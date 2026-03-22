@@ -1,0 +1,5 @@
+{
+  "name": "Council Watch NYC",
+  "description": "Demystifying New York City's legislative process for everyday New Yorkers. Track bills, find your council member, and see campaign finance data.",
+  "requestFramePermissions": ["geolocation"]
+}
