@@ -1,0 +1,978 @@
+[
+  {
+    "slug": "christopher-marte",
+    "districtNumber": 1,
+    "displayName": "Christopher Marte",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Financial District-Battery Park City",
+      "Tribeca-Civic Center",
+      "The Battery-Governors Island-Ellis Island-Liberty Island",
+      "SoHo-Little Italy-Hudson Square",
+      "Chinatown-Two Bridges",
+      "Lower East Side"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-1.jpg",
+    "email": "District1@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "harvey-d-epstein",
+    "districtNumber": 2,
+    "displayName": "Harvey Epstein",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Greenwich Village",
+      "Lower East Side",
+      "East Village",
+      "Midtown South-Flatiron-Union Square",
+      "Gramercy",
+      "Murray Hill-Kips Bay"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-2.jpg",
+    "email": "District2@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": null,
+    "districtNumber": 3,
+    "displayName": "Office of Council District 3",
+    "party": "Blank",
+    "neighborhoods": [
+      "Hudson Square",
+      "West Village",
+      "Chelsea",
+      "Hudson Yards",
+      "Meatpacking District",
+      "Garment District",
+      "Times Square",
+      "Hell's Kitchen"
+    ],
+    "photoUrl": "",
+    "email": "District3@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "virginia-maloney",
+    "districtNumber": 4,
+    "displayName": "Virginia Maloney",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Midtown South-NoMad",
+      "Midtown-Times Square",
+      "Stuyvesant Town-Peter Cooper Village",
+      "Murray Hill-Kips Bay",
+      "East Midtown-Turtle Bay",
+      "United Nations",
+      "Upper East Side-Carnegie Hill"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-4.jpg",
+    "email": "District4@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "julie-menin",
+    "districtNumber": 5,
+    "displayName": "Speaker Julie Menin",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Upper East Side (Lenox Hill",
+      "Yorkville",
+      "Carnegie Hill) and Roosevelt Island"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-5.jpg",
+    "email": "SpeakerMenin@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "gale-a-brewer",
+    "districtNumber": 6,
+    "displayName": "Gale A. Brewer",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Upper West Side",
+      "Lincoln Square",
+      "Hell's Kitchen",
+      "Central Park"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-6.jpg",
+    "email": "District6@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "shaun-abreu",
+    "districtNumber": 7,
+    "displayName": "Majority Leader Shaun Abreu",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Upper West Side (Central)",
+      "Upper West Side-Manhattan Valley",
+      "Morningside Heights",
+      "Manhattanville-West Harlem",
+      "Hamilton Heights-Sugar Hill",
+      "Washington Heights (South)"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-7.jpg",
+    "email": "District7@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "elsie-encarnacion",
+    "districtNumber": 8,
+    "displayName": "Elsie Encarnacion",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Mott Haven-Port Morris",
+      "Melrose",
+      "Concourse-Concourse Village",
+      "Upper East Side-Carnegie Hill",
+      "Upper East Side-Yorkville",
+      "East Harlem (South)",
+      "East Harlem (North)",
+      "Randall's Island"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-8.jpg",
+    "email": "District8@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "yusef-salaam",
+    "districtNumber": 9,
+    "displayName": "Yusef Salaam",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Morningside Heights",
+      "Manhattanville-West Harlem",
+      "Hamilton Heights-Sugar Hill",
+      "Harlem (South)",
+      "Harlem (North)",
+      "East Harlem (South)",
+      "East Harlem (North)",
+      "Upper West Side-Manhattan Valley"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-9.jpg",
+    "email": "district9@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "carmen-n-de-la-rosa",
+    "districtNumber": 10,
+    "displayName": "Carmen De La Rosa",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Washington Heights",
+      "Inwood",
+      "Marble Hill"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-10.jpg",
+    "email": "District10@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "eric-dinowitz",
+    "districtNumber": 11,
+    "displayName": "Eric Dinowitz",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Bedford Park",
+      "Norwood",
+      "Kingsbridge Heights-Van Cortlandt Village",
+      "Kingsbridge",
+      "Riverdale-Spuyten Duyvil",
+      "Wakefield-Woodlawn",
+      "Woodlawn Cemetery",
+      "Van Cortlandt Park"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-11.jpg",
+    "email": "dinowitz@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "kevin-c-riley",
+    "districtNumber": 12,
+    "displayName": "Kevin C. Riley",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Williamsbridge-Olinville",
+      "Bronxwood",
+      "Eastchester-Edenwald-Baychester",
+      "Wakefield",
+      "Allerton-Parkside",
+      "Baychester",
+      "The Valley",
+      "and Co-op City"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-12.jpg",
+    "email": "District12@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "shirley-aldebol",
+    "districtNumber": 13,
+    "displayName": "Shirley Aldebol",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Bruckner-Bronx River",
+      "Throggs Neck-Schuylerville",
+      "Pelham Bay-Country Club-City Island",
+      "Hart Island",
+      "Ferry Point Park-St. Raymond Cemetery",
+      "Pelham Parkway-Van Nest",
+      "Morris Park",
+      "Pelham Bay Park"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-13.jpg",
+    "email": "District13@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "pierina-ana-sanchez",
+    "districtNumber": 14,
+    "displayName": "Pierina Ana Sanchez",
+    "party": "Democrat",
+    "neighborhoods": [
+      "University Heights (South)-Morris Heights",
+      "Mount Hope",
+      "Fordham Heights",
+      "University Heights (North)-Fordham",
+      "Bedford Park",
+      "Kingsbridge Heights-Van Cortlandt Village",
+      "Kingsbridge-Marble Hill"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-14.jpg",
+    "email": "District14@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "oswald-j-feliz",
+    "districtNumber": 15,
+    "displayName": "Oswald Feliz",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Fordham",
+      "East Tremont",
+      "Belmont",
+      "Bathgate",
+      "Crotona Park",
+      "Mount Eden-Claremont",
+      "Mount Hope",
+      "West Farms",
+      "Bedford Park",
+      "Allerton",
+      "Bronx Park East"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-15.jpg",
+    "email": "District15@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "althea-v-stevens",
+    "districtNumber": 16,
+    "displayName": "Althea Stevens",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Morrisania",
+      "Claremont Village-Claremont (East)",
+      "Concourse-Concourse Village",
+      "Highbridge",
+      "Mount Eden-Claremont (West)",
+      "Yankee Stadium-Macombs Dam Park",
+      "Claremont Park",
+      "University Heights (South)-Morris Heights",
+      "University Heights (North)-Fordham"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-16.jpg",
+    "email": "District16@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "justin-e-sanchez",
+    "districtNumber": 17,
+    "displayName": "Justin Sanchez",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Mott Haven-Port Morris",
+      "Melrose",
+      "Hunts Point",
+      "Longwood",
+      "North & South Brother Islands",
+      "Morrisania",
+      "Crotona Park East",
+      "Concourse-Concourse Village",
+      "West Farms",
+      "Soundview-Bruckner-Bronx River"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-17.jpg",
+    "email": "District17@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "amanda-c-farias",
+    "districtNumber": 18,
+    "displayName": "Amanda Farías",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Soundview-Bruckner",
+      "Soundview-Clason Point",
+      "Castle Hill-Unionport",
+      "Harding Park",
+      "Parkchester",
+      "Westchester Square"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-18.jpg",
+    "email": "District18@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "vickie-paladino",
+    "districtNumber": 19,
+    "displayName": "Vickie Paladino",
+    "party": "Republican",
+    "neighborhoods": [
+      "College Point",
+      "Whitestone-Beechhurst",
+      "Murray Hill-Broadway Flushing",
+      "North Flushing",
+      "Auburndale",
+      "Bayside",
+      "Bay Terrace-Clearview",
+      "Fort Totten",
+      "Douglaston-Little Neck"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-19.jpg",
+    "email": "District19@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "sandra-ung",
+    "districtNumber": 20,
+    "displayName": "Sandra Ung",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Flushing",
+      "Murray Hill",
+      "Queensboro Hill",
+      "Fresh Meadows & Mitchell-Linden"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-20.jpg",
+    "email": "district20@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "shanel-thomas-henry",
+    "districtNumber": 21,
+    "displayName": "Shanel Thomas-Henry",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Astoria (North)-Ditmars-Steinway",
+      "Jackson Heights",
+      "East Elmhurst",
+      "North Corona",
+      "Elmhurst",
+      "Corona",
+      "Rego Park",
+      "Flushing-Willets Point",
+      "LaGuardia Airport",
+      "Flushing Meadows-Corona Park"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-21.jpg",
+    "email": "District21@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "tiffany-l-caban",
+    "districtNumber": 22,
+    "displayName": "Tiffany Cabán",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Astoria (North)-Ditmars-Steinway",
+      "Old Astoria-Hallets Point",
+      "Astoria (Central)",
+      "Astoria (East)-Woodside (North)",
+      "Queensbridge-Ravenswood-Dutch Kills",
+      "Rikers Island",
+      "St. Michael's Cemetery",
+      "Astoria Park",
+      "Jackson Heights",
+      "East Elmhurst",
+      "LaGuardia Airport"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-22.jpg",
+    "email": "District22@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "linda-lee",
+    "districtNumber": 23,
+    "displayName": "Linda Lee",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Fresh Meadows",
+      "Jamaica Estates-Holliswood",
+      "Cunningham Park",
+      "Bayside",
+      "Douglaston-Little Neck",
+      "Oakland Gardens-Hollis Hills",
+      "Alley Pond Park",
+      "Jamaica",
+      "Hollis",
+      "Glen Oaks-Floral Park-New Hyde Park",
+      "Bellerose",
+      "Queens Village",
+      "Jamaica"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-23.jpg",
+    "email": "District23@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "james-f-gennaro",
+    "districtNumber": 24,
+    "displayName": "James F. Gennaro",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Rego Park",
+      "Forest Hills",
+      "Kew Gardens Hills",
+      "Pomonok-Electchester-Hillcrest",
+      "Fresh Meadows-Utopia",
+      "Jamaica Estates-Holliswood",
+      "Jamaica Hills-Briarwood",
+      "Mount Hebron & Cedar Grove Cemeteries",
+      "Jamaica",
+      "Flushing Meadows-Corona Park"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-24.jpg",
+    "email": "District24@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "shekar-krishnan",
+    "districtNumber": 25,
+    "displayName": "Shekar Krishnan",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Jackson Heights",
+      "Elmhurst",
+      "East Elmhurst",
+      "Woodside"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-25.jpg",
+    "email": "District25@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "julie-won",
+    "districtNumber": 26,
+    "displayName": "Julie Won",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Astoria (Central)",
+      "Astoria (East)-Woodside (North)",
+      "Queensbridge-Ravenswood-Dutch Kills",
+      "Sunnyside Yards (North)",
+      "Long Island City-Hunters Point",
+      "Sunnyside",
+      "Woodside",
+      "Sunnyside Yards (South)",
+      "Calvary & Mount Zion Cemeteries",
+      "Jackson Heights",
+      "Elmhurst",
+      "Maspeth"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-26.jpg",
+    "email": "district26@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "nantasha-m-williams",
+    "districtNumber": 27,
+    "displayName": "Deputy Speaker Dr. Nantasha Williams",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Jamaica",
+      "South Jamaica",
+      "Springfield Gardens (North)-Rochdale Village",
+      "St. Albans",
+      "Hollis",
+      "Queens Village",
+      "Cambria Heights",
+      "Laurelton",
+      "Jamaica"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-27.jpg",
+    "email": "District27@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "ty-hankerson",
+    "districtNumber": 28,
+    "displayName": "Tyrell \"Ty\" Hankerson",
+    "party": "Democrat",
+    "neighborhoods": [
+      "South Ozone Park",
+      "Jamaica",
+      "South Jamaica",
+      "Baisley Park",
+      "Springfield Gardens (North)-Rochdale Village",
+      "Springfield Gardens (South)-Brookville"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-28.jpg",
+    "email": "District28@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "lynn-c-schulman",
+    "districtNumber": 29,
+    "displayName": "Lynn Schulman",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Rego Park",
+      "Forest Hills",
+      "Kew Gardens",
+      "Richmond Hill",
+      "South Richmond Hill",
+      "Ozone Park (North)",
+      "South Ozone Park"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-29.jpg",
+    "email": "District29@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "phil-wong",
+    "districtNumber": 30,
+    "displayName": "Phil Wong",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Maspeth",
+      "Middle Village",
+      "Glendale",
+      "Elmhurst",
+      "Rego Park and parts of Ridgewood"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-30.jpg",
+    "email": "District30@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "selvena-n-brooks-powers",
+    "districtNumber": 31,
+    "displayName": "Selvena N. Brooks-Powers",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Arverne",
+      "Brookville",
+      "Edgemere",
+      "Jamaica (parts)",
+      "Far Rockaway",
+      "Laurelton",
+      "Rosedale",
+      "Springfield Gardens (parts)"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-31.jpg",
+    "email": "District31@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "joann-ariola",
+    "districtNumber": 32,
+    "displayName": "Joann Ariola",
+    "party": "Republican",
+    "neighborhoods": [
+      "Glendale",
+      "Forest Park",
+      "Ozone Park (North)",
+      "Woodhaven",
+      "Ozone Park",
+      "Howard Beach-Lindenwood",
+      "Spring Creek Park",
+      "Broad Channel",
+      "Rockaway Beach",
+      "Rockaway Park",
+      "Belle Harbor",
+      "Neponsit",
+      "Roxbury",
+      "Jacob Riis Park",
+      "Fort Tilden",
+      "Breezy Point"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-32.jpg",
+    "email": "District32@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "lincoln-restler",
+    "districtNumber": 33,
+    "displayName": "Lincoln Restler",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Greenpoint",
+      "Northside Williamsburg",
+      "South Williamsburg",
+      "Brooklyn Heights",
+      "Downtown Brooklyn",
+      "DUMBO",
+      "Boerum Hill",
+      "Vinegar Hill",
+      "Bedford-Stuyvesant",
+      "Brooklyn Navy Yard"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-33.jpg",
+    "email": "District33@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "jennifer-gutierrez",
+    "districtNumber": 34,
+    "displayName": "Jennifer Gutiérrez",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Williamsburg",
+      "South Williamsburg",
+      "East Williamsburg",
+      "Bushwick (West)",
+      "Bushwick (East)",
+      "Ridgewood"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-34.jpg",
+    "email": "District34@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "crystal-hudson",
+    "districtNumber": 35,
+    "displayName": "Crystal Hudson",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Fort Greene",
+      "Clinton Hill",
+      "Prospect Heights",
+      "Crown Heights"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-35.jpg",
+    "email": "District35@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "chi-a-osse",
+    "districtNumber": 36,
+    "displayName": "Chi Ossé",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Bedford-Stuyvesant (West)",
+      "Bedford-Stuyvesant (East)",
+      "Crown Heights (North)"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-36.jpg",
+    "email": "District36@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "sandy-nurse",
+    "districtNumber": 37,
+    "displayName": "Sandy Nurse",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Bushwick (West)",
+      "Bushwick (East)",
+      "The Evergreens Cemetery",
+      "Cypress Hills",
+      "East New York (North)",
+      "East New York-City Line",
+      "Highland Park-Cypress Hills Cemeteries (South)",
+      "Ocean Hill",
+      "Brownsville"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-37.jpg",
+    "email": "District37@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "alexa-aviles",
+    "districtNumber": 38,
+    "displayName": "Alexa Avilés",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Red Hook and parts of Gowanus",
+      "Park Slope",
+      "Sunset Park",
+      "Borough Park",
+      "Dyker Heights",
+      "Bensonhurst",
+      "and Bath Beach"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-38.jpg",
+    "email": "District38@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "shahana-k-hanif",
+    "districtNumber": 39,
+    "displayName": "Shahana Hanif",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Kensington",
+      "Borough Park",
+      "Windsor Terrace",
+      "Park Slope",
+      "Gowanus",
+      "Carroll Gardens",
+      "Cobble Hill",
+      "Boerum Hill",
+      "and the Columbia Waterfront"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-39.jpg",
+    "email": "District39@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "rita-c-joseph",
+    "districtNumber": 40,
+    "displayName": "Rita Joseph",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Windsor Terrace-South Slope",
+      "Crown Heights (South)",
+      "Prospect Lefferts Gardens-Wingate",
+      "Borough Park",
+      "Kensington",
+      "Mapleton-Midwood (West)",
+      "Flatbush",
+      "Flatbush (West)-Ditmas Park-Parkville",
+      "East Flatbush-Erasmus",
+      "East Flatbush-Rugby",
+      "Prospect Park"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-40.jpg",
+    "email": "District40@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "darlene-mealy",
+    "districtNumber": 41,
+    "displayName": "Darlene Mealy",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Bedford-Stuyvesant (East)",
+      "Crown Heights (North)",
+      "Lincoln Terrace Park",
+      "Crown Heights (South)",
+      "Prospect Lefferts Gardens-Wingate",
+      "Ocean Hill",
+      "Brownsville",
+      "East Flatbush-Rugby",
+      "East Flatbush-Remsen Village"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-41.jpg",
+    "email": "District41@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "chris-banks",
+    "districtNumber": 42,
+    "displayName": "Chris Banks",
+    "party": "Democrat",
+    "neighborhoods": [
+      "East New York",
+      "Spring Creek-Starrett City",
+      "Brownsville",
+      "East Flatbush",
+      "Remsen Village",
+      "Canarsie"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-42.jpg",
+    "email": "District42@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "susan-zhuang",
+    "districtNumber": 43,
+    "displayName": "Susan Zhuang",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Sunset Park (Central)",
+      "Dyker Heights",
+      "Bensonhurst",
+      "Bath Beach",
+      "Gravesend (West)",
+      "Sunset Park (East)-Borough Park (West)",
+      "Borough Park",
+      "Mapleton-Midwood (West)",
+      "Gravesend (East)-Homecrest"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-43.jpg",
+    "email": "District43@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": null,
+    "districtNumber": 44,
+    "displayName": "Simcha Felder",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Borough Park",
+      "Flatbush",
+      "Gravesend",
+      "Mapleton",
+      "and Midwood"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-44.jpg",
+    "email": "AskSimcha@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "farah-n-louis",
+    "districtNumber": 45,
+    "displayName": "Farah N. Louis",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Flatbush",
+      "Midwood",
+      "East Flatbush",
+      "Flatlands",
+      "Marine Park",
+      "Canarsie"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-45.jpg",
+    "email": "District45@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "mercedes-narcisse",
+    "districtNumber": 46,
+    "displayName": "Mercedes Narcisse",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Bergen Beach",
+      "Canarsie",
+      "Flatlands",
+      "Georgetown",
+      "Gerritsen Beach",
+      "Marine Park",
+      "Mill Basin",
+      "Mill Island",
+      "and Sheepshead Bay"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-46.jpg",
+    "email": "District46@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "kayla-santosuosso",
+    "districtNumber": 47,
+    "displayName": "Kayla Santosuosso",
+    "party": "Democrat",
+    "neighborhoods": [
+      "Bath Beach",
+      "Bay Ridge",
+      "Coney Island",
+      "Dyker Heights",
+      "Gravesend",
+      "Sea Gate"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-47.jpg",
+    "email": "heykayla@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "inna-vernikov",
+    "districtNumber": 48,
+    "displayName": "Inna Vernikov",
+    "party": "Republican",
+    "neighborhoods": [
+      "Gravesend (South)",
+      "Coney Island-Sea Gate",
+      "Brighton Beach",
+      "Midwood",
+      "Gravesend (East)-Homecrest",
+      "Madison",
+      "Sheepshead Bay-Manhattan Beach-Gerritsen Beach"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-48.jpg",
+    "email": "IVernikov@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "kamillah-hanks",
+    "districtNumber": 49,
+    "displayName": "Kamillah Hanks",
+    "party": "Democrat",
+    "neighborhoods": [
+      "St. George-New Brighton",
+      "Tompkinsville-Stapleton-Clifton-Fox Hills",
+      "Rosebank-Shore Acres-Park Hill",
+      "West New Brighton-Silver Lake-Grymes Hill",
+      "Westerleigh-Castleton Corners",
+      "Port Richmond",
+      "Mariner's Harbor-Arlington-Graniteville",
+      "Snug Harbor",
+      "Todt Hill-Emerson Hill-Manor Heights",
+      "Fort Wadsworth"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-49.jpg",
+    "email": "District49@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "david-m-carr",
+    "districtNumber": 50,
+    "displayName": "David Carr",
+    "party": "Republican",
+    "neighborhoods": [
+      "Arrochar",
+      "Bath Beach",
+      "Bay Ridge",
+      "Bay Terrace",
+      "Bulls Head",
+      "Castleton Corners",
+      "Concord",
+      "Dongan Hills",
+      "Dongan Hills Colony",
+      "Dyker Beach Park",
+      "Dyker Heights",
+      "Egbertville",
+      "Emmerson Hill",
+      "Fort Hamilton",
+      "Fort Wadsworth",
+      "Grant City",
+      "Grasmere",
+      "High Rock",
+      "Lighthouse Hill",
+      "Midland Beach",
+      "New Dorp",
+      "Oakwood",
+      "Ocean Breeze",
+      "Old Town",
+      "Richmondtown",
+      "South Beach",
+      "Todt Hill",
+      "Travis",
+      "Westerleigh",
+      "Willowbrook"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-50.jpg",
+    "email": "DCarr@council.nyc.gov",
+    "socials": {}
+  },
+  {
+    "slug": "frank-morano",
+    "districtNumber": 51,
+    "displayName": "Frank Morano",
+    "party": "Republican",
+    "neighborhoods": [
+      "New Springville-Willowbrook-Bulls Head-Travis",
+      "Freshkills Park (North)",
+      "Oakwood-Richmondtown",
+      "Great Kills-Eltingville",
+      "Arden Heights-Rossville",
+      "Annadale-Huguenot-Prince's Bay-Woodrow",
+      "Tottenville-Charleston",
+      "Freshkills Park (South)",
+      "Great Kills Park"
+    ],
+    "photoUrl": "https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-51.jpg",
+    "email": "Morano@council.nyc.gov",
+    "socials": {}
+  }
+]
