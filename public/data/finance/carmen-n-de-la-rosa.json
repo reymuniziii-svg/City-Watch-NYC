@@ -1,0 +1,153 @@
+{
+  "slug": "carmen-n-de-la-rosa",
+  "cycle": "2025",
+  "candidateName": "De La Rosa, Carmen",
+  "candidateId": "2349",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-03-22T01:08:37.663Z",
+  "contributorCount": 445,
+  "totalRaised": 71296,
+  "publicFunds": 101334,
+  "publicFundsShare": 0.587,
+  "smallDollarAmount": 31096,
+  "smallDollarDonorCount": 385,
+  "smallDollarShare": 0.436,
+  "topTenDonorShare": 0.169,
+  "maxContributionDonorCount": 14,
+  "maxContributionAmount": 14700,
+  "organizationalDonorAmount": 13150,
+  "organizationalDonorShare": 0.184,
+  "outsideCityAmount": 18670,
+  "outsideCityShare": 0.262,
+  "topDonors": [
+    {
+      "name": "Garcia, Ismael",
+      "amount": 2100,
+      "donorType": "IND",
+      "city": "Bronx",
+      "state": "NY",
+      "occupation": "Owner",
+      "employer": "Made in Mexico"
+    },
+    {
+      "name": "CWA District One PAC",
+      "amount": 1550,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "32BJ United ADF",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Brooks-Powers, Selvena",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Rockaway Beach",
+      "state": "NY",
+      "occupation": "Council Member",
+      "employer": "NYC Council"
+    },
+    {
+      "name": "Cozen O'Connor PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Philadelphia",
+      "state": "PA",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "De La Rosa, Dolly",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Bronx",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Doctors Council SEIU COPE",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "IUOE Local 30 State PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Whitestone",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Montano, Diogenes",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Founder/Director",
+      "employer": "Sports & Health in the City"
+    },
+    {
+      "name": "NYSNA PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Albany",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 52369,
+      "contributorCount": 360
+    },
+    {
+      "label": "Small Business / Retail",
+      "amount": 6875,
+      "contributorCount": 14
+    },
+    {
+      "label": "Healthcare",
+      "amount": 4015,
+      "contributorCount": 14
+    },
+    {
+      "label": "Legal",
+      "amount": 3736,
+      "contributorCount": 17
+    },
+    {
+      "label": "Education",
+      "amount": 2936,
+      "contributorCount": 19
+    },
+    {
+      "label": "Real Estate",
+      "amount": 1950,
+      "contributorCount": 6
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds account for about 59% of the campaign's total resources.",
+    "14 donors gave at the legal maximum, totaling $14,700.",
+    "Committees, unions, or other non-individual donors made up 18% of reported private fundraising.",
+    "A noticeable share of reported private fundraising, 26%, came from outside New York City.",
+    "Among reported private contributions, small business / retail stands out as one of the strongest donor patterns."
+  ]
+}

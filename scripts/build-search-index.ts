@@ -1,7 +1,7 @@
 import path from "node:path";
 import { PROCESSED_DIR, PUBLIC_DATA_DIR } from "./lib/constants";
 import { ensureDir, readJsonFile, writeJsonFile } from "./lib/fs-utils";
-import type { SearchDocument } from "../src/lib/types";
+import type { HearingRecord, SearchDocument } from "../src/lib/types";
 
 interface BillIndexRow {
   billId: string;
@@ -22,41 +22,28 @@ interface MemberIndexRow {
   status: "seated" | "vacant";
 }
 
-interface MemberProfile {
-  slug: string;
-  committees: Array<{ bodyName: string }>;
+function buildFilterRoute(pathname: string, query: string): string {
+  return `${pathname}?q=${encodeURIComponent(query)}`;
 }
 
-async function loadCommitteeDocuments(memberRows: MemberIndexRow[]): Promise<SearchDocument[]> {
-  const committeeMap = new Map<string, SearchDocument>();
-
-  for (const member of memberRows) {
-    if (!member.slug || member.status !== "seated") {
-      continue;
-    }
-
-    const profile = await readJsonFile<MemberProfile>(path.join(PROCESSED_DIR, "members", `${member.slug}.json`));
-    for (const committee of profile.committees) {
-      const key = committee.bodyName.toLowerCase();
-      if (!committeeMap.has(key)) {
-        committeeMap.set(key, {
-          id: `committee:${key}`,
-          type: "committee",
-          label: committee.bodyName,
-          subtitle: "Committee",
-          route: "/council",
-          committeeName: committee.bodyName,
-        });
-      }
-    }
+function formatSearchDate(value: string): string {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) {
+    return value;
   }
 
-  return Array.from(committeeMap.values());
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(date);
 }
 
 export async function buildSearchIndex(): Promise<SearchDocument[]> {
   const bills = await readJsonFile<BillIndexRow[]>(path.join(PROCESSED_DIR, "bills-index.json"));
   const members = await readJsonFile<MemberIndexRow[]>(path.join(PROCESSED_DIR, "members-index.json"));
+  const hearings = await readJsonFile<HearingRecord[]>(path.join(PROCESSED_DIR, "hearings-upcoming.json")).catch(() => []);
 
   const memberDocs: SearchDocument[] = members
     .filter((member) => member.slug && member.status === "seated")
@@ -65,8 +52,9 @@ export async function buildSearchIndex(): Promise<SearchDocument[]> {
       type: "member",
       label: member.fullName,
       subtitle: `District ${member.districtNumber} · ${member.party}`,
-      route: `/member/${member.slug}`,
+      route: `/members/${member.slug}`,
       memberName: member.fullName,
+      searchText: `${member.fullName} district ${member.districtNumber} ${member.party}`,
     }));
 
   const billDocs: SearchDocument[] = bills.map((bill) => ({
@@ -74,14 +62,30 @@ export async function buildSearchIndex(): Promise<SearchDocument[]> {
     type: "bill",
     label: bill.introNumber,
     subtitle: bill.title,
-    route: bill.route,
+    route: buildFilterRoute("/bills", bill.introNumber),
     introNumber: bill.introNumber,
     billTitle: bill.title,
     committeeName: bill.committee,
+    searchText: `${bill.introNumber} ${bill.title} ${bill.summary} ${bill.committee}`,
   }));
 
-  const committeeDocs = await loadCommitteeDocuments(members);
-  const documents = [...memberDocs, ...billDocs, ...committeeDocs];
+  const hearingDocs: SearchDocument[] = hearings.map((hearing): SearchDocument => {
+    const hearingDate = hearing.date.slice(0, 10);
+    const billTitles = hearing.agendaItems.map((item) => item.title).join(" ");
+    return {
+      id: `hearing:${hearing.eventId}`,
+      type: "hearing",
+      label: hearing.bodyName,
+      subtitle: `${formatSearchDate(hearing.date)} · ${hearing.location}`,
+      route: buildFilterRoute("/hearings", `${hearing.bodyName} ${hearingDate}`),
+      hearingTitle: hearing.bodyName,
+      hearingDate,
+      committeeName: hearing.bodyName,
+      searchText: `${hearing.bodyName} ${hearing.location} ${hearingDate} ${billTitles}`,
+    };
+  });
+
+  const documents = [...memberDocs, ...billDocs, ...hearingDocs];
 
   await writeJsonFile(path.join(PROCESSED_DIR, "search-index.json"), documents);
   await ensureDir(PUBLIC_DATA_DIR);

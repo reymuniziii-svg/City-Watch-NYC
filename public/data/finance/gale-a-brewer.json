@@ -1,0 +1,152 @@
+{
+  "slug": "gale-a-brewer",
+  "cycle": "2025",
+  "candidateName": "Brewer, Gale",
+  "candidateId": "399",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-03-22T01:08:37.528Z",
+  "contributorCount": 295,
+  "totalRaised": 58751,
+  "publicFunds": null,
+  "publicFundsShare": 0,
+  "smallDollarAmount": 28201,
+  "smallDollarDonorCount": 252,
+  "smallDollarShare": 0.48,
+  "topTenDonorShare": 0.22,
+  "maxContributionDonorCount": 13,
+  "maxContributionAmount": 15600,
+  "organizationalDonorAmount": 13250,
+  "organizationalDonorShare": 0.226,
+  "outsideCityAmount": 9791,
+  "outsideCityShare": 0.167,
+  "topDonors": [
+    {
+      "name": "Brewer, Gale",
+      "amount": 3000,
+      "donorType": "CAN",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "City Council",
+      "employer": "NYC Council"
+    },
+    {
+      "name": "Cozen O'Connor Political Actio",
+      "amount": 1500,
+      "donorType": "PCOMP",
+      "city": "MIDDLE CITY WEST",
+      "state": "PA",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Bank, Andrew",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Product Manager",
+      "employer": "Cirrus"
+    },
+    {
+      "name": "Bank, Jeffrey",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "CEO",
+      "employer": "Alicart"
+    },
+    {
+      "name": "Bank, Karen",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Homemaker",
+      "employer": ""
+    },
+    {
+      "name": "Bank, Sarah",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Teacher",
+      "employer": "Rodeph Sholom School"
+    },
+    {
+      "name": "Doctors Council SEIU COPE",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Farias 2025",
+      "amount": 1050,
+      "donorType": "PCOMZ",
+      "city": "The Bronx",
+      "state": "NY",
+      "occupation": "Candidate Committee",
+      "employer": "Farias 2025"
+    },
+    {
+      "name": "GREENBERG TRAURIG P.A. PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Albany",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Jourdain, Ivan",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "PHARMACIST",
+      "employer": "IVAN PHARMACY / 731 PHARMACY C"
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 48323,
+      "contributorCount": 241
+    },
+    {
+      "label": "Legal",
+      "amount": 3355,
+      "contributorCount": 16
+    },
+    {
+      "label": "Education",
+      "amount": 1873,
+      "contributorCount": 10
+    },
+    {
+      "label": "Real Estate",
+      "amount": 1625,
+      "contributorCount": 4
+    },
+    {
+      "label": "Government / Public Sector",
+      "amount": 1425,
+      "contributorCount": 8
+    },
+    {
+      "label": "Healthcare",
+      "amount": 1375,
+      "contributorCount": 4
+    }
+  ],
+  "explanatoryNotes": [
+    "13 donors gave at the legal maximum, totaling $15,600.",
+    "Committees, unions, or other non-individual donors made up 23% of reported private fundraising.",
+    "A noticeable share of reported private fundraising, 17%, came from outside New York City.",
+    "Among reported private contributions, legal stands out as one of the strongest donor patterns."
+  ]
+}

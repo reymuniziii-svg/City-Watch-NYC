@@ -1,0 +1,153 @@
+{
+  "slug": "alexa-aviles",
+  "cycle": "2025",
+  "candidateName": "Aviles, Alexa",
+  "candidateId": "2306",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-03-22T01:08:38.300Z",
+  "contributorCount": 838,
+  "totalRaised": 84357.8,
+  "publicFunds": 392600,
+  "publicFundsShare": 0.823,
+  "smallDollarAmount": 55840,
+  "smallDollarDonorCount": 778,
+  "smallDollarShare": 0.662,
+  "topTenDonorShare": 0.124,
+  "maxContributionDonorCount": 10,
+  "maxContributionAmount": 10500,
+  "organizationalDonorAmount": 9800,
+  "organizationalDonorShare": 0.116,
+  "outsideCityAmount": 5545.5,
+  "outsideCityShare": 0.066,
+  "topDonors": [
+    {
+      "name": "32BJ United",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Bliven, David",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "The Bronx",
+      "state": "NY",
+      "occupation": "Attorney",
+      "employer": "Law Offices of David Bliven"
+    },
+    {
+      "name": "Farias 2025",
+      "amount": 1050,
+      "donorType": "PCOMC",
+      "city": "Bronx",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Kusama-Hinte, Jeffrey",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Film Producer",
+      "employer": "Antidote International Films,"
+    },
+    {
+      "name": "Kusama-Hinte, Kristen",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Homemaker",
+      "employer": ""
+    },
+    {
+      "name": "New York State Laborers PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Albany",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "NYSNA PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Albany",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "StreetsPAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "UFT COPE",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "witten, betsy",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Manager",
+      "employer": "AE&J Investments"
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 64050.5,
+      "contributorCount": 627
+    },
+    {
+      "label": "Education",
+      "amount": 6672.5,
+      "contributorCount": 87
+    },
+    {
+      "label": "Legal",
+      "amount": 5088,
+      "contributorCount": 41
+    },
+    {
+      "label": "Small Business / Retail",
+      "amount": 2895,
+      "contributorCount": 14
+    },
+    {
+      "label": "Healthcare",
+      "amount": 1544.9,
+      "contributorCount": 18
+    },
+    {
+      "label": "Nonprofit / Advocacy",
+      "amount": 1373,
+      "contributorCount": 18
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds make up 82% of this campaign's total resources.",
+    "Small-dollar donors contributed 66% of reported private fundraising across 778 contributions.",
+    "Private fundraising looks relatively diffuse: the top ten donors account for only 12% of reported private contributions.",
+    "10 donors gave at the legal maximum, totaling $10,500.",
+    "Among reported private contributions, education stands out as one of the strongest donor patterns."
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "slug": "mercedes-narcisse",
+  "cycle": "2025",
+  "candidateName": "Narcisse, Mercedes",
+  "candidateId": "1159",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-03-22T01:08:38.476Z",
+  "contributorCount": 628,
+  "totalRaised": 143464.68,
+  "publicFunds": 305736,
+  "publicFundsShare": 0.681,
+  "smallDollarAmount": 64757.34,
+  "smallDollarDonorCount": 481,
+  "smallDollarShare": 0.451,
+  "topTenDonorShare": 0.09,
+  "maxContributionDonorCount": 24,
+  "maxContributionAmount": 25200,
+  "organizationalDonorAmount": 15579.68,
+  "organizationalDonorShare": 0.109,
+  "outsideCityAmount": 38500,
+  "outsideCityShare": 0.268,
+  "topDonors": [
+    {
+      "name": "Lambert, Yves",
+      "amount": 1675,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Nonprofit",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Kernisant, Lesly",
+      "amount": 1550,
+      "donorType": "IND",
+      "city": "Glen Cove",
+      "state": "NY",
+      "occupation": "Unemployed",
+      "employer": "Unemployed"
+    },
+    {
+      "name": "Simon, Herold",
+      "amount": 1350,
+      "donorType": "IND",
+      "city": "VALLEY STREAM",
+      "state": "NY",
+      "occupation": "Physican",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Charles, Michel jose",
+      "amount": 1300,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Physician",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Abakporo, Theophine",
+      "amount": 1250,
+      "donorType": "IND",
+      "city": "Jamaica",
+      "state": "NY",
+      "occupation": "Physician",
+      "employer": "NYu"
+    },
+    {
+      "name": "Joseph, Jean",
+      "amount": 1250,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Accountant",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Theus, Marie-Paule",
+      "amount": 1250,
+      "donorType": "IND",
+      "city": "Glen Cove",
+      "state": "NY",
+      "occupation": "Medical Doctor",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Blokh, Ilya",
+      "amount": 1200,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Oncologist",
+      "employer": "Maimonides Medical Center"
+    },
+    {
+      "name": "32BJ United ADF",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Alkaslasi, Ron",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Real estate",
+      "employer": "Self-Employed"
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 118950.68,
+      "contributorCount": 482
+    },
+    {
+      "label": "Healthcare",
+      "amount": 18995,
+      "contributorCount": 58
+    },
+    {
+      "label": "Legal",
+      "amount": 7055,
+      "contributorCount": 33
+    },
+    {
+      "label": "Education",
+      "amount": 3583,
+      "contributorCount": 17
+    },
+    {
+      "label": "Real Estate",
+      "amount": 3176,
+      "contributorCount": 14
+    },
+    {
+      "label": "Finance",
+      "amount": 2000,
+      "contributorCount": 9
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds make up 68% of this campaign's total resources.",
+    "Private fundraising looks relatively diffuse: the top ten donors account for only 9% of reported private contributions.",
+    "24 donors gave at the legal maximum, totaling $25,200.",
+    "A noticeable share of reported private fundraising, 27%, came from outside New York City.",
+    "Among reported private contributions, healthcare stands out as one of the strongest donor patterns."
+  ]
+}

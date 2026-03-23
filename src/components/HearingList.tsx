@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Calendar, Search, Filter, Loader2 } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
+import { Search, Loader2 } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Hearing } from '../types';
 import { fetchHearings } from '../services/nycDataService';
 import HearingCard from './HearingCard';
 
 export default function HearingList() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [hearings, setHearings] = useState<Hearing[]>([]);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState(() => searchParams.get('q') ?? '');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -17,10 +19,43 @@ export default function HearingList() {
     });
   }, []);
 
-  const filteredHearings = hearings.filter(h => 
-    h.title?.toLowerCase().includes(search.toLowerCase()) ||
-    h.committee?.toLowerCase().includes(search.toLowerCase())
-  );
+  useEffect(() => {
+    setSearch(searchParams.get('q') ?? '');
+  }, [searchParams]);
+
+  const filteredHearings = hearings.filter((hearing) => {
+    const normalizedQuery = search.trim().toLowerCase();
+    if (!normalizedQuery) {
+      return true;
+    }
+
+    const haystack = [
+      hearing.title,
+      hearing.committee,
+      hearing.location,
+      hearing.date,
+      hearing.time,
+      hearing.bills.join(' '),
+    ]
+      .filter(Boolean)
+      .join(' ')
+      .toLowerCase();
+
+    return haystack.includes(normalizedQuery);
+  });
+
+  const handleSearchChange = (value: string) => {
+    setSearch(value);
+
+    const nextParams = new URLSearchParams(searchParams);
+    if (value.trim()) {
+      nextParams.set('q', value);
+    } else {
+      nextParams.delete('q');
+    }
+
+    setSearchParams(nextParams, { replace: true });
+  };
 
   if (isLoading) {
     return (
@@ -46,7 +81,7 @@ export default function HearingList() {
             placeholder="Search by committee or keyword..."
             className="w-full pl-12 pr-4 py-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) => handleSearchChange(e.target.value)}
           />
         </div>
       </div>

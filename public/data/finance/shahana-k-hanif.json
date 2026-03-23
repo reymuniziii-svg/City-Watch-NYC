@@ -1,0 +1,153 @@
+{
+  "slug": "shahana-k-hanif",
+  "cycle": "2025",
+  "candidateName": "Hanif, Shahana",
+  "candidateId": "2256",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-03-22T01:08:38.334Z",
+  "contributorCount": 1027,
+  "totalRaised": 103198.78,
+  "publicFunds": 253334,
+  "publicFundsShare": 0.711,
+  "smallDollarAmount": 71668.44,
+  "smallDollarDonorCount": 958,
+  "smallDollarShare": 0.694,
+  "topTenDonorShare": 0.106,
+  "maxContributionDonorCount": 12,
+  "maxContributionAmount": 12600,
+  "organizationalDonorAmount": 5858.16,
+  "organizationalDonorShare": 0.057,
+  "outsideCityAmount": 7320,
+  "outsideCityShare": 0.071,
+  "topDonors": [
+    {
+      "name": "DiPietro, Daniel",
+      "amount": 1450,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Life Sciences",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Au, Sau Fong",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Administrator",
+      "employer": "Brooklyn College"
+    },
+    {
+      "name": "Courage to Change PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Corona",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Hanif, Muhammed",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Hanif, Rehana",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "",
+      "employer": "Homemaker"
+    },
+    {
+      "name": "Jones, Caleb",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Software Engineer",
+      "employer": "Asurion"
+    },
+    {
+      "name": "Kusama-Hinte, Jeffrey",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "President/Producer",
+      "employer": "Antidote International Films,"
+    },
+    {
+      "name": "Meiseles, Yaacov (Jake)",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Attorney",
+      "employer": "Global Action on Gun Violence"
+    },
+    {
+      "name": "NYSNA PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Albany",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Shah, Sahil",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Software Engineer",
+      "employer": "New York Times"
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 79941.78000000001,
+      "contributorCount": 757
+    },
+    {
+      "label": "Legal",
+      "amount": 10274.5,
+      "contributorCount": 77
+    },
+    {
+      "label": "Education",
+      "amount": 6847,
+      "contributorCount": 91
+    },
+    {
+      "label": "Government / Public Sector",
+      "amount": 2166,
+      "contributorCount": 26
+    },
+    {
+      "label": "Healthcare",
+      "amount": 1625,
+      "contributorCount": 20
+    },
+    {
+      "label": "Small Business / Retail",
+      "amount": 1129,
+      "contributorCount": 11
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds make up 71% of this campaign's total resources.",
+    "Small-dollar donors contributed 69% of reported private fundraising across 958 contributions.",
+    "Private fundraising looks relatively diffuse: the top ten donors account for only 11% of reported private contributions.",
+    "12 donors gave at the legal maximum, totaling $12,600.",
+    "Among reported private contributions, legal stands out as one of the strongest donor patterns."
+  ]
+}

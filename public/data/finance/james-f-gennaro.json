@@ -1,0 +1,153 @@
+{
+  "slug": "james-f-gennaro",
+  "cycle": "2025",
+  "candidateName": "Gennaro, James",
+  "candidateId": "283",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-03-22T01:08:37.968Z",
+  "contributorCount": 137,
+  "totalRaised": 86125,
+  "publicFunds": null,
+  "publicFundsShare": 0,
+  "smallDollarAmount": 10525,
+  "smallDollarDonorCount": 55,
+  "smallDollarShare": 0.122,
+  "topTenDonorShare": 0.134,
+  "maxContributionDonorCount": 45,
+  "maxContributionAmount": 48300,
+  "organizationalDonorAmount": 21975,
+  "organizationalDonorShare": 0.255,
+  "outsideCityAmount": 16500,
+  "outsideCityShare": 0.192,
+  "topDonors": [
+    {
+      "name": "Slifkin, David",
+      "amount": 2100,
+      "donorType": "IND",
+      "city": "Flushing",
+      "state": "NY",
+      "occupation": "Executive",
+      "employer": "Boulevard Health Management, L"
+    },
+    {
+      "name": "2025, Farias",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Unemployed",
+      "employer": ""
+    },
+    {
+      "name": "ACEC NYC PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Andujar, Destiny",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Ozone Park",
+      "state": "NY",
+      "occupation": "Executive Assistant",
+      "employer": "Marx Development Group"
+    },
+    {
+      "name": "Balk, Chana",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Personal Trainer",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Balk, Gertrude",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Flushing",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Davydov, Rita",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Jamaica",
+      "state": "NY",
+      "occupation": "Owner",
+      "employer": "Owner"
+    },
+    {
+      "name": "Davydov, Roman",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Briarwood",
+      "state": "NY",
+      "occupation": "Broker",
+      "employer": "Tavak llc"
+    },
+    {
+      "name": "Davydov, Solomon",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Briarwood",
+      "state": "NY",
+      "occupation": "Real Estate",
+      "employer": "Exit"
+    },
+    {
+      "name": "IBEW NY PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Washington",
+      "state": "DC",
+      "occupation": "",
+      "employer": ""
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 67820,
+      "contributorCount": 103
+    },
+    {
+      "label": "Real Estate",
+      "amount": 4825,
+      "contributorCount": 8
+    },
+    {
+      "label": "Legal",
+      "amount": 3450,
+      "contributorCount": 9
+    },
+    {
+      "label": "Healthcare",
+      "amount": 3300,
+      "contributorCount": 4
+    },
+    {
+      "label": "Education",
+      "amount": 2500,
+      "contributorCount": 4
+    },
+    {
+      "label": "Small Business / Retail",
+      "amount": 2150,
+      "contributorCount": 3
+    }
+  ],
+  "explanatoryNotes": [
+    "Private fundraising looks relatively diffuse: the top ten donors account for only 13% of reported private contributions.",
+    "45 donors gave at the legal maximum, totaling $48,300.",
+    "Committees, unions, or other non-individual donors made up 26% of reported private fundraising.",
+    "A noticeable share of reported private fundraising, 19%, came from outside New York City.",
+    "Among reported private contributions, real estate stands out as one of the strongest donor patterns."
+  ]
+}

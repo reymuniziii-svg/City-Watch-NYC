@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Mail, Phone, Globe, Twitter, Facebook, MapPin, FileText, Landmark, Calendar, ChevronRight, Loader2 } from 'lucide-react';
+import { Mail, Phone, Globe, Twitter, FileText, Landmark, Calendar, BarChart3, Loader2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { CouncilMember, Bill, Hearing, CampaignFinance } from '../types';
-import { fetchMembers, fetchBills, fetchHearings } from '../services/nycDataService';
+import { CouncilMember, Bill, Hearing, CampaignFinance, MemberMetrics } from '../types';
+import { fetchMembers, fetchBills, fetchHearings, getCampaignFinance, getMemberMetrics } from '../services/nycDataService';
 import BillCard from './BillCard';
 import HearingCard from './HearingCard';
 import FinanceView from './FinanceView';
+import Scorecard from './Scorecard';
+import ActivityFeed from './ActivityFeed';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
@@ -20,7 +22,8 @@ export default function MemberDashboard() {
   const [bills, setBills] = useState<Bill[]>([]);
   const [hearings, setHearings] = useState<Hearing[]>([]);
   const [finance, setFinance] = useState<CampaignFinance | null>(null);
-  const [activeTab, setActiveTab] = useState<'activity' | 'money' | 'hearings'>('activity');
+  const [metrics, setMetrics] = useState<MemberMetrics | null>(null);
+  const [activeTab, setActiveTab] = useState<'activity' | 'bills' | 'money' | 'hearings'>('activity');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -38,34 +41,27 @@ export default function MemberDashboard() {
 
         if (foundMember) {
           setMember(foundMember);
-          const [allBills, allHearings] = await Promise.all([fetchBills(), fetchHearings()]);
+          const [allBills, allHearings, financeProfile, memberMetrics] = await Promise.all([
+            fetchBills(),
+            fetchHearings(),
+            getCampaignFinance(foundMember.id),
+            getMemberMetrics(foundMember.id),
+          ]);
           
-          // Filter bills sponsored by this member
-          setBills(allBills.filter(b => b.sponsors?.includes(foundMember!.name)));
+          const memberBills = allBills
+            .filter((bill) => bill.leadSponsorSlug === foundMember!.id)
+            .sort((left, right) => {
+              const leftDate = new Date(left.lastActionDate || left.introducedDate || 0).getTime();
+              const rightDate = new Date(right.lastActionDate || right.introducedDate || 0).getTime();
+              return rightDate - leftDate;
+            });
+
+          setBills(memberBills);
           
           // Filter hearings related to this member's committees
           setHearings(allHearings.filter(h => foundMember!.committees?.includes(h.committee)));
-
-          // Mock campaign finance data
-          setFinance({
-            totalRaised: 245000 + (foundMember.district * 1000),
-            publicFunds: 180000,
-            smallDollarShare: 65,
-            topDonors: [
-              { name: 'NYC Hotel Trades Council', amount: 15000 },
-              { name: '32BJ SEIU', amount: 12000 },
-              { name: 'UFT PAC', amount: 10000 },
-              { name: 'Real Estate Board of NY', amount: 8000 },
-              { name: 'Individual Donors', amount: 120000 }
-            ],
-            donorPatterns: [
-              { category: 'Labor Unions', amount: 45000 },
-              { category: 'Real Estate', amount: 25000 },
-              { category: 'Education', amount: 15000 },
-              { category: 'Healthcare', amount: 20000 },
-              { category: 'Individual Small Donors', amount: 140000 }
-            ]
-          });
+          setFinance(financeProfile);
+          setMetrics(memberMetrics);
         }
       } catch (error) {
         console.error('Error loading member data:', error);
@@ -163,7 +159,8 @@ export default function MemberDashboard() {
       {/* Tabs */}
       <div className="flex gap-2 p-1.5 bg-slate-100 rounded-2xl w-fit mx-auto md:mx-0">
         {[
-          { id: 'activity', label: 'Legislative Activity', icon: FileText },
+          { id: 'activity', label: 'Activity', icon: BarChart3 },
+          { id: 'bills', label: 'Bills', icon: FileText },
           { id: 'hearings', label: 'Hearings', icon: Calendar },
           { id: 'money', label: 'Money', icon: Landmark },
         ].map((tab) => (
@@ -194,16 +191,38 @@ export default function MemberDashboard() {
               exit={{ opacity: 0, x: -20 }}
               className="space-y-6"
             >
-              <div className="flex items-center justify-between mb-2">
+              {metrics ? (
+                <Scorecard metrics={metrics} />
+              ) : (
+                <div className="rounded-3xl border border-dashed border-slate-200 bg-white p-8 text-center">
+                  <p className="font-semibold text-slate-900">Scorecard data unavailable</p>
+                  <p className="mt-2 text-slate-500">
+                    Static activity metrics are not available for this member yet.
+                  </p>
+                </div>
+              )}
+              <ActivityFeed bills={bills} />
+            </motion.div>
+          )}
+
+          {activeTab === 'bills' && (
+            <motion.div
+              key="bills"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="space-y-6"
+            >
+              <div className="mb-2 flex items-center justify-between">
                 <h2 className="text-2xl font-bold text-slate-900">Sponsored Bills</h2>
                 <span className="text-sm font-medium text-slate-500">{bills.length} Active Bills</span>
               </div>
               {bills.length > 0 ? (
                 <div className="grid grid-cols-1 gap-6">
-                  {bills.map(bill => <BillCard key={bill.id} bill={bill} />)}
+                  {bills.map((bill) => <BillCard key={bill.id} bill={bill} />)}
                 </div>
               ) : (
-                <div className="p-12 bg-white border border-dashed border-slate-200 rounded-3xl text-center">
+                <div className="rounded-3xl border border-dashed border-slate-200 bg-white p-12 text-center">
                   <p className="text-slate-500">No active bill sponsorships found for this session.</p>
                 </div>
               )}
@@ -234,7 +253,7 @@ export default function MemberDashboard() {
             </motion.div>
           )}
 
-          {activeTab === 'money' && finance && (
+          {activeTab === 'money' && (
             <motion.div
               key="money"
               initial={{ opacity: 0, x: 20 }}

@@ -1,0 +1,153 @@
+{
+  "slug": "chi-a-osse",
+  "cycle": "2025",
+  "candidateName": "Osse, Chi",
+  "candidateId": "2371",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-03-22T01:08:38.246Z",
+  "contributorCount": 1401,
+  "totalRaised": 74298.96,
+  "publicFunds": 48134,
+  "publicFundsShare": 0.393,
+  "smallDollarAmount": 55750,
+  "smallDollarDonorCount": 1358,
+  "smallDollarShare": 0.75,
+  "topTenDonorShare": 0.141,
+  "maxContributionDonorCount": 7,
+  "maxContributionAmount": 7350,
+  "organizationalDonorAmount": 7830,
+  "organizationalDonorShare": 0.105,
+  "outsideCityAmount": 5622,
+  "outsideCityShare": 0.076,
+  "topDonors": [
+    {
+      "name": "Glazer, Ilana",
+      "amount": 1100,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Comedian",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Stephenson, Alistair",
+      "amount": 1088.96,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Chief of Staff",
+      "employer": "National Domestic Workers Alli"
+    },
+    {
+      "name": "CWA District One PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Doctors Council SEIU COPE",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Dupler, Joshua",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Executive function coach and s",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "New York Hotel Trades Council",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "NYSNA Political Action Committ",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Albany",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "United Federation of Teachers",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "BOWLING GREEN",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "1199 SEIU",
+      "amount": 1000,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Celestin, Bob",
+      "amount": 1000,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Attorney",
+      "employer": "Self-Employed"
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 63316.96,
+      "contributorCount": 1196
+    },
+    {
+      "label": "Legal",
+      "amount": 2708,
+      "contributorCount": 33
+    },
+    {
+      "label": "Small Business / Retail",
+      "amount": 2076,
+      "contributorCount": 16
+    },
+    {
+      "label": "Education",
+      "amount": 1780,
+      "contributorCount": 58
+    },
+    {
+      "label": "Healthcare",
+      "amount": 1710,
+      "contributorCount": 38
+    },
+    {
+      "label": "Real Estate",
+      "amount": 1386,
+      "contributorCount": 22
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds account for about 39% of the campaign's total resources.",
+    "Small-dollar donors contributed 75% of reported private fundraising across 1358 contributions.",
+    "Private fundraising looks relatively diffuse: the top ten donors account for only 14% of reported private contributions.",
+    "7 donors gave at the legal maximum, totaling $7,350.",
+    "Among reported private contributions, legal stands out as one of the strongest donor patterns."
+  ]
+}

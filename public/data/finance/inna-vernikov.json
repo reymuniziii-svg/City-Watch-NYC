@@ -1,0 +1,153 @@
+{
+  "slug": "inna-vernikov",
+  "cycle": "2025",
+  "candidateName": "Vernikov, Inna",
+  "candidateId": "2423",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-03-22T01:08:38.614Z",
+  "contributorCount": 335,
+  "totalRaised": 51466.98,
+  "publicFunds": 179196,
+  "publicFundsShare": 0.777,
+  "smallDollarAmount": 28416.98,
+  "smallDollarDonorCount": 292,
+  "smallDollarShare": 0.552,
+  "topTenDonorShare": 0.211,
+  "maxContributionDonorCount": 6,
+  "maxContributionAmount": 6300,
+  "organizationalDonorAmount": 500,
+  "organizationalDonorShare": 0.01,
+  "outsideCityAmount": 9452,
+  "outsideCityShare": 0.184,
+  "topDonors": [
+    {
+      "name": "Steinmann, David",
+      "amount": 1550,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Agus, Jonathan",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Englewood",
+      "state": "NJ",
+      "occupation": "Real Estate",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Donn, Leah",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Professor",
+      "employer": "College of Mt. Saint Vincent"
+    },
+    {
+      "name": "Grossman, Keith",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "President",
+      "employer": "MoonPay"
+    },
+    {
+      "name": "Nederlander, James L",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "CEO/President",
+      "employer": "Nederlander Producing Co. of A"
+    },
+    {
+      "name": "SINENSKY, MICHAEL",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Carolina",
+      "state": "",
+      "occupation": "CONSULTANT",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "torossian, ronn",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "ny",
+      "state": "NY",
+      "occupation": "entrepreneur",
+      "employer": "entrepreneur"
+    },
+    {
+      "name": "Goldman, Esta",
+      "amount": 1000,
+      "donorType": "IND",
+      "city": "Lakewood",
+      "state": "NJ",
+      "occupation": "Homemaker",
+      "employer": ""
+    },
+    {
+      "name": "Goldstein, Joel",
+      "amount": 1000,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Catering",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Katz, DAVID",
+      "amount": 1000,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Attorney",
+      "employer": "Self-Employed"
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 38571.979999999996,
+      "contributorCount": 251
+    },
+    {
+      "label": "Legal",
+      "amount": 5285,
+      "contributorCount": 27
+    },
+    {
+      "label": "Real Estate",
+      "amount": 4230,
+      "contributorCount": 15
+    },
+    {
+      "label": "Education",
+      "amount": 3096,
+      "contributorCount": 11
+    },
+    {
+      "label": "Healthcare",
+      "amount": 2534,
+      "contributorCount": 19
+    },
+    {
+      "label": "Finance",
+      "amount": 810,
+      "contributorCount": 7
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds make up 78% of this campaign's total resources.",
+    "Small-dollar donors contributed 55% of reported private fundraising across 292 contributions.",
+    "6 donors gave at the legal maximum, totaling $6,300.",
+    "A noticeable share of reported private fundraising, 18%, came from outside New York City.",
+    "Among reported private contributions, legal stands out as one of the strongest donor patterns."
+  ]
+}

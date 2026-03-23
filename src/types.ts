@@ -27,6 +27,13 @@ export interface Bill {
   sponsors: string[];
   introducedDate: string;
   lastActionDate: string;
+  introNumber?: string;
+  session?: number;
+  statusBucket?: string;
+  committee?: string;
+  sponsorCount?: number;
+  leadSponsorSlug?: string | null;
+  route?: string;
   plainEnglishSummary?: {
     whatItDoes: string;
     whoItAffects: string;
@@ -52,9 +59,49 @@ export interface Hearing {
 }
 
 export interface CampaignFinance {
-  totalRaised: number;
-  publicFunds: number;
-  smallDollarShare: number;
-  topDonors: { name: string; amount: number }[];
-  donorPatterns: { category: string; amount: number }[];
+  slug: string;
+  cycle: string;
+  candidateName: string | null;
+  candidateId: string | null;
+  sourceUrl: string;
+  updatedAt: string;
+  contributorCount: number;
+  totalRaised: number | null;
+  publicFunds: number | null;
+  publicFundsShare: number | null;
+  smallDollarAmount: number | null;
+  smallDollarDonorCount: number | null;
+  smallDollarShare: number | null;
+  topTenDonorShare: number | null;
+  maxContributionDonorCount: number | null;
+  maxContributionAmount: number | null;
+  organizationalDonorAmount: number | null;
+  organizationalDonorShare: number | null;
+  outsideCityAmount: number | null;
+  outsideCityShare: number | null;
+  topDonors: {
+    name: string;
+    amount: number;
+    donorType: string;
+    city: string;
+    state: string;
+    occupation: string;
+    employer: string;
+  }[];
+  topIndustries: {
+    label: string;
+    amount: number;
+    contributorCount: number;
+  }[];
+  explanatoryNotes: string[];
+}
+
+export interface MemberMetrics {
+  slug: string;
+  billsSponsored: number;
+  billsEnacted: number;
+  coSponsorshipRate: number;
+  hearingActivity: number;
+  rankSponsored: number;
+  rankEnacted: number;
 }

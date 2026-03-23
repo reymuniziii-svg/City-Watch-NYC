@@ -1,0 +1,153 @@
+{
+  "slug": "shaun-abreu",
+  "cycle": "2025",
+  "candidateName": "Abreu, Shaun",
+  "candidateId": "2243",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-03-22T01:08:37.549Z",
+  "contributorCount": 644,
+  "totalRaised": 114099.93,
+  "publicFunds": 336498,
+  "publicFundsShare": 0.747,
+  "smallDollarAmount": 54962.43,
+  "smallDollarDonorCount": 563,
+  "smallDollarShare": 0.482,
+  "topTenDonorShare": 0.099,
+  "maxContributionDonorCount": 32,
+  "maxContributionAmount": 33600,
+  "organizationalDonorAmount": 15100,
+  "organizationalDonorShare": 0.132,
+  "outsideCityAmount": 18475,
+  "outsideCityShare": 0.162,
+  "topDonors": [
+    {
+      "name": "Schorin, Charles",
+      "amount": 1510.1399999999999,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Ores, Michelle",
+      "amount": 1411.25,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "32BJ United ADF",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Acosta, Rolando T",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "lawyer",
+      "employer": "Pillsbury Winthrop Shaw Pittma"
+    },
+    {
+      "name": "Fixel, Lauren",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Philanthropist",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Fixel, Lee",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Investor",
+      "employer": "Addition"
+    },
+    {
+      "name": "Garcia, Frank",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Miami",
+      "state": "FL",
+      "occupation": "Finance",
+      "employer": "GLC capital"
+    },
+    {
+      "name": "Goldshine, Scott",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "General Manager",
+      "employer": "Zabars"
+    },
+    {
+      "name": "Gottesman, Sally",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Hanson, Stephen",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 86973.81999999999,
+      "contributorCount": 484
+    },
+    {
+      "label": "Legal",
+      "amount": 9713.5,
+      "contributorCount": 50
+    },
+    {
+      "label": "Finance",
+      "amount": 6610,
+      "contributorCount": 20
+    },
+    {
+      "label": "Education",
+      "amount": 4058,
+      "contributorCount": 39
+    },
+    {
+      "label": "Real Estate",
+      "amount": 3780,
+      "contributorCount": 12
+    },
+    {
+      "label": "Healthcare",
+      "amount": 2270,
+      "contributorCount": 16
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds make up 75% of this campaign's total resources.",
+    "Private fundraising looks relatively diffuse: the top ten donors account for only 10% of reported private contributions.",
+    "32 donors gave at the legal maximum, totaling $33,600.",
+    "A noticeable share of reported private fundraising, 16%, came from outside New York City.",
+    "Among reported private contributions, legal stands out as one of the strongest donor patterns."
+  ]
+}

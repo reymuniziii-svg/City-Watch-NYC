@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Search, Users, FileText, Calendar, Landmark, Menu, X } from 'lucide-react';
+import { Search, Users, FileText, Calendar, Landmark, Map, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import GlobalSearch from './GlobalSearch';
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -13,9 +14,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
   const location = useLocation();
 
+  React.useEffect(() => {
+    setIsSidebarOpen(false);
+  }, [location.pathname, location.search]);
+
   const navItems = [
     { name: 'Find My Member', icon: Search, path: '/' },
     { name: 'Council Members', icon: Users, path: '/members' },
+    { name: 'District Map', icon: Map, path: '/districts' },
     { name: 'Bills', icon: FileText, path: '/bills' },
     { name: 'Hearings', icon: Calendar, path: '/hearings' },
   ];
@@ -45,6 +51,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               Council Watch <span className="text-emerald-600">NYC</span>
             </span>
           </Link>
+
+          <div className="mb-6">
+            <GlobalSearch />
+          </div>
 
           <nav className="flex-1 space-y-2">
             {navItems.map((item) => {

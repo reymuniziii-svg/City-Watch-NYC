@@ -8,5 +8,14 @@ coverage/
 !.env.example
 
 # Build-time generated data
-data/
-public/data/
+/data/
+public/data/*
+!public/data/bills-index.json
+!public/data/district-map.geojson
+!public/data/districts-index.json
+!public/data/hearings-upcoming.json
+!public/data/member-metrics.json
+!public/data/members-index.json
+!public/data/search-index.json
+!public/data/finance/
+!public/data/finance/*.json

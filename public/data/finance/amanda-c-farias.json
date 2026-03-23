@@ -1,0 +1,153 @@
+{
+  "slug": "amanda-c-farias",
+  "cycle": "2025",
+  "candidateName": "Farias, Amanda",
+  "candidateId": "1945",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-03-22T01:08:37.845Z",
+  "contributorCount": 597,
+  "totalRaised": 185407.15,
+  "publicFunds": null,
+  "publicFundsShare": 0,
+  "smallDollarAmount": 61694.18,
+  "smallDollarDonorCount": 450,
+  "smallDollarShare": 0.333,
+  "topTenDonorShare": 0.086,
+  "maxContributionDonorCount": 39,
+  "maxContributionAmount": 54350,
+  "organizationalDonorAmount": 46541,
+  "organizationalDonorShare": 0.251,
+  "outsideCityAmount": 52631,
+  "outsideCityShare": 0.284,
+  "topDonors": [
+    {
+      "name": "ACEC New York City PAC",
+      "amount": 1600,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Albanese, Christopher",
+      "amount": 1600,
+      "donorType": "IND",
+      "city": "Port Washington",
+      "state": "NY",
+      "occupation": "Real Estate",
+      "employer": "Albanese Organization, Inc."
+    },
+    {
+      "name": "Brown & Weinraub NYC PAC",
+      "amount": 1600,
+      "donorType": "PCOMP",
+      "city": "Albany",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Cozen O'Connor PAC",
+      "amount": 1600,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "District Council 37",
+      "amount": 1600,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Goicochea, Edwin",
+      "amount": 1600,
+      "donorType": "IND",
+      "city": "Oakland Gardens",
+      "state": "NY",
+      "occupation": "Managing Partner",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "IBT Joint Council No 16 PAC",
+      "amount": 1600,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "IUOE Local 30 State PAC",
+      "amount": 1600,
+      "donorType": "PCOMP",
+      "city": "Whitestone",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "McGonigle, Sean",
+      "amount": 1600,
+      "donorType": "IND",
+      "city": "New Hyde Park",
+      "state": "NY",
+      "occupation": "Manager",
+      "employer": "Pork King Sausage"
+    },
+    {
+      "name": "Moskowitz, Jeremy",
+      "amount": 1600,
+      "donorType": "IND",
+      "city": "New york",
+      "state": "NY",
+      "occupation": "EVP",
+      "employer": "VGM"
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 151247.15,
+      "contributorCount": 465
+    },
+    {
+      "label": "Legal",
+      "amount": 14945,
+      "contributorCount": 42
+    },
+    {
+      "label": "Real Estate",
+      "amount": 8415,
+      "contributorCount": 19
+    },
+    {
+      "label": "Government / Public Sector",
+      "amount": 4091,
+      "contributorCount": 26
+    },
+    {
+      "label": "Healthcare",
+      "amount": 2944,
+      "contributorCount": 15
+    },
+    {
+      "label": "Small Business / Retail",
+      "amount": 2725,
+      "contributorCount": 8
+    }
+  ],
+  "explanatoryNotes": [
+    "Private fundraising looks relatively diffuse: the top ten donors account for only 9% of reported private contributions.",
+    "39 donors gave at the legal maximum, totaling $54,350.",
+    "Committees, unions, or other non-individual donors made up 25% of reported private fundraising.",
+    "A noticeable share of reported private fundraising, 28%, came from outside New York City.",
+    "Among reported private contributions, legal stands out as one of the strongest donor patterns."
+  ]
+}

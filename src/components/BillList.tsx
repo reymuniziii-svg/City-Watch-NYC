@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { FileText, Search, Filter, Loader2 } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
+import { Search, Loader2 } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Bill } from '../types';
 import { fetchBills } from '../services/nycDataService';
 import BillCard from './BillCard';
 
 export default function BillList() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [bills, setBills] = useState<Bill[]>([]);
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState(() => searchParams.get('q') ?? '');
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -17,11 +19,43 @@ export default function BillList() {
     });
   }, []);
 
-  const filteredBills = bills.filter(b => 
-    b.title?.toLowerCase().includes(search.toLowerCase()) ||
-    b.number?.toLowerCase().includes(search.toLowerCase()) ||
-    b.summary?.toLowerCase().includes(search.toLowerCase())
-  );
+  useEffect(() => {
+    setSearch(searchParams.get('q') ?? '');
+  }, [searchParams]);
+
+  const filteredBills = bills.filter((bill) => {
+    const normalizedQuery = search.trim().toLowerCase();
+    if (!normalizedQuery) {
+      return true;
+    }
+
+    const haystack = [
+      bill.title,
+      bill.number,
+      bill.introNumber,
+      bill.summary,
+      bill.status,
+      bill.committee,
+    ]
+      .filter(Boolean)
+      .join(' ')
+      .toLowerCase();
+
+    return haystack.includes(normalizedQuery);
+  });
+
+  const handleSearchChange = (value: string) => {
+    setSearch(value);
+
+    const nextParams = new URLSearchParams(searchParams);
+    if (value.trim()) {
+      nextParams.set('q', value);
+    } else {
+      nextParams.delete('q');
+    }
+
+    setSearchParams(nextParams, { replace: true });
+  };
 
   if (isLoading) {
     return (
@@ -47,7 +81,7 @@ export default function BillList() {
             placeholder="Search by bill # or keyword..."
             className="w-full pl-12 pr-4 py-3 bg-white border border-slate-200 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all"
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(e) => handleSearchChange(e.target.value)}
           />
         </div>
       </div>

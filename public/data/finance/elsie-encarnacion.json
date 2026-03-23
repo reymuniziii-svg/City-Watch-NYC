@@ -1,0 +1,153 @@
+{
+  "slug": "elsie-encarnacion",
+  "cycle": "2025",
+  "candidateName": "Encarnacion, Elsie",
+  "candidateId": "2843",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-03-22T01:08:37.575Z",
+  "contributorCount": 418,
+  "totalRaised": 67966,
+  "publicFunds": 211389,
+  "publicFundsShare": 0.757,
+  "smallDollarAmount": 40451,
+  "smallDollarDonorCount": 376,
+  "smallDollarShare": 0.595,
+  "topTenDonorShare": 0.168,
+  "maxContributionDonorCount": 11,
+  "maxContributionAmount": 11550,
+  "organizationalDonorAmount": 14075,
+  "organizationalDonorShare": 0.207,
+  "outsideCityAmount": 11980,
+  "outsideCityShare": 0.176,
+  "topDonors": [
+    {
+      "name": "New York Apartment Assn. PAC",
+      "amount": 2000,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "32BJ United ADF",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "CSA COPE PAC Fund",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "District Council 37 PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Farias 2025",
+      "amount": 1050,
+      "donorType": "PCOMC",
+      "city": "Bronx",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Kempner, Michael",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Executive",
+      "employer": "MikeWorldWide"
+    },
+    {
+      "name": "Mason Tenders District Council",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Mateus, Jimmy",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Jackson Heights",
+      "state": "NY",
+      "occupation": "Owner",
+      "employer": "Ricardo LLC"
+    },
+    {
+      "name": "NYSNA PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Albany",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Salamanca, Rafael",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Bronx",
+      "state": "NY",
+      "occupation": "Council member",
+      "employer": "NYC council"
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 54596,
+      "contributorCount": 318
+    },
+    {
+      "label": "Education",
+      "amount": 3125,
+      "contributorCount": 27
+    },
+    {
+      "label": "Labor",
+      "amount": 2305,
+      "contributorCount": 15
+    },
+    {
+      "label": "Small Business / Retail",
+      "amount": 2110,
+      "contributorCount": 9
+    },
+    {
+      "label": "Government / Public Sector",
+      "amount": 1850,
+      "contributorCount": 13
+    },
+    {
+      "label": "Legal",
+      "amount": 1400,
+      "contributorCount": 8
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds make up 76% of this campaign's total resources.",
+    "Small-dollar donors contributed 60% of reported private fundraising across 376 contributions.",
+    "11 donors gave at the legal maximum, totaling $11,550.",
+    "Committees, unions, or other non-individual donors made up 21% of reported private fundraising.",
+    "A noticeable share of reported private fundraising, 18%, came from outside New York City."
+  ]
+}

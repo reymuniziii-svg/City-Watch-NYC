@@ -1,0 +1,153 @@
+{
+  "slug": "shanel-thomas-henry",
+  "cycle": "2025",
+  "candidateName": "Thomas-Henry, Shanel",
+  "candidateId": "2923",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-03-22T01:08:37.910Z",
+  "contributorCount": 574,
+  "totalRaised": 109822,
+  "publicFunds": 223368,
+  "publicFundsShare": 0.67,
+  "smallDollarAmount": 56192,
+  "smallDollarDonorCount": 482,
+  "smallDollarShare": 0.512,
+  "topTenDonorShare": 0.096,
+  "maxContributionDonorCount": 26,
+  "maxContributionAmount": 27300,
+  "organizationalDonorAmount": 13150,
+  "organizationalDonorShare": 0.12,
+  "outsideCityAmount": 40126,
+  "outsideCityShare": 0.365,
+  "topDonors": [
+    {
+      "name": "ACEC New York City PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Barnes, Marc",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Washington",
+      "state": "DC",
+      "occupation": "Restaurant - Service Industry",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "BURKE, JAMES",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Hobe Sound",
+      "state": "FL",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Cohen, Tiffany",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Scarsdale",
+      "state": "NY",
+      "occupation": "Corporate Communications",
+      "employer": "Point72"
+    },
+    {
+      "name": "Cohn, Brian",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Greenwich",
+      "state": "CT",
+      "occupation": "Investor",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Comella, Maria",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Consultant",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Cozen O'Connor Political Actio",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Philadelphia",
+      "state": "PA",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "District Council 37",
+      "amount": 1050,
+      "donorType": "PCOMZ",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Dixon, George R",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Flushing",
+      "state": "NY",
+      "occupation": "",
+      "employer": "Retired"
+    },
+    {
+      "name": "Dowd, Matthew",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New Canaan",
+      "state": "CT",
+      "occupation": "Research",
+      "employer": "Point72"
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 90221,
+      "contributorCount": 473
+    },
+    {
+      "label": "Legal",
+      "amount": 5710,
+      "contributorCount": 19
+    },
+    {
+      "label": "Finance",
+      "amount": 3800,
+      "contributorCount": 7
+    },
+    {
+      "label": "Government / Public Sector",
+      "amount": 3456,
+      "contributorCount": 18
+    },
+    {
+      "label": "Small Business / Retail",
+      "amount": 3245,
+      "contributorCount": 15
+    },
+    {
+      "label": "Healthcare",
+      "amount": 2415,
+      "contributorCount": 19
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds make up 67% of this campaign's total resources.",
+    "Small-dollar donors contributed 51% of reported private fundraising across 482 contributions.",
+    "Private fundraising looks relatively diffuse: the top ten donors account for only 10% of reported private contributions.",
+    "26 donors gave at the legal maximum, totaling $27,300.",
+    "A noticeable share of reported private fundraising, 37%, came from outside New York City."
+  ]
+}

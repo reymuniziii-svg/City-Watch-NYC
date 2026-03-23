@@ -1,0 +1,153 @@
+{
+  "slug": "harvey-d-epstein",
+  "cycle": "2025",
+  "candidateName": "Epstein, Harvey",
+  "candidateId": "2860",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-03-22T01:08:37.459Z",
+  "contributorCount": 773,
+  "totalRaised": 102346.03,
+  "publicFunds": 370552,
+  "publicFundsShare": 0.784,
+  "smallDollarAmount": 59198.91,
+  "smallDollarDonorCount": 706,
+  "smallDollarShare": 0.578,
+  "topTenDonorShare": 0.106,
+  "maxContributionDonorCount": 13,
+  "maxContributionAmount": 13650,
+  "organizationalDonorAmount": 12322.12,
+  "organizationalDonorShare": 0.12,
+  "outsideCityAmount": 13665.42,
+  "outsideCityShare": 0.134,
+  "topDonors": [
+    {
+      "name": "Beranbaum, Joan",
+      "amount": 1225,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Bilek, Mary Lu",
+      "amount": 1175,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "2025, Farias",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "The Bronx",
+      "state": "NY",
+      "occupation": "Farias 2025",
+      "employer": "Farias 2025"
+    },
+    {
+      "name": "Committee on Political Educati",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Communication Workers of Ameri",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Council of Supervisors and Adm",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "DC 37 Political Action Committ",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Duane, Thomas",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Eliot, Anita",
+      "amount": 1050,
+      "donorType": "SPO",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Attorney",
+      "employer": "The Committee of Interns and R"
+    },
+    {
+      "name": "Jacobs, Rob",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 80255.45000000001,
+      "contributorCount": 580
+    },
+    {
+      "label": "Legal",
+      "amount": 12834,
+      "contributorCount": 78
+    },
+    {
+      "label": "Education",
+      "amount": 3742,
+      "contributorCount": 39
+    },
+    {
+      "label": "Real Estate",
+      "amount": 1686,
+      "contributorCount": 13
+    },
+    {
+      "label": "Healthcare",
+      "amount": 1390,
+      "contributorCount": 23
+    },
+    {
+      "label": "Government / Public Sector",
+      "amount": 1045,
+      "contributorCount": 16
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds make up 78% of this campaign's total resources.",
+    "Small-dollar donors contributed 58% of reported private fundraising across 706 contributions.",
+    "Private fundraising looks relatively diffuse: the top ten donors account for only 11% of reported private contributions.",
+    "13 donors gave at the legal maximum, totaling $13,650.",
+    "Among reported private contributions, legal stands out as one of the strongest donor patterns."
+  ]
+}

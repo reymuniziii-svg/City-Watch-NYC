@@ -234,14 +234,17 @@ export interface MemberProfile {
 
 export interface SearchDocument {
   id: string;
-  type: "member" | "bill" | "committee";
+  type: "member" | "bill" | "hearing";
   label: string;
   subtitle: string;
   route: string;
   introNumber?: string;
   billTitle?: string;
   memberName?: string;
+  hearingTitle?: string;
+  hearingDate?: string;
   committeeName?: string;
+  searchText?: string;
 }
 
 export interface SummaryCacheEntry {

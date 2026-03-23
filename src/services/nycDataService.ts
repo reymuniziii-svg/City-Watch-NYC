@@ -1,10 +1,12 @@
-import { CouncilMember, Bill, Hearing } from '../types';
+import { CouncilMember, Bill, Hearing, CampaignFinance, MemberMetrics } from '../types';
 import type { MemberSummary, HearingRecord } from '../lib/types';
 
 // Static data caches
 let membersCache: CouncilMember[] | null = null;
 let billsCache: Bill[] | null = null;
 let hearingsCache: Hearing[] | null = null;
+const financeCache = new Map<string, CampaignFinance | null>();
+let memberMetricsCache: MemberMetrics[] | null = null;
 
 interface BillIndexRecord {
   billId: string;
@@ -42,12 +44,19 @@ function mapBillToBill(bill: BillIndexRecord): Bill {
   return {
     id: bill.billId,
     number: bill.introNumber,
+    introNumber: bill.introNumber,
     title: bill.title,
     summary: bill.summary,
     status: bill.statusName,
     sponsors: [],
     introducedDate: bill.introDate,
     lastActionDate: bill.actionDate,
+    statusBucket: (bill as BillIndexRecord & { statusBucket?: string }).statusBucket,
+    committee: (bill as BillIndexRecord & { committee?: string }).committee,
+    sponsorCount: bill.sponsorCount,
+    leadSponsorSlug: bill.leadSponsorSlug,
+    route: (bill as BillIndexRecord & { route?: string }).route,
+    session: (bill as BillIndexRecord & { session?: number }).session,
   };
 }
 
@@ -119,6 +128,52 @@ export async function fetchHearings(): Promise<Hearing[]> {
     console.error('Error loading hearings:', error);
     return [];
   }
+}
+
+export async function getCampaignFinance(memberId: string): Promise<CampaignFinance | null> {
+  if (financeCache.has(memberId)) {
+    return financeCache.get(memberId) ?? null;
+  }
+
+  try {
+    const response = await fetch('/data/finance/' + memberId + '.json');
+    if (!response.ok) {
+      financeCache.set(memberId, null);
+      return null;
+    }
+
+    const finance: CampaignFinance = await response.json();
+    financeCache.set(memberId, finance);
+    return finance;
+  } catch (error) {
+    console.error('Error loading campaign finance:', error);
+    financeCache.set(memberId, null);
+    return null;
+  }
+}
+
+export async function fetchMemberMetrics(): Promise<MemberMetrics[]> {
+  if (memberMetricsCache) return memberMetricsCache;
+
+  try {
+    const response = await fetch('/data/member-metrics.json');
+    if (!response.ok) {
+      console.error('Failed to load member-metrics.json');
+      return [];
+    }
+
+    const metrics: MemberMetrics[] = await response.json();
+    memberMetricsCache = metrics;
+    return memberMetricsCache;
+  } catch (error) {
+    console.error('Error loading member metrics:', error);
+    return [];
+  }
+}
+
+export async function getMemberMetrics(memberId: string): Promise<MemberMetrics | null> {
+  const metrics = await fetchMemberMetrics();
+  return metrics.find((entry) => entry.slug === memberId) ?? null;
 }
 
 export async function searchAddress(query: string) {

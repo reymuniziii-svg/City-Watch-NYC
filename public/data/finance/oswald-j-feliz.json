@@ -1,0 +1,153 @@
+{
+  "slug": "oswald-j-feliz",
+  "cycle": "2025",
+  "candidateName": "Feliz, Oswald",
+  "candidateId": "2311",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-03-22T01:08:37.767Z",
+  "contributorCount": 227,
+  "totalRaised": 43199,
+  "publicFunds": 71910,
+  "publicFundsShare": 0.625,
+  "smallDollarAmount": 16314,
+  "smallDollarDonorCount": 193,
+  "smallDollarShare": 0.378,
+  "topTenDonorShare": 0.243,
+  "maxContributionDonorCount": 15,
+  "maxContributionAmount": 15750,
+  "organizationalDonorAmount": 13925,
+  "organizationalDonorShare": 0.322,
+  "outsideCityAmount": 14725,
+  "outsideCityShare": 0.341,
+  "topDonors": [
+    {
+      "name": "De Los Santos, Shariff",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Bergenfield",
+      "state": "NJ",
+      "occupation": "Healthcare Admin",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "District Council (DC) 37 Polit",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "IUOE Local 30 State PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "",
+      "state": "",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Johnson, John",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New Rochelle",
+      "state": "NY",
+      "occupation": "Consultant",
+      "employer": "TREDA Inc"
+    },
+    {
+      "name": "JULIE MENIN 2025",
+      "amount": 1050,
+      "donorType": "PCOMC",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Nederlander, James",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "CEO",
+      "employer": "Nederalander"
+    },
+    {
+      "name": "New York Hotel Trades Council",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "NYS NURSES ASSOCIATION",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Albany",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Schreiber, Adam",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Teaneck",
+      "state": "NJ",
+      "occupation": "Investor",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Shevchenko, Oleksandr",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Bronx",
+      "state": "NY",
+      "occupation": "President",
+      "employer": "Ailalab"
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 34479,
+      "contributorCount": 183
+    },
+    {
+      "label": "Real Estate",
+      "amount": 2200,
+      "contributorCount": 8
+    },
+    {
+      "label": "Legal",
+      "amount": 2105,
+      "contributorCount": 7
+    },
+    {
+      "label": "Healthcare",
+      "amount": 1805,
+      "contributorCount": 11
+    },
+    {
+      "label": "Finance",
+      "amount": 1500,
+      "contributorCount": 4
+    },
+    {
+      "label": "Education",
+      "amount": 450,
+      "contributorCount": 6
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds account for about 63% of the campaign's total resources.",
+    "15 donors gave at the legal maximum, totaling $15,750.",
+    "Committees, unions, or other non-individual donors made up 32% of reported private fundraising.",
+    "A noticeable share of reported private fundraising, 34%, came from outside New York City.",
+    "Among reported private contributions, real estate stands out as one of the strongest donor patterns."
+  ]
+}
