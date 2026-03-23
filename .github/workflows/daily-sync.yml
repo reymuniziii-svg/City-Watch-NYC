@@ -1,0 +1,62 @@
+name: Daily Data Sync
+
+on:
+  schedule:
+    - cron: "0 10 * * *"
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Time Gate (6:00 AM America/New_York)
+        id: timegate
+        run: |
+          if [ "$(TZ=America/New_York date +%H:%M)" = "06:00" ]; then
+            echo "run_sync=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run_sync=false" >> "$GITHUB_OUTPUT"
+            echo "Skipping run outside 6:00 AM America/New_York."
+          fi
+
+      - name: Checkout
+        if: steps.timegate.outputs.run_sync == 'true'
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        if: steps.timegate.outputs.run_sync == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        if: steps.timegate.outputs.run_sync == 'true'
+        run: npm ci
+
+      - name: Run sync and build
+        if: steps.timegate.outputs.run_sync == 'true'
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          NYC_OPENDATA_APP_TOKEN: ${{ secrets.NYC_OPENDATA_APP_TOKEN }}
+          SESSION_START_YEAR: "2026"
+          SESSION_END_YEAR: "2029"
+        run: npm run data:sync
+
+      - name: Commit processed data
+        if: steps.timegate.outputs.run_sync == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/processed public/data
+          if git diff --cached --quiet; then
+            echo "No data changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(data): daily council data refresh"
+          git push
