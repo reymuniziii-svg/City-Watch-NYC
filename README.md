@@ -3,7 +3,7 @@
 
 This contains everything you need to run your app locally.
 
-View the live app in AI Studio: https://ai.studio/apps/7d0f3255-18f8-4ff0-9ae0-65477e1eb260
+View the live app here (https://council-watch-nyc-476021631183.us-west1.run.app)
 
 ## Run Locally
 
