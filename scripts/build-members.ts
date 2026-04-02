@@ -206,8 +206,8 @@ export async function buildMembers(): Promise<MemberSummary[]> {
 
   const peopleBySlug = new Map(people.map((person) => [person.Slug, person]));
   const supplemental = await readJsonFile<SupplementalRow[]>(path.join(CONTENT_DIR, "member-supplemental.json"));
-  const metrics = await readJsonFile<MemberMetric[]>(path.join(PROCESSED_DIR, "member-metrics.json")).catch(() => []);
-  const metricBySlug = new Map(metrics.map((row) => [row.slug, row]));
+  const metrics = await readJsonFile<MemberMetric[]>(path.join(PROCESSED_DIR, "member-metrics.json")).catch((): MemberMetric[] => []);
+  const metricBySlug = new Map<string, MemberMetric>(metrics.map((row) => [row.slug, row]));
 
   const bills = await loadBillDetails();
   const hearings = await readJsonFile<HearingRecord[]>(path.join(PROCESSED_DIR, "hearings-upcoming.json")).catch(() => []);
