@@ -1,32 +1,44 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Search, Loader2, CalendarX } from 'lucide-react';
+import { Search, CalendarX } from 'lucide-react';
 import { motion } from 'motion/react';
 import { Hearing } from '../types';
-import { fetchHearings } from '../services/nycDataService';
+import { fetchHearings, fetchPastHearings } from '../services/nycDataService';
 import HearingCard from './HearingCard';
+
+type Tab = 'upcoming' | 'past';
 
 export default function HearingList() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [hearings, setHearings] = useState<Hearing[]>([]);
+  const [upcomingHearings, setUpcomingHearings] = useState<Hearing[]>([]);
+  const [pastHearings, setPastHearings] = useState<Hearing[]>([]);
   const [search, setSearch] = useState(() => searchParams.get('q') ?? '');
+  const [activeTab, setActiveTab] = useState<Tab>(() => {
+    const tab = searchParams.get('tab');
+    return tab === 'past' ? 'past' : 'upcoming';
+  });
   const [isLoading, setIsLoading] = useState(true);
   const [displayCount, setDisplayCount] = useState(50);
 
   useEffect(() => {
     setDisplayCount(50);
-  }, [search]);
+  }, [search, activeTab]);
 
   useEffect(() => {
-    fetchHearings().then(data => {
-      setHearings(data);
+    Promise.all([fetchHearings(), fetchPastHearings()]).then(([upcoming, past]) => {
+      setUpcomingHearings(upcoming);
+      setPastHearings(past);
       setIsLoading(false);
     });
   }, []);
 
   useEffect(() => {
     setSearch(searchParams.get('q') ?? '');
+    const tab = searchParams.get('tab');
+    setActiveTab(tab === 'past' ? 'past' : 'upcoming');
   }, [searchParams]);
+
+  const hearings = activeTab === 'past' ? pastHearings : upcomingHearings;
 
   const filteredHearings = hearings.filter((hearing) => {
     const normalizedQuery = search.trim().toLowerCase();
@@ -59,6 +71,17 @@ export default function HearingList() {
       nextParams.delete('q');
     }
 
+    setSearchParams(nextParams, { replace: true });
+  };
+
+  const handleTabChange = (tab: Tab) => {
+    setActiveTab(tab);
+    const nextParams = new URLSearchParams(searchParams);
+    if (tab === 'past') {
+      nextParams.set('tab', 'past');
+    } else {
+      nextParams.delete('tab');
+    }
     setSearchParams(nextParams, { replace: true });
   };
 
@@ -101,8 +124,8 @@ export default function HearingList() {
     <div className="space-y-8">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div>
-          <h1 className="font-editorial text-5xl font-black text-black tracking-tighter mb-4">Upcoming Hearings</h1>
-          <p className="text-slate-600">Stay informed about committee meetings and public oversight.</p>
+          <h1 className="font-editorial text-5xl font-black text-black tracking-tighter mb-4">Council Hearings</h1>
+          <p className="text-slate-600">Upcoming committee meetings and past public oversight sessions.</p>
         </div>
 
         <div className="relative group w-full md:w-80">
@@ -117,13 +140,46 @@ export default function HearingList() {
         </div>
       </div>
 
+      <div className="flex border-b border-slate-200">
+        <button
+          onClick={() => handleTabChange('upcoming')}
+          className={`px-6 py-3 text-xs font-bold uppercase tracking-widest border-b-2 transition-colors ${
+            activeTab === 'upcoming'
+              ? 'border-black text-black'
+              : 'border-transparent text-slate-500 hover:text-black'
+          }`}
+        >
+          Upcoming
+          {upcomingHearings.length > 0 && (
+            <span className="ml-2 text-[10px] font-bold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">
+              {upcomingHearings.length}
+            </span>
+          )}
+        </button>
+        <button
+          onClick={() => handleTabChange('past')}
+          className={`px-6 py-3 text-xs font-bold uppercase tracking-widest border-b-2 transition-colors ${
+            activeTab === 'past'
+              ? 'border-black text-black'
+              : 'border-transparent text-slate-500 hover:text-black'
+          }`}
+        >
+          Past 90 Days
+          {pastHearings.length > 0 && (
+            <span className="ml-2 text-[10px] font-bold bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded">
+              {pastHearings.length}
+            </span>
+          )}
+        </button>
+      </div>
+
       <div className="grid grid-cols-1 gap-8">
         {filteredHearings.slice(0, displayCount).map((hearing, i) => (
           <motion.div
             key={hearing.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.05 }}
+            transition={{ delay: i * 0.04 }}
           >
             <HearingCard hearing={hearing} />
           </motion.div>
@@ -147,10 +203,18 @@ export default function HearingList() {
       {filteredHearings.length === 0 && (
         <div className="text-center py-20 bg-white border-editorial flex flex-col items-center justify-center">
           <CalendarX className="w-12 h-12 text-slate-300 mb-4" />
-          <p className="text-slate-500 font-bold uppercase tracking-widest text-xs">No hearings found matching your search.</p>
-          <button onClick={() => handleSearchChange('')} className="mt-4 text-black underline text-sm font-medium hover:text-slate-600 active:scale-95 transition-all">
-            Clear search
-          </button>
+          {search ? (
+            <>
+              <p className="text-slate-500 font-bold uppercase tracking-widest text-xs">No hearings found matching your search.</p>
+              <button onClick={() => handleSearchChange('')} className="mt-4 text-black underline text-sm font-medium hover:text-slate-600 active:scale-95 transition-all">
+                Clear search
+              </button>
+            </>
+          ) : (
+            <p className="text-slate-500 font-bold uppercase tracking-widest text-xs">
+              {activeTab === 'upcoming' ? 'No upcoming hearings scheduled.' : 'No past hearings found in the last 90 days.'}
+            </p>
+          )}
         </div>
       )}
     </div>

@@ -38,6 +38,7 @@ function mapBillRecordToBill(bill: BillRecord): Bill {
 
 function mapHearingRecordToHearing(hearing: HearingRecord): Hearing {
   const dateObj = new Date(hearing.date);
+  const now = new Date();
   return {
     id: hearing.eventId.toString(),
     title: hearing.bodyName,
@@ -46,6 +47,7 @@ function mapHearingRecordToHearing(hearing: HearingRecord): Hearing {
     location: hearing.location,
     committee: hearing.bodyName,
     bills: hearing.agendaItems ? hearing.agendaItems.map(item => item.title) : [],
+    isPast: dateObj < now,
   };
 }
 

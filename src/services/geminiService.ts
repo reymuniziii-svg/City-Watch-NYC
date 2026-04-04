@@ -74,23 +74,25 @@ export async function summarizeBill(billTitle: string, billSummary: string) {
   }
 }
 
-export async function summarizeHearing(hearingTitle: string, hearingDescription: string) {
+export async function summarizeHearing(hearingTitle: string, committeeOrBills: string, hearingDate?: string) {
   try {
+    const dateContext = hearingDate ? `\nScheduled Date: ${hearingDate}` : '';
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
       contents: `
-        You are a civic engagement expert for New York City. 
-        Explain the following NYC City Council hearing in plain, accessible English.
+        You are a civic engagement expert for New York City.
+        Explain the following UPCOMING NYC City Council hearing in plain, accessible English.
+        This hearing has NOT happened yet — use future tense throughout.
         
-        Hearing Title: ${hearingTitle}
-        Description: ${hearingDescription}
+        Committee / Hearing Title: ${hearingTitle}
+        Bills or Agenda Items: ${committeeOrBills}${dateContext}
         
         Provide the response in the following JSON format:
         {
-          "whatHappened": "A concise summary of the hearing's main discussion points.",
-          "takeaways": ["The most important conclusions or developments from the hearing."],
-          "actionType": "Clarification on the hearing's nature (e.g., Legislative Action, Oversight, Testimony).",
-          "keyQuotes": ["Notable statements or exchanges from participants."]
+          "whatIsAbout": "A clear, plain-English explanation of what this hearing is about and why it is being held.",
+          "takeaways": ["Key things to know or watch for at this hearing — 2 to 3 points."],
+          "billsConsidered": ["List of bills or topics that will be discussed, if known. Leave empty array if none."],
+          "whatToExpect": "What typically happens at this type of hearing (testimony, oversight, vote, etc.)."
         }
       `,
       config: {

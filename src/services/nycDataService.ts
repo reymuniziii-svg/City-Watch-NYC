@@ -1,10 +1,17 @@
-import { CouncilMember, Bill, Hearing, CampaignFinance, MemberMetrics, FinanceIndexRow } from '../types';
-import type { MemberSummary, HearingRecord, MemberProfile } from '../lib/types';
+import { CouncilMember, Bill, Hearing, HearingEnrichment, CampaignFinance, MemberMetrics, FinanceIndexRow } from '../types';
+import type { MemberSummary, HearingRecord, MemberProfile, HearingSummary } from '../lib/types';
+
+interface HearingEnrichmentIndex {
+  byEventId: Map<string, HearingEnrichment>;
+  byBodyDate: Map<string, HearingEnrichment>;
+}
 
 // Static data caches
 let membersCache: CouncilMember[] | null = null;
 let billsCache: Bill[] | null = null;
 let hearingsCache: Hearing[] | null = null;
+let pastHearingsCache: Hearing[] | null = null;
+let hearingEnrichmentIndex: HearingEnrichmentIndex | null = null;
 const financeCache = new Map<string, CampaignFinance | null>();
 let memberMetricsCache: MemberMetrics[] | null = null;
 const memberProfileCache = new Map<string, MemberProfile | null>();
@@ -63,7 +70,7 @@ function mapBillToBill(bill: BillIndexRecord): Bill {
   };
 }
 
-function mapHearingToHearing(hearing: HearingRecord): Hearing {
+function mapHearingToHearing(hearing: HearingRecord, isPast = false): Hearing {
   const dateObj = new Date(hearing.date);
   return {
     id: hearing.eventId.toString(),
@@ -73,6 +80,7 @@ function mapHearingToHearing(hearing: HearingRecord): Hearing {
     location: hearing.location,
     committee: hearing.bodyName,
     bills: hearing.agendaItems.map(item => item.title),
+    isPast,
   };
 }
 
@@ -117,15 +125,100 @@ export async function fetchBills(): Promise<Bill[]> {
   }
 }
 
+async function loadHearingEnrichmentIndex(): Promise<HearingEnrichmentIndex> {
+  if (hearingEnrichmentIndex) return hearingEnrichmentIndex;
+
+  try {
+    const enrichments = await fetchJson<HearingSummary[]>('/data/hearing-enrichment.json');
+    const byEventId = new Map<string, HearingEnrichment>();
+    const byBodyDate = new Map<string, HearingEnrichment>();
+
+    for (const e of enrichments) {
+      const mapped: HearingEnrichment = {
+        id: e.id,
+        eventDate: e.eventDate,
+        bodyName: e.bodyName,
+        title: e.title,
+        cityMeetingsUrl: e.cityMeetingsUrl,
+        sourceLabel: e.sourceLabel,
+        overview: e.overview,
+        takeaways: e.takeaways,
+        quotes: e.quotes,
+        outcomeType: e.outcomeType,
+        matchedBy: e.matchedBy,
+      };
+      const eventId = e.id.split('-')[0];
+      byEventId.set(eventId, mapped);
+
+      const date = e.eventDate.slice(0, 10);
+      const bodyKey = e.bodyName.toLowerCase().replace(/\s+/g, '-');
+      byBodyDate.set(`${date}::${bodyKey}`, mapped);
+    }
+
+    hearingEnrichmentIndex = { byEventId, byBodyDate };
+    return hearingEnrichmentIndex;
+  } catch (error) {
+    console.error('Error loading hearing enrichment:', error);
+    return { byEventId: new Map(), byBodyDate: new Map() };
+  }
+}
+
+export async function fetchHearingEnrichment(): Promise<HearingEnrichmentIndex> {
+  return loadHearingEnrichmentIndex();
+}
+
 export async function fetchHearings(): Promise<Hearing[]> {
   if (hearingsCache) return hearingsCache;
 
   try {
     const hearings = await fetchJson<HearingRecord[]>('/data/hearings-upcoming.json');
-    hearingsCache = hearings.map(mapHearingToHearing);
+    hearingsCache = hearings.map(h => mapHearingToHearing(h, false));
     return hearingsCache;
   } catch (error) {
     console.error('Error loading hearings:', error);
+    return [];
+  }
+}
+
+function lookupEnrichment(hearing: HearingRecord, index: HearingEnrichmentIndex): HearingEnrichment | null {
+  const eventId = hearing.eventId.toString();
+  if (index.byEventId.has(eventId)) {
+    return index.byEventId.get(eventId)!;
+  }
+
+  const date = hearing.date.slice(0, 10);
+  if (index.byBodyDate.has(`${date}::${hearing.bodySlug}`)) {
+    return index.byBodyDate.get(`${date}::${hearing.bodySlug}`)!;
+  }
+
+  for (const [key, enrichment] of index.byBodyDate) {
+    const [keyDate, keyBody] = key.split('::');
+    if (keyDate === date && (hearing.bodySlug.includes(keyBody) || keyBody.includes(hearing.bodySlug))) {
+      return enrichment;
+    }
+  }
+
+  return null;
+}
+
+export async function fetchPastHearings(): Promise<Hearing[]> {
+  if (pastHearingsCache) return pastHearingsCache;
+
+  try {
+    const [rawHearings, index] = await Promise.all([
+      fetchJson<HearingRecord[]>('/data/hearings-past.json'),
+      loadHearingEnrichmentIndex(),
+    ]);
+
+    pastHearingsCache = rawHearings.map(raw => {
+      const hearing = mapHearingToHearing(raw, true);
+      hearing.enrichment = lookupEnrichment(raw, index) ?? null;
+      return hearing;
+    });
+
+    return pastHearingsCache;
+  } catch (error) {
+    console.error('Error loading past hearings:', error);
     return [];
   }
 }

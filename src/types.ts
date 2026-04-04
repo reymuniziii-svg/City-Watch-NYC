@@ -42,6 +42,27 @@ export interface Bill {
   };
 }
 
+export interface HearingQuote {
+  speaker: string;
+  quote: string;
+  chapterTitle: string;
+  chapterUrl: string;
+}
+
+export interface HearingEnrichment {
+  id: string;
+  eventDate: string;
+  bodyName: string;
+  title: string;
+  cityMeetingsUrl: string;
+  sourceLabel: string;
+  overview: string;
+  takeaways: string[];
+  quotes: HearingQuote[];
+  outcomeType: "action" | "oversight" | "testimony" | "mixed" | "unknown";
+  matchedBy: string;
+}
+
 export interface Hearing {
   id: string;
   title: string;
@@ -50,11 +71,13 @@ export interface Hearing {
   location: string;
   committee: string;
   bills: string[];
+  isPast: boolean;
+  enrichment?: HearingEnrichment | null;
   summary?: {
-    whatHappened: string;
+    whatIsAbout: string;
     takeaways: string[];
-    actionType: string;
-    keyQuotes: string[];
+    billsConsidered: string[];
+    whatToExpect: string;
   };
 }
 

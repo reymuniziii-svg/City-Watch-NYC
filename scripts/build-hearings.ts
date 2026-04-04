@@ -28,10 +28,40 @@ function isWithinNextDays(date: string, days: number): boolean {
   return diffMs <= limit;
 }
 
-export async function buildHearings(): Promise<HearingRecord[]> {
-  const hearings: HearingRecord[] = [];
+function isWithinPastDays(date: string, days: number): boolean {
+  const now = new Date();
+  const target = new Date(date);
+  const diffMs = now.getTime() - target.getTime();
+  if (diffMs < 0) {
+    return false;
+  }
 
-  for (const year of SESSION_YEARS) {
+  const limit = days * 24 * 60 * 60 * 1000;
+  return diffMs <= limit;
+}
+
+function buildAgendaItems(raw: RawEvent) {
+  return (raw.Items ?? [])
+    .filter((item) => Boolean(item.MatterFile))
+    .map((item) => {
+      const parsed = parseMatterFile(item.MatterFile!);
+      return {
+        matterFile: parsed.matterFile,
+        billSession: parsed.billSession,
+        billNumber: parsed.billNumber,
+        billRoute: parsed.billRoute,
+        title: item.Title ?? parsed.title,
+      };
+    });
+}
+
+export async function buildHearings(): Promise<HearingRecord[]> {
+  const upcoming: HearingRecord[] = [];
+  const past: HearingRecord[] = [];
+
+  const yearsToScan = [SESSION_YEARS[0] - 1, ...SESSION_YEARS];
+
+  for (const year of yearsToScan) {
     const yearDir = path.join(RAW_UPSTREAM_DIR, "events", String(year));
     let files: string[] = [];
 
@@ -44,24 +74,16 @@ export async function buildHearings(): Promise<HearingRecord[]> {
     for (const file of files) {
       const raw = await readJsonFile<RawEvent>(path.join(yearDir, file));
       const date = cleanDate(raw.Date);
-      if (!isWithinNextDays(date, 30)) {
+
+      const isUpcoming = isWithinNextDays(date, 30);
+      const isPast = isWithinPastDays(date, 90);
+
+      if (!isUpcoming && !isPast) {
         continue;
       }
 
-      const agendaItems = (raw.Items ?? [])
-        .filter((item) => Boolean(item.MatterFile))
-        .map((item) => {
-          const parsed = parseMatterFile(item.MatterFile!);
-          return {
-            matterFile: parsed.matterFile,
-            billSession: parsed.billSession,
-            billNumber: parsed.billNumber,
-            billRoute: parsed.billRoute,
-            title: item.Title ?? parsed.title,
-          };
-        });
-
-      hearings.push({
+      const agendaItems = buildAgendaItems(raw);
+      const record: HearingRecord = {
         eventId: raw.ID,
         bodyName: raw.BodyName,
         bodySlug: bodyToSlug(raw.BodyName),
@@ -71,18 +93,29 @@ export async function buildHearings(): Promise<HearingRecord[]> {
         legistarUrl: raw.InSiteURL ?? null,
         testimonyUrl: raw.InSiteURL ?? null,
         agendaItems,
-      });
+      };
+
+      if (isUpcoming) {
+        upcoming.push(record);
+      } else {
+        past.push(record);
+      }
     }
   }
 
-  hearings.sort((a, b) => a.date.localeCompare(b.date));
+  upcoming.sort((a, b) => a.date.localeCompare(b.date));
+  past.sort((a, b) => b.date.localeCompare(a.date));
 
-  await writeJsonFile(path.join(PROCESSED_DIR, "hearings-upcoming.json"), hearings);
   await ensureDir(PUBLIC_DATA_DIR);
-  await writeJsonFile(path.join(PUBLIC_DATA_DIR, "hearings-upcoming.json"), hearings);
 
-  console.log(`[build-hearings] wrote ${hearings.length} upcoming hearings`);
-  return hearings;
+  await writeJsonFile(path.join(PROCESSED_DIR, "hearings-upcoming.json"), upcoming);
+  await writeJsonFile(path.join(PUBLIC_DATA_DIR, "hearings-upcoming.json"), upcoming);
+
+  await writeJsonFile(path.join(PROCESSED_DIR, "hearings-past.json"), past);
+  await writeJsonFile(path.join(PUBLIC_DATA_DIR, "hearings-past.json"), past);
+
+  console.log(`[build-hearings] wrote ${upcoming.length} upcoming hearings and ${past.length} past hearings`);
+  return upcoming;
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
