@@ -4,9 +4,8 @@ import donationConfig, { type DonationTier } from '../data/donationConfig';
 
 type Mode = 'oneTime' | 'monthly';
 
-function DonationButton({ tier, mode }: { tier: DonationTier; mode: Mode }) {
+function DonationButton({ tier }: { tier: DonationTier }) {
   const isConfigured = tier.url !== '#';
-  const label = mode === 'monthly' ? tier.label : tier.label;
 
   if (!isConfigured) {
     return (
@@ -15,7 +14,7 @@ function DonationButton({ tier, mode }: { tier: DonationTier; mode: Mode }) {
           disabled
           className="w-full px-6 py-4 border-editorial bg-slate-50 text-slate-400 font-bold text-sm uppercase tracking-widest cursor-not-allowed"
         >
-          {label}
+          {tier.label}
         </button>
         <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-white text-[10px] font-bold uppercase tracking-widest px-2 py-1 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
           Coming soon
@@ -31,7 +30,7 @@ function DonationButton({ tier, mode }: { tier: DonationTier; mode: Mode }) {
       rel="noopener noreferrer"
       className="w-full flex items-center justify-center gap-2 px-6 py-4 border-editorial bg-white text-black font-bold text-sm uppercase tracking-widest hover:bg-black hover:text-white transition-colors"
     >
-      {label}
+      {tier.label}
       <ExternalLink className="w-3 h-3" />
     </a>
   );
@@ -116,7 +115,7 @@ export default function SupportPage() {
 
         <div className="grid grid-cols-2 gap-3 mb-4">
           {tiers.map((tier) => (
-            <DonationButton key={tier.label} tier={tier} mode={mode} />
+            <DonationButton key={tier.label} tier={tier} />
           ))}
         </div>
 
