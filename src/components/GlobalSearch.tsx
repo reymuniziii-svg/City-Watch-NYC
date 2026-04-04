@@ -50,6 +50,11 @@ export default function GlobalSearch() {
           throw new Error('Failed to load search index');
         }
 
+        const contentType = response.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+          throw new Error('Search index is not JSON');
+        }
+
         const payload: SearchDocument[] = await response.json();
         if (active) {
           setDocuments(payload);

@@ -75,16 +75,23 @@ function mapHearingToHearing(hearing: HearingRecord): Hearing {
   };
 }
 
+async function fetchJson<T>(url: string): Promise<T> {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Failed to load ${url}`);
+  }
+  const contentType = response.headers.get('content-type');
+  if (!contentType || !contentType.includes('application/json')) {
+    throw new Error(`Response from ${url} is not JSON`);
+  }
+  return response.json();
+}
+
 export async function fetchMembers(): Promise<CouncilMember[]> {
   if (membersCache) return membersCache;
 
   try {
-    const response = await fetch('/data/members-index.json');
-    if (!response.ok) {
-      console.error('Failed to load members-index.json');
-      return [];
-    }
-    const members: MemberSummary[] = await response.json();
+    const members = await fetchJson<MemberSummary[]>('/data/members-index.json');
     membersCache = members
       .filter(m => m.status === 'seated')
       .map(mapMemberToCouncilMember)
@@ -100,12 +107,7 @@ export async function fetchBills(): Promise<Bill[]> {
   if (billsCache) return billsCache;
 
   try {
-    const response = await fetch('/data/bills-index.json');
-    if (!response.ok) {
-      console.error('Failed to load bills-index.json');
-      return [];
-    }
-    const bills: BillIndexRecord[] = await response.json();
+    const bills = await fetchJson<BillIndexRecord[]>('/data/bills-index.json');
     billsCache = bills.map(mapBillToBill);
     return billsCache;
   } catch (error) {
@@ -118,12 +120,7 @@ export async function fetchHearings(): Promise<Hearing[]> {
   if (hearingsCache) return hearingsCache;
 
   try {
-    const response = await fetch('/data/hearings-upcoming.json');
-    if (!response.ok) {
-      console.error('Failed to load hearings-upcoming.json');
-      return [];
-    }
-    const hearings: HearingRecord[] = await response.json();
+    const hearings = await fetchJson<HearingRecord[]>('/data/hearings-upcoming.json');
     hearingsCache = hearings.map(mapHearingToHearing);
     return hearingsCache;
   } catch (error) {
@@ -138,13 +135,7 @@ export async function getCampaignFinance(memberId: string): Promise<CampaignFina
   }
 
   try {
-    const response = await fetch('/data/finance/' + memberId + '.json');
-    if (!response.ok) {
-      financeCache.set(memberId, null);
-      return null;
-    }
-
-    const finance: CampaignFinance = await response.json();
+    const finance = await fetchJson<CampaignFinance>('/data/finance/' + memberId + '.json');
     financeCache.set(memberId, finance);
     return finance;
   } catch (error) {
@@ -158,13 +149,7 @@ export async function fetchMemberMetrics(): Promise<MemberMetrics[]> {
   if (memberMetricsCache) return memberMetricsCache;
 
   try {
-    const response = await fetch('/data/member-metrics.json');
-    if (!response.ok) {
-      console.error('Failed to load member-metrics.json');
-      return [];
-    }
-
-    const metrics: MemberMetrics[] = await response.json();
+    const metrics = await fetchJson<MemberMetrics[]>('/data/member-metrics.json');
     memberMetricsCache = metrics;
     return memberMetricsCache;
   } catch (error) {
@@ -219,13 +204,7 @@ export async function fetchMemberProfile(id: string): Promise<MemberProfile | nu
   }
 
   try {
-    const response = await fetch('/data/members/' + id + '.json');
-    if (!response.ok) {
-      memberProfileCache.set(id, null);
-      return null;
-    }
-
-    const profile: MemberProfile = await response.json();
+    const profile = await fetchJson<MemberProfile>('/data/members/' + id + '.json');
     memberProfileCache.set(id, profile);
     return profile;
   } catch (error) {
