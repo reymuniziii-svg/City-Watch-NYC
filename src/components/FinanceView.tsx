@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
-import { DollarSign, TrendingUp, Users, Landmark, MapPin, AlertCircle, ChevronDown, ChevronUp, ChevronsUpDown, Building2, Star, ArrowRightLeft, ShoppingBag } from 'lucide-react';
+import { DollarSign, TrendingUp, Users, Landmark, MapPin, ChevronDown, ChevronUp, ChevronsUpDown, Building2, Star, ArrowRightLeft, ShoppingBag } from 'lucide-react';
 import { CampaignFinance } from '../types';
 
 const COLORS = ['#F27D26', '#14B8A6', '#8B5CF6', '#F43F5E', '#EAB308', '#3B82F6', '#10B981', '#F97316'];
@@ -85,10 +85,6 @@ export default function FinanceView({ data }: { data: CampaignFinance | null }) 
     { name: 'Large-Dollar (>$250)', amount: largeDollarAmount }
   ];
 
-  const hasRealEstateInfluence = data.topIndustries.some(ind =>
-    ind.label.toLowerCase().includes('real estate') && ind.amount > (data.totalRaised || 0) * 0.1
-  );
-
   const donorPatterns = data.topIndustries.map((industry) => ({
     category: industry.label,
     amount: industry.amount,
@@ -144,19 +140,6 @@ export default function FinanceView({ data }: { data: CampaignFinance | null }) 
           <p className="text-sm leading-relaxed opacity-80 max-w-xl">
             This score combines small-dollar fundraising share (40%), donor concentration (30%), organizational vs. individual donors (15%), and local vs. out-of-city sources (15%). Higher scores reflect broader grassroots support.
           </p>
-        </div>
-      )}
-
-      {/* Warning Badges */}
-      {hasRealEstateInfluence && (
-        <div className="bg-amber-50 border border-amber-200 p-4 flex items-start gap-3">
-          <AlertCircle className="w-5 h-5 text-amber-600 mt-0.5 shrink-0" />
-          <div>
-            <h4 className="text-sm font-bold text-amber-900 uppercase tracking-widest mb-1">Doing Business Warning</h4>
-            <p className="text-sm text-amber-800">
-              This member receives over 10% of their funding from the Real Estate industry. This may indicate potential conflicts of interest on zoning and land use bills.
-            </p>
-          </div>
         </div>
       )}
 
