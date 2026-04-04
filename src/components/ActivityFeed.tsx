@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Clock3, FileText } from 'lucide-react';
 import { Bill } from '../types';
 
-type FilterMode = 'all' | 'recent' | 'enacted';
+type FilterMode = 'all' | 'committee' | 'enacted';
 
 function formatDate(value?: string) {
   if (!value) {
@@ -41,8 +41,8 @@ export default function ActivityFeed({ bills }: { bills: Bill[] }) {
   const filteredBills = useMemo(() => {
     const sortedBills = sortBillsByDate(bills);
 
-    if (filter === 'recent') {
-      return sortedBills.slice(0, 8);
+    if (filter === 'committee') {
+      return sortedBills.filter(b => !isEnactedBill(b));
     }
 
     if (filter === 'enacted') {
@@ -65,7 +65,7 @@ export default function ActivityFeed({ bills }: { bills: Bill[] }) {
         <div className="flex flex-wrap gap-2">
           {[
             { id: 'all', label: 'All' },
-            { id: 'recent', label: 'Recent' },
+            { id: 'committee', label: 'In Committee' },
             { id: 'enacted', label: 'Enacted' },
           ].map((option) => (
             <button
@@ -126,7 +126,9 @@ export default function ActivityFeed({ bills }: { bills: Bill[] }) {
         </ul>
       ) : (
         <div className="border-editorial bg-white px-6 py-12 text-center">
-          <p className="text-slate-500 font-bold uppercase tracking-widest text-xs">No bills match this activity filter yet.</p>
+          <p className="text-slate-500 font-bold uppercase tracking-widest text-xs">
+            {filter === 'enacted' ? 'No bills have been enacted yet in this session.' : 'No bills match this filter.'}
+          </p>
         </div>
       )}
 
