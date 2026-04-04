@@ -96,6 +96,28 @@ export interface CampaignFinance {
   explanatoryNotes: string[];
 }
 
+export interface FinanceIndexRow {
+  slug: string;
+  fullName: string;
+  districtNumber: number;
+  party: string;
+  borough: string;
+  totalRaised: number | null;
+  publicFundsShare: number | null;
+  smallDollarShare: number | null;
+  topTenDonorShare: number | null;
+  contributorCount: number;
+  avgContribution: number | null;
+  outsideCityShare: number | null;
+  organizationalDonorShare: number | null;
+  hasRealEstateFlag: boolean;
+  topIndustries: {
+    label: string;
+    amount: number;
+    contributorCount: number;
+  }[];
+}
+
 export interface MemberMetrics {
   slug: string;
   billsSponsored: number;

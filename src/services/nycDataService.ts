@@ -1,4 +1,4 @@
-import { CouncilMember, Bill, Hearing, CampaignFinance, MemberMetrics } from '../types';
+import { CouncilMember, Bill, Hearing, CampaignFinance, MemberMetrics, FinanceIndexRow } from '../types';
 import type { MemberSummary, HearingRecord, MemberProfile } from '../lib/types';
 
 // Static data caches
@@ -8,6 +8,7 @@ let hearingsCache: Hearing[] | null = null;
 const financeCache = new Map<string, CampaignFinance | null>();
 let memberMetricsCache: MemberMetrics[] | null = null;
 const memberProfileCache = new Map<string, MemberProfile | null>();
+let financeIndexCache: FinanceIndexRow[] | null = null;
 
 interface BillIndexRecord {
   billId: string;
@@ -196,6 +197,19 @@ export async function getDistrictFromCoords(lat: number, lng: number) {
     console.error('Error fetching district from coords:', error);
   }
   return null;
+}
+
+export async function fetchFinanceIndex(): Promise<FinanceIndexRow[]> {
+  if (financeIndexCache) return financeIndexCache;
+
+  try {
+    const index = await fetchJson<FinanceIndexRow[]>('/data/finance-index.json');
+    financeIndexCache = index;
+    return financeIndexCache;
+  } catch (error) {
+    console.error('Error loading finance index:', error);
+    return [];
+  }
 }
 
 export async function fetchMemberProfile(id: string): Promise<MemberProfile | null> {

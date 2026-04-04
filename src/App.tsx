@@ -6,6 +6,7 @@ import MemberDashboard from './components/MemberDashboard';
 import BillList from './components/BillList';
 import HearingList from './components/HearingList';
 import DistrictsPage from './components/DistrictsPage';
+import MoneyPage from './components/MoneyPage';
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/districts" element={<DistrictsPage />} />
           <Route path="/bills" element={<BillList />} />
           <Route path="/hearings" element={<HearingList />} />
+          <Route path="/money" element={<MoneyPage />} />
         </Routes>
       </Layout>
     </Router>

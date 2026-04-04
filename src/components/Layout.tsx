@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Search, Users, FileText, Calendar, Landmark, Map, Menu, X } from 'lucide-react';
+import { Search, Users, FileText, Calendar, Landmark, Map, Menu, X, DollarSign } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -26,6 +26,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: 'District Map', icon: Map, path: '/districts' },
     { name: 'Bills', icon: FileText, path: '/bills' },
     { name: 'Hearings', icon: Calendar, path: '/hearings' },
+    { name: 'Money', icon: DollarSign, path: '/money' },
   ];
 
   return (

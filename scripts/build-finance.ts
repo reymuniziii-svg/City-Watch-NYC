@@ -379,6 +379,98 @@ export async function buildFinance(): Promise<Map<string, MemberFinanceProfile>>
   return financeProfiles;
 }
 
+export interface FinanceIndexRow {
+  slug: string;
+  fullName: string;
+  districtNumber: number;
+  party: string;
+  borough: string;
+  totalRaised: number | null;
+  publicFundsShare: number | null;
+  smallDollarShare: number | null;
+  topTenDonorShare: number | null;
+  contributorCount: number;
+  avgContribution: number | null;
+  outsideCityShare: number | null;
+  organizationalDonorShare: number | null;
+  hasRealEstateFlag: boolean;
+  topIndustries: FinanceIndustryBreakdown[];
+}
+
+interface MemberIndexRow {
+  slug: string | null;
+  fullName: string;
+  districtNumber: number;
+  party: string;
+  status: string;
+}
+
+function districtToBorough(district: number): string {
+  if (district >= 1 && district <= 7) return "Manhattan";
+  if (district === 8) return "Bronx";
+  if (district >= 9 && district <= 10) return "Manhattan";
+  if (district >= 11 && district <= 18) return "Bronx";
+  if (district >= 19 && district <= 32) return "Queens";
+  if (district >= 33 && district <= 48) return "Brooklyn";
+  if (district >= 49 && district <= 51) return "Staten Island";
+  return "NYC";
+}
+
+export async function buildFinanceIndex(): Promise<void> {
+  const membersIndexPath = path.join(PUBLIC_DATA_DIR, "members-index.json");
+  const membersIndex = await readJsonFile<MemberIndexRow[]>(membersIndexPath);
+  const financeDir = path.join(PUBLIC_DATA_DIR, "finance");
+
+  const rows: FinanceIndexRow[] = [];
+
+  for (const member of membersIndex) {
+    if (!member.slug || member.status !== "seated") continue;
+
+    const financePath = path.join(financeDir, `${member.slug}.json`);
+    let finance: MemberFinanceProfile | null = null;
+    try {
+      finance = await readJsonFile<MemberFinanceProfile>(financePath);
+    } catch {
+      continue;
+    }
+
+    if (!finance || finance.totalRaised === null) continue;
+
+    const avgContribution =
+      finance.totalRaised !== null && finance.contributorCount > 0
+        ? Number((finance.totalRaised / finance.contributorCount).toFixed(2))
+        : null;
+
+    const hasRealEstateFlag = finance.topIndustries.some(
+      (ind) =>
+        ind.label.toLowerCase().includes("real estate") &&
+        ind.amount > (finance.totalRaised ?? 0) * 0.1,
+    );
+
+    rows.push({
+      slug: member.slug,
+      fullName: member.fullName,
+      districtNumber: member.districtNumber,
+      party: member.party,
+      borough: districtToBorough(member.districtNumber),
+      totalRaised: finance.totalRaised,
+      publicFundsShare: finance.publicFundsShare,
+      smallDollarShare: finance.smallDollarShare,
+      topTenDonorShare: finance.topTenDonorShare,
+      contributorCount: finance.contributorCount,
+      avgContribution,
+      outsideCityShare: finance.outsideCityShare,
+      organizationalDonorShare: finance.organizationalDonorShare,
+      hasRealEstateFlag,
+      topIndustries: finance.topIndustries,
+    });
+  }
+
+  rows.sort((a, b) => a.districtNumber - b.districtNumber);
+  await writeJsonFile(path.join(PUBLIC_DATA_DIR, "finance-index.json"), rows);
+  console.log(`[build-finance] wrote finance-index.json with ${rows.length} rows`);
+}
+
 if (import.meta.url === `file://${process.argv[1]}`) {
   buildFinance().catch((error) => {
     console.error("[build-finance] failed", error);
