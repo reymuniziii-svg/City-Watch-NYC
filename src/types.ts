@@ -72,6 +72,7 @@ export interface Hearing {
   committee: string;
   bills: string[];
   isPast: boolean;
+  legistarUrl?: string;
   enrichment?: HearingEnrichment | null;
   summary?: {
     whatIsAbout: string;

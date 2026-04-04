@@ -48,6 +48,7 @@ function mapHearingRecordToHearing(hearing: HearingRecord): Hearing {
     committee: hearing.bodyName,
     bills: hearing.agendaItems ? hearing.agendaItems.map(item => item.title) : [],
     isPast: dateObj < now,
+    legistarUrl: hearing.legistarUrl ?? undefined,
   };
 }
 

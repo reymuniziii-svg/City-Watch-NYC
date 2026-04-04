@@ -101,7 +101,9 @@ export default function HearingCard({ hearing }: { hearing: Hearing }) {
               className="flex items-center gap-2 px-5 py-2.5 border-editorial bg-white text-black font-bold text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-colors"
             >
               <FileText className="w-4 h-4" />
-              {enrichment ? (isExpanded ? 'Hide Summary' : 'View Summary') : 'No Transcript'}
+              {enrichment
+                ? (isExpanded ? 'Hide Summary' : 'View Summary')
+                : (isExpanded ? 'Hide Details' : 'View Details')}
             </button>
           ) : (
             <button
@@ -187,10 +189,38 @@ export default function HearingCard({ hearing }: { hearing: Hearing }) {
                   )}
                 </div>
               ) : (
-                <div className="text-center py-6">
-                  <FileText className="w-8 h-8 text-slate-300 mx-auto mb-3" />
-                  <p className="text-slate-500 text-sm font-medium">No transcript available for this hearing.</p>
-                  <p className="text-slate-400 text-xs mt-1">A CityMeetings.nyc record could not be matched to this event.</p>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <FileText className="w-5 h-5 text-slate-400 mt-0.5 shrink-0" />
+                    <div>
+                      <p className="text-black text-sm font-medium mb-1">Transcript not yet available</p>
+                      <p className="text-slate-500 text-sm leading-relaxed">
+                        Summaries and key quotes are sourced from{' '}
+                        <a
+                          href="https://citymeetings.nyc/meetings/new-york-city-council/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-bold underline hover:text-black"
+                        >
+                          CityMeetings.nyc
+                        </a>
+                        , which publishes transcripts after each meeting is processed. Recent hearings are typically added within a few weeks.
+                      </p>
+                    </div>
+                  </div>
+                  {hearing.legistarUrl && (
+                    <div className="pt-2 border-t border-slate-200">
+                      <a
+                        href={hearing.legistarUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-xs font-bold text-black hover:text-slate-600 uppercase tracking-widest underline"
+                      >
+                        <ExternalLink className="w-3 h-3" />
+                        View agenda &amp; materials on Legistar
+                      </a>
+                    </div>
+                  )}
                 </div>
               )
             ) : summary ? (
