@@ -212,7 +212,7 @@ export async function buildMembers(): Promise<MemberSummary[]> {
   } catch {
     // ignore
   }
-  const metricBySlug = new Map<string, MemberMetric>(metrics.map((row) => [row.slug, row]));
+  const metricBySlug = new Map<string, MemberMetric>(metrics.map((row): [string, MemberMetric] => [row.slug, row]));
 
   const bills = await loadBillDetails();
   const hearings = await readJsonFile<HearingRecord[]>(path.join(PROCESSED_DIR, "hearings-upcoming.json")).catch(() => []);
