@@ -7,7 +7,7 @@ import { fileExists, readJsonFile, writeJsonFile } from "./lib/fs-utils";
 import { parseMatterFile, type RawEvent } from "./lib/legislation";
 import { sha1 } from "./lib/hash";
 import { normalizeText } from "./lib/normalize";
-import type { HearingQuote, HearingSummary } from "../src/lib/types";
+import type { HearingQuote, HearingSummary, SourceContext } from "../src/lib/types";
 
 interface CityMeetingsCard {
   eventDate: string;
@@ -606,6 +606,19 @@ export async function buildHearingEnrichment(): Promise<HearingSummary[]> {
 
     const quotes = await selectRelevantQuotes(chapterCards);
 
+    const sourceContext: SourceContext = {
+      inputFields: [
+        { label: "Meeting", value: card.title },
+        { label: "Date", value: card.eventDate },
+        { label: "CityMeetings Summary", value: card.summary },
+        { label: "Chapter Titles", value: chapterCards.map((c) => c.title).slice(0, 12).join("; ") },
+      ],
+      sourceLabel: "CityMeetings NYC",
+      sourceUrl: card.url,
+      generatedAt: new Date().toISOString(),
+      model: runtime.provider !== "none" ? runtime.model : "fallback",
+    };
+
     const hearingSummary = {
       id: `${event.ID}-${normalizeText(card.title)}`,
       eventDate: new Date(event.Date).toISOString(),
@@ -621,6 +634,7 @@ export async function buildHearingEnrichment(): Promise<HearingSummary[]> {
         .map((item) => parseMatterFile(item.MatterFile!)),
       outcomeType: normalized.outcomeType,
       matchedBy: "body-and-date",
+      sourceContext,
     } satisfies HearingSummary;
 
     processedCount += 1;

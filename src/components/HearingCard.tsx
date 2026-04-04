@@ -3,6 +3,7 @@ import { Calendar, Clock, MapPin, Sparkles, Loader2, ExternalLink, FileText } fr
 import { motion, AnimatePresence } from 'motion/react';
 import { Hearing } from '../types';
 import { summarizeHearing } from '../services/geminiService';
+import SourceContext from './SourceContext';
 
 const OUTCOME_LABELS: Record<string, string> = {
   action: 'Vote / Action',
@@ -174,6 +175,8 @@ export default function HearingCard({ hearing }: { hearing: Hearing }) {
                     </div>
                   )}
 
+                  <SourceContext context={enrichment.sourceContext} />
+
                   {enrichment.cityMeetingsUrl && (
                     <div className="pt-2">
                       <a
@@ -251,6 +254,7 @@ export default function HearingCard({ hearing }: { hearing: Hearing }) {
                     </div>
                   )}
                 </div>
+                <SourceContext context={summary?.sourceContext} />
               </div>
             ) : null}
           </motion.div>

@@ -4,11 +4,29 @@ import { PROCESSED_DIR, SUMMARY_CACHE_FILE, PUBLIC_DATA_DIR } from "./lib/consta
 import { buildAiCacheNamespace, generateStructuredJson, resolveAiRuntimeConfig } from "./lib/ai";
 import { ensureDir, fileExists, readJsonFile, writeJsonFile } from "./lib/fs-utils";
 import { sha1 } from "./lib/hash";
-import type { BillExplainer, BillRecord, SummaryCacheEntry, SummaryCacheFile } from "../src/lib/types";
+import type { BillExplainer, BillRecord, SourceContext, SummaryCacheEntry, SummaryCacheFile } from "../src/lib/types";
 
 function fallbackSummary(bill: BillRecord): string {
   const sponsorNote = bill.sponsorCount > 1 ? ` It currently has ${bill.sponsorCount} sponsors.` : "";
   return `${bill.introNumber} would ${bill.title.replace(/^A Local Law to /i, "").toLowerCase()}. It is currently in ${bill.statusName}.${sponsorNote}`;
+}
+
+function buildBillSourceContext(bill: BillRecord, model: string): SourceContext {
+  return {
+    inputFields: [
+      { label: "Bill Title", value: bill.title },
+      { label: "Intro Number", value: bill.introNumber },
+      { label: "Type", value: bill.typeName },
+      { label: "Status", value: bill.statusName },
+      { label: "Committee", value: bill.committee },
+      { label: "Sponsors", value: String(bill.sponsorCount) },
+      { label: "Intro Date", value: bill.introDate },
+    ],
+    sourceLabel: "NYC Council Legistar",
+    sourceUrl: bill.legistarUrl,
+    generatedAt: new Date().toISOString(),
+    model,
+  };
 }
 
 function fallbackExplainer(bill: BillRecord): BillExplainer {
@@ -17,6 +35,7 @@ function fallbackExplainer(bill: BillRecord): BillExplainer {
     whoItAffects: `People, agencies, or businesses touched by ${bill.committee || "this policy area"} in New York City.`,
     whyItMatters: bill.sponsorCount > 5 ? "The bill has attracted multiple sponsors, which can signal broader Council interest." : "The bill is part of the Council's current legislative agenda.",
     whatHappensNext: bill.committee ? `Watch for movement in ${bill.committee} or a future Council vote.` : "Watch for a hearing, committee action, or a future Council vote.",
+    sourceContext: buildBillSourceContext(bill, "fallback"),
   };
 }
 
@@ -67,7 +86,7 @@ async function listBillFiles(): Promise<string[]> {
   return files;
 }
 
-function normalizeExplainer(value: Partial<BillExplainer> | null | undefined, bill: BillRecord): BillExplainer {
+function normalizeExplainer(value: Partial<BillExplainer> | null | undefined, bill: BillRecord, sourceContext?: SourceContext): BillExplainer {
   const fallback = fallbackExplainer(bill);
 
   return {
@@ -75,6 +94,7 @@ function normalizeExplainer(value: Partial<BillExplainer> | null | undefined, bi
     whoItAffects: value?.whoItAffects?.trim() || fallback.whoItAffects,
     whyItMatters: value?.whyItMatters?.trim() || fallback.whyItMatters,
     whatHappensNext: value?.whatHappensNext?.trim() || fallback.whatHappensNext,
+    sourceContext: sourceContext ?? value?.sourceContext ?? fallback.sourceContext,
   };
 }
 
@@ -112,6 +132,8 @@ Return JSON like:
     temperature: 0,
   });
 
+  const sourceContext = buildBillSourceContext(bill, resolveAiRuntimeConfig().model);
+
   if (!parsed) {
     return {
       summaryShort: fallbackSummary(bill),
@@ -121,7 +143,7 @@ Return JSON like:
 
   return {
     summaryShort: parsed.summaryShort?.trim() || fallbackSummary(bill),
-    explainer: normalizeExplainer(parsed, bill),
+    explainer: normalizeExplainer(parsed, bill, sourceContext),
   };
 }
 

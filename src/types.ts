@@ -1,3 +1,5 @@
+import type { SourceContext } from './lib/types';
+
 export interface CouncilMember {
   id: string;
   name: string;
@@ -39,6 +41,7 @@ export interface Bill {
     whoItAffects: string;
     whyItMatters: string;
     whatHappensNext: string;
+    sourceContext?: SourceContext;
   };
 }
 
@@ -61,6 +64,7 @@ export interface HearingEnrichment {
   quotes: HearingQuote[];
   outcomeType: "action" | "oversight" | "testimony" | "mixed" | "unknown";
   matchedBy: string;
+  sourceContext?: SourceContext;
 }
 
 export interface Hearing {
@@ -79,6 +83,7 @@ export interface Hearing {
     takeaways: string[];
     billsConsidered: string[];
     whatToExpect: string;
+    sourceContext?: SourceContext;
   };
 }
 

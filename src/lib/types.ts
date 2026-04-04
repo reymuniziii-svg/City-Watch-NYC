@@ -1,3 +1,16 @@
+export interface SourceContextField {
+  label: string;
+  value: string;
+}
+
+export interface SourceContext {
+  inputFields: SourceContextField[];
+  sourceLabel: string;
+  sourceUrl?: string;
+  generatedAt: string;
+  model: string;
+}
+
 export type OccupancyStatus = "seated" | "vacant";
 
 export interface DistrictRecord {
@@ -78,6 +91,7 @@ export interface BillExplainer {
   whoItAffects: string;
   whyItMatters: string;
   whatHappensNext: string;
+  sourceContext?: SourceContext;
 }
 
 export interface BillRecord {
@@ -147,6 +161,7 @@ export interface HearingSummary {
   discussedBills: HearingAgendaItem[];
   outcomeType: "action" | "oversight" | "testimony" | "mixed" | "unknown";
   matchedBy: "body-and-date";
+  sourceContext?: SourceContext;
 }
 
 export interface VoteRecord {
@@ -276,6 +291,7 @@ export interface SummaryCacheEntry {
   titleHash: string;
   summary: string;
   explainer: BillExplainer;
+  sourceContext?: SourceContext;
   updatedAt: string;
 }
 

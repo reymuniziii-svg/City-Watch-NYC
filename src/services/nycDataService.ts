@@ -147,6 +147,7 @@ async function loadHearingEnrichmentIndex(): Promise<HearingEnrichmentIndex> {
         quotes: e.quotes,
         outcomeType: e.outcomeType,
         matchedBy: e.matchedBy,
+        sourceContext: e.sourceContext,
       };
       const eventId = e.id.split('-')[0];
       byEventId.set(eventId, mapped);

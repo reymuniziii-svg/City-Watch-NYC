@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Bill } from '../types';
 import { summarizeBill } from '../services/geminiService';
 import CivicActionCenter from './CivicActionCenter';
+import SourceContext from './SourceContext';
 
 type OpenPanel = 'none' | 'summary' | 'action';
 
@@ -183,6 +184,8 @@ export default function BillCard({ bill }: { bill: Bill }) {
                   </div>
                 </div>
               </div>
+
+              <SourceContext context={summary?.sourceContext} />
 
               <div className="mt-8 pt-8 border-t border-slate-200">
                 <div className="flex items-center gap-2 mb-6">

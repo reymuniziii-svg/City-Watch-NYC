@@ -67,7 +67,19 @@ export async function summarizeBill(billTitle: string, billSummary: string) {
 
     let jsonStr = response.text || '{}';
     jsonStr = jsonStr.replace(/^```json\n?/, '').replace(/\n?```$/, '').trim();
-    return JSON.parse(jsonStr);
+    const parsed = JSON.parse(jsonStr);
+    return {
+      ...parsed,
+      sourceContext: {
+        inputFields: [
+          { label: 'Bill Title', value: billTitle },
+          { label: 'Official Summary', value: billSummary },
+        ],
+        sourceLabel: 'NYC Council Legistar',
+        generatedAt: new Date().toISOString(),
+        model: 'gemini-3-flash-preview',
+      },
+    };
   } catch (error) {
     console.error('Error summarizing bill:', error);
     return null;
@@ -102,7 +114,20 @@ export async function summarizeHearing(hearingTitle: string, committeeOrBills: s
 
     let jsonStr = response.text || '{}';
     jsonStr = jsonStr.replace(/^```json\n?/, '').replace(/\n?```$/, '').trim();
-    return JSON.parse(jsonStr);
+    const parsed = JSON.parse(jsonStr);
+    return {
+      ...parsed,
+      sourceContext: {
+        inputFields: [
+          { label: 'Committee', value: hearingTitle },
+          { label: 'Agenda Items', value: committeeOrBills },
+          ...(hearingDate ? [{ label: 'Date', value: hearingDate }] : []),
+        ],
+        sourceLabel: 'NYC Council Calendar',
+        generatedAt: new Date().toISOString(),
+        model: 'gemini-3-flash-preview',
+      },
+    };
   } catch (error) {
     console.error('Error summarizing hearing:', error);
     return null;
