@@ -42,3 +42,7 @@ deploymentTarget = "vm"
 build = ["npm", "run", "build"]
 publicDir = "dist"
 run = ["node", "server.js"]
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 60000
