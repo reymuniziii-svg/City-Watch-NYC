@@ -1,0 +1,153 @@
+{
+  "slug": "kayla-santosuosso",
+  "cycle": "2025",
+  "candidateName": "Santosuosso, Kayla",
+  "candidateId": "2918",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-04-04T16:48:38.842Z",
+  "contributorCount": 660,
+  "totalRaised": 87116.73,
+  "publicFunds": 381124,
+  "publicFundsShare": 0.814,
+  "smallDollarAmount": 55146.73,
+  "smallDollarDonorCount": 598,
+  "smallDollarShare": 0.633,
+  "topTenDonorShare": 0.134,
+  "maxContributionDonorCount": 8,
+  "maxContributionAmount": 8400,
+  "organizationalDonorAmount": 7700,
+  "organizationalDonorShare": 0.088,
+  "outsideCityAmount": 10436,
+  "outsideCityShare": 0.12,
+  "topDonors": [
+    {
+      "name": "DiCunto, Paula",
+      "amount": 2050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Shah, Nirali",
+      "amount": 1235,
+      "donorType": "IND",
+      "city": "NEW YORK",
+      "state": "NY",
+      "occupation": "Broker",
+      "employer": "McGill and Partners"
+    },
+    {
+      "name": "2025, Farias",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "The Bronx",
+      "state": "NY",
+      "occupation": "Farias 2025",
+      "employer": "Farias 2025"
+    },
+    {
+      "name": "2025, Selvena",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Rockaway Beach",
+      "state": "NY",
+      "occupation": "NYC Council Member",
+      "employer": "NYC Council"
+    },
+    {
+      "name": "32Bj United ADF",
+      "amount": 1050,
+      "donorType": "EMPO",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Cozen O'Connor",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Philadelphia",
+      "state": "PA",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Doctors Council SEIU COPE",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Masoud, Essa",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "brooklyn",
+      "state": "NY",
+      "occupation": "Owner",
+      "employer": "Self-Employed Balady Foods"
+    },
+    {
+      "name": "NYSNA",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Albany",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Ramos, Crisel",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Bronx",
+      "state": "NY",
+      "occupation": "A receptionist",
+      "employer": "Stateside construction"
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 65923.08,
+      "contributorCount": 475
+    },
+    {
+      "label": "Legal",
+      "amount": 9380,
+      "contributorCount": 67
+    },
+    {
+      "label": "Education",
+      "amount": 4659,
+      "contributorCount": 46
+    },
+    {
+      "label": "Healthcare",
+      "amount": 2950,
+      "contributorCount": 20
+    },
+    {
+      "label": "Small Business / Retail",
+      "amount": 2275,
+      "contributorCount": 8
+    },
+    {
+      "label": "Real Estate",
+      "amount": 2060,
+      "contributorCount": 15
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds make up 81% of this campaign's total resources.",
+    "Small-dollar donors contributed 63% of reported private fundraising across 598 contributions.",
+    "Private fundraising looks relatively diffuse: the top ten donors account for only 13% of reported private contributions.",
+    "8 donors gave at the legal maximum, totaling $8,400.",
+    "Among reported private contributions, legal stands out as one of the strongest donor patterns."
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "slug": "joann-ariola",
+  "cycle": "2025",
+  "candidateName": "Ariola, Joann",
+  "candidateId": "504",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-04-04T16:48:38.448Z",
+  "contributorCount": 333,
+  "totalRaised": 56436,
+  "publicFunds": null,
+  "publicFundsShare": 0,
+  "smallDollarAmount": 34508,
+  "smallDollarDonorCount": 294,
+  "smallDollarShare": 0.611,
+  "topTenDonorShare": 0.193,
+  "maxContributionDonorCount": 9,
+  "maxContributionAmount": 9450,
+  "organizationalDonorAmount": 8825,
+  "organizationalDonorShare": 0.156,
+  "outsideCityAmount": 7900,
+  "outsideCityShare": 0.14,
+  "topDonors": [
+    {
+      "name": "Uniformed Fire Officers Associ",
+      "amount": 1500,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Argento, Anthony",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Construction Worker",
+      "employer": "Brooklyn Constructing"
+    },
+    {
+      "name": "Correction Officers' Benevolen",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "East Elmhurst",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Doctors Council SEIU COPE",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Merlino, Silvena",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Flushing",
+      "state": "NY",
+      "occupation": "attorney",
+      "employer": "Rivkin Radler LLP"
+    },
+    {
+      "name": "Plumbers Local Union No. 1 NYC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Long Island City",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Police Benevolent Association",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Uniformed FireFighters Assn",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Wagner, Jimmy",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Legal",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Clemenza, James",
+      "amount": 1000,
+      "donorType": "IND",
+      "city": "Far Rockaway",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 48311,
+      "contributorCount": 278
+    },
+    {
+      "label": "Legal",
+      "amount": 4175,
+      "contributorCount": 11
+    },
+    {
+      "label": "Education",
+      "amount": 1775,
+      "contributorCount": 10
+    },
+    {
+      "label": "Small Business / Retail",
+      "amount": 1675,
+      "contributorCount": 11
+    },
+    {
+      "label": "Finance",
+      "amount": 1525,
+      "contributorCount": 10
+    },
+    {
+      "label": "Healthcare",
+      "amount": 875,
+      "contributorCount": 7
+    }
+  ],
+  "explanatoryNotes": [
+    "Small-dollar donors contributed 61% of reported private fundraising across 294 contributions.",
+    "9 donors gave at the legal maximum, totaling $9,450.",
+    "Committees, unions, or other non-individual donors made up 16% of reported private fundraising.",
+    "Among reported private contributions, legal stands out as one of the strongest donor patterns."
+  ]
+}

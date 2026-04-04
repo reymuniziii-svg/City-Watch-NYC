@@ -1,0 +1,152 @@
+{
+  "slug": "crystal-hudson",
+  "cycle": "2025",
+  "candidateName": "Hudson, Crystal",
+  "candidateId": "2267",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-04-04T16:48:38.541Z",
+  "contributorCount": 834,
+  "totalRaised": 182480.85,
+  "publicFunds": 247644,
+  "publicFundsShare": 0.576,
+  "smallDollarAmount": 79406.74,
+  "smallDollarDonorCount": 671,
+  "smallDollarShare": 0.435,
+  "topTenDonorShare": 0.076,
+  "maxContributionDonorCount": 36,
+  "maxContributionAmount": 37800,
+  "organizationalDonorAmount": 22169.11,
+  "organizationalDonorShare": 0.121,
+  "outsideCityAmount": 23445.36,
+  "outsideCityShare": 0.128,
+  "topDonors": [
+    {
+      "name": "Baxter, Ryan",
+      "amount": 2100,
+      "donorType": "IND",
+      "city": "Forest Hills",
+      "state": "NY",
+      "occupation": "Carbon Strategist",
+      "employer": "5"
+    },
+    {
+      "name": "SACCHI, RITA",
+      "amount": 1750,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Sheffey, Stacey",
+      "amount": 1550,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Oliveira, Ana Luiza",
+      "amount": 1500,
+      "donorType": "IND",
+      "city": "New York City",
+      "state": "NY",
+      "occupation": "CEO",
+      "employer": "The New York Women's Foundatio"
+    },
+    {
+      "name": "Grainger, Katherine",
+      "amount": 1300,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Managing Partner",
+      "employer": "Civitas"
+    },
+    {
+      "name": "Wing, Matthew",
+      "amount": 1275,
+      "donorType": "IND",
+      "city": "BROOKLYN",
+      "state": "NY",
+      "occupation": "Consultant",
+      "employer": "Wingspan"
+    },
+    {
+      "name": "Tyus, Ethel",
+      "amount": 1250,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "32BJ United ADF",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Anastasiou, Ted",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Attorney",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Berlin, Valerie",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Consultant",
+      "employer": "BerlinRosen"
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 150078.85,
+      "contributorCount": 622
+    },
+    {
+      "label": "Legal",
+      "amount": 11630,
+      "contributorCount": 69
+    },
+    {
+      "label": "Government / Public Sector",
+      "amount": 5890,
+      "contributorCount": 37
+    },
+    {
+      "label": "Education",
+      "amount": 5250,
+      "contributorCount": 35
+    },
+    {
+      "label": "Healthcare",
+      "amount": 5241,
+      "contributorCount": 26
+    },
+    {
+      "label": "Finance",
+      "amount": 4470,
+      "contributorCount": 13
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds account for about 58% of the campaign's total resources.",
+    "Private fundraising looks relatively diffuse: the top ten donors account for only 8% of reported private contributions.",
+    "36 donors gave at the legal maximum, totaling $37,800.",
+    "Among reported private contributions, legal stands out as one of the strongest donor patterns."
+  ]
+}

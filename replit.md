@@ -35,6 +35,19 @@ A React web application for tracking NYC City Council activities. Allows residen
 - `npm run data:build` - Process raw data into JSON for the frontend
 - `npm run data:sync` - Full data pipeline (sync upstream + build)
 
+## Production Server (`server.js`)
+A small Express server handles the production deployment:
+- Serves the built static files from `dist/`
+- On startup, automatically runs `data:sync` + `build` if no `dist/` exists
+- Schedules a **nightly refresh at 3:00 AM UTC**: re-runs `data:sync` then `npm run build` in the background while continuing to serve the current build. This keeps legislation, hearings, and campaign finance data current without any manual intervention.
+- Run command: `node server.js`
+
 ## Deployment
-- Static site deployment via `npm run build` → `dist/` directory
-- Note: Data must be built first (`npm run data:build`) before a full production build
+- VM deployment: `node server.js`
+- The server handles all data sync and builds automatically — no separate build step needed
+- Data refreshes nightly; each refresh pulls the latest nyc_legislation repo + downloads fresh campaign finance CSVs
+
+## Known Issues / Notes
+- Vite file watcher is configured to ignore `.local/**`, `data/**`, and `node_modules/**` to prevent reload loops from Replit's internal log files and the large raw data directory
+- Tailwind CSS v4 content scanner is configured via `@source "!..."` in `src/index.css` to exclude `.local/`, `data/`, and `node_modules/`
+- `GEMINI_API_KEY` is optional; fallback summaries are used when absent

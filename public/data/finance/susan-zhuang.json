@@ -1,0 +1,152 @@
+{
+  "slug": "susan-zhuang",
+  "cycle": "2025",
+  "candidateName": "Zhuang, Susan",
+  "candidateId": "2758",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-04-04T16:48:38.762Z",
+  "contributorCount": 579,
+  "totalRaised": 94829.93,
+  "publicFunds": null,
+  "publicFundsShare": 0,
+  "smallDollarAmount": 51232.93,
+  "smallDollarDonorCount": 494,
+  "smallDollarShare": 0.54,
+  "topTenDonorShare": 0.11,
+  "maxContributionDonorCount": 8,
+  "maxContributionAmount": 8400,
+  "organizationalDonorAmount": 6950,
+  "organizationalDonorShare": 0.073,
+  "outsideCityAmount": 5450,
+  "outsideCityShare": 0.057,
+  "topDonors": [
+    {
+      "name": "DOCTORS COUNCIL SEIU COPE",
+      "amount": 1050,
+      "donorType": "EMPO",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Fixel, Lauren",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Philanthropist",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Fixel, Lee",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Investor",
+      "employer": "Addition"
+    },
+    {
+      "name": "Julie Menin 2025",
+      "amount": 1050,
+      "donorType": "PCOMC",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "New York Hotel Trades Council",
+      "amount": 1050,
+      "donorType": "EMPO",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Rosen, Adeena",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Scarsdale",
+      "state": "NY",
+      "occupation": "Homemaker",
+      "employer": ""
+    },
+    {
+      "name": "rosen, david",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Scarsdale",
+      "state": "NY",
+      "occupation": "Analyst",
+      "employer": "Rubric Capital"
+    },
+    {
+      "name": "UNITED FEDERATION OF TEACHERS",
+      "amount": 1050,
+      "donorType": "EMPO",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "1199 SEIU-NYS Political Action",
+      "amount": 1000,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "ADJMI, HARRY",
+      "amount": 1000,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "CEO",
+      "employer": "ONE STEP UP LTD"
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 78431.93,
+      "contributorCount": 498
+    },
+    {
+      "label": "Small Business / Retail",
+      "amount": 7373,
+      "contributorCount": 24
+    },
+    {
+      "label": "Finance",
+      "amount": 3325,
+      "contributorCount": 9
+    },
+    {
+      "label": "Healthcare",
+      "amount": 2835,
+      "contributorCount": 26
+    },
+    {
+      "label": "Real Estate",
+      "amount": 2625,
+      "contributorCount": 12
+    },
+    {
+      "label": "Legal",
+      "amount": 1010,
+      "contributorCount": 7
+    }
+  ],
+  "explanatoryNotes": [
+    "Small-dollar donors contributed 54% of reported private fundraising across 494 contributions.",
+    "Private fundraising looks relatively diffuse: the top ten donors account for only 11% of reported private contributions.",
+    "8 donors gave at the legal maximum, totaling $8,400.",
+    "Among reported private contributions, small business / retail stands out as one of the strongest donor patterns."
+  ]
+}

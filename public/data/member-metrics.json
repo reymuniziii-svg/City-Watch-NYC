@@ -1,0 +1,443 @@
+[
+  {
+    "slug": "julie-menin",
+    "billsSponsored": 10,
+    "billsEnacted": 3,
+    "coSponsorshipRate": 0.333,
+    "hearingActivity": 0,
+    "rankSponsored": 33,
+    "rankEnacted": 1
+  },
+  {
+    "slug": "inna-vernikov",
+    "billsSponsored": 7,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.86,
+    "hearingActivity": 0,
+    "rankSponsored": 36,
+    "rankEnacted": 29
+  },
+  {
+    "slug": "joann-ariola",
+    "billsSponsored": 17,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.77,
+    "hearingActivity": 2,
+    "rankSponsored": 17,
+    "rankEnacted": 31
+  },
+  {
+    "slug": "eric-dinowitz",
+    "billsSponsored": 14,
+    "billsEnacted": 1,
+    "coSponsorshipRate": 0.682,
+    "hearingActivity": 5,
+    "rankSponsored": 23,
+    "rankEnacted": 4
+  },
+  {
+    "slug": "lynn-c-schulman",
+    "billsSponsored": 12,
+    "billsEnacted": 1,
+    "coSponsorshipRate": 0.878,
+    "hearingActivity": 5,
+    "rankSponsored": 30,
+    "rankEnacted": 13
+  },
+  {
+    "slug": "shaun-abreu",
+    "billsSponsored": 24,
+    "billsEnacted": 3,
+    "coSponsorshipRate": 0.704,
+    "hearingActivity": 9,
+    "rankSponsored": 12,
+    "rankEnacted": 2
+  },
+  {
+    "slug": "james-f-gennaro",
+    "billsSponsored": 32,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.396,
+    "hearingActivity": 2,
+    "rankSponsored": 4,
+    "rankEnacted": 30
+  },
+  {
+    "slug": "sandra-ung",
+    "billsSponsored": 22,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.796,
+    "hearingActivity": 8,
+    "rankSponsored": 14,
+    "rankEnacted": 38
+  },
+  {
+    "slug": "farah-n-louis",
+    "billsSponsored": 16,
+    "billsEnacted": 1,
+    "coSponsorshipRate": 0.978,
+    "hearingActivity": 7,
+    "rankSponsored": 19,
+    "rankEnacted": 5
+  },
+  {
+    "slug": "mercedes-narcisse",
+    "billsSponsored": 26,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.667,
+    "hearingActivity": 4,
+    "rankSponsored": 9,
+    "rankEnacted": 35
+  },
+  {
+    "slug": "linda-lee",
+    "billsSponsored": 24,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.684,
+    "hearingActivity": 6,
+    "rankSponsored": 11,
+    "rankEnacted": 34
+  },
+  {
+    "slug": "gale-a-brewer",
+    "billsSponsored": 34,
+    "billsEnacted": 1,
+    "coSponsorshipRate": 0.854,
+    "hearingActivity": 7,
+    "rankSponsored": 3,
+    "rankEnacted": 6
+  },
+  {
+    "slug": "kamillah-hanks",
+    "billsSponsored": 14,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.785,
+    "hearingActivity": 0,
+    "rankSponsored": 26,
+    "rankEnacted": 32
+  },
+  {
+    "slug": "oswald-j-feliz",
+    "billsSponsored": 23,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.629,
+    "hearingActivity": 5,
+    "rankSponsored": 13,
+    "rankEnacted": 36
+  },
+  {
+    "slug": "chris-banks",
+    "billsSponsored": 4,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.967,
+    "hearingActivity": 2,
+    "rankSponsored": 38,
+    "rankEnacted": 22
+  },
+  {
+    "slug": "susan-zhuang",
+    "billsSponsored": 4,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.852,
+    "hearingActivity": 2,
+    "rankSponsored": 40,
+    "rankEnacted": 45
+  },
+  {
+    "slug": "kevin-c-riley",
+    "billsSponsored": 13,
+    "billsEnacted": 1,
+    "coSponsorshipRate": 0.755,
+    "hearingActivity": 6,
+    "rankSponsored": 29,
+    "rankEnacted": 11
+  },
+  {
+    "slug": "virginia-maloney",
+    "billsSponsored": 3,
+    "billsEnacted": 1,
+    "coSponsorshipRate": 0.912,
+    "hearingActivity": 2,
+    "rankSponsored": 42,
+    "rankEnacted": 17
+  },
+  {
+    "slug": "phil-wong",
+    "billsSponsored": 4,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.938,
+    "hearingActivity": 0,
+    "rankSponsored": 39,
+    "rankEnacted": 37
+  },
+  {
+    "slug": "nantasha-m-williams",
+    "billsSponsored": 30,
+    "billsEnacted": 1,
+    "coSponsorshipRate": 0.625,
+    "hearingActivity": 4,
+    "rankSponsored": 7,
+    "rankEnacted": 14
+  },
+  {
+    "slug": "elsie-encarnacion",
+    "billsSponsored": 1,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.97,
+    "hearingActivity": 6,
+    "rankSponsored": 44,
+    "rankEnacted": 27
+  },
+  {
+    "slug": "justin-e-sanchez",
+    "billsSponsored": 1,
+    "billsEnacted": 1,
+    "coSponsorshipRate": 0.98,
+    "hearingActivity": 10,
+    "rankSponsored": 45,
+    "rankEnacted": 10
+  },
+  {
+    "slug": "yusef-salaam",
+    "billsSponsored": 9,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.847,
+    "hearingActivity": 3,
+    "rankSponsored": 35,
+    "rankEnacted": 49
+  },
+  {
+    "slug": "ty-hankerson",
+    "billsSponsored": 1,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.968,
+    "hearingActivity": 3,
+    "rankSponsored": 46,
+    "rankEnacted": 47
+  },
+  {
+    "slug": "darlene-mealy",
+    "billsSponsored": 3,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.571,
+    "hearingActivity": 1,
+    "rankSponsored": 41,
+    "rankEnacted": 25
+  },
+  {
+    "slug": "christopher-marte",
+    "billsSponsored": 13,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.863,
+    "hearingActivity": 6,
+    "rankSponsored": 28,
+    "rankEnacted": 23
+  },
+  {
+    "slug": "shekar-krishnan",
+    "billsSponsored": 15,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.826,
+    "hearingActivity": 4,
+    "rankSponsored": 22,
+    "rankEnacted": 43
+  },
+  {
+    "slug": "shirley-aldebol",
+    "billsSponsored": 0,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 1,
+    "hearingActivity": 2,
+    "rankSponsored": 49,
+    "rankEnacted": 44
+  },
+  {
+    "slug": "harvey-d-epstein",
+    "billsSponsored": 5,
+    "billsEnacted": 1,
+    "coSponsorshipRate": 0.881,
+    "hearingActivity": 5,
+    "rankSponsored": 37,
+    "rankEnacted": 7
+  },
+  {
+    "slug": "selvena-n-brooks-powers",
+    "billsSponsored": 27,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.842,
+    "hearingActivity": 3,
+    "rankSponsored": 8,
+    "rankEnacted": 40
+  },
+  {
+    "slug": "shanel-thomas-henry",
+    "billsSponsored": 0,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 1,
+    "hearingActivity": 2,
+    "rankSponsored": 48,
+    "rankEnacted": 42
+  },
+  {
+    "slug": "vickie-paladino",
+    "billsSponsored": 9,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.8,
+    "hearingActivity": 0,
+    "rankSponsored": 34,
+    "rankEnacted": 48
+  },
+  {
+    "slug": "david-m-carr",
+    "billsSponsored": 10,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.722,
+    "hearingActivity": 0,
+    "rankSponsored": 32,
+    "rankEnacted": 26
+  },
+  {
+    "slug": "frank-morano",
+    "billsSponsored": 16,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.9,
+    "hearingActivity": 2,
+    "rankSponsored": 20,
+    "rankEnacted": 28
+  },
+  {
+    "slug": "shahana-k-hanif",
+    "billsSponsored": 20,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.926,
+    "hearingActivity": 3,
+    "rankSponsored": 15,
+    "rankEnacted": 41
+  },
+  {
+    "slug": "julie-won",
+    "billsSponsored": 14,
+    "billsEnacted": 1,
+    "coSponsorshipRate": 0.774,
+    "hearingActivity": 3,
+    "rankSponsored": 25,
+    "rankEnacted": 9
+  },
+  {
+    "slug": "althea-v-stevens",
+    "billsSponsored": 30,
+    "billsEnacted": 1,
+    "coSponsorshipRate": 0.806,
+    "hearingActivity": 5,
+    "rankSponsored": 6,
+    "rankEnacted": 3
+  },
+  {
+    "slug": "amanda-c-farias",
+    "billsSponsored": 16,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.778,
+    "hearingActivity": 5,
+    "rankSponsored": 18,
+    "rankEnacted": 19
+  },
+  {
+    "slug": "rita-c-joseph",
+    "billsSponsored": 12,
+    "billsEnacted": 1,
+    "coSponsorshipRate": 0.846,
+    "hearingActivity": 5,
+    "rankSponsored": 31,
+    "rankEnacted": 16
+  },
+  {
+    "slug": "tiffany-l-caban",
+    "billsSponsored": 19,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.84,
+    "hearingActivity": 4,
+    "rankSponsored": 16,
+    "rankEnacted": 46
+  },
+  {
+    "slug": "jennifer-gutierrez",
+    "billsSponsored": 14,
+    "billsEnacted": 1,
+    "coSponsorshipRate": 0.818,
+    "hearingActivity": 2,
+    "rankSponsored": 24,
+    "rankEnacted": 8
+  },
+  {
+    "slug": "alexa-aviles",
+    "billsSponsored": 13,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.797,
+    "hearingActivity": 0,
+    "rankSponsored": 27,
+    "rankEnacted": 18
+  },
+  {
+    "slug": "sandy-nurse",
+    "billsSponsored": 32,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.726,
+    "hearingActivity": 2,
+    "rankSponsored": 5,
+    "rankEnacted": 39
+  },
+  {
+    "slug": "lincoln-restler",
+    "billsSponsored": 50,
+    "billsEnacted": 1,
+    "coSponsorshipRate": 0.658,
+    "hearingActivity": 8,
+    "rankSponsored": 1,
+    "rankEnacted": 12
+  },
+  {
+    "slug": "crystal-hudson",
+    "billsSponsored": 39,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.854,
+    "hearingActivity": 4,
+    "rankSponsored": 2,
+    "rankEnacted": 24
+  },
+  {
+    "slug": "carmen-n-de-la-rosa",
+    "billsSponsored": 25,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.643,
+    "hearingActivity": 3,
+    "rankSponsored": 10,
+    "rankEnacted": 20
+  },
+  {
+    "slug": "chi-a-osse",
+    "billsSponsored": 1,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 0.979,
+    "hearingActivity": 0,
+    "rankSponsored": 43,
+    "rankEnacted": 21
+  },
+  {
+    "slug": "pierina-ana-sanchez",
+    "billsSponsored": 15,
+    "billsEnacted": 1,
+    "coSponsorshipRate": 0.741,
+    "hearingActivity": 7,
+    "rankSponsored": 21,
+    "rankEnacted": 15
+  },
+  {
+    "slug": "kayla-santosuosso",
+    "billsSponsored": 0,
+    "billsEnacted": 0,
+    "coSponsorshipRate": 1,
+    "hearingActivity": 0,
+    "rankSponsored": 47,
+    "rankEnacted": 33
+  }
+]

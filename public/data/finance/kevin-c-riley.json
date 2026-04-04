@@ -1,0 +1,153 @@
+{
+  "slug": "kevin-c-riley",
+  "cycle": "2025",
+  "candidateName": "Riley, Kevin",
+  "candidateId": "2327",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-04-04T16:48:37.926Z",
+  "contributorCount": 579,
+  "totalRaised": 106163.12,
+  "publicFunds": 161201,
+  "publicFundsShare": 0.603,
+  "smallDollarAmount": 53477.12,
+  "smallDollarDonorCount": 502,
+  "smallDollarShare": 0.504,
+  "topTenDonorShare": 0.112,
+  "maxContributionDonorCount": 22,
+  "maxContributionAmount": 23550,
+  "organizationalDonorAmount": 19077.120000000003,
+  "organizationalDonorShare": 0.18,
+  "outsideCityAmount": 28954,
+  "outsideCityShare": 0.273,
+  "topDonors": [
+    {
+      "name": "Rosenshein, Lisa",
+      "amount": 1985,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Commercial Real Estate",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Zamechansky, Kathy",
+      "amount": 1300,
+      "donorType": "IND",
+      "city": "The Bronx",
+      "state": "NY",
+      "occupation": "Real Estate Broker",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "ALSTON, JAMES",
+      "amount": 1225,
+      "donorType": "IND",
+      "city": "The Bronx",
+      "state": "NY",
+      "occupation": "entrepreneur",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Bricklayers & Allied Craftwork",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Astoria",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Brooks-Powers, Selvena",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Rockaway Beach",
+      "state": "NY",
+      "occupation": "Council Member",
+      "employer": "NYC Council"
+    },
+    {
+      "name": "District Council 37 Political",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Doctors Council SEIU Cope",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Duvnjak, Robert",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Manhasset",
+      "state": "NY",
+      "occupation": "Financial Services",
+      "employer": "Alliant"
+    },
+    {
+      "name": "FARIAS 2025",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Bronx",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "IUOE Local 30 State PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Whitestone",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 85962.12,
+      "contributorCount": 450
+    },
+    {
+      "label": "Real Estate",
+      "amount": 7210,
+      "contributorCount": 19
+    },
+    {
+      "label": "Healthcare",
+      "amount": 3782,
+      "contributorCount": 28
+    },
+    {
+      "label": "Government / Public Sector",
+      "amount": 3120,
+      "contributorCount": 25
+    },
+    {
+      "label": "Legal",
+      "amount": 2851,
+      "contributorCount": 25
+    },
+    {
+      "label": "Finance",
+      "amount": 1827,
+      "contributorCount": 8
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds account for about 60% of the campaign's total resources.",
+    "Small-dollar donors contributed 50% of reported private fundraising across 502 contributions.",
+    "Private fundraising looks relatively diffuse: the top ten donors account for only 11% of reported private contributions.",
+    "22 donors gave at the legal maximum, totaling $23,550.",
+    "Committees, unions, or other non-individual donors made up 18% of reported private fundraising."
+  ]
+}

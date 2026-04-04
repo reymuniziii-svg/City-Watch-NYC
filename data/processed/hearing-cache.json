@@ -1,0 +1,748 @@
+{
+  "generatedAt": "2026-04-04T16:48:19.642Z",
+  "provider": "none",
+  "model": "gemini-2.5-flash",
+  "cacheNamespace": "hearing-summary:none:gemini-2.5-flash",
+  "entries": [
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::ceabde768e2699b8fc9f12a382dd34baffcdf737",
+      "overview": "The Stated Meeting happens every 2 weeks (4 weeks in summer), when the council votes on and introduces new legislation. Notably at this meeting, the council passed several significant items including the Atlantic Avenue Mixed Use Plan for 4,600 new housing units, legislation requiring application confirmation notices for social services, and a resolution calling for federal legislation to ensure fair compensation for musicians from streaming services. The council also introduced new bills on environmental impact studies for JFK Airport, cannabis store regulations, and labor history education.",
+      "takeaways": [
+        "The Stated Meeting happens every 2 weeks (4 weeks in summer), when the council votes on and introduces new legislation. Notably at this meeting, the council passed several significant items including the Atlantic Avenue Mixed Use Plan for 4,600 new housing units, legislation requiring application confirmation notices for social services, and a resolution calling for federal legislation to ensure fair compensation for musicians from streaming services. The council also introduced new bills on environmental impact studies for JFK Airport, cannabis store regulations, and labor history education.",
+        "Majority Leader Amanda Farías opens the May 28, 2025 stated meeting with introductory remarks",
+        "Invocation by Rev. Nell Archer, Vicar of Bushwick Abbey and Iglesia de la Santa Cruz"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::da9955c467b28b44346c3603daa8e779decd3371",
+      "overview": "The Stated Meeting happens every 2 weeks (4 weeks in summer), when the council votes on and introduces new legislation. Notably at this meeting, Julie Menin is elected Speaker of the NYC City Council and David Carr is elected Minority Leader.",
+      "takeaways": [
+        "The Stated Meeting happens every 2 weeks (4 weeks in summer), when the council votes on and introduces new legislation. Notably at this meeting, Julie Menin is elected Speaker of the NYC City Council and David Carr is elected Minority Leader.",
+        "Attorney General Letitia James addresses city priorities and administers the oath of office",
+        "Invocation by Joseph Potasnik, Rabbi and Executive Vice President, New York Board of Rabbis"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::1b1f24f3225943bf5aa3231f9401401925917322",
+      "overview": "A hearing on the New York City Police Department (NYPD) and Mayor's Office of Criminal Justice (MOCJ) budgets for fiscal year 2026. Discussions focused on NYPD staffing goals, overtime spending, public safety initiatives, 911 operations, and MOCJ programs including reentry initiatives and alternatives to incarceration Key issues included the new policy of issuing criminal summonses to cyclists, concerns about federal funding cuts affecting nonprofit providers, and requests for increased funding for legal services and emergency medical services. Features testimony from NYPD, MOCJ, and the public.",
+      "takeaways": [
+        "A hearing on the New York City Police Department (NYPD) and Mayor's Office of Criminal Justice (MOCJ) budgets for fiscal year 2026. Discussions focused on NYPD staffing goals, overtime spending, public safety initiatives, 911 operations, and MOCJ programs including reentry initiatives and alternatives to incarceration Key issues included the new policy of issuing criminal summonses to cyclists, concerns about federal funding cuts affecting nonprofit providers, and requests for increased funding for legal services and emergency medical services. Features testimony from NYPD, MOCJ, and the public.",
+        "Council Member Justin Brannan's opening remarks for NYPD budget hearing",
+        "Council Member Yusef Salaam's opening remarks for fiscal 2026 public safety budget hearing"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::b284242503ef7dd571e4eb26367a82cc7d0c5182",
+      "overview": "A hearing on the FY 2026 executive budget, focusing on the city's fiscal outlook, potential federal funding cuts, reserve funds, tax revenue projections, and various agency budgets. Discussions covered challenges like asylum seeker costs, childcare voucher funding, property tax reform, and budget equity across communities. Features testimony from the Office of Management and Budget (OMB), the City Comptroller, the Department of Finance, and the Independent Budget Office (IBO).",
+      "takeaways": [
+        "A hearing on the FY 2026 executive budget, focusing on the city's fiscal outlook, potential federal funding cuts, reserve funds, tax revenue projections, and various agency budgets. Discussions covered challenges like asylum seeker costs, childcare voucher funding, property tax reform, and budget equity across communities. Features testimony from the Office of Management and Budget (OMB), the City Comptroller, the Department of Finance, and the Independent Budget Office (IBO).",
+        "Council Member Justin Brannan opens final day of FY 2026 executive budget hearings",
+        "Speaker Adams discusses budget overview and economic forecast"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::a1ad3a5ec33859e7e42d0d6efe1778f443d1fb31",
+      "overview": "A hearing on the Department of Health and Mental Hygiene's FY 2026 executive budget of $2.3 billion, representing 2% of the city's total budget. Discussions focused on: Potential federal funding cuts New allocations for programs like STI testing and tuberculosis management Calls for increased funding in areas such as school-based health centers, maternal health, animal welfare, and mental health services Key topics included strategies to reduce black maternal mortality, expand overdose prevention services, and implement the Healthy NYC program to increase life expectancy. Features testimony from the Department of Health and Mental Hygiene (DOHMH) officials and the public.",
+      "takeaways": [
+        "A hearing on the Department of Health and Mental Hygiene's FY 2026 executive budget of $2.3 billion, representing 2% of the city's total budget. Discussions focused on: Potential federal funding cuts New allocations for programs like STI testing and tuberculosis management Calls for increased funding in areas such as school-based health centers, maternal health, animal welfare, and mental health services Key topics included strategies to reduce black maternal mortality, expand overdose prevention services, and implement the Healthy NYC program to increase life expectancy. Features testimony from the Department of Health and Mental Hygiene (DOHMH) officials and the public.",
+        "Council Member Justin Brannan's opening remarks for DOHMH budget hearing",
+        "Council Member Linda Lee provides opening remarks on DOHMH's FY 2026 budget"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::d373a022a4186595d07c9b88cc36c54abd500872",
+      "overview": "A hearing on the FY2026 executive budget for the Department of Corrections (DOC) and Mayor's Office of Immigrant Affairs (MOIA). For DOC, discussions focused on the $1.21 billion proposed budget, high overtime spending, capital projects at Rikers Island, delays in new therapeutic bed facilities, and ongoing staffing challenges. For MOIA, the $29.6 million proposed budget was examined, with emphasis on new immigration legal support centers, funding cuts to existing programs, and the agency's response to increased federal immigration enforcement. Features testimony from DOC, MOIA, and the public.",
+      "takeaways": [
+        "A hearing on the FY2026 executive budget for the Department of Corrections (DOC) and Mayor's Office of Immigrant Affairs (MOIA). For DOC, discussions focused on the $1.21 billion proposed budget, high overtime spending, capital projects at Rikers Island, delays in new therapeutic bed facilities, and ongoing staffing challenges. For MOIA, the $29.6 million proposed budget was examined, with emphasis on new immigration legal support centers, funding cuts to existing programs, and the agency's response to increased federal immigration enforcement. Features testimony from DOC, MOIA, and the public.",
+        "Council Member Justin Brannan's opening remarks for FY2026 budget hearing on Department of Corrections",
+        "Council Member Sandy Nurse outlines focus for Department of Corrections budget hearing"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::ad7ad8a13910320ed45f642b17438393788bcf23",
+      "overview": "A hearing on the Health + Hospitals (H+H) executive budget for FY 2026. Discussions focused on potential impacts of proposed federal Medicaid cuts, current financial outlook, capital projects for flood mitigation, and various healthcare initiatives. Features testimony from Health + Hospitals officials, including President and CEO Dr. Mitchell Katz, and the public.",
+      "takeaways": [
+        "A hearing on the Health + Hospitals (H+H) executive budget for FY 2026. Discussions focused on potential impacts of proposed federal Medicaid cuts, current financial outlook, capital projects for flood mitigation, and various healthcare initiatives. Features testimony from Health + Hospitals officials, including President and CEO Dr. Mitchell Katz, and the public.",
+        "Council Member Brannan's opening remarks on Health and Hospitals Corporation budget hearing",
+        "Council Member Mercedes Narcisse opens joint hearing on NYC Health + Hospitals budget"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::e8312da7c2a25897b87d3826510347fe42edbd2d",
+      "overview": "A hearing on the FY2026 executive budget for libraries and cultural affairs. Discussions focused on the need for increased baseline funding for libraries to address staffing shortages, facility repairs, and service expansion. For cultural affairs, the dialogue centered on the recent $45 million baseline increase and calls for an additional $30 million to offset federal funding cuts and support smaller organizations. Features testimony from the New York Public Library, Brooklyn Public Library, Queens Public Library, the Department of Cultural Affairs (DCLA), and the public.",
+      "takeaways": [
+        "A hearing on the FY2026 executive budget for libraries and cultural affairs. Discussions focused on the need for increased baseline funding for libraries to address staffing shortages, facility repairs, and service expansion. For cultural affairs, the dialogue centered on the recent $45 million baseline increase and calls for an additional $30 million to offset federal funding cuts and support smaller organizations. Features testimony from the New York Public Library, Brooklyn Public Library, Queens Public Library, the Department of Cultural Affairs (DCLA), and the public.",
+        "Council Member Justin Brannan's opening remarks for FY2026 budget hearing on libraries and cultural affairs",
+        "Council Member Carlina Rivera's opening remarks on library funding and budget priorities"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::c02c2400914e9459720320fdeaed90e62e02c448",
+      "overview": "A hearing on the One45 for Harlem development proposal, a mixed-use project in Central Harlem requiring rezoning approvals. Discussions focused on affordable housing levels, community benefits, building height, environmental impacts, and local hiring commitments. The proposal includes 968 apartments (291 affordable), retail space, a community center, and a rooftop banquet hall. Key issues included increasing affordable units, ensuring affordability matches local incomes, adding more family-sized units, and addressing gentrification concerns. Features testimony from the developer, Bruce Teitelbaum, and the public, with diverse opinions on the project's potential impact on the community.",
+      "takeaways": [
+        "A hearing on the One45 for Harlem development proposal, a mixed-use project in Central Harlem requiring rezoning approvals. Discussions focused on affordable housing levels, community benefits, building height, environmental impacts, and local hiring commitments. The proposal includes 968 apartments (291 affordable), retail space, a community center, and a rooftop banquet hall. Key issues included increasing affordable units, ensuring affordability matches local incomes, adding more family-sized units, and addressing gentrification concerns. Features testimony from the developer, Bruce Teitelbaum, and the public, with diverse opinions on the project's potential impact on the community.",
+        "Council Member Kevin Riley introduces the meeting and explains procedures for the One45 for Harlem proposal hearing",
+        "Council Member Yusef Salaam addresses the One Forty Five for Harlem project"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::2ee20242af91420b8f6ea11b34731a5df26625fb",
+      "overview": "A hearing on the FY 2026 executive budget for the Administration for Children's Services (ACS) and Department of Youth and Community Development (DYCD). Discussions focused on: Funding for child care vouchers Foster care After-school programs Runaway and homeless youth services Youth employment programs. Key issues included: Potential shortfalls in child care voucher funding New investments in after-school programs Expansions to youth services Concerns about rising costs for providers Features testimony from ACS, DYCD, and the public.",
+      "takeaways": [
+        "A hearing on the FY 2026 executive budget for the Administration for Children's Services (ACS) and Department of Youth and Community Development (DYCD). Discussions focused on: Funding for child care vouchers Foster care After-school programs Runaway and homeless youth services Youth employment programs. Key issues included: Potential shortfalls in child care voucher funding New investments in after-school programs Expansions to youth services Concerns about rising costs for providers Features testimony from ACS, DYCD, and the public.",
+        "Council Member Justin Brannan's opening remarks on FY 2026 budget hearing for ACS and DYCD",
+        "Council Member Althea Stevens opens executive budget hearing for ACS and DYCD"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::970020b5297889bf7037944022c33766b8f7ccfb",
+      "overview": "A hearing on the Department of Education's FY 2026 executive budget, which totals $34.4 billion, representing 30% of the city's total budget. Discussions focused on key investments such as funding for pre-K special education, 3-K seats, and new teaching positions to comply with class size mandates. Major concerns raised included potential federal funding cuts, insufficient support for mental health programs and school food workers, and high costs of special education services. Council members pressed the DOE on issues like class size compliance, early childhood education capacity, and support for students with disabilities. Features testimony from the Department of Education (DOE), students, parents, educators, advocates, and the public.",
+      "takeaways": [
+        "A hearing on the Department of Education's FY 2026 executive budget, which totals $34.4 billion, representing 30% of the city's total budget. Discussions focused on key investments such as funding for pre-K special education, 3-K seats, and new teaching positions to comply with class size mandates. Major concerns raised included potential federal funding cuts, insufficient support for mental health programs and school food workers, and high costs of special education services. Council members pressed the DOE on issues like class size compliance, early childhood education capacity, and support for students with disabilities. Features testimony from the Department of Education (DOE), students, parents, educators, advocates, and the public.",
+        "Council Member Justin Brannan's opening remarks for FY 2026 DOE budget hearing",
+        "Introduction and overview of the Department of Education's budget hearing"
+      ],
+      "outcomeType": "oversight"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::c84db5a2d887b1017c272a6e08d2fde6ada40329",
+      "overview": "A hearing on the Department of Social Services (DSS) fiscal year 2026 executive budget, covering both the Human Resources Administration (HRA) and Department of Homeless Services (DHS). Discussions focused on: Potential federal funding cuts to critical programs like SNAP and Medicaid Historically under-budgeted entitlement programs Implementation of prevailing wages for shelter security officers Proposed changes to the CityFHEPS housing voucher program Funding for food assistance programs Immigrant legal services Right to Counsel for tenants Shelter conditions and policies Support for domestic violence survivors. Features testimony from DSS Commissioner Molly Wasow Park, HRA and DHS officials, and the public.",
+      "takeaways": [
+        "A hearing on the Department of Social Services (DSS) fiscal year 2026 executive budget, covering both the Human Resources Administration (HRA) and Department of Homeless Services (DHS). Discussions focused on: Potential federal funding cuts to critical programs like SNAP and Medicaid Historically under-budgeted entitlement programs Implementation of prevailing wages for shelter security officers Proposed changes to the CityFHEPS housing voucher program Funding for food assistance programs Immigrant legal services Right to Counsel for tenants Shelter conditions and policies Support for domestic violence survivors. Features testimony from DSS Commissioner Molly Wasow Park, HRA and DHS officials, and the public.",
+        "Justin Brannan's opening remarks for FY 2026 DSS budget hearing",
+        "Council Member Diana Ayala's opening remarks on the FY 2026 executive budget for Department of Social Services"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::baeb07b7b51319250794aed7a2fdbe1e8d01eb2d",
+      "overview": "A hearing on the City University of New York (CUNY) and Campaign Finance Board (CFB) FY2026 budgets. Discussions focused on CUNY's funding challenges, including federal grant cancellations, faculty vacancies, and program expansions like CUNY Reconnect. For the CFB, topics included budget allocations for public matching funds, staff expansion, technology upgrades, and efforts to enforce campaign finance rules and educate voters on ranked choice voting. Features testimony from CUNY, CFB, and the public.",
+      "takeaways": [
+        "A hearing on the City University of New York (CUNY) and Campaign Finance Board (CFB) FY2026 budgets. Discussions focused on CUNY's funding challenges, including federal grant cancellations, faculty vacancies, and program expansions like CUNY Reconnect. For the CFB, topics included budget allocations for public matching funds, staff expansion, technology upgrades, and efforts to enforce campaign finance rules and educate voters on ranked choice voting. Features testimony from CUNY, CFB, and the public.",
+        "Council Member Justin Brannan's opening remarks for CUNY FY2026 budget hearing",
+        "Council Member Eric Dinowitz's opening remarks on CUNY's FY2026 executive budget"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::0512aaf005165a35e5080603b21455254104df46",
+      "overview": "A hearing on the Department of Housing Preservation and Development (HPD) and New York City Housing Authority (NYCHA) budgets for FY2026. Discussions focused on: Federal funding concerns Affordable housing development challenges NYCHA's capital needs and repair issues The RAD/PACT program Community land trusts Homelessness and housing vouchers Tenant protections. Features testimony from HPD, NYCHA, and the public.",
+      "takeaways": [
+        "A hearing on the Department of Housing Preservation and Development (HPD) and New York City Housing Authority (NYCHA) budgets for FY2026. Discussions focused on: Federal funding concerns Affordable housing development challenges NYCHA's capital needs and repair issues The RAD/PACT program Community land trusts Homelessness and housing vouchers Tenant protections. Features testimony from HPD, NYCHA, and the public.",
+        "Council Member Justin Brannan's opening remarks on HPD budget and housing crisis",
+        "Council Member Sanchez introduces the executive budget hearing on housing"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::5d6021db2d23cb1ae81e23aa1b8b423939246326",
+      "overview": "A hearing on the FY 2026 executive budget for the Department of Transportation (DOT) and Department of Parks and Recreation. Discussions focused on DOT's $1.5 billion budget, concerns about 630 vacancies, and goals for street resurfacing. For Parks, the $667.3 million budget was examined, along with staffing shortages and the need to restore critical positions. Both agencies faced questions about addressing budget cuts, filling vacancies, and improving services. Council members and public advocates pushed for increased funding and staffing to better maintain city infrastructure and public spaces. Features testimony from the Department of Transportation, Department of Parks and Recreation, and the public.",
+      "takeaways": [
+        "A hearing on the FY 2026 executive budget for the Department of Transportation (DOT) and Department of Parks and Recreation. Discussions focused on DOT's $1.5 billion budget, concerns about 630 vacancies, and goals for street resurfacing. For Parks, the $667.3 million budget was examined, along with staffing shortages and the need to restore critical positions. Both agencies faced questions about addressing budget cuts, filling vacancies, and improving services. Council members and public advocates pushed for increased funding and staffing to better maintain city infrastructure and public spaces. Features testimony from the Department of Transportation, Department of Parks and Recreation, and the public.",
+        "Council Member Justin Brannan's opening remarks on DOT budget hearing",
+        "Council Member Brooks-Powers opens Transportation and Infrastructure Committee hearing on DOT budget"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::9d8a276d50dff35676137176348d557300b1cea0",
+      "overview": "A hearing on the FY2026 executive budgets for the Department of Sanitation (DSNY) and the Department for the Aging (DFTA). For DSNY, discussions focused on: Waste containerization Citywide composting Commercial waste zones Street cleaning initiatives Rising waste export costs. The DFTA portion covered: Funding for case management services Meal program reimbursement rates Capital needs for older adult centers Support for naturally occurring retirement communities (NORCs) Features testimony from DSNY, DFTA, and the public.",
+      "takeaways": [
+        "A hearing on the FY2026 executive budgets for the Department of Sanitation (DSNY) and the Department for the Aging (DFTA). For DSNY, discussions focused on: Waste containerization Citywide composting Commercial waste zones Street cleaning initiatives Rising waste export costs. The DFTA portion covered: Funding for case management services Meal program reimbursement rates Capital needs for older adult centers Support for naturally occurring retirement communities (NORCs) Features testimony from DSNY, DFTA, and the public.",
+        "Council Member Justin Brannan's opening remarks on the FY2026 executive budget hearing for the Department of Sanitation",
+        "Council Member Shaun Abreu's opening remarks for the FY2026 DSNY budget hearing"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::a0540073743c388ce3f5e1e23ccad4461243a7f2",
+      "overview": "A hearing on supporting New York City small businesses' compliance with the Americans with Disabilities Act (ADA) and local accessibility laws. Discussions focused on: Challenges faced by small businesses in meeting accessibility requirements Concerns about predatory lawsuits Proposed legislation to provide support through education, legal assistance, and funding for accessibility improvements Three bills were discussed: Intro 282 (establishing a fund for accessibility improvements Intro 639 (requiring training on workplace accessibility) Intro 1260 (expanding legal services for accessibility compliance) Features testimony from the NYC Commission on Human Rights (CCHR), Department of Small Business Services (SBS), and the public.",
+      "takeaways": [
+        "A hearing on supporting New York City small businesses' compliance with the Americans with Disabilities Act (ADA) and local accessibility laws. Discussions focused on: Challenges faced by small businesses in meeting accessibility requirements Concerns about predatory lawsuits Proposed legislation to provide support through education, legal assistance, and funding for accessibility improvements Three bills were discussed: Intro 282 (establishing a fund for accessibility improvements Intro 639 (requiring training on workplace accessibility) Intro 1260 (expanding legal services for accessibility compliance) Features testimony from the NYC Commission on Human Rights (CCHR), Department of Small Business Services (SBS), and the public.",
+        "Council Member Nantasha Williams opens joint hearing on supporting small businesses' accessibility compliance",
+        "Council Member Oswald Feliz opens joint hearing on small business accessibility compliance"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::db2d28ce766dd1a10ac054a4939ae57d9d6daf71",
+      "overview": "A hearing on nature-based solutions for climate resiliency and disaster preparedness in New York City. Discussions focused on expanding green infrastructure, including rain gardens, bioswales, and Blue Belt programs, to manage stormwater and increase climate resilience. Two bills were discussed: Intro 1253 on notifying council members about bioretention system installations Intro 1254 on setting green acre targets for MS4 areas Features testimony from the Department of Environmental Protection (DEP), Department of Parks and Recreation, and the public.",
+      "takeaways": [
+        "A hearing on nature-based solutions for climate resiliency and disaster preparedness in New York City. Discussions focused on expanding green infrastructure, including rain gardens, bioswales, and Blue Belt programs, to manage stormwater and increase climate resilience. Two bills were discussed: Intro 1253 on notifying council members about bioretention system installations Intro 1254 on setting green acre targets for MS4 areas Features testimony from the Department of Environmental Protection (DEP), Department of Parks and Recreation, and the public.",
+        "Council Member Gennaro introduces the meeting and agenda items",
+        "Overview of nature-based solutions and their benefits"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::d4b0edcf8c9122aa3bd608bb4a730b2c249cddc1",
+      "overview": "A hearing on street vending enforcement and licensing, focusing on proposed legislation to reform street vending regulations. Discussions centered on: Increasing the number of available vending licenses Creating new support services for vendors Improving enforcement practices Balancing the needs of vendors, brick-and-mortar businesses, and communities Features testimony from the Department of Sanitation (DSNY), Department of Small Business Services (SBS), Department of Consumer and Worker Protection (DCWP), Department of Health and Mental Hygiene (DOHMH), and the public, including street vendors, business improvement districts, and small business representatives.",
+      "takeaways": [
+        "A hearing on street vending enforcement and licensing, focusing on proposed legislation to reform street vending regulations. Discussions centered on: Increasing the number of available vending licenses Creating new support services for vendors Improving enforcement practices Balancing the needs of vendors, brick-and-mortar businesses, and communities Features testimony from the Department of Sanitation (DSNY), Department of Small Business Services (SBS), Department of Consumer and Worker Protection (DCWP), Department of Health and Mental Hygiene (DOHMH), and the public, including street vendors, business improvement districts, and small business representatives.",
+        "Council Member Julie Menin opens the hearing on street vending",
+        "Historical context and importance of street vending in New York City"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::dbf420c36f7950801009ed1a452499f1ddd7d50f",
+      "overview": "A vote. The committee unanimously passes Intro 1185-A, a bill requiring the Department of Parks and Recreation to develop a plan by March 1, 2026, to mitigate brushfires in city parks, in response to recent drought conditions and increased wildfire risks.",
+      "takeaways": [
+        "A vote. The committee unanimously passes Intro 1185-A, a bill requiring the Department of Parks and Recreation to develop a plan by March 1, 2026, to mitigate brushfires in city parks, in response to recent drought conditions and increased wildfire risks.",
+        "Chair Krishnan introduces bill to mitigate brushfires in city parks",
+        "Vote on brushfire mitigation plan bill"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::16d376df1621526ceac828cee4ea4035f6d56a92",
+      "overview": "The Stated Meeting happens every 2 weeks (4 weeks in summer), when the council votes on and introduces new legislation. At this meeting, the council passes several bills including legislation on food delivery app fee caps, reporting on minority and women-owned business contracts, school library resources, and wildfire mitigation planning. The council also adopts resolutions on healthcare costs, fertility treatment coverage, and recognizing Chinese American Railroad Workers Memorial Day. New legislation is introduced on topics such as youth trafficking prevention, beauty product safety, protections for intersex individuals, and training for co-op board members.",
+      "takeaways": [
+        "The Stated Meeting happens every 2 weeks (4 weeks in summer), when the council votes on and introduces new legislation. At this meeting, the council passes several bills including legislation on food delivery app fee caps, reporting on minority and women-owned business contracts, school library resources, and wildfire mitigation planning. The council also adopts resolutions on healthcare costs, fertility treatment coverage, and recognizing Chinese American Railroad Workers Memorial Day. New legislation is introduced on topics such as youth trafficking prevention, beauty product safety, protections for intersex individuals, and training for co-op board members.",
+        "Majority Leader Amanda Farias opens the May 1, 2025 stated meeting with welcoming remarks and decorum guidelines",
+        "Invocation by Rev. Kim Council, Deputy Brooklyn Borough President, Brooklyn Borough President's Office"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::5c1c94aa432a4fe1a58eabb714177dc511905c7c",
+      "overview": "A vote. The committee passes proposed Introduction 762-B, amending the 2021 local law on fee caps for third-party food delivery services. The bill allows increased fees for enhanced services while maintaining protections for restaurants, aiming to balance the interests of delivery services and small businesses. It passed with 5 votes in favor and 1 against.",
+      "takeaways": [
+        "A vote. The committee passes proposed Introduction 762-B, amending the 2021 local law on fee caps for third-party food delivery services. The bill allows increased fees for enhanced services while maintaining protections for restaurants, aiming to balance the interests of delivery services and small businesses. It passed with 5 votes in favor and 1 against.",
+        "Julie Menin explains proposed changes to food delivery service fee caps",
+        "Council Member Salamanca explains benefits of Intro 762-B for restaurants and consumers"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::1be7b003a55aa6f6c0157333323932000f2f2e83",
+      "overview": "A vote. The committee passes two rezoning proposals: 2510 Coney Island Avenue in Brooklyn (with modifications to zoning districts and removal of MIH option one) and 102-51 Queens Boulevard in Queens. The projects will create approximately 27 apartments (9 affordable) in Brooklyn and 216 apartments (54 affordable) in Queens.",
+      "takeaways": [
+        "A vote. The committee passes two rezoning proposals: 2510 Coney Island Avenue in Brooklyn (with modifications to zoning districts and removal of MIH option one) and 102-51 Queens Boulevard in Queens. The projects will create approximately 27 apartments (9 affordable) in Brooklyn and 216 apartments (54 affordable) in Queens.",
+        "Council Member Salamanca Jr. introduces meeting and presents rezoning proposals for vote",
+        "Crystal Hudson explains her vote on housing production"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::85b74d5a40620d46dece51a77f08bd70eca02e68",
+      "overview": "A vote. The committee unanimously passes Proposed Introduction 23-A, requiring the city controller to publish an annual report on citywide purchases from Minority and Women-Owned Business Enterprises (MWBEs), aimed at increasing transparency in MWBE contracting.",
+      "takeaways": [
+        "A vote. The committee unanimously passes Proposed Introduction 23-A, requiring the city controller to publish an annual report on citywide purchases from Minority and Women-Owned Business Enterprises (MWBEs), aimed at increasing transparency in MWBE contracting.",
+        "Council Member Julie Won introduces and explains the importance of Proposed Introduction 23-A",
+        "Council Member Brooks-Powers introduces bill for MWBE contracting transparency"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::1cfcdcb1326923023ea644af5b312db4ae22b8cb",
+      "overview": "A vote. The committee passes two resolutions: Resolution 165-B, advocating for equity in fertility treatment access, and Resolution 822-A, calling for the passage of the Fair Pricing Act to cap payments for routine medical services at 150% of Medicare rates. Resolution 165-B passes unanimously (7-0-0), while Resolution 822-A passes with a majority (6-1-0).",
+      "takeaways": [
+        "A vote. The committee passes two resolutions: Resolution 165-B, advocating for equity in fertility treatment access, and Resolution 822-A, calling for the passage of the Fair Pricing Act to cap payments for routine medical services at 150% of Medicare rates. Resolution 165-B passes unanimously (7-0-0), while Resolution 822-A passes with a majority (6-1-0).",
+        "Council Member Lynn Schulman discusses resolutions and advocates for the Fair Pricing Act",
+        "Council Member Mercedes Narcisse advocates for equity in fertility treatment access"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::2d06617350cd0fa1595132eed49864f3ad4d7ba2",
+      "overview": "A vote. The committee unanimously passes Proposed Intro 193-A, sponsored by Council Member Jennifer Gutierrez, requiring taxis and for-hire vehicles to display decals warning passengers to look for cyclists when opening doors. The Taxi and Limousine Commission will provide these decals at no cost to drivers and vehicle owners.",
+      "takeaways": [
+        "A vote. The committee unanimously passes Proposed Intro 193-A, sponsored by Council Member Jennifer Gutierrez, requiring taxis and for-hire vehicles to display decals warning passengers to look for cyclists when opening doors. The Taxi and Limousine Commission will provide these decals at no cost to drivers and vehicle owners.",
+        "Chair Brooks-Powers opens committee meeting and introduces Intro 193-A",
+        "Vote on Proposed Intro 193-A"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::d92529971e7def7fcab619ba0370de6785dcc8f2",
+      "overview": "A vote. The committee unanimously passes two resolutions: Resolution 741 designating May 10 as Judith Jamison Day in New York City, honoring the dancer and choreographer's contributions to the Alvin Ailey American Dance Theater, and Resolution 844 recognizing May 10 as Chinese American Railroad Workers Memorial Day in New York City, acknowledging the contributions of Chinese American immigrants to the country's infrastructure.",
+      "takeaways": [
+        "A vote. The committee unanimously passes two resolutions: Resolution 741 designating May 10 as Judith Jamison Day in New York City, honoring the dancer and choreographer's contributions to the Alvin Ailey American Dance Theater, and Resolution 844 recognizing May 10 as Chinese American Railroad Workers Memorial Day in New York City, acknowledging the contributions of Chinese American immigrants to the country's infrastructure.",
+        "Council Member Rivera opens meeting and introduces resolutions for vote",
+        "Council Member Susan Zhuang remarks on Chinese American Railroad Workers Memorial Day resolution"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::8dd983f2474cc814b1e57cfbddd2268a232a6dd9",
+      "overview": "A vote. The committee passes Intro 1125-A unanimously, requiring the Department of Education to report on school librarians and library access in New York City public schools.",
+      "takeaways": [
+        "A vote. The committee passes Intro 1125-A unanimously, requiring the Department of Education to report on school librarians and library access in New York City public schools.",
+        "Council Member Rita Joseph introduces legislation on school librarians and encourages support",
+        "Vote outcome for Intro 1125-A on school librarians and library access"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::faaeedfc9b5bde0a8cda1034d53d7fcb86a4a071",
+      "overview": "A vote. The committee passes the 102-51 Queens Boulevard rezoning proposal in Forest Hills, Queens. The project, supported by Council Member Lynn C. Schulman, will create a mixed-use development with 216 apartments, including 54 affordable units. The proposal involves zoning map and text amendments to allow for higher density residential development and mandatory inclusionary housing.",
+      "takeaways": [
+        "A vote. The committee passes the 102-51 Queens Boulevard rezoning proposal in Forest Hills, Queens. The project, supported by Council Member Lynn C. Schulman, will create a mixed-use development with 216 apartments, including 54 affordable units. The proposal involves zoning map and text amendments to allow for higher density residential development and mandatory inclusionary housing.",
+        "Chair Kevin Riley introduces Subcommittee meeting and Queens Boulevard rezoning proposal",
+        "Council Member Schulman's remarks on 102-51 Queens Boulevard rezoning"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::09e62f3279c8b148ec3389a634248c6616de7f7c",
+      "overview": "A hearing of the temporary task force on tax liens, focusing on reforms to NYC's enforcement of delinquent property taxes and water bills following the passage of Local Law 82 of 2024. Discussions centered on: Improving transparency, reporting, and resolution processes for properties stuck in the 1998-2002 trust Addressing concerns about the negative impacts of tax lien sales on vulnerable homeowners, particularly in minority communities Exploring alternatives to the current trust model Recommendations included improving accessibility of tax exemption programs, providing more support for struggling homeowners, and addressing challenges faced by small property owners in maintaining affordable housing units. Features testimony from the public.",
+      "takeaways": [
+        "A hearing of the temporary task force on tax liens, focusing on reforms to NYC's enforcement of delinquent property taxes and water bills following the passage of Local Law 82 of 2024. Discussions centered on: Improving transparency, reporting, and resolution processes for properties stuck in the 1998-2002 trust Addressing concerns about the negative impacts of tax lien sales on vulnerable homeowners, particularly in minority communities Exploring alternatives to the current trust model Recommendations included improving accessibility of tax exemption programs, providing more support for struggling homeowners, and addressing challenges faced by small property owners in maintaining affordable housing units. Features testimony from the public.",
+        "Introduction to the temporary task force on tax liens hearing",
+        "Reforms introduced by Local Law 82 of 2024"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::e4a3265cd279feae72ac67e85db9962dc2d3410a",
+      "overview": "A hearing on removing small financial barriers for CUNY students, focusing on three main issues: application fees, unpaid balances preventing re-enrollment, and transportation costs. Discussions included: The success of the CUNY Reconnect program for adult learners The impact of unpaid balances on student enrollment Proposals for free MetroCards/OmniCards for all CUNY students The hearing emphasized the potential economic benefits of investing in these initiatives to improve student access and success. Features testimony from CUNY officials, the Center for an Urban Future, student representatives, and the public.",
+      "takeaways": [
+        "A hearing on removing small financial barriers for CUNY students, focusing on three main issues: application fees, unpaid balances preventing re-enrollment, and transportation costs. Discussions included: The success of the CUNY Reconnect program for adult learners The impact of unpaid balances on student enrollment Proposals for free MetroCards/OmniCards for all CUNY students The hearing emphasized the potential economic benefits of investing in these initiatives to improve student access and success. Features testimony from CUNY officials, the Center for an Urban Future, student representatives, and the public.",
+        "Council Member Eric Dinowitz opens hearing on removing small financial barriers for CUNY students",
+        "Introduction and overview of CUNY's potential impact on New York City"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::afd0a96b155822c63b320068f32add81b3184f15",
+      "overview": "A hearing on the city's persistent challenges in paying human service providers on time, causing severe financial strain for many nonprofits. Discussions focused on: Delays in contract registration Slow invoice processing Backlogs in budget modifications The impact on nonprofit operations and services The council considered several bills aimed at addressing these issues, including requiring quicker disbursement of funds after contract registration and creating a new Department of Contract Services. Nonprofit leaders testified about the severe impacts of payment delays, including taking out high-interest loans, struggling to make payroll, and having to cut programs and staff. Features testimony from the Mayor's Office of Contract Services (MOCS), Mayor's Office of Nonprofit Services (MONS), Department of Youth and Community Development (DYCD), Department of Social Services (DSS), Department for the Aging (DFTA), and the public.",
+      "takeaways": [
+        "A hearing on the city's persistent challenges in paying human service providers on time, causing severe financial strain for many nonprofits. Discussions focused on: Delays in contract registration Slow invoice processing Backlogs in budget modifications The impact on nonprofit operations and services The council considered several bills aimed at addressing these issues, including requiring quicker disbursement of funds after contract registration and creating a new Department of Contract Services. Nonprofit leaders testified about the severe impacts of payment delays, including taking out high-interest loans, struggling to make payroll, and having to cut programs and staff. Features testimony from the Mayor's Office of Contract Services (MOCS), Mayor's Office of Nonprofit Services (MONS), Department of Youth and Community Development (DYCD), Department of Social Services (DSS), Department for the Aging (DFTA), and the public.",
+        "Council Member Julie Won opens hearing on late payments to human service providers",
+        "Council Speaker introduces hearing on challenges facing nonprofit service providers"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::9e6308a9d13565b00d98b8bc220780d9a90c247a",
+      "overview": "A hearing on the Western Rail Yards modification proposal in Manhattan. Discussions focused on Related Companies' plans to modify the 2009 development agreement, including: Increasing housing units Reconfiguring building sites and open space Adding a potential casino option Using a new financing mechanism (PILOT) to fund infrastructure costs Features testimony from Related Companies, community board representatives, local residents, business owners, union representatives, and the public.",
+      "takeaways": [
+        "A hearing on the Western Rail Yards modification proposal in Manhattan. Discussions focused on Related Companies' plans to modify the 2009 development agreement, including: Increasing housing units Reconfiguring building sites and open space Adding a potential casino option Using a new financing mechanism (PILOT) to fund infrastructure costs Features testimony from Related Companies, community board representatives, local residents, business owners, union representatives, and the public.",
+        "Council Member Kevin Riley opens subcommittee meeting and outlines agenda",
+        "Vote on LUs 267 and 268"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::04473fa19c65991824e0ee68d57e7a81b66b6a56",
+      "overview": "A hearing on implementing recommendations from the city council's report card initiative for the Department of Veterans Services (DVS). Discussions focused on: DVS's C grade Challenges in veteran outreach and self-identification Funding and staffing issues Improving service delivery. Key topics included increasing the DVS budget, enhancing communication with veterans, addressing veteran homelessness, and improving support for veteran street vendors. Features testimony from the Department of Veterans Services (DVS) and the public.",
+      "takeaways": [
+        "A hearing on implementing recommendations from the city council's report card initiative for the Department of Veterans Services (DVS). Discussions focused on: DVS's C grade Challenges in veteran outreach and self-identification Funding and staffing issues Improving service delivery. Key topics included increasing the DVS budget, enhancing communication with veterans, addressing veteran homelessness, and improving support for veteran street vendors. Features testimony from the Department of Veterans Services (DVS) and the public.",
+        "Council Member Holden introduces oversight hearing on DVS report card",
+        "Introduction and context for DVS testimony"
+      ],
+      "outcomeType": "oversight"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::2063f316c1d59ca3e919fc9f7434f9d3a0285dea",
+      "overview": "A hearing on the Housing Connect system and affordable housing in New York City. Discussions focused on: Inefficiencies in the application process Accessibility challenges for seniors and non-English speakers Mismatch between income requirements and applicants' actual incomes Proposed legislation to improve the system The hearing explored issues such as long processing times, re-rental vacancies, and the need for a comprehensive overhaul of Housing Connect. Features testimony from the Department of Housing Preservation and Development (HPD), housing advocates, developers, and members of the public.",
+      "takeaways": [
+        "A hearing on the Housing Connect system and affordable housing in New York City. Discussions focused on: Inefficiencies in the application process Accessibility challenges for seniors and non-English speakers Mismatch between income requirements and applicants' actual incomes Proposed legislation to improve the system The hearing explored issues such as long processing times, re-rental vacancies, and the need for a comprehensive overhaul of Housing Connect. Features testimony from the Department of Housing Preservation and Development (HPD), housing advocates, developers, and members of the public.",
+        "Introduction to the hearing on Housing Connect and affordable housing",
+        "Overview of New York City's housing crisis"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::e66897e004785ac63a9733e423f6d6e580d00a17",
+      "overview": "A hearing on nominations and reappointments to various New York City commissions. Discussions focused on the reappointment of members to the Board of Correction, new appointments to the Landmarks Preservation Commission, and a nomination for president of the Tax Commission. Features testimony from the nominees, including Board of Correction members, Landmarks Preservation Commission candidates, the Tax Commission nominee, and the public.",
+      "takeaways": [
+        "A hearing on nominations and reappointments to various New York City commissions. Discussions focused on the reappointment of members to the Board of Correction, new appointments to the Landmarks Preservation Commission, and a nomination for president of the Tax Commission. Features testimony from the nominees, including Board of Correction members, Landmarks Preservation Commission candidates, the Tax Commission nominee, and the public.",
+        "Council Member Keith Powers introduces the Rules, Privileges, and Elections Committee meeting agenda",
+        "Dr. Robert Cohen's testimony on reappointment to NYC Board of Correction"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::e66a634d49c35f1786ec37ee7adbf083442f7abd",
+      "overview": "A hearing on NYPD's parking and traffic enforcement efforts and related legislation. Discussions focused on traffic safety strategies, racial disparities in enforcement, ghost cars, and proposed bills to address various concerns. The hearing examined the effectiveness and fairness of NYPD's enforcement efforts, including decreases in DWI arrests and towing of illegally parked vehicles. Council members pressed for explanations on racial disparities in traffic stops and searches. The hearing also covered potential automated enforcement technologies and the need for speed limiters in vehicles of repeat traffic offenders. Features testimony from NYPD officials and the public, including families affected by traffic fatalities.",
+      "takeaways": [
+        "A hearing on NYPD's parking and traffic enforcement efforts and related legislation. Discussions focused on traffic safety strategies, racial disparities in enforcement, ghost cars, and proposed bills to address various concerns. The hearing examined the effectiveness and fairness of NYPD's enforcement efforts, including decreases in DWI arrests and towing of illegally parked vehicles. Council members pressed for explanations on racial disparities in traffic stops and searches. The hearing also covered potential automated enforcement technologies and the need for speed limiters in vehicles of repeat traffic offenders. Features testimony from NYPD officials and the public, including families affected by traffic fatalities.",
+        "Council Member Yusef Salaam's opening remarks on NYPD parking and traffic enforcement hearing",
+        "Introduction and overview of NYPD traffic enforcement"
+      ],
+      "outcomeType": "oversight"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::4eb8ecce1e0aab46904b38243ec76de921979280",
+      "overview": "The Stated Meeting happens every 2 weeks (4 weeks in summer), when the council votes on and introduces new legislation. At this meeting, the council passes a package of bills to protect and support transgender, gender non-conforming, and non-binary New Yorkers, approves measures to regulate non-essential helicopter flights, and introduces legislation to combat deed theft and improve stormwater management. The council also votes on several land use items, including the Brownsville NCP project for affordable housing.",
+      "takeaways": [
+        "The Stated Meeting happens every 2 weeks (4 weeks in summer), when the council votes on and introduces new legislation. At this meeting, the council passes a package of bills to protect and support transgender, gender non-conforming, and non-binary New Yorkers, approves measures to regulate non-essential helicopter flights, and introduces legislation to combat deed theft and improve stormwater management. The council also votes on several land use items, including the Brownsville NCP project for affordable housing.",
+        "Majority Leader Amanda Farías opens the NYC City Council stated meeting with introductory remarks",
+        "Invocation by Reverend Patrick J. Keating, Deputy CEO of Catholic Charities Brooklyn and Queens"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::9e4254e6b77e0c8ede46680219eed75c83588c27",
+      "overview": "A hearing on New York City's broadband strategy and digital equity initiatives. Discussions focused on: The lack of a comprehensive long-term plan after shelving the Internet Master Plan The Big Apple Connect program providing free internet to NYCHA residents Debates over infrastructure investment versus leveraging existing networks Proposed legislation to expand access and affordability Features testimony from the Office of Technology and Innovation (OTI), Department of Citywide Administrative Services (DCAS), and the public.",
+      "takeaways": [
+        "A hearing on New York City's broadband strategy and digital equity initiatives. Discussions focused on: The lack of a comprehensive long-term plan after shelving the Internet Master Plan The Big Apple Connect program providing free internet to NYCHA residents Debates over infrastructure investment versus leveraging existing networks Proposed legislation to expand access and affordability Features testimony from the Office of Technology and Innovation (OTI), Department of Citywide Administrative Services (DCAS), and the public.",
+        "Council Member Jennifer Gutiérrez's opening remarks on NYC's broadband strategy",
+        "Council Member Holden advocates for Intro 898 to increase broadband transparency"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::03a116d0059a0fb23006d62a2e31e905e12ac465",
+      "overview": "A vote. The committee passes Intro 246-A, requiring city agencies to include 'X' as a gender identity option, with 6 votes in favor and 2 against. The committee also unanimously adopts a pre-considered introduction and a home rule message regarding parkland in Flushing Meadows Corona Park.",
+      "takeaways": [
+        "A vote. The committee passes Intro 246-A, requiring city agencies to include 'X' as a gender identity option, with 6 votes in favor and 2 against. The committee also unanimously adopts a pre-considered introduction and a home rule message regarding parkland in Flushing Meadows Corona Park.",
+        "Council Member Lincoln Restler introduces committee meeting and agenda items",
+        "Vote outcome for multiple items including Intro 246-A"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::c45334abf52a043a3e06459edfc1d2ab14949766",
+      "overview": "A vote. The committee passes Resolution 598, calling for New York City healthcare institutions to contract only with industrial laundry companies that respect workers' rights and maintain fair labor standards.",
+      "takeaways": [
+        "A vote. The committee passes Resolution 598, calling for New York City healthcare institutions to contract only with industrial laundry companies that respect workers' rights and maintain fair labor standards.",
+        "Council Member Carmen De La Rosa introduces and advocates for Resolution 598",
+        "Vote on Resolution 598"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::5ef00b26fd8fc6d2eba8d68ba4d8f43d0ce12376",
+      "overview": "A vote. The committee passes several pieces of legislation and resolutions aimed at protecting and advancing the rights of transgender, gender non-conforming, non-binary, and intersex individuals.",
+      "takeaways": [
+        "A vote. The committee passes several pieces of legislation and resolutions aimed at protecting and advancing the rights of transgender, gender non-conforming, non-binary, and intersex individuals.",
+        "Council Member Farah N. Louis introduces legislation for committee vote",
+        "Council Member Bottcher's remarks on transgender rights legislation"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::92570af7fb5d7b7ca276eac4f1fe3e37e78c2a4b",
+      "overview": "A vote. The committee unanimously passes: Proposed Intro 1150-A requiring the Department of Environmental Protection to develop a comprehensive stormwater management plan Resolution 8 calling for fair allocation of lead service line replacement funding Proposed Resolution 144-A urging the removal of barriers preventing NYC from receiving adequate water infrastructure project funding",
+      "takeaways": [
+        "A vote. The committee unanimously passes: Proposed Intro 1150-A requiring the Department of Environmental Protection to develop a comprehensive stormwater management plan Resolution 8 calling for fair allocation of lead service line replacement funding Proposed Resolution 144-A urging the removal of barriers preventing NYC from receiving adequate water infrastructure project funding",
+        "Council Member Gennaro introduces the meeting agenda",
+        "Council Member Gennaro discusses Proposed Intro 1150-A on stormwater management"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::a540ca99cbcccbab3d95d8f17aa80d801201eb9b",
+      "overview": "A vote. The committee passes six pieces of legislation, including bills on community hiring reports, community benefits transparency, helicopter noise reduction, and economic development transparency.",
+      "takeaways": [
+        "A vote. The committee passes six pieces of legislation, including bills on community hiring reports, community benefits transparency, helicopter noise reduction, and economic development transparency.",
+        "Majority Leader Amanda Farías introduces six pieces of legislation for voting",
+        "Council Member Alexa Avilés thanks advocates and committee for Intro 860 and Intro 861"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::d4b43fed282ebdf2e85ebaffc23268e4324b57eb",
+      "overview": "A hearing on the establishment of the East Harlem 125th Street Business Improvement District (BID), followed by a vote on several pieces of legislation. The hearing focused on the need for the BID to address challenges in the area, including cleanliness, safety, and economic development. The committee then voted on five items, including legislation on real estate notifications, budget process timelines, and funding designations. All items passed unanimously. Features testimony from NYC Small Business Services, BID steering committee members, the Independent Budget Office, and the public.",
+      "takeaways": [
+        "A hearing on the establishment of the East Harlem 125th Street Business Improvement District (BID), followed by a vote on several pieces of legislation. The hearing focused on the need for the BID to address challenges in the area, including cleanliness, safety, and economic development. The committee then voted on five items, including legislation on real estate notifications, budget process timelines, and funding designations. All items passed unanimously. Features testimony from NYC Small Business Services, BID steering committee members, the Independent Budget Office, and the public.",
+        "Council Member Brannan introduces Finance Committee meeting agenda",
+        "Council Member Ayala expresses excitement for East Harlem 125th Street BID"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::100cbaec7920597ca7b96404e64b3f05ba7a5a09",
+      "overview": "A hearing on improving access to public athletic and recreational facilities, focusing on three bills: Intro 566 to expand public access to school playgrounds Intro 573 to increase drinking fountains near parks Intro 643 to facilitate indoor basketball court use during bad weather Discussions centered on: Opening more school playgrounds after hours Improving drinking fountain availability and maintenance Providing indoor alternatives for sports during inclement weather Addressing issues with the Parks Department's new athletic field permitting system Features testimony from the NYC Department of Parks and Recreation, NYC Independent Budget Office, and the public.",
+      "takeaways": [
+        "A hearing on improving access to public athletic and recreational facilities, focusing on three bills: Intro 566 to expand public access to school playgrounds Intro 573 to increase drinking fountains near parks Intro 643 to facilitate indoor basketball court use during bad weather Discussions centered on: Opening more school playgrounds after hours Improving drinking fountain availability and maintenance Providing indoor alternatives for sports during inclement weather Addressing issues with the Parks Department's new athletic field permitting system Features testimony from the NYC Department of Parks and Recreation, NYC Independent Budget Office, and the public.",
+        "Introduction to the hearing on improving access to public athletic and recreational facilities",
+        "Overview of existing playgrounds and recreational facilities in New York City"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::22344f6c3caa083005c225426c157c05f429e3e4",
+      "overview": "A hearing on four zoning proposals in Brooklyn: A mixed-use development at 2201-2227 Neptune Avenue in Coney Island A 13-story residential building at 73-99 Empire Boulevard in Crown Heights A 15-unit building at 19 Maspeth Avenue in East Williamsburg A revised proposal for 166 Kings Highway in Bensonhurst Features testimony from the applicants and the public.",
+      "takeaways": [
+        "A hearing on four zoning proposals in Brooklyn: A mixed-use development at 2201-2227 Neptune Avenue in Coney Island A 13-story residential building at 73-99 Empire Boulevard in Crown Heights A 15-unit building at 19 Maspeth Avenue in East Williamsburg A revised proposal for 166 Kings Highway in Bensonhurst Features testimony from the applicants and the public.",
+        "Council Member Riley opens subcommittee meeting and explains procedures",
+        "Introduction and overview of Neptune Avenue rezoning application"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::652251b88dd52fc6eb8a11d3aa460d2abf1dc8bb",
+      "overview": "A hearing on the Dining Out NYC permanent outdoor dining program, which replaced the temporary pandemic-era program. Discussions focused on challenges in the program's rollout and implementation, including: Complex application processes Approval delays High costs for restaurants Restrictions on year-round roadway dining Clearance requirements Features testimony from the Department of Transportation (DOT) and the public.",
+      "takeaways": [
+        "A hearing on the Dining Out NYC permanent outdoor dining program, which replaced the temporary pandemic-era program. Discussions focused on challenges in the program's rollout and implementation, including: Complex application processes Approval delays High costs for restaurants Restrictions on year-round roadway dining Clearance requirements Features testimony from the Department of Transportation (DOT) and the public.",
+        "Introduction to the joint legislative hearing on Dining Out NYC",
+        "Establishment of the permanent outdoor dining program"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::c3c6323521ae717d3641bb2ee7635ea6afc64e5b",
+      "overview": "A hearing on the implementation of New York City's commercial waste zones (CWZ) program. Discussions focused on: The slow rollout of the program, with only 1 out of 20 zones implemented so far Safety and enforcement measures Data collection challenges Impacts on businesses Proposed legislation to expand organic waste separation requirements and establish a grease disposal tracking system. Concerns were raised about the pace of implementation, market consolidation effects, and the need for more resources to speed up the process. The hearing also addressed the recent decision to pause fines for residential composting violations in smaller buildings. Features testimony from the Department of Sanitation (DSNY), the Business Integrity Commission (BIC), and the public.",
+      "takeaways": [
+        "A hearing on the implementation of New York City's commercial waste zones (CWZ) program. Discussions focused on: The slow rollout of the program, with only 1 out of 20 zones implemented so far Safety and enforcement measures Data collection challenges Impacts on businesses Proposed legislation to expand organic waste separation requirements and establish a grease disposal tracking system. Concerns were raised about the pace of implementation, market consolidation effects, and the need for more resources to speed up the process. The hearing also addressed the recent decision to pause fines for residential composting violations in smaller buildings. Features testimony from the Department of Sanitation (DSNY), the Business Integrity Commission (BIC), and the public.",
+        "Council Member Shaun Abreu's opening remarks on commercial waste zones implementation and related legislation",
+        "Council Member Sandy Nurse discusses Intro 784 on grease tracking system"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::ea5e7dc4e438453a5a2a6eb81aecc686d342279c",
+      "overview": "A hearing on a proposed rezoning for 102-51 Queens Boulevard in Forest Hills, Queens. The proposal seeks to rezone the site from R7-1 to R8X C2-4 to allow development of a 17-story mixed-use building with 216 apartments, including 54 affordable units. Discussions focused on the project's potential to activate an underdeveloped stretch of Queens Boulevard, affordable housing creation, labor commitments, and design considerations. Features testimony from the applicant team (QBM Properties LLC) and SEIU Local 32BJ.",
+      "takeaways": [
+        "A hearing on a proposed rezoning for 102-51 Queens Boulevard in Forest Hills, Queens. The proposal seeks to rezone the site from R7-1 to R8X C2-4 to allow development of a 17-story mixed-use building with 216 apartments, including 54 affordable units. Discussions focused on the project's potential to activate an underdeveloped stretch of Queens Boulevard, affordable housing creation, labor commitments, and design considerations. Features testimony from the applicant team (QBM Properties LLC) and SEIU Local 32BJ.",
+        "Councilmember Schulman introduces the Subcommittee on Zoning and Franchises meeting and rezoning proposal",
+        "Introduction and personal remarks"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::4744c27b26966f22d23f3334db3d05ac60e0b8f9",
+      "overview": "A hearing on evaluating access to healthcare for patients with disabilities in New York City. Discussions focused on: Physical accessibility issues in healthcare facilities Communication barriers Provider training Transportation challenges The need for inclusive decision-making processes Specific topics included accessible medical equipment, ASL interpretation, challenges for plus-size patients, mental health needs, and culturally competent care for immigrant communities. Features testimony from the Mayor's Office for People with Disabilities (MOPD), NYC Health + Hospitals, Department of Health and Mental Hygiene (DOHMH), and the public.",
+      "takeaways": [
+        "A hearing on evaluating access to healthcare for patients with disabilities in New York City. Discussions focused on: Physical accessibility issues in healthcare facilities Communication barriers Provider training Transportation challenges The need for inclusive decision-making processes Specific topics included accessible medical equipment, ASL interpretation, challenges for plus-size patients, mental health needs, and culturally competent care for immigrant communities. Features testimony from the Mayor's Office for People with Disabilities (MOPD), NYC Health + Hospitals, Department of Health and Mental Hygiene (DOHMH), and the public.",
+        "Council Member Linda Lee's opening remarks on healthcare access for patients with disabilities",
+        "Council Member Mercedes Narcisse addresses accessibility in healthcare facilities"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::0801d2bd27c9f0f56f66ce3b5b8f9348159d65a7",
+      "overview": "A hearing on parking infrastructure and daylighting in New York City, focusing on three proposed bills: Intro 99-A to create overnight truck parking areas in industrial business zones Intro 340 to waive certain late penalties for parking violations Intro 1138 to prohibit parking within 20 feet of crosswalks and require universal daylighting Discussions centered on modernizing parking systems, improving street safety, and balancing the needs of drivers with pedestrian safety. Features testimony from the Department of Transportation (DOT), Department of Finance, and extensive public testimony.",
+      "takeaways": [
+        "A hearing on parking infrastructure and daylighting in New York City, focusing on three proposed bills: Intro 99-A to create overnight truck parking areas in industrial business zones Intro 340 to waive certain late penalties for parking violations Intro 1138 to prohibit parking within 20 feet of crosswalks and require universal daylighting Discussions centered on modernizing parking systems, improving street safety, and balancing the needs of drivers with pedestrian safety. Features testimony from the Department of Transportation (DOT), Department of Finance, and extensive public testimony.",
+        "Council member Brooks-Powers introduces the committee hearing",
+        "Overview of legislation to be discussed in the hearing"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::0ef9154702c8d5bd8ff35b82aa09bc71a8f7a7bf",
+      "overview": "A hearing on equitable representation in New York City's municipal workforce, focusing on pay equity, diversity, and inclusion initiatives. Discussions covered gender pay disparities, occupational segregation, retention challenges, and efforts to improve diversity in high-paying positions. The hearing also addressed proposed legislation on gender pay equity, unionization rights, telework expansion, and fair pay for musicians from streaming services. Features testimony from the Department of Citywide Administrative Services (DCAS), Office of Labor Relations (OLR), Commission on Gender Equity (CGE), and the public.",
+      "takeaways": [
+        "A hearing on equitable representation in New York City's municipal workforce, focusing on pay equity, diversity, and inclusion initiatives. Discussions covered gender pay disparities, occupational segregation, retention challenges, and efforts to improve diversity in high-paying positions. The hearing also addressed proposed legislation on gender pay equity, unionization rights, telework expansion, and fair pay for musicians from streaming services. Features testimony from the Department of Citywide Administrative Services (DCAS), Office of Labor Relations (OLR), Commission on Gender Equity (CGE), and the public.",
+        "Opening remarks for the hearing on equitable representation in the city's workforce",
+        "Overview of legislation to be discussed in the hearing"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::b4dada320f47866706c4cb340198a2a7c3de8230",
+      "overview": "A hearing examining recommendations from the Independent Rikers Commission's blueprint to close Rikers Island. Discussions focused on: Speeding up construction of borough-based jails Reducing the jail population through alternatives to incarceration and case processing reforms Creating more psychiatric beds outside jails Investing in reentry services and supportive housing The hearing highlighted challenges in meeting the 2027 closure deadline, concerns about budget cuts to alternative programs, and the need for coordinated efforts across multiple agencies. Features testimony from the Mayor's Office of Criminal Justice (MOCJ), Department of Correction (DOC), Department of Design and Construction (DDC), Correctional Health Services (CHS), Human Resources Administration (HRA), the Independent Rikers Commission, and the public.",
+      "takeaways": [
+        "A hearing examining recommendations from the Independent Rikers Commission's blueprint to close Rikers Island. Discussions focused on: Speeding up construction of borough-based jails Reducing the jail population through alternatives to incarceration and case processing reforms Creating more psychiatric beds outside jails Investing in reentry services and supportive housing The hearing highlighted challenges in meeting the 2027 closure deadline, concerns about budget cuts to alternative programs, and the need for coordinated efforts across multiple agencies. Features testimony from the Mayor's Office of Criminal Justice (MOCJ), Department of Correction (DOC), Department of Design and Construction (DDC), Correctional Health Services (CHS), Human Resources Administration (HRA), the Independent Rikers Commission, and the public.",
+        "Council Member Sandy Nurse introduces oversight hearing on closing Rikers Island",
+        "Council Member Nurse emphasizes urgency of closing Rikers Island"
+      ],
+      "outcomeType": "oversight"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::b6e9838f77846e0b458fb705e4fd1d9ae901aa8c",
+      "overview": "A hearing on the impact of federal funding cuts on New York City's budget, services, and nonprofit organizations. Discussions focused on: The potential effects on vulnerable populations The need for contingency planning and increased reserves Financial strain on service providers Coordinated advocacy at federal, state, and local levels Features testimony from the Independent Budget Office (IBO), Citizens Budget Commission (CBC), various nonprofit organizations, and the public.",
+      "takeaways": [
+        "A hearing on the impact of federal funding cuts on New York City's budget, services, and nonprofit organizations. Discussions focused on: The potential effects on vulnerable populations The need for contingency planning and increased reserves Financial strain on service providers Coordinated advocacy at federal, state, and local levels Features testimony from the Independent Budget Office (IBO), Citizens Budget Commission (CBC), various nonprofit organizations, and the public.",
+        "Council Member Restler introduces himself and recognizes colleagues",
+        "Criticism of Trump administration and its impact on federal resources"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::f6d3c9a9c6ccf1fcba2e58648daa9982e319ae88",
+      "overview": "A hearing on Adult Protective Services (APS) referrals, examining operations, challenges, and potential improvements in serving vulnerable adults, particularly older New Yorkers. Discussions focused on: Increased referrals but decreased eligibility Staffing shortages Housing assistance challenges Federal funding concerns Interagency collaboration Assessment processes Elder abuse response Preparation for a growing aging population Features testimony from the Human Resources Administration (HRA), Department of Social Services (DSS), NYC Department for the Aging, and the public.",
+      "takeaways": [
+        "A hearing on Adult Protective Services (APS) referrals, examining operations, challenges, and potential improvements in serving vulnerable adults, particularly older New Yorkers. Discussions focused on: Increased referrals but decreased eligibility Staffing shortages Housing assistance challenges Federal funding concerns Interagency collaboration Assessment processes Elder abuse response Preparation for a growing aging population Features testimony from the Human Resources Administration (HRA), Department of Social Services (DSS), NYC Department for the Aging, and the public.",
+        "Introduction and welcome to the oversight hearing on adult protective services referrals",
+        "Overview of Adult Protective Services (APS) eligibility and services"
+      ],
+      "outcomeType": "oversight"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::0f7c6adfd20aea277279bf103c8cb1a2f80157bb",
+      "overview": "A hearing on NYCHA's security guards, fire guards, and oversight of contractors. Discussions focused on the Department of Investigation's findings of widespread neglect by contracted guards, NYCHA's failure to implement proper oversight measures, and plans for improvement. Key issues included guard absenteeism, falsified time sheets, inadequate inspections, and lack of resident engagement in security decisions. NYCHA officials acknowledged past failures and outlined steps to implement DOI recommendations, including geofencing technology and increased inspections. Council members pressed for better resident feedback mechanisms and improved communication about security measures. Features testimony from the Department of Investigation (DOI), New York City Housing Authority (NYCHA), and the public.",
+      "takeaways": [
+        "A hearing on NYCHA's security guards, fire guards, and oversight of contractors. Discussions focused on the Department of Investigation's findings of widespread neglect by contracted guards, NYCHA's failure to implement proper oversight measures, and plans for improvement. Key issues included guard absenteeism, falsified time sheets, inadequate inspections, and lack of resident engagement in security decisions. NYCHA officials acknowledged past failures and outlined steps to implement DOI recommendations, including geofencing technology and increased inspections. Council members pressed for better resident feedback mechanisms and improved communication about security measures. Features testimony from the Department of Investigation (DOI), New York City Housing Authority (NYCHA), and the public.",
+        "Council Member Chris Banks opens hearing on NYCHA security and fire guard issues",
+        "Department of Investigations reveals widespread neglect by NYCHA security and fire guards"
+      ],
+      "outcomeType": "oversight"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::ec33d492b3a29c0a39d18082c8f7ff47871e334f",
+      "overview": "A hearing on combating immigration services fraud in New York City, focusing on the city's efforts to prevent fraud and support victims. Discussions included enforcement strategies, outreach efforts, and two proposed bills: Intro 205 to expand education about fraud, and Intro 980 to increase penalties for violations by immigration service providers. Challenges such as 'fly-by-night' operations and underreporting due to fear and distrust were highlighted. Features testimony from the Department of Consumer and Worker Protection (DCWP), various immigrant advocacy organizations, legal service providers, and the public.",
+      "takeaways": [
+        "A hearing on combating immigration services fraud in New York City, focusing on the city's efforts to prevent fraud and support victims. Discussions included enforcement strategies, outreach efforts, and two proposed bills: Intro 205 to expand education about fraud, and Intro 980 to increase penalties for violations by immigration service providers. Challenges such as 'fly-by-night' operations and underreporting due to fear and distrust were highlighted. Features testimony from the Department of Consumer and Worker Protection (DCWP), various immigrant advocacy organizations, legal service providers, and the public.",
+        "Council Member Avilés opens the hearing on immigration services fraud",
+        "The significance of immigrants in New York City's population"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::f9f93c9bb3f2d8e49733481752ec9d2200551c65",
+      "overview": "The Stated Meeting happens every 2 weeks (4 weeks in summer), when the council votes on and introduces new legislation. The council passes several bills enhancing transparency on NYPD surveillance technology use, improving tree maintenance processes, creating a citywide public bathroom network, and waiving civil service exam fees for certain applicants. The council also authorizes legal action against the Adams administration regarding sanctuary city policies.",
+      "takeaways": [
+        "The Stated Meeting happens every 2 weeks (4 weeks in summer), when the council votes on and introduces new legislation. The council passes several bills enhancing transparency on NYPD surveillance technology use, improving tree maintenance processes, creating a citywide public bathroom network, and waiving civil service exam fees for certain applicants. The council also authorizes legal action against the Adams administration regarding sanctuary city policies.",
+        "Majority Leader Amanda Farías opens the NYC Council stated meeting with introductory remarks",
+        "Invocation by Rabbi Avrohom Walkin, Chazaq"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::9b87a51303b4ff0a637962ab8f6a47b266594df8",
+      "overview": "A vote. The committee unanimously passes Introduction 978-A, requiring the 311 customer service center to provide resources for tree pruning-related requests. The bill aims to improve public access to tree maintenance information and encourage community involvement in urban tree care.",
+      "takeaways": [
+        "A vote. The committee unanimously passes Introduction 978-A, requiring the 311 customer service center to provide resources for tree pruning-related requests. The bill aims to improve public access to tree maintenance information and encourage community involvement in urban tree care.",
+        "Chair Jennifer Gutiérrez introduces bill on 311 resources for tree pruning requests",
+        "Vote outcome for Introduction 978-A on 311 tree pruning resources"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::63fd8253811b2f4f5926e92fb895544a14528500",
+      "overview": "A vote. The committee passes Proposed Intro 671-A, authorizing DCAS to waive civil service examination fees for high school students and first-time applicants, and Proposed Resolution 333-A, calling on the state legislature to pass bills eliminating sub-minimum wage for employees based on disability or age.",
+      "takeaways": [
+        "A vote. The committee passes Proposed Intro 671-A, authorizing DCAS to waive civil service examination fees for high school students and first-time applicants, and Proposed Resolution 333-A, calling on the state legislature to pass bills eliminating sub-minimum wage for employees based on disability or age.",
+        "Council Member Carmen De La Rosa gives opening remarks on legislative items and acknowledges staff and colleagues",
+        "Committee votes to adopt two legislative items"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::12a41e2889e22c74ff7497acab41fbd8fcdae251",
+      "overview": "A vote. The committee unanimously passes Intro 694-A, which requires the city to create a strategic plan for a citywide bathroom network and an online map of public bathrooms.",
+      "takeaways": [
+        "A vote. The committee unanimously passes Intro 694-A, which requires the city to create a strategic plan for a citywide bathroom network and an online map of public bathrooms.",
+        "Council Member Restler introduces legislation on citywide bathroom network",
+        "Vote on Intro 694-A: Unanimous approval"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::cc2f2367cc005d4f6b56f9b3d0c8c55c4efa4ad8",
+      "overview": "A vote. The committee unanimously passes four items of legislation: two proposed introductions and two resolutions. The legislation includes tracking progress on the Streets Master Plan, creating an online capital project tracker, and calling for environmental impact studies on transportation projects.",
+      "takeaways": [
+        "A vote. The committee unanimously passes four items of legislation: two proposed introductions and two resolutions. The legislation includes tracking progress on the Streets Master Plan, creating an online capital project tracker, and calling for environmental impact studies on transportation projects.",
+        "Chair Brooks-Powers opens the Transportation and Infrastructure Committee hearing",
+        "Committee votes unanimously to adopt all items"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::825ca04f61b1b64ea650449d9ec397c43909c875",
+      "overview": "A vote. The committee unanimously passes Introduction 807-A, sponsored by Council Member Brooks-Powers, requiring New York City Emergency Management (NYCEM) to develop guidance for safe evacuation during flash flood emergencies and disseminate preparedness materials in flood-prone areas. The legislation aims to increase public awareness about flash flooding responses and boost Notify NYC registration.",
+      "takeaways": [
+        "A vote. The committee unanimously passes Introduction 807-A, sponsored by Council Member Brooks-Powers, requiring New York City Emergency Management (NYCEM) to develop guidance for safe evacuation during flash flood emergencies and disseminate preparedness materials in flood-prone areas. The legislation aims to increase public awareness about flash flooding responses and boost Notify NYC registration.",
+        "Council Member Ariola introduces legislation on flash flood emergency preparedness",
+        "Vote on Introduction 807-A"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::19afefb56976634210d2519f9d27f1e099423ab7",
+      "overview": "A vote. The committee passes three bills aimed at increasing transparency and oversight of NYPD's surveillance technologies: Intro 168-A strengthening the Department of Investigation's audit capabilities Intro 480-A clarifying language in the POST Act for more comprehensive Impact and Use Policies Intro 233-A mandating NYPD to publish a policy on facial recognition technology use and conduct annual audits. Intros 168-A and 233-A passed unanimously (11-0), while Intro 480-A passed with a 9-2 vote.",
+      "takeaways": [
+        "A vote. The committee passes three bills aimed at increasing transparency and oversight of NYPD's surveillance technologies: Intro 168-A strengthening the Department of Investigation's audit capabilities Intro 480-A clarifying language in the POST Act for more comprehensive Impact and Use Policies Intro 233-A mandating NYPD to publish a policy on facial recognition technology use and conduct annual audits. Intros 168-A and 233-A passed unanimously (11-0), while Intro 480-A passed with a 9-2 vote.",
+        "Council Member Salaam introduces proposed legislation on NYPD surveillance technology oversight",
+        "Council Member Amanda Farías explains Intro 168-A to strengthen NYPD surveillance oversight"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::be096c55bf235fb9f646492670d5b011a3cb7483",
+      "overview": "A vote. The committee passes two resolutions approving real property tax exemptions under Article 11 for projects at 15 Stratford Road in Council Member Rita Joseph's district and 1383 Plimpton Avenue in Council Member Althea Stevens' district. Both resolutions are adopted unanimously with 15 votes in favor, 0 against, and no abstentions.",
+      "takeaways": [
+        "A vote. The committee passes two resolutions approving real property tax exemptions under Article 11 for projects at 15 Stratford Road in Council Member Rita Joseph's district and 1383 Plimpton Avenue in Council Member Althea Stevens' district. Both resolutions are adopted unanimously with 15 votes in favor, 0 against, and no abstentions.",
+        "Council Member Brannan introduces Finance Committee meeting and agenda items",
+        "Finance Committee adopts two resolutions on real property tax exemptions"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::c20f9235a5d286a3dece0da3ce0f775cfdf07e96",
+      "overview": "A vote. The committee passes resolutions appointing Dr. Lauren Stossel to the Board of Corrections, reappointing Dr. Patricia Marthone to the Health and Hospitals Corporation board, reappointing Leah Goodridge to the City Planning Commission, and appointing Mark Landis to the Board of Elections. The committee also approves a resolution authorizing legal action against the Adams administration's violation of sanctuary city laws.",
+      "takeaways": [
+        "A vote. The committee passes resolutions appointing Dr. Lauren Stossel to the Board of Corrections, reappointing Dr. Patricia Marthone to the Health and Hospitals Corporation board, reappointing Leah Goodridge to the City Planning Commission, and appointing Mark Landis to the Board of Elections. The committee also approves a resolution authorizing legal action against the Adams administration's violation of sanctuary city laws.",
+        "Council Member Keith Powers opens the Committee on Rules, Privileges, and Elections meeting",
+        "Mark Landis's testimony for Manhattan Democratic Commissioner of the Board of Elections"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::9861d1c71bba52d38367bba674c94a6874a35c17",
+      "overview": "A vote. The committee passes Resolution 729, condemning President Trump's revocation of diversity, equity, and inclusion (DEI) programs at the federal level and expressing support for such programs at the city and state level.",
+      "takeaways": [
+        "A vote. The committee passes Resolution 729, condemning President Trump's revocation of diversity, equity, and inclusion (DEI) programs at the federal level and expressing support for such programs at the city and state level.",
+        "Chair Nantasha Williams introduces Resolution 729 and condemns Trump's revocation of DEI programs",
+        "Resolution 729 adopted by the Committee on Civil and Human Rights"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::992a2d12ecbdf15c1621771359374f8a54334721",
+      "overview": "A vote. The committee unanimously approves modifications to the Brownsville NCP proposal, which includes three related actions to develop approximately 74 affordable housing units across three sites in Brooklyn. The modifications involve striking MIH option two and adding MIH option three for Land Use items 244, 245, and 246.",
+      "takeaways": [
+        "A vote. The committee unanimously approves modifications to the Brownsville NCP proposal, which includes three related actions to develop approximately 74 affordable housing units across three sites in Brooklyn. The modifications involve striking MIH option two and adding MIH option three for Land Use items 244, 245, and 246.",
+        "Council Member Salamanca opens the land use committee meeting and introduces the agenda",
+        "Roll call vote results for committee on land use"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::ad49b706f5af5d0cfe3c2f5c6b5739d8b72030cc",
+      "overview": "A vote. The committee passes with modifications a housing development project in Brownsville, Brooklyn, including zoning amendments and the construction of three new buildings with approximately 74 units. The vote passes 6-1, with Council member Mealy opposing due to concerns about affordability and transparency.",
+      "takeaways": [
+        "A vote. The committee passes with modifications a housing development project in Brownsville, Brooklyn, including zoning amendments and the construction of three new buildings with approximately 74 units. The vote passes 6-1, with Council member Mealy opposing due to concerns about affordability and transparency.",
+        "Council Member Hanks opens subcommittee meeting and introduces agenda",
+        "Council Member Sandy Nurse expresses support for Brownsville NCP housing project"
+      ],
+      "outcomeType": "action"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::c7c85e091e75814e72e3a8a39b79182cda58f024",
+      "overview": "A hearing on New York City's food infrastructure and its impact on produce quality and cost. Discussions focused on: Modernizing the Hunts Point Market Addressing cold storage capacity challenges Improving regional food distribution Increasing access to healthy and affordable food Rising food prices Potential transportation improvements for food distribution. The hearing also covered the need for diverse representation among food distributors and balancing emergency food support with sustainable community-centered solutions. Features testimony from the Mayor's Office of Food Policy, the Economic Development Corporation (EDC), Hunts Point Market operators, food policy experts, and the public.",
+      "takeaways": [
+        "A hearing on New York City's food infrastructure and its impact on produce quality and cost. Discussions focused on: Modernizing the Hunts Point Market Addressing cold storage capacity challenges Improving regional food distribution Increasing access to healthy and affordable food Rising food prices Potential transportation improvements for food distribution. The hearing also covered the need for diverse representation among food distributors and balancing emergency food support with sustainable community-centered solutions. Features testimony from the Mayor's Office of Food Policy, the Economic Development Corporation (EDC), Hunts Point Market operators, food policy experts, and the public.",
+        "Council Member Gale A. Brewer's opening remarks on NYC's food infrastructure hearing",
+        "Majority Leader Amanda Farías opens joint hearing on NYC food infrastructure"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::edf73f252aae5cff972fa9a0401303599b052e84",
+      "overview": "A hearing on two zoning proposals: Dispositions of city-owned land related to the Atlantic Avenue Mixed Use Plan (AAMUP) in Brooklyn The 2510 Coney Island Avenue rezoning proposal in Sheepshead Bay, Brooklyn Discussions focused on affordable housing development for AAMUP and revisions to the Coney Island Avenue proposal, including reduced building height, increased parking, and addressing community concerns. Features testimony from the Housing Preservation and Development (HPD) and the applicant team.",
+      "takeaways": [
+        "A hearing on two zoning proposals: Dispositions of city-owned land related to the Atlantic Avenue Mixed Use Plan (AAMUP) in Brooklyn The 2510 Coney Island Avenue rezoning proposal in Sheepshead Bay, Brooklyn Discussions focused on affordable housing development for AAMUP and revisions to the Coney Island Avenue proposal, including reduced building height, increased parking, and addressing community concerns. Features testimony from the Housing Preservation and Development (HPD) and the applicant team.",
+        "Council Member Riley opens the Zoning and Franchises subcommittee meeting and provides instructions",
+        "Justin Donlon outlines HPD's acquisition and disposition requests related to the Atlantic Avenue Mixed Use Plan (AAMUP)"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::2996bd2369fe8e0c0ab62517b2858c3509243e2d",
+      "overview": "A hearing on Introduction 998, which aims to codify and improve New York City's cooling center program. Discussions focused on: The current state of cooling centers The impact of extreme heat on public health Proposals to enhance the program's effectiveness Key topics included increasing the number and accessibility of cooling centers, extending operational hours, improving public awareness, and addressing funding challenges. The hearing also touched on the potential expansion of the program to address poor air quality events. Features testimony from New York City Emergency Management, the Department of Health and Mental Hygiene, and the public.",
+      "takeaways": [
+        "A hearing on Introduction 998, which aims to codify and improve New York City's cooling center program. Discussions focused on: The current state of cooling centers The impact of extreme heat on public health Proposals to enhance the program's effectiveness Key topics included increasing the number and accessibility of cooling centers, extending operational hours, improving public awareness, and addressing funding challenges. The hearing also touched on the potential expansion of the program to address poor air quality events. Features testimony from New York City Emergency Management, the Department of Health and Mental Hygiene, and the public.",
+        "Council Member Lynn Schulman's opening remarks on cooling centers and extreme heat",
+        "Council Member Keith Powers discusses the importance of cooling centers and introduces his bill to improve the program"
+      ],
+      "outcomeType": "testimony"
+    },
+    {
+      "key": "hearing-summary:none:gemini-2.5-flash::6e5da8e43923dd8c9527950fab4d4f135db40c9f",
+      "overview": "A hearing on ensuring equity and access to arts education in NYC public schools. Discussions focused on: Disparities in arts access across boroughs Funding challenges The need for more certified arts teachers The importance of arts education for student development and academic success The hearing also addressed the lack of school librarians and libraries, with advocates pushing for a bill to require reporting on this issue. Features testimony from the Department of Education, Department of Cultural Affairs, various arts and cultural organizations, and the public.",
+      "takeaways": [
+        "A hearing on ensuring equity and access to arts education in NYC public schools. Discussions focused on: Disparities in arts access across boroughs Funding challenges The need for more certified arts teachers The importance of arts education for student development and academic success The hearing also addressed the lack of school librarians and libraries, with advocates pushing for a bill to require reporting on this issue. Features testimony from the Department of Education, Department of Cultural Affairs, various arts and cultural organizations, and the public.",
+        "Council Member Rita Joseph welcomes attendees and introduces the hearing",
+        "Council Member Rita Joseph announces legislation to be discussed in the hearing"
+      ],
+      "outcomeType": "testimony"
+    }
+  ]
+}

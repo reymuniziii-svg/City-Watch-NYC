@@ -1,0 +1,153 @@
+{
+  "slug": "frank-morano",
+  "cycle": "2025",
+  "candidateName": "Morano, Frank",
+  "candidateId": "2949",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-04-04T16:48:38.942Z",
+  "contributorCount": 498,
+  "totalRaised": 83490.94,
+  "publicFunds": 266586,
+  "publicFundsShare": 0.762,
+  "smallDollarAmount": 45465.46,
+  "smallDollarDonorCount": 423,
+  "smallDollarShare": 0.545,
+  "topTenDonorShare": 0.15,
+  "maxContributionDonorCount": 6,
+  "maxContributionAmount": 7035,
+  "organizationalDonorAmount": 5450,
+  "organizationalDonorShare": 0.065,
+  "outsideCityAmount": 22770.93,
+  "outsideCityShare": 0.273,
+  "topDonors": [
+    {
+      "name": "LoBaido, Scott",
+      "amount": 2000,
+      "donorType": "IND",
+      "city": "Staten Island",
+      "state": "NY",
+      "occupation": "Artist",
+      "employer": "Self Employed"
+    },
+    {
+      "name": "Halpern, Jeff",
+      "amount": 1700,
+      "donorType": "IND",
+      "city": "Jupiter",
+      "state": "FL",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "McConville, Kevin",
+      "amount": 1635,
+      "donorType": "IND",
+      "city": "Staten Island",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Boyd, John",
+      "amount": 1100,
+      "donorType": "IND",
+      "city": "Pompano Beach",
+      "state": "FL",
+      "occupation": "Management Consultant",
+      "employer": "The Boyd Company, Inc."
+    },
+    {
+      "name": "CSA Cope PAC Fund",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "RPAC of NYS",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Albany",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Blosser-Bernardo, Terry",
+      "amount": 1010,
+      "donorType": "IND",
+      "city": "Rock Hill",
+      "state": "NY",
+      "occupation": "ILS Date Officer",
+      "employer": "Orange County NY Government"
+    },
+    {
+      "name": "Berman, Myron",
+      "amount": 1000,
+      "donorType": "IND",
+      "city": "Staten Island",
+      "state": "NY",
+      "occupation": "Real Estate",
+      "employer": "Myron | Berman"
+    },
+    {
+      "name": "Bisceglia, Ralph",
+      "amount": 1000,
+      "donorType": "IND",
+      "city": "Huntington",
+      "state": "NY",
+      "occupation": "CEO",
+      "employer": "American Transit Insurance Co"
+    },
+    {
+      "name": "Mirones, Matthew",
+      "amount": 1000,
+      "donorType": "IND",
+      "city": "Palm Beach",
+      "state": "FL",
+      "occupation": "Retired",
+      "employer": ""
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 66770.94,
+      "contributorCount": 412
+    },
+    {
+      "label": "Legal",
+      "amount": 5280,
+      "contributorCount": 28
+    },
+    {
+      "label": "Real Estate",
+      "amount": 3780,
+      "contributorCount": 11
+    },
+    {
+      "label": "Small Business / Retail",
+      "amount": 2870,
+      "contributorCount": 14
+    },
+    {
+      "label": "Finance",
+      "amount": 2050,
+      "contributorCount": 8
+    },
+    {
+      "label": "Education",
+      "amount": 1900,
+      "contributorCount": 11
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds make up 76% of this campaign's total resources.",
+    "Small-dollar donors contributed 55% of reported private fundraising across 423 contributions.",
+    "Private fundraising looks relatively diffuse: the top ten donors account for only 15% of reported private contributions.",
+    "6 donors gave at the legal maximum, totaling $7,035.",
+    "A noticeable share of reported private fundraising, 27%, came from outside New York City."
+  ]
+}

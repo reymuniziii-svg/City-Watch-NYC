@@ -1,0 +1,151 @@
+{
+  "slug": "julie-won",
+  "cycle": "2025",
+  "candidateName": "Won, Julie",
+  "candidateId": "2380",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-04-04T16:48:38.292Z",
+  "contributorCount": 280,
+  "totalRaised": 76221.5,
+  "publicFunds": null,
+  "publicFundsShare": 0,
+  "smallDollarAmount": 17622.5,
+  "smallDollarDonorCount": 212,
+  "smallDollarShare": 0.231,
+  "topTenDonorShare": 0.179,
+  "maxContributionDonorCount": 40,
+  "maxContributionAmount": 42000,
+  "organizationalDonorAmount": 4714.5,
+  "organizationalDonorShare": 0.062,
+  "outsideCityAmount": 18275,
+  "outsideCityShare": 0.24,
+  "topDonors": [
+    {
+      "name": "Lee, John",
+      "amount": 2100,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Bond trader",
+      "employer": "Mizuho Securities USA"
+    },
+    {
+      "name": "Park, Elliot",
+      "amount": 2100,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Executive",
+      "employer": "Shine Electronics Co"
+    },
+    {
+      "name": "Park, Julienne",
+      "amount": 2100,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Graphic designer",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Chen, Qiuyan",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Fresh Meadow",
+      "state": "NY",
+      "occupation": "unemployed",
+      "employer": ""
+    },
+    {
+      "name": "Chen, Zhen Mei",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Corona",
+      "state": "NY",
+      "occupation": "Owner",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Chon, Victor",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Glen Head",
+      "state": "NY",
+      "occupation": "Engineering",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Chong, Charles",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Manhasset",
+      "state": "NY",
+      "occupation": "CEO",
+      "employer": "Barn Joo"
+    },
+    {
+      "name": "Choo, Mi Kyoung",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Palisades Park",
+      "state": "NJ",
+      "occupation": "Homemaker",
+      "employer": ""
+    },
+    {
+      "name": "Deng, Lilly E",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Roslyn Harbor",
+      "state": "NY",
+      "occupation": "Self Employed",
+      "employer": "Dragon Development"
+    },
+    {
+      "name": "Deng, Long",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Roslyn Harbor",
+      "state": "NY",
+      "occupation": "Self Employed",
+      "employer": "Go Fresh 365 Inc."
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 60841.5,
+      "contributorCount": 221
+    },
+    {
+      "label": "Small Business / Retail",
+      "amount": 10700,
+      "contributorCount": 19
+    },
+    {
+      "label": "Legal",
+      "amount": 3080,
+      "contributorCount": 13
+    },
+    {
+      "label": "Healthcare",
+      "amount": 2405,
+      "contributorCount": 5
+    },
+    {
+      "label": "Education",
+      "amount": 1735,
+      "contributorCount": 12
+    },
+    {
+      "label": "Real Estate",
+      "amount": 650,
+      "contributorCount": 3
+    }
+  ],
+  "explanatoryNotes": [
+    "40 donors gave at the legal maximum, totaling $42,000.",
+    "A noticeable share of reported private fundraising, 24%, came from outside New York City.",
+    "Among reported private contributions, small business / retail stands out as one of the strongest donor patterns."
+  ]
+}

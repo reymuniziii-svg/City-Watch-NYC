@@ -1,0 +1,151 @@
+{
+  "slug": "david-m-carr",
+  "cycle": "2025",
+  "candidateName": "Carr, David",
+  "candidateId": "2382",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-04-04T16:48:38.916Z",
+  "contributorCount": 263,
+  "totalRaised": 56035,
+  "publicFunds": 180326,
+  "publicFundsShare": 0.763,
+  "smallDollarAmount": 26885,
+  "smallDollarDonorCount": 211,
+  "smallDollarShare": 0.48,
+  "topTenDonorShare": 0.238,
+  "maxContributionDonorCount": 5,
+  "maxContributionAmount": 5250,
+  "organizationalDonorAmount": 4675,
+  "organizationalDonorShare": 0.083,
+  "outsideCityAmount": 7225,
+  "outsideCityShare": 0.129,
+  "topDonors": [
+    {
+      "name": "Fonte, Mark",
+      "amount": 2000,
+      "donorType": "IND",
+      "city": "Howell Township",
+      "state": "NJ",
+      "occupation": "Attorney",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Masucci, Raymond",
+      "amount": 2000,
+      "donorType": "IND",
+      "city": "Staten Island",
+      "state": "NY",
+      "occupation": "President",
+      "employer": "RPM Warehouse"
+    },
+    {
+      "name": "Franza, Randy",
+      "amount": 1750,
+      "donorType": "IND",
+      "city": "Staten Island",
+      "state": "NY",
+      "occupation": "Contractor",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "RPAC OF NEW YORK STATE",
+      "amount": 1350,
+      "donorType": "PCOMP",
+      "city": "Albany",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Savoleo, Len",
+      "amount": 1200,
+      "donorType": "IND",
+      "city": "Staten Island",
+      "state": "NY",
+      "occupation": "Pension Consultant",
+      "employer": "Advanced Pension Actuaries"
+    },
+    {
+      "name": "RSA - PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Bashirov, Nazim",
+      "amount": 1000,
+      "donorType": "IND",
+      "city": "Staten Island",
+      "state": "NY",
+      "occupation": "Manager",
+      "employer": "ESL Holding LLC"
+    },
+    {
+      "name": "Carr, Alex",
+      "amount": 1000,
+      "donorType": "IND",
+      "city": "staten island",
+      "state": "NY",
+      "occupation": "Zookeeper",
+      "employer": "Staten Island Zoo"
+    },
+    {
+      "name": "D'Ambrosio, William",
+      "amount": 1000,
+      "donorType": "IND",
+      "city": "Staten Island",
+      "state": "NY",
+      "occupation": "",
+      "employer": "Retired"
+    },
+    {
+      "name": "Reiner, David",
+      "amount": 1000,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Office",
+      "employer": "Abaline paper"
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 45820,
+      "contributorCount": 195
+    },
+    {
+      "label": "Legal",
+      "amount": 6025,
+      "contributorCount": 22
+    },
+    {
+      "label": "Small Business / Retail",
+      "amount": 2300,
+      "contributorCount": 7
+    },
+    {
+      "label": "Healthcare",
+      "amount": 2060,
+      "contributorCount": 9
+    },
+    {
+      "label": "Finance",
+      "amount": 1550,
+      "contributorCount": 10
+    },
+    {
+      "label": "Real Estate",
+      "amount": 1125,
+      "contributorCount": 6
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds make up 76% of this campaign's total resources.",
+    "5 donors gave at the legal maximum, totaling $5,250.",
+    "Among reported private contributions, legal stands out as one of the strongest donor patterns."
+  ]
+}

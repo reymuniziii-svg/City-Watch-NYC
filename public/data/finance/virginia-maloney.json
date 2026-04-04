@@ -1,0 +1,153 @@
+{
+  "slug": "virginia-maloney",
+  "cycle": "2025",
+  "candidateName": "Maloney, Virginia",
+  "candidateId": "2909",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-04-04T16:48:37.727Z",
+  "contributorCount": 931,
+  "totalRaised": 208814.3,
+  "publicFunds": 405234,
+  "publicFundsShare": 0.66,
+  "smallDollarAmount": 77651.22,
+  "smallDollarDonorCount": 752,
+  "smallDollarShare": 0.372,
+  "topTenDonorShare": 0.09,
+  "maxContributionDonorCount": 66,
+  "maxContributionAmount": 71400,
+  "organizationalDonorAmount": 19275,
+  "organizationalDonorShare": 0.092,
+  "outsideCityAmount": 62486.420000000006,
+  "outsideCityShare": 0.299,
+  "topDonors": [
+    {
+      "name": "Maloney, Virginia",
+      "amount": 3475,
+      "donorType": "CAN",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Product Manager",
+      "employer": "Meta"
+    },
+    {
+      "name": "Kerr-Jarrett, Paula",
+      "amount": 2100,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Homemaker",
+      "employer": ""
+    },
+    {
+      "name": "Rockefeller, Larry",
+      "amount": 2100,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Rockefeller, Wendy",
+      "amount": 2100,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Steffan, Andrew",
+      "amount": 2000,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Cronson, Paul",
+      "amount": 1550,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Investor",
+      "employer": "Self-Employed"
+    },
+    {
+      "name": "Woodward, Lisa",
+      "amount": 1550,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Aaron, Virginia",
+      "amount": 1500,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Homemaker",
+      "employer": ""
+    },
+    {
+      "name": "Capalino, James F.",
+      "amount": 1250,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Goverment Relations Advisor",
+      "employer": "CAPALINO+COMPANY"
+    },
+    {
+      "name": "Weiner, Shari",
+      "amount": 1150,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Real estate broker",
+      "employer": "Stribling at Compass"
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 154754.47,
+      "contributorCount": 678
+    },
+    {
+      "label": "Legal",
+      "amount": 18041.33,
+      "contributorCount": 88
+    },
+    {
+      "label": "Finance",
+      "amount": 13395,
+      "contributorCount": 42
+    },
+    {
+      "label": "Real Estate",
+      "amount": 11687.5,
+      "contributorCount": 35
+    },
+    {
+      "label": "Government / Public Sector",
+      "amount": 6130,
+      "contributorCount": 33
+    },
+    {
+      "label": "Education",
+      "amount": 4331,
+      "contributorCount": 21
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds make up 66% of this campaign's total resources.",
+    "Private fundraising looks relatively diffuse: the top ten donors account for only 9% of reported private contributions.",
+    "66 donors gave at the legal maximum, totaling $71,400.",
+    "A noticeable share of reported private fundraising, 30%, came from outside New York City.",
+    "Among reported private contributions, legal stands out as one of the strongest donor patterns."
+  ]
+}

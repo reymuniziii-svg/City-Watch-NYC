@@ -1,0 +1,153 @@
+{
+  "slug": "darlene-mealy",
+  "cycle": "2025",
+  "candidateName": "Mealy, Darlene",
+  "candidateId": "846",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-04-04T16:48:38.716Z",
+  "contributorCount": 232,
+  "totalRaised": 29072.12,
+  "publicFunds": 75130,
+  "publicFundsShare": 0.721,
+  "smallDollarAmount": 10950,
+  "smallDollarDonorCount": 201,
+  "smallDollarShare": 0.377,
+  "topTenDonorShare": 0.386,
+  "maxContributionDonorCount": 9,
+  "maxContributionAmount": 11150,
+  "organizationalDonorAmount": 11567.12,
+  "organizationalDonorShare": 0.398,
+  "outsideCityAmount": 3725,
+  "outsideCityShare": 0.128,
+  "topDonors": [
+    {
+      "name": "Greenberg Traurig, P.A.",
+      "amount": 2000,
+      "donorType": "PCOMP",
+      "city": "Albany",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Bichotte - Bichotte For NY, Rodneyse",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Assemblymember",
+      "employer": "NYS Assembly"
+    },
+    {
+      "name": "CSA COPE PAC FUND",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Doctors Council SEIU COPE",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Julie Menin 2025",
+      "amount": 1050,
+      "donorType": "PCOMC",
+      "city": "",
+      "state": "",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Kempner, Michael",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Executive",
+      "employer": "MikeWorldWide"
+    },
+    {
+      "name": "Transport Workers Union L 100",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "United Federation of Teachers",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Williams, Ayanna",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Councilmanic Aide",
+      "employer": "New York City Council"
+    },
+    {
+      "name": "NYC DC of Carpententers",
+      "amount": 822.12,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 27972.12,
+      "contributorCount": 220
+    },
+    {
+      "label": "Legal",
+      "amount": 550,
+      "contributorCount": 2
+    },
+    {
+      "label": "Real Estate",
+      "amount": 185,
+      "contributorCount": 2
+    },
+    {
+      "label": "Government / Public Sector",
+      "amount": 120,
+      "contributorCount": 2
+    },
+    {
+      "label": "Small Business / Retail",
+      "amount": 100,
+      "contributorCount": 1
+    },
+    {
+      "label": "Healthcare",
+      "amount": 85,
+      "contributorCount": 3
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds make up 72% of this campaign's total resources.",
+    "Private fundraising is relatively concentrated: the top ten donors account for 39% of reported private contributions.",
+    "9 donors gave at the legal maximum, totaling $11,150.",
+    "Committees, unions, or other non-individual donors made up 40% of reported private fundraising.",
+    "Among reported private contributions, legal stands out as one of the strongest donor patterns."
+  ]
+}

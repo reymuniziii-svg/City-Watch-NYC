@@ -1,0 +1,153 @@
+{
+  "slug": "yusef-salaam",
+  "cycle": "2025",
+  "candidateName": "Salaam, Yusef",
+  "candidateId": "2756",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-04-04T16:48:37.855Z",
+  "contributorCount": 268,
+  "totalRaised": 37730,
+  "publicFunds": null,
+  "publicFundsShare": 0,
+  "smallDollarAmount": 18930,
+  "smallDollarDonorCount": 242,
+  "smallDollarShare": 0.502,
+  "topTenDonorShare": 0.319,
+  "maxContributionDonorCount": 6,
+  "maxContributionAmount": 7950,
+  "organizationalDonorAmount": 10020,
+  "organizationalDonorShare": 0.266,
+  "outsideCityAmount": 6560,
+  "outsideCityShare": 0.174,
+  "topDonors": [
+    {
+      "name": "UNITED FEDERATION OF TEACHERS",
+      "amount": 1700,
+      "donorType": "OTHR",
+      "city": "BOWLING GREEN",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "32BJ UNITED ADF",
+      "amount": 1600,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "JULIE MENIN 2025",
+      "amount": 1600,
+      "donorType": "PCOMZ",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "2025, Farias",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "The Bronx",
+      "state": "NY",
+      "occupation": "Candidate Committee",
+      "employer": "Farias 2025"
+    },
+    {
+      "name": "DOCTORS COUNCIL SEIU COPE",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "STRIVING FOR A BETTER NEW YORK",
+      "amount": 1050,
+      "donorType": "OTHR",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "1199 SEIU NYS POLITICAL ACTION",
+      "amount": 1000,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "COMMITTEE OF INTERNS AND RESID",
+      "amount": 1000,
+      "donorType": "OTHR",
+      "city": "LONG ISLAND CITY",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "HIGGINSEN, VY",
+      "amount": 1000,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "EXEC DIRECTOR",
+      "employer": "MAMA FOUNDATION"
+    },
+    {
+      "name": "LOWE, MELVIN",
+      "amount": 1000,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "CONSULTANT",
+      "employer": "MATURITY WORKS"
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 30835,
+      "contributorCount": 211
+    },
+    {
+      "label": "Real Estate",
+      "amount": 2475,
+      "contributorCount": 10
+    },
+    {
+      "label": "Legal",
+      "amount": 2150,
+      "contributorCount": 19
+    },
+    {
+      "label": "Nonprofit / Advocacy",
+      "amount": 1050,
+      "contributorCount": 3
+    },
+    {
+      "label": "Government / Public Sector",
+      "amount": 805,
+      "contributorCount": 7
+    },
+    {
+      "label": "Education",
+      "amount": 475,
+      "contributorCount": 8
+    }
+  ],
+  "explanatoryNotes": [
+    "Small-dollar donors contributed 50% of reported private fundraising across 242 contributions.",
+    "Private fundraising is relatively concentrated: the top ten donors account for 32% of reported private contributions.",
+    "6 donors gave at the legal maximum, totaling $7,950.",
+    "Committees, unions, or other non-individual donors made up 27% of reported private fundraising.",
+    "A noticeable share of reported private fundraising, 17%, came from outside New York City."
+  ]
+}

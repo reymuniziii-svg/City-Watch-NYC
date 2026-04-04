@@ -1,0 +1,153 @@
+{
+  "slug": "jennifer-gutierrez",
+  "cycle": "2025",
+  "candidateName": "Gutierrez, Jennifer",
+  "candidateId": "2357",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-04-04T16:48:38.502Z",
+  "contributorCount": 103,
+  "totalRaised": 17981,
+  "publicFunds": null,
+  "publicFundsShare": 0,
+  "smallDollarAmount": 8006,
+  "smallDollarDonorCount": 89,
+  "smallDollarShare": 0.445,
+  "topTenDonorShare": 0.487,
+  "maxContributionDonorCount": 5,
+  "maxContributionAmount": 5250,
+  "organizationalDonorAmount": 5900,
+  "organizationalDonorShare": 0.328,
+  "outsideCityAmount": 3359,
+  "outsideCityShare": 0.187,
+  "topDonors": [
+    {
+      "name": "Doctors Council SEIU Cope",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Kataria, Varun",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "",
+      "state": "",
+      "occupation": "Founder",
+      "employer": "Self"
+    },
+    {
+      "name": "NYSNA- Political Action Commi",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Albany",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Restler, Peter",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "United Federation of Teachers",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "BOWLING GREEN",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "1199 SEIU- NYS Political Actio",
+      "amount": 1000,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Committee of Interns and Resid",
+      "amount": 1000,
+      "donorType": "PCOMP",
+      "city": "Astoria18",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Farias 2025",
+      "amount": 500,
+      "donorType": "PCOMC",
+      "city": "Bronx",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Perahia, Joann",
+      "amount": 500,
+      "donorType": "IND",
+      "city": "Port Washington",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Solano, Rob",
+      "amount": 500,
+      "donorType": "IND",
+      "city": "Brooklyn",
+      "state": "NY",
+      "occupation": "Executive Director",
+      "employer": "CUFFH"
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 16354,
+      "contributorCount": 85
+    },
+    {
+      "label": "Government / Public Sector",
+      "amount": 568,
+      "contributorCount": 5
+    },
+    {
+      "label": "Education",
+      "amount": 532,
+      "contributorCount": 7
+    },
+    {
+      "label": "Healthcare",
+      "amount": 275,
+      "contributorCount": 2
+    },
+    {
+      "label": "Real Estate",
+      "amount": 134,
+      "contributorCount": 2
+    },
+    {
+      "label": "Legal",
+      "amount": 84,
+      "contributorCount": 2
+    }
+  ],
+  "explanatoryNotes": [
+    "Private fundraising is relatively concentrated: the top ten donors account for 49% of reported private contributions.",
+    "5 donors gave at the legal maximum, totaling $5,250.",
+    "Committees, unions, or other non-individual donors made up 33% of reported private fundraising.",
+    "A noticeable share of reported private fundraising, 19%, came from outside New York City.",
+    "Among reported private contributions, government / public sector stands out as one of the strongest donor patterns."
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "slug": "shekar-krishnan",
+  "cycle": "2025",
+  "candidateName": "Krishnan, Shekar",
+  "candidateId": "2206",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-04-04T16:48:38.268Z",
+  "contributorCount": 481,
+  "totalRaised": 102983,
+  "publicFunds": 308992,
+  "publicFundsShare": 0.75,
+  "smallDollarAmount": 47334,
+  "smallDollarDonorCount": 400,
+  "smallDollarShare": 0.46,
+  "topTenDonorShare": 0.103,
+  "maxContributionDonorCount": 31,
+  "maxContributionAmount": 32550,
+  "organizationalDonorAmount": 13650,
+  "organizationalDonorShare": 0.133,
+  "outsideCityAmount": 22053,
+  "outsideCityShare": 0.214,
+  "topDonors": [
+    {
+      "name": "Siegel, Gail",
+      "amount": 1150,
+      "donorType": "IND",
+      "city": "Jackson Heights",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Gottsegen, Paul",
+      "amount": 1100,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "32BJ United ADF",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Bhojwani, Prince",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "BOWLING GREEN",
+      "state": "NY",
+      "occupation": "Chief Investment Officer",
+      "employer": "The Graywall Company LLC"
+    },
+    {
+      "name": "Buhl, Miriam",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Pro Bono Counsel",
+      "employer": "Weil"
+    },
+    {
+      "name": "Courage to Change",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Corona",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Devi, Gayatri",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Park Avenue Neurology",
+      "employer": "neurologist"
+    },
+    {
+      "name": "Doctors Council SEIU Cope",
+      "amount": 1050,
+      "donorType": "OTHR",
+      "city": "BOWLING GREEN",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Gardner, Gretchen",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Ann Arbor",
+      "state": "MI",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Hassan, Naureen",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 73314,
+      "contributorCount": 336
+    },
+    {
+      "label": "Legal",
+      "amount": 14450,
+      "contributorCount": 51
+    },
+    {
+      "label": "Healthcare",
+      "amount": 4290,
+      "contributorCount": 22
+    },
+    {
+      "label": "Small Business / Retail",
+      "amount": 3151,
+      "contributorCount": 14
+    },
+    {
+      "label": "Finance",
+      "amount": 2750,
+      "contributorCount": 13
+    },
+    {
+      "label": "Nonprofit / Advocacy",
+      "amount": 2714,
+      "contributorCount": 13
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds make up 75% of this campaign's total resources.",
+    "Private fundraising looks relatively diffuse: the top ten donors account for only 10% of reported private contributions.",
+    "31 donors gave at the legal maximum, totaling $32,550.",
+    "A noticeable share of reported private fundraising, 21%, came from outside New York City.",
+    "Among reported private contributions, legal stands out as one of the strongest donor patterns."
+  ]
+}

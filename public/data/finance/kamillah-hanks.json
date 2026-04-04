@@ -1,0 +1,153 @@
+{
+  "slug": "kamillah-hanks",
+  "cycle": "2025",
+  "candidateName": "Hanks, Kamillah",
+  "candidateId": "1996",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-04-04T16:48:38.888Z",
+  "contributorCount": 457,
+  "totalRaised": 135742.88,
+  "publicFunds": 246845,
+  "publicFundsShare": 0.645,
+  "smallDollarAmount": 44740,
+  "smallDollarDonorCount": 324,
+  "smallDollarShare": 0.33,
+  "topTenDonorShare": 0.091,
+  "maxContributionDonorCount": 14,
+  "maxContributionAmount": 14900,
+  "organizationalDonorAmount": 18877.879999999997,
+  "organizationalDonorShare": 0.139,
+  "outsideCityAmount": 26230,
+  "outsideCityShare": 0.193,
+  "topDonors": [
+    {
+      "name": "Harrison, Timothy",
+      "amount": 2000,
+      "donorType": "IND",
+      "city": "Staten Island",
+      "state": "NY",
+      "occupation": "Real Estate Developer",
+      "employer": "TCH Realty & Development Co.,"
+    },
+    {
+      "name": "Savo, Michael",
+      "amount": 2000,
+      "donorType": "IND",
+      "city": "Staten Island",
+      "state": "NY",
+      "occupation": "President",
+      "employer": "MSB Development Corp"
+    },
+    {
+      "name": "2025, Selvena",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Rockaway Beach",
+      "state": "NY",
+      "occupation": "Council Member",
+      "employer": "NYC Council"
+    },
+    {
+      "name": "32bj",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "ATU New York Cope Fund",
+      "amount": 1050,
+      "donorType": "OTHR",
+      "city": "Silver Spring",
+      "state": "MD",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Doctors Council SEIU Cope",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Farias 2025",
+      "amount": 1050,
+      "donorType": "OTHR",
+      "city": "Bronx",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Guberman, Daniel M",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Staten Island",
+      "state": "NY",
+      "occupation": "Student",
+      "employer": ""
+    },
+    {
+      "name": "Julie Menin 2025",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Lvovskiy, Yevgeniy",
+      "amount": 1050,
+      "donorType": "IND",
+      "city": "Staten Island",
+      "state": "NY",
+      "occupation": "CEO",
+      "employer": "ZHL Group Inc."
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 106207.88,
+      "contributorCount": 350
+    },
+    {
+      "label": "Real Estate",
+      "amount": 14375,
+      "contributorCount": 38
+    },
+    {
+      "label": "Legal",
+      "amount": 9100,
+      "contributorCount": 24
+    },
+    {
+      "label": "Finance",
+      "amount": 3250,
+      "contributorCount": 8
+    },
+    {
+      "label": "Small Business / Retail",
+      "amount": 2800,
+      "contributorCount": 12
+    },
+    {
+      "label": "Healthcare",
+      "amount": 2125,
+      "contributorCount": 14
+    }
+  ],
+  "explanatoryNotes": [
+    "Public matching funds account for about 65% of the campaign's total resources.",
+    "Private fundraising looks relatively diffuse: the top ten donors account for only 9% of reported private contributions.",
+    "14 donors gave at the legal maximum, totaling $14,900.",
+    "A noticeable share of reported private fundraising, 19%, came from outside New York City.",
+    "Among reported private contributions, real estate stands out as one of the strongest donor patterns."
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "slug": "julie-menin",
+  "cycle": "2025",
+  "candidateName": "Menin, Julie",
+  "candidateId": "1529",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-04-04T16:48:37.763Z",
+  "contributorCount": 1402,
+  "totalRaised": 753068.74,
+  "publicFunds": null,
+  "publicFundsShare": 0,
+  "smallDollarAmount": 101468.04,
+  "smallDollarDonorCount": 786,
+  "smallDollarShare": 0.135,
+  "topTenDonorShare": 0.043,
+  "maxContributionDonorCount": 288,
+  "maxContributionAmount": 448842.67,
+  "organizationalDonorAmount": 49274.29,
+  "organizationalDonorShare": 0.065,
+  "outsideCityAmount": 147791,
+  "outsideCityShare": 0.196,
+  "topDonors": [
+    {
+      "name": "Patterson, Katheryn",
+      "amount": 4300,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Bikoff, J Darius",
+      "amount": 3200,
+      "donorType": "IND",
+      "city": "Whitestone",
+      "state": "NY",
+      "occupation": "Founder",
+      "employer": "The Observatory"
+    },
+    {
+      "name": "FUHRMAN, GLENN",
+      "amount": 3200,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "CEO",
+      "employer": "Tru Arrow Partners"
+    },
+    {
+      "name": "Haber, Jimmy",
+      "amount": 3200,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Retired",
+      "employer": ""
+    },
+    {
+      "name": "Kefalidis, Laurie",
+      "amount": 3200,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Real Estate",
+      "employer": "KLM Equities"
+    },
+    {
+      "name": "Mehiel, Dennis",
+      "amount": 3200,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Administrator",
+      "employer": "Four M Investments, LLC"
+    },
+    {
+      "name": "Min, Sarah",
+      "amount": 3200,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "Unemployed",
+      "employer": ""
+    },
+    {
+      "name": "rohatyn, nicolas",
+      "amount": 3200,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "investor",
+      "employer": "TRG management LLC"
+    },
+    {
+      "name": "Roth, Jordan",
+      "amount": 3015.38,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "President",
+      "employer": "Jujamcyn Theaters"
+    },
+    {
+      "name": "Epstein Rubenstein, Samantha",
+      "amount": 2850,
+      "donorType": "IND",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "real estate",
+      "employer": "Warespace"
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 551572.03,
+      "contributorCount": 967
+    },
+    {
+      "label": "Finance",
+      "amount": 71749,
+      "contributorCount": 87
+    },
+    {
+      "label": "Real Estate",
+      "amount": 70202,
+      "contributorCount": 112
+    },
+    {
+      "label": "Legal",
+      "amount": 67524.95,
+      "contributorCount": 136
+    },
+    {
+      "label": "Small Business / Retail",
+      "amount": 16604,
+      "contributorCount": 26
+    },
+    {
+      "label": "Healthcare",
+      "amount": 8540,
+      "contributorCount": 16
+    }
+  ],
+  "explanatoryNotes": [
+    "Private fundraising looks relatively diffuse: the top ten donors account for only 4% of reported private contributions.",
+    "288 donors gave at the legal maximum, totaling $448,843.",
+    "A noticeable share of reported private fundraising, 20%, came from outside New York City.",
+    "Among reported private contributions, finance stands out as one of the strongest donor patterns."
+  ]
+}

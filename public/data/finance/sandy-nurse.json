@@ -1,0 +1,153 @@
+{
+  "slug": "sandy-nurse",
+  "cycle": "2025",
+  "candidateName": "Nurse, Sandy",
+  "candidateId": "2310",
+  "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
+  "updatedAt": "2026-04-04T16:48:38.606Z",
+  "contributorCount": 375,
+  "totalRaised": 42075.08,
+  "publicFunds": null,
+  "publicFundsShare": 0,
+  "smallDollarAmount": 22144.87,
+  "smallDollarDonorCount": 350,
+  "smallDollarShare": 0.526,
+  "topTenDonorShare": 0.248,
+  "maxContributionDonorCount": 9,
+  "maxContributionAmount": 9450,
+  "organizationalDonorAmount": 16380.21,
+  "organizationalDonorShare": 0.389,
+  "outsideCityAmount": 7215,
+  "outsideCityShare": 0.171,
+  "topDonors": [
+    {
+      "name": "32BJ United ADF",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "CSA COPE PAC Fund",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "District Council 37 Political",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Doctors Council SEIU COPE",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "IUOE Local 30 State PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Beechhurst",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "NY Hotel Trades Council COPE",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "NYSNA PAC",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "Albany",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "Selvena 2025",
+      "amount": 1050,
+      "donorType": "PCOMC",
+      "city": "Far Rockaway",
+      "state": "NY",
+      "occupation": "NYC Council Member",
+      "employer": "NYC Council"
+    },
+    {
+      "name": "United Federation of Teachers",
+      "amount": 1050,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    },
+    {
+      "name": "1199 SEIU NYS Political Action",
+      "amount": 1000,
+      "donorType": "PCOMP",
+      "city": "New York",
+      "state": "NY",
+      "occupation": "",
+      "employer": ""
+    }
+  ],
+  "topIndustries": [
+    {
+      "label": "Other / Mixed",
+      "amount": 36477.579999999994,
+      "contributorCount": 298
+    },
+    {
+      "label": "Education",
+      "amount": 1910,
+      "contributorCount": 26
+    },
+    {
+      "label": "Legal",
+      "amount": 1252.5,
+      "contributorCount": 18
+    },
+    {
+      "label": "Government / Public Sector",
+      "amount": 685,
+      "contributorCount": 10
+    },
+    {
+      "label": "Healthcare",
+      "amount": 440,
+      "contributorCount": 4
+    },
+    {
+      "label": "Real Estate",
+      "amount": 425,
+      "contributorCount": 5
+    }
+  ],
+  "explanatoryNotes": [
+    "Small-dollar donors contributed 53% of reported private fundraising across 350 contributions.",
+    "9 donors gave at the legal maximum, totaling $9,450.",
+    "Committees, unions, or other non-individual donors made up 39% of reported private fundraising.",
+    "A noticeable share of reported private fundraising, 17%, came from outside New York City.",
+    "Among reported private contributions, education stands out as one of the strongest donor patterns."
+  ]
+}
