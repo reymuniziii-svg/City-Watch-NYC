@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { FileText, ArrowRight, Sparkles, Loader2, ChevronDown, ChevronUp, Share2, Check } from 'lucide-react';
+import { FileText, Sparkles, Loader2, Share2, Check, Megaphone } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Bill } from '../types';
 import { summarizeBill } from '../services/geminiService';
+import CivicActionCenter from './CivicActionCenter';
+
+type OpenPanel = 'none' | 'summary' | 'action';
 
 export default function BillCard({ bill }: { bill: Bill }) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [openPanel, setOpenPanel] = useState<OpenPanel>('none');
   const [summary, setSummary] = useState<Bill['plainEnglishSummary'] | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -25,23 +28,34 @@ export default function BillCard({ bill }: { bill: Bill }) {
 
   const handleSummarize = async () => {
     if (summary) {
-      setIsExpanded(!isExpanded);
+      setOpenPanel(prev => prev === 'summary' ? 'none' : 'summary');
       return;
     }
 
+    setOpenPanel('summary');
     setIsLoading(true);
     try {
       const result = await summarizeBill(bill.title, bill.summary);
       if (result) {
         setSummary(result);
-        setIsExpanded(true);
+        setOpenPanel(prev => prev === 'summary' ? 'summary' : prev);
+      } else {
+        setOpenPanel(prev => prev === 'summary' ? 'none' : prev);
       }
     } catch (error) {
       console.error('Summarization error:', error);
+      setOpenPanel(prev => prev === 'summary' ? 'none' : prev);
     } finally {
       setIsLoading(false);
     }
   };
+
+  const handleToggleAction = () => {
+    setOpenPanel(prev => prev === 'action' ? 'none' : 'action');
+  };
+
+  const isActionOpen = openPanel === 'action';
+  const isSummaryOpen = openPanel === 'summary' && summary != null;
 
   return (
     <div className="bg-white border-editorial hover:bg-slate-50 transition-colors overflow-hidden">
@@ -90,6 +104,17 @@ export default function BillCard({ bill }: { bill: Bill }) {
             >
               {copied ? <Check className="w-4 h-4 text-green-600" /> : <Share2 className="w-4 h-4" />}
             </button>
+            <button
+              onClick={handleToggleAction}
+              className={`flex items-center gap-2 px-5 py-2.5 border-editorial font-bold text-xs uppercase tracking-widest active:scale-95 transition-all ${
+                isActionOpen
+                  ? 'bg-black text-white'
+                  : 'bg-white text-black hover:bg-black hover:text-white'
+              }`}
+            >
+              <Megaphone className="w-4 h-4" />
+              Take Action
+            </button>
             <button 
               onClick={handleSummarize}
               disabled={isLoading}
@@ -100,15 +125,35 @@ export default function BillCard({ bill }: { bill: Bill }) {
               ) : (
                 <Sparkles className="w-4 h-4" />
               )}
-              {summary ? (isExpanded ? 'Hide Summary' : 'Show Summary') : 'Translate to Plain English'}
+              {summary ? (isSummaryOpen ? 'Hide Summary' : 'Show Summary') : 'Translate to Plain English'}
             </button>
           </div>
         </div>
       </div>
 
       <AnimatePresence>
-        {isExpanded && summary && (
+        {isActionOpen && (
           <motion.div
+            key="action"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="overflow-hidden bg-slate-50 border-t-editorial"
+          >
+            <CivicActionCenter
+              billNumber={bill.number}
+              billTitle={bill.title}
+              billStatus={bill.status}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {isSummaryOpen && (
+          <motion.div
+            key="summary"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -139,7 +184,6 @@ export default function BillCard({ bill }: { bill: Bill }) {
                 </div>
               </div>
 
-              {/* Lobbying Insights Section */}
               <div className="mt-8 pt-8 border-t border-slate-200">
                 <div className="flex items-center gap-2 mb-6">
                   <h4 className="font-editorial text-xl font-bold text-black">Lobbying Insights</h4>
