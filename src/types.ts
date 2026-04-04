@@ -93,6 +93,17 @@ export interface CampaignFinance {
     amount: number;
     contributorCount: number;
   }[];
+  donorsByIndustry: Record<string, {
+    name: string;
+    amount: number;
+    donorType: string;
+    city: string;
+    state: string;
+    occupation: string;
+    employer: string;
+  }[]>;
+  grassrootsScore: number | null;
+  grassrootsGrade: string | null;
   explanatoryNotes: string[];
 }
 

@@ -4,7 +4,7 @@
   "candidateName": "Ariola, Joann",
   "candidateId": "504",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:14:51.937Z",
+  "updatedAt": "2026-04-04T17:24:31.200Z",
   "contributorCount": 333,
   "totalRaised": 56436,
   "publicFunds": null,
@@ -143,6 +143,701 @@
       "contributorCount": 7
     }
   ],
+  "donorsByIndustry": {
+    "Other / Mixed": [
+      {
+        "name": "Uniformed Fire Officers Associ",
+        "amount": 1500,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Argento, Anthony",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Construction Worker",
+        "employer": "Brooklyn Constructing"
+      },
+      {
+        "name": "Correction Officers' Benevolen",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "East Elmhurst",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Doctors Council SEIU COPE",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Plumbers Local Union No. 1 NYC",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "Long Island City",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Police Benevolent Association",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Uniformed FireFighters Assn",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Clemenza, James",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Far Rockaway",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "NYS Supreme Court Officers Ass",
+        "amount": 1000,
+        "donorType": "PCOMP",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Robbins, Sanford",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Howard Beach",
+        "state": "NY",
+        "occupation": "insurance",
+        "employer": "advanced planning concepts"
+      },
+      {
+        "name": "Shamloo, Mehdi",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Smithtown",
+        "state": "NY",
+        "occupation": "self employed",
+        "employer": "Exxon Mobile"
+      },
+      {
+        "name": "Singh, Sandeep",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Roslyn",
+        "state": "NY",
+        "occupation": "Contractor",
+        "employer": "J & N Construction Group"
+      },
+      {
+        "name": "Vigliarolo, Anne",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Howard Beach",
+        "state": "NY",
+        "occupation": "manager",
+        "employer": "Harbor Motor Inn"
+      },
+      {
+        "name": "Vitucci, Dominick",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Howard Beach",
+        "state": "NY",
+        "occupation": "sales",
+        "employer": "self"
+      },
+      {
+        "name": "Rothkrug, Hiram",
+        "amount": 600,
+        "donorType": "IND",
+        "city": "GREAT NCK PLZ",
+        "state": "NY",
+        "occupation": "consultant",
+        "employer": "environmental studies corp"
+      },
+      {
+        "name": "Isabella, Carmela",
+        "amount": 525,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Voting Machine Technician",
+        "employer": "Board of Elections in the City"
+      },
+      {
+        "name": "Mason Tenders District Council",
+        "amount": 525,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Anzalone, AnneMarie",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Hampton Bays",
+        "state": "NY",
+        "occupation": "Lobbyist",
+        "employer": "Bolton StJohns"
+      },
+      {
+        "name": "Buffolino, Barbara",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "ROCKAWAY PARK",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Novick, Randall",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Howard Beach",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      }
+    ],
+    "Small Business / Retail": [
+      {
+        "name": "COTRONE, Vincent",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "bellmore",
+        "state": "NY",
+        "occupation": "Business owner",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "mcmahon, Peter",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Howard Beach",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Harbor Waterproofing"
+      },
+      {
+        "name": "Latchana, Nazneen",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Small business owner",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Singh, Avtar",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Lynbrook",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Five Boro Building Supply"
+      },
+      {
+        "name": "Singh, Baikar",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "South Richmond Hill",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "B and H Liquor Store"
+      },
+      {
+        "name": "Singh, Gurpreet",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Bridgewater",
+        "state": "NJ",
+        "occupation": "Owner",
+        "employer": "Tiger Management"
+      },
+      {
+        "name": "Singh, Harcharan",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Plainview",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Five Boro Building Supply"
+      },
+      {
+        "name": "Singh, Hardev",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Plainview",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "107 Auto Body"
+      },
+      {
+        "name": "Cermeli, Jonathan",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "East Northport",
+        "state": "NY",
+        "occupation": "Business Owner",
+        "employer": "Blackwing Consulting  LLC"
+      },
+      {
+        "name": "Troia, Maurizio",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Villa Erasmo"
+      },
+      {
+        "name": "Alfino, Carl",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Merrick",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "QUEENSBORO physical therapy"
+      }
+    ],
+    "Legal": [
+      {
+        "name": "Merlino, Silvena",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "attorney",
+        "employer": "Rivkin Radler LLP"
+      },
+      {
+        "name": "Wagner, Jimmy",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Legal",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Ragano, John",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "North Valley Stream",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "self"
+      },
+      {
+        "name": "Cortegiano, Mark",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "self"
+      },
+      {
+        "name": "Silvagni, Giovanni",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Rockville Centre",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "self"
+      },
+      {
+        "name": "Ciaramella, Brina",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Ny",
+        "state": "NY",
+        "occupation": "Lawyer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Henry, Michael",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Gravino, Pat",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Sound Private Wealth"
+      },
+      {
+        "name": "Butkiewicz, Eric",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Middle Village",
+        "state": "NY",
+        "occupation": "Associate General Counsel",
+        "employer": "Board of Elections in the City"
+      },
+      {
+        "name": "Wurzel, Marc",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "General Counsel",
+        "employer": "GCP"
+      }
+    ],
+    "Finance": [
+      {
+        "name": "Carcione, Walter",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Howard Beach",
+        "state": "NY",
+        "occupation": "Chief Investigator",
+        "employer": "City of New York"
+      },
+      {
+        "name": "Fuzailov, Azarya",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "",
+        "employer": "Dynasty Capital"
+      },
+      {
+        "name": "Fuzailov, Chananya",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "96-14 Metropolitan Avenue",
+        "employer": "Dynasty Capital"
+      },
+      {
+        "name": "Fuzailov, Yosef",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "insurance",
+        "employer": "Dynasty Capital"
+      },
+      {
+        "name": "Liu, HuiHui",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Long Island City",
+        "state": "NY",
+        "occupation": "Underwriter",
+        "employer": "Dynasty Capital"
+      },
+      {
+        "name": "Shi, Benson",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Underwriter",
+        "employer": "Dynasty Capital"
+      },
+      {
+        "name": "Sullivan, Gerald",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Breezy Point",
+        "state": "NY",
+        "occupation": "Finance Officer",
+        "employer": "Board of Elections in the City"
+      },
+      {
+        "name": "Zhang, Danni",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Long Island City",
+        "state": "NY",
+        "occupation": "Underwriter",
+        "employer": "Dynasty Capital"
+      },
+      {
+        "name": "SPAGNUOLO, JOHN",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Howard Beach",
+        "state": "NY",
+        "occupation": "Private Banker",
+        "employer": "Flagstar Private Banker"
+      },
+      {
+        "name": "Hanratty, Kevin",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Jackson Heights",
+        "state": "NY",
+        "occupation": "Compliance consultant",
+        "employer": "Allied Irish Bank"
+      }
+    ],
+    "Healthcare": [
+      {
+        "name": "Flanz, Bruce J",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New City",
+        "state": "NY",
+        "occupation": "Health Care Adminstrator",
+        "employer": "Jamaica Hospital Medical Cente"
+      },
+      {
+        "name": "Connolly, Gerard",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Howard Beach",
+        "state": "NY",
+        "occupation": "Heslthcare",
+        "employer": "One Brooklyn Health"
+      },
+      {
+        "name": "Ruffo, Ana",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Howard Beach",
+        "state": "NY",
+        "occupation": "medical assistant",
+        "employer": "Dr. maria musso"
+      },
+      {
+        "name": "Luccisano Jr, Vincent",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "howard beach",
+        "state": "NY",
+        "occupation": "Hospitality manager",
+        "employer": "Mpj Enterprises inc"
+      },
+      {
+        "name": "Rubin, Andrew",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Woodmere",
+        "state": "NY",
+        "occupation": "Public Affairs",
+        "employer": "Jamaica Hospital Medical Cente"
+      },
+      {
+        "name": "Causi, Francesca",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "South Ozone Park",
+        "state": "NY",
+        "occupation": "manager",
+        "employer": "Jamaica Hospital Medical Cente"
+      },
+      {
+        "name": "charles, Ferria",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Queens",
+        "state": "NY",
+        "occupation": "Home Health",
+        "employer": "Ferria Charles"
+      }
+    ],
+    "Real Estate": [
+      {
+        "name": "Napolitano, Cathy",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Howard Beach",
+        "state": "NY",
+        "occupation": "Real Estate Manager",
+        "employer": "Howard Plaza Realty"
+      },
+      {
+        "name": "mendolia, theresa",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Real estate owner",
+        "employer": "SDM FAMILY CORP"
+      },
+      {
+        "name": "Chirichigno, Anne Marie",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "South Ozone Park",
+        "state": "NY",
+        "occupation": "Real estate broker",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Faulisi, Mario",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Howard Beach",
+        "state": "NY",
+        "occupation": "Property Management",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Guzzo, Joseph",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Howard Beach",
+        "state": "NY",
+        "occupation": "Real Estate Broker",
+        "employer": "Self-Employed"
+      }
+    ],
+    "Education": [
+      {
+        "name": "Sciulara, Nancy",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Howard Beach",
+        "state": "NY",
+        "occupation": "teacher",
+        "employer": "self"
+      },
+      {
+        "name": "Mannarino, Karra",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Howard Beach",
+        "state": "NY",
+        "occupation": "FinTech Education",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Ippolito, Elizabeth",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Howard Beach",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "NYC DOE"
+      },
+      {
+        "name": "palazzolo, Antonella",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "school aide",
+        "employer": "Dept of Education"
+      },
+      {
+        "name": "palazzolo, rosalia",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "school aide",
+        "employer": "Dept of Education"
+      },
+      {
+        "name": "palazzolo, Salvatore",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "teacher",
+        "employer": "DOE"
+      },
+      {
+        "name": "Siano, Nicole",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Howard Beach",
+        "state": "NY",
+        "occupation": "teacher",
+        "employer": "Board of ED NYC"
+      },
+      {
+        "name": "Rein, Briget",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Lobbyist",
+        "employer": "United Federation of Teachers"
+      },
+      {
+        "name": "Cicero, Nicole",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Howard Beach",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "NYCDOEE"
+      },
+      {
+        "name": "Nusbaum, Shari",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Paraprofessional",
+        "employer": "NYC Dept of Education"
+      }
+    ],
+    "Labor": [
+      {
+        "name": "Pelman, Simon",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Administration",
+        "employer": "Unionplaza NH"
+      },
+      {
+        "name": "Singh, Gurden",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "South Richmond Hill",
+        "state": "NY",
+        "occupation": "Labor",
+        "employer": "Union Local 1"
+      }
+    ]
+  },
+  "grassrootsScore": 74,
+  "grassrootsGrade": "B",
   "explanatoryNotes": [
     "Small-dollar donors contributed 61% of reported private fundraising across 294 contributions.",
     "9 donors gave at the legal maximum, totaling $9,450.",

@@ -4,7 +4,7 @@
   "candidateName": "Mealy, Darlene",
   "candidateId": "846",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:14:52.208Z",
+  "updatedAt": "2026-04-04T17:24:31.458Z",
   "contributorCount": 232,
   "totalRaised": 29072.12,
   "publicFunds": 75130,
@@ -143,6 +143,312 @@
       "contributorCount": 3
     }
   ],
+  "donorsByIndustry": {
+    "Other / Mixed": [
+      {
+        "name": "Greenberg Traurig, P.A.",
+        "amount": 2000,
+        "donorType": "PCOMP",
+        "city": "Albany",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Bichotte - Bichotte For NY, Rodneyse",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Assemblymember",
+        "employer": "NYS Assembly"
+      },
+      {
+        "name": "CSA COPE PAC FUND",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Doctors Council SEIU COPE",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Julie Menin 2025",
+        "amount": 1050,
+        "donorType": "PCOMC",
+        "city": "",
+        "state": "",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Kempner, Michael",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Executive",
+        "employer": "MikeWorldWide"
+      },
+      {
+        "name": "Transport Workers Union L 100",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "United Federation of Teachers",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Williams, Ayanna",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Councilmanic Aide",
+        "employer": "New York City Council"
+      },
+      {
+        "name": "NYC DC of Carpententers",
+        "amount": 822.12,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Alexander, Ronald",
+        "amount": 750,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "32BJ United ADF",
+        "amount": 500,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Bichotte - Bichotte For  NY, Rodneyse",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "BROOKLYN",
+        "state": "NY",
+        "occupation": "Assemblymember",
+        "employer": "NYS Assembly"
+      },
+      {
+        "name": "City Employees Local 237",
+        "amount": 500,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Local 1407Maf Misbah Uddin Pre",
+        "amount": 500,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Mealy, Louise",
+        "amount": 420,
+        "donorType": "FAM",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Hutchinson, flaudeen",
+        "amount": 410,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "NUTRITION",
+        "employer": "BMS"
+      },
+      {
+        "name": "Craig, Rev. Dan",
+        "amount": 400,
+        "donorType": "IND",
+        "city": "South Hempstead",
+        "state": "NY",
+        "occupation": "Pastor",
+        "employer": "Self employed"
+      },
+      {
+        "name": "Wright, Ernestine",
+        "amount": 350,
+        "donorType": "FAM",
+        "city": "Far Rockaway",
+        "state": "NY",
+        "occupation": "Conf. Secretary",
+        "employer": "NYC Transit"
+      },
+      {
+        "name": "Willis, Rebecca",
+        "amount": 330,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      }
+    ],
+    "Finance": [
+      {
+        "name": "Sterlin, Vladimir",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Le Roi Capital"
+      },
+      {
+        "name": "Ayu, Ibrahim",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Supervisor",
+        "employer": "NYC Dept. of Finance"
+      }
+    ],
+    "Government / Public Sector": [
+      {
+        "name": "Council, Kimberly",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Deputy Borough President-Brook",
+        "employer": "City of New York"
+      },
+      {
+        "name": "Payne, Rebecca",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Child Protective Spec.",
+        "employer": "City of New York"
+      }
+    ],
+    "Legal": [
+      {
+        "name": "Friends of Steve Cohen, Steve",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Lawyer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "St Louis, Tawanna",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Principal Law Clerk",
+        "employer": "NYS Unified Court System"
+      }
+    ],
+    "Healthcare": [
+      {
+        "name": "Smith-Watson, Anika",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Medical assistant",
+        "employer": "New York Presbyterian Brooklyn"
+      },
+      {
+        "name": "McQueen, Michelle",
+        "amount": 25,
+        "donorType": "FAM",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Appeal Specialist",
+        "employer": "Emblem Health"
+      },
+      {
+        "name": "Watson, Maria",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Home Health aide",
+        "employer": "Self Employed"
+      }
+    ],
+    "Small Business / Retail": [
+      {
+        "name": "Minter, shemene  Moniqu",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "SMM COMMUNITY SOLUTIONS"
+      }
+    ],
+    "Real Estate": [
+      {
+        "name": "Wiley, Frederick",
+        "amount": 160,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Community Coordinator",
+        "employer": "Housing Preservation and Devel"
+      },
+      {
+        "name": "Wilson, Dillon",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Real estate agent",
+        "employer": "Self-Employed"
+      }
+    ]
+  },
+  "grassrootsScore": 56,
+  "grassrootsGrade": "C",
   "explanatoryNotes": [
     "Public matching funds make up 72% of this campaign's total resources.",
     "Private fundraising is relatively concentrated: the top ten donors account for 39% of reported private contributions.",

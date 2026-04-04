@@ -206,6 +206,9 @@ export interface MemberFinanceProfile {
   outsideCityShare: number | null;
   topDonors: FinanceTopDonor[];
   topIndustries: FinanceIndustryBreakdown[];
+  donorsByIndustry: Record<string, FinanceTopDonor[]>;
+  grassrootsScore: number | null;
+  grassrootsGrade: string | null;
   explanatoryNotes: string[];
 }
 

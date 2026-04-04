@@ -4,7 +4,7 @@
   "candidateName": "Gutierrez, Jennifer",
   "candidateId": "2357",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:14:52.002Z",
+  "updatedAt": "2026-04-04T17:24:31.250Z",
   "contributorCount": 103,
   "totalRaised": 17981,
   "publicFunds": null,
@@ -143,6 +143,375 @@
       "contributorCount": 2
     }
   ],
+  "donorsByIndustry": {
+    "Other / Mixed": [
+      {
+        "name": "Doctors Council SEIU Cope",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Kataria, Varun",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "",
+        "state": "",
+        "occupation": "Founder",
+        "employer": "Self"
+      },
+      {
+        "name": "NYSNA- Political Action Commi",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "Albany",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Restler, Peter",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "United Federation of Teachers",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "BOWLING GREEN",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "1199 SEIU- NYS Political Actio",
+        "amount": 1000,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Committee of Interns and Resid",
+        "amount": 1000,
+        "donorType": "PCOMP",
+        "city": "Astoria18",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Farias 2025",
+        "amount": 500,
+        "donorType": "PCOMC",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Perahia, Joann",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Port Washington",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Solano, Rob",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Executive Director",
+        "employer": "CUFFH"
+      },
+      {
+        "name": "D'Arienzo, John",
+        "amount": 450,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Funeral Director",
+        "employer": "D'Arienzo Funeral Home, Inc."
+      },
+      {
+        "name": "Norris, Keith",
+        "amount": 425,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Specialist",
+        "employer": "Brooklyn Ballers Sports Youth"
+      },
+      {
+        "name": "Carrion, Marco",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Executive Director",
+        "employer": "El Puente"
+      },
+      {
+        "name": "Dennis, Ward",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Higgins Quasebarth & Partners,"
+      },
+      {
+        "name": "Gonzalez, Teresa",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Lobbyist",
+        "employer": "Bolton-St. Johns"
+      },
+      {
+        "name": "Harrington, Kieran",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "CEO",
+        "employer": "RiseBoro Community Partnership"
+      },
+      {
+        "name": "Rochford, Michael",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Administrator",
+        "employer": "St Nicks Alliance"
+      },
+      {
+        "name": "Viera, Maria",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Central Valley",
+        "state": "NY",
+        "occupation": "Executive",
+        "employer": "RiseBoro Community Partnership"
+      },
+      {
+        "name": "WM NY PAC",
+        "amount": 250,
+        "donorType": "PCOMP",
+        "city": "",
+        "state": "",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Diggins, Patrick",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Product Manager",
+        "employer": "Microsoft"
+      }
+    ],
+    "Education": [
+      {
+        "name": "Hernandez, Alexandra",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "North Babylon",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "NYCDOE"
+      },
+      {
+        "name": "Campos-Peguero, Awilda",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "NY DOE"
+      },
+      {
+        "name": "Caceres, Maria",
+        "amount": 70,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "SPECIAL EDUCATION  TEACHER",
+        "employer": "PS257"
+      },
+      {
+        "name": "Yourke, Kate",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "STEAM Education",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Fujita, Jane",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Professor",
+        "employer": "NYU"
+      },
+      {
+        "name": "SALAZAR, GERONIMO",
+        "amount": 22,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "NYC Dept. of Education"
+      },
+      {
+        "name": "Garvey, Timothy",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "NYC Public Schools"
+      }
+    ],
+    "Healthcare": [
+      {
+        "name": "Schlesinger, Gary",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "CEO",
+        "employer": "ParCare Community Health Netwo"
+      },
+      {
+        "name": "Calliste, Gregory",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Administration",
+        "employer": "Woodhull Hospital"
+      }
+    ],
+    "Government / Public Sector": [
+      {
+        "name": "restler, lincoln",
+        "amount": 350,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "City Council",
+        "employer": "City of New York"
+      },
+      {
+        "name": "Morris, Gregory J",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Non profit executive",
+        "employer": "Fund for the City of New York"
+      },
+      {
+        "name": "Comito, Lauren",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Brooklyn, NY",
+        "state": "NY",
+        "occupation": "Librarian",
+        "employer": "Brooklyn Public Library"
+      },
+      {
+        "name": "Daniel, Bruno",
+        "amount": 34,
+        "donorType": "IND",
+        "city": "BROOKLYN",
+        "state": "NY",
+        "occupation": "Assistant to Borough President",
+        "employer": "City of New York"
+      },
+      {
+        "name": "Nicholson, Kate",
+        "amount": 34,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Public Interest Technology Dir",
+        "employer": "Cornell Tech"
+      }
+    ],
+    "Nonprofit / Advocacy": [
+      {
+        "name": "Costanzo, Kimberleigh",
+        "amount": 34,
+        "donorType": "IND",
+        "city": "Ridgewood",
+        "state": "NY",
+        "occupation": "Senior Director, Grants and Op",
+        "employer": "Howard Gilman Foundation"
+      }
+    ],
+    "Real Estate": [
+      {
+        "name": "Riggs, Joseph",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Ridgewood, NY",
+        "state": "NY",
+        "occupation": "Real Estate",
+        "employer": "Hudson Companies"
+      },
+      {
+        "name": "Lee, Robert",
+        "amount": 34,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Property owner",
+        "employer": "Self"
+      }
+    ],
+    "Legal": [
+      {
+        "name": "Limm, Bright",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Lawyer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Valenzuela, Carlos",
+        "amount": 34,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Lawyer",
+        "employer": "Self-Employed"
+      }
+    ]
+  },
+  "grassrootsScore": 55,
+  "grassrootsGrade": "C",
   "explanatoryNotes": [
     "Private fundraising is relatively concentrated: the top ten donors account for 49% of reported private contributions.",
     "5 donors gave at the legal maximum, totaling $5,250.",

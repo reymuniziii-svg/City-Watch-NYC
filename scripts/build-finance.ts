@@ -125,6 +125,51 @@ function isNycContributor(row: Record<string, string>): boolean {
   ].includes(normalizedCity);
 }
 
+function buildGrassrootsScore(
+  smallDollarShare: number | null,
+  topTenDonorShare: number | null,
+  organizationalDonorShare: number | null,
+  outsideCityShare: number | null,
+): { score: number; grade: string } {
+  let raw = 0;
+  let totalWeight = 0;
+
+  if (smallDollarShare !== null) {
+    raw += Math.min(smallDollarShare, 1) * 40;
+    totalWeight += 40;
+  }
+  if (topTenDonorShare !== null) {
+    raw += (1 - Math.min(topTenDonorShare, 1)) * 30;
+    totalWeight += 30;
+  }
+  if (organizationalDonorShare !== null) {
+    raw += (1 - Math.min(organizationalDonorShare, 1)) * 15;
+    totalWeight += 15;
+  }
+  if (outsideCityShare !== null) {
+    raw += (1 - Math.min(outsideCityShare, 1)) * 15;
+    totalWeight += 15;
+  }
+
+  const score = totalWeight > 0 ? Math.round((raw / totalWeight) * 100) : 0;
+
+  let grade: string;
+  if (score >= 90) grade = "A+";
+  else if (score >= 85) grade = "A";
+  else if (score >= 80) grade = "A-";
+  else if (score >= 75) grade = "B+";
+  else if (score >= 70) grade = "B";
+  else if (score >= 65) grade = "B-";
+  else if (score >= 60) grade = "C+";
+  else if (score >= 55) grade = "C";
+  else if (score >= 50) grade = "C-";
+  else if (score >= 45) grade = "D+";
+  else if (score >= 40) grade = "D";
+  else grade = "F";
+
+  return { score, grade };
+}
+
 function buildExplanatoryNotes(profile: FinanceInsightInput): string[] {
   const notes: string[] = [];
 
@@ -318,6 +363,18 @@ export async function buildFinance(): Promise<Map<string, MemberFinanceProfile>>
       .sort((a, b) => b.amount - a.amount)
       .slice(0, 6);
 
+    const donorsByIndustry: Record<string, FinanceTopDonor[]> = {};
+    for (const donorRecord of donorGroups.values()) {
+      const label = classifyIndustry(donorRecord.occupation, donorRecord.employer);
+      if (!donorsByIndustry[label]) donorsByIndustry[label] = [];
+      donorsByIndustry[label].push(donorRecord);
+    }
+    for (const label of Object.keys(donorsByIndustry)) {
+      donorsByIndustry[label] = donorsByIndustry[label]
+        .sort((a, b) => b.amount - a.amount)
+        .slice(0, 20);
+    }
+
     const totalRaised = parseAmount(candidate.net_cntns);
     const publicFunds = payment ? parseAmount(payment.TOTALPAY) : parseAmount(candidate.pubfnd_pmt);
     const smallDollarAmount = parseAmount(candidate.sml_amt);
@@ -329,6 +386,13 @@ export async function buildFinance(): Promise<Map<string, MemberFinanceProfile>>
     const topTenDonorShare = totalRaised > 0 ? Number((topTenDonorAmount / totalRaised).toFixed(3)) : null;
     const organizationalDonorShare = totalRaised > 0 ? Number((organizationalDonorAmount / totalRaised).toFixed(3)) : null;
     const outsideCityShare = totalRaised > 0 ? Number((outsideCityAmount / totalRaised).toFixed(3)) : null;
+
+    const { score: grassrootsScore, grade: grassrootsGrade } = buildGrassrootsScore(
+      smallDollarShare,
+      topTenDonorShare,
+      organizationalDonorShare,
+      outsideCityShare,
+    );
 
     const profile: MemberFinanceProfile = {
       slug: member.slug,
@@ -353,6 +417,9 @@ export async function buildFinance(): Promise<Map<string, MemberFinanceProfile>>
       outsideCityShare,
       topDonors,
       topIndustries,
+      donorsByIndustry,
+      grassrootsScore,
+      grassrootsGrade,
       explanatoryNotes: buildExplanatoryNotes({
         contributorCount,
         publicFunds: publicFunds || null,

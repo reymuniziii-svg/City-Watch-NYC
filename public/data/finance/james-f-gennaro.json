@@ -4,7 +4,7 @@
   "candidateName": "Gennaro, James",
   "candidateId": "283",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:14:51.712Z",
+  "updatedAt": "2026-04-04T17:24:30.986Z",
   "contributorCount": 137,
   "totalRaised": 86125,
   "publicFunds": null,
@@ -143,6 +143,523 @@
       "contributorCount": 3
     }
   ],
+  "donorsByIndustry": {
+    "Other / Mixed": [
+      {
+        "name": "2025, Farias",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "ACEC NYC PAC",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Andujar, Destiny",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Ozone Park",
+        "state": "NY",
+        "occupation": "Executive Assistant",
+        "employer": "Marx Development Group"
+      },
+      {
+        "name": "Balk, Chana",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Personal Trainer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Balk, Gertrude",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Davydov, Roman",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Briarwood",
+        "state": "NY",
+        "occupation": "Broker",
+        "employer": "Tavak llc"
+      },
+      {
+        "name": "IBEW NY PAC",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "Washington",
+        "state": "DC",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "IBT Joint Council NO 16 PAC",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "IUOE Local 30 State Pac",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "Beechhurst",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Izgelov, Ruben",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Fund manager",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Julie Menin 2025",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Landahl, Brian",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Raleigh",
+        "state": "NC",
+        "occupation": "Manager",
+        "employer": "Terminix"
+      },
+      {
+        "name": "Landahl, Laura",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Raleigh",
+        "state": "NC",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Marx, Aaron",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Lawrence",
+        "state": "NY",
+        "occupation": "VP of operations",
+        "employer": "Majestic Care ABA"
+      },
+      {
+        "name": "Mason Tenders PAC",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Musheyeva, Liliya",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "salesperson",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "New York Building Congress",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "New York Hotel Trades Council",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "New York State Laborers PAC",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "Albany",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Niyazova, Marianna",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Agent",
+        "employer": "Self-Employed"
+      }
+    ],
+    "Legal": [
+      {
+        "name": "merlino, silvana",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Whitestone",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Rivkin Radler LLP"
+      },
+      {
+        "name": "Yellen, Richard",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Majestic Management LLC"
+      },
+      {
+        "name": "Altman, Robert",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Cortlandt",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Robert S. Altman, Esq., PLLC"
+      },
+      {
+        "name": "Miller, Arthur",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "REGO PARK",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Law Office of Arthur L. Miller"
+      },
+      {
+        "name": "Palatnik, Eric",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Port Washington",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Romski, Gerard",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Arverne",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Orlow, Adam",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Jamaica Estates",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Piscitelli, Anthony",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Counselor",
+        "employer": "CMW Strategies"
+      },
+      {
+        "name": "Bryk, Dale",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Harvard Law School"
+      }
+    ],
+    "Education": [
+      {
+        "name": "kikirov, leya",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "Bet gavriel daycare"
+      },
+      {
+        "name": "Argyriou, Stelene",
+        "amount": 750,
+        "donorType": "IND",
+        "city": "Brooklyn Heights",
+        "state": "NY",
+        "occupation": "Financial Manager",
+        "employer": "A. Fantis School of Saints Con"
+      },
+      {
+        "name": "Virdone -Nunziata, Mary",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Floral Park",
+        "state": "NY",
+        "occupation": "Teacher aide",
+        "employer": "Great neck public school"
+      },
+      {
+        "name": "Rose, Claire",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "CGPS"
+      }
+    ],
+    "Real Estate": [
+      {
+        "name": "Davydov, Solomon",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Briarwood",
+        "state": "NY",
+        "occupation": "Real Estate",
+        "employer": "Exit"
+      },
+      {
+        "name": "mermelstein, uri",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Real Estate investor",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Ciampa, Ben",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Plandome",
+        "state": "NY",
+        "occupation": "Real Estate Professional",
+        "employer": "Self"
+      },
+      {
+        "name": "shimhayiv, daniel",
+        "amount": 875,
+        "donorType": "IND",
+        "city": "brooklyn",
+        "state": "NY",
+        "occupation": "Real EState",
+        "employer": "357717 LLC"
+      },
+      {
+        "name": "Bluestone, Eric",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Real Estate",
+        "employer": "Banta Homes Corp."
+      },
+      {
+        "name": "Mattone, Carl",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "Real Estate Developer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Mavlyanov, Ilio",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Real Estate Investor",
+        "employer": "Jasper Venture Group"
+      },
+      {
+        "name": "Shimhayiv, Daniel",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "brooklyn",
+        "state": "NY",
+        "occupation": "Real Estate",
+        "employer": "Top Rock Holdings LLC"
+      }
+    ],
+    "Healthcare": [
+      {
+        "name": "Slifkin, David",
+        "amount": 2100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Executive",
+        "employer": "Boulevard Health Management, L"
+      },
+      {
+        "name": "Spitz, Moshe",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Bklyn",
+        "state": "NY",
+        "occupation": "CFO",
+        "employer": "Boulevard Health Management"
+      },
+      {
+        "name": "Brandt, Maria",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Garden City",
+        "state": "NY",
+        "occupation": "HR",
+        "employer": "Northwell Health"
+      },
+      {
+        "name": "Goldberg, Nathan",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Rabbi",
+        "employer": "Bridgeport Hospital"
+      }
+    ],
+    "Small Business / Retail": [
+      {
+        "name": "Davydov, Rita",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Owner"
+      },
+      {
+        "name": "Schmid, Albert",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Chef owner",
+        "employer": "Alba’s Pizzeria and Restaurant"
+      },
+      {
+        "name": "Johnson, Kenneth",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Canandaigua",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Leonard's Express, Inc."
+      }
+    ],
+    "Government / Public Sector": [
+      {
+        "name": "Woloz, Michael",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Public relations",
+        "employer": "CMW Strategies"
+      },
+      {
+        "name": "Nussbaum, michael",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Queens Village",
+        "state": "NY",
+        "occupation": "Publishing",
+        "employer": "Queens Public Media LLC"
+      },
+      {
+        "name": "Shearman, Nicolas",
+        "amount": 5,
+        "donorType": "IND",
+        "city": "Long Island City",
+        "state": "NY",
+        "occupation": "City Planner 2",
+        "employer": "City of New York"
+      }
+    ],
+    "Finance": [
+      {
+        "name": "Rosenblum, Alexis",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Port Washington",
+        "state": "NY",
+        "occupation": "Financial Services",
+        "employer": "Capital Group"
+      },
+      {
+        "name": "Suleymanov, Moisey",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Forest Hills",
+        "state": "NY",
+        "occupation": "Finance",
+        "employer": "WeLend"
+      },
+      {
+        "name": "Ocana, Fernando",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Retirement Internal Advisor Co",
+        "employer": "First Eagle Investments"
+      }
+    ],
+    "Labor": [
+      {
+        "name": "Pelman, Simon",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Health care",
+        "employer": "Unionplaza"
+      }
+    ]
+  },
+  "grassrootsScore": 54,
+  "grassrootsGrade": "C-",
   "explanatoryNotes": [
     "Private fundraising looks relatively diffuse: the top ten donors account for only 13% of reported private contributions.",
     "45 donors gave at the legal maximum, totaling $48,300.",

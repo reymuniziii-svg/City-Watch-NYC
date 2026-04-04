@@ -4,7 +4,7 @@
   "candidateName": "Morano, Frank",
   "candidateId": "2949",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:14:52.436Z",
+  "updatedAt": "2026-04-04T17:24:31.697Z",
   "contributorCount": 498,
   "totalRaised": 83490.94,
   "publicFunds": 266586,
@@ -143,6 +143,908 @@
       "contributorCount": 11
     }
   ],
+  "donorsByIndustry": {
+    "Other / Mixed": [
+      {
+        "name": "LoBaido, Scott",
+        "amount": 2000,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Artist",
+        "employer": "Self Employed"
+      },
+      {
+        "name": "Halpern, Jeff",
+        "amount": 1700,
+        "donorType": "IND",
+        "city": "Jupiter",
+        "state": "FL",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "McConville, Kevin",
+        "amount": 1635,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Boyd, John",
+        "amount": 1100,
+        "donorType": "IND",
+        "city": "Pompano Beach",
+        "state": "FL",
+        "occupation": "Management Consultant",
+        "employer": "The Boyd Company, Inc."
+      },
+      {
+        "name": "CSA Cope PAC Fund",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "RPAC of NYS",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "Albany",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Bisceglia, Ralph",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Huntington",
+        "state": "NY",
+        "occupation": "CEO",
+        "employer": "American Transit Insurance Co"
+      },
+      {
+        "name": "Mirones, Matthew",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Palm Beach",
+        "state": "FL",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Palmieri, Anthony",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Holmdel",
+        "state": "NJ",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Patriotic Artist LLC",
+        "amount": 1000,
+        "donorType": "LLC",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Sherman, Leonard",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "VP of Operations",
+        "employer": "Alex's Meat & Provisions"
+      },
+      {
+        "name": "Soloway, Donna",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Kuriansky, Judith",
+        "amount": 650,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Psycholgist",
+        "employer": "Self Employed"
+      },
+      {
+        "name": "Avitabile, Tom",
+        "amount": 586,
+        "donorType": "IND",
+        "city": "Bronxville",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Molino, Frank",
+        "amount": 550,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": "Retired"
+      },
+      {
+        "name": "McMillan, Daniel",
+        "amount": 525,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Author",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Khinich, Roman",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Glass Maker",
+        "employer": "Opaque Smart Glass"
+      },
+      {
+        "name": "morano, Stephanie",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Clerk",
+        "employer": "Nyc board of elections"
+      },
+      {
+        "name": "Phillips, William",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Samuels, Bill",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Newport",
+        "state": "RI",
+        "occupation": "",
+        "employer": "Retired"
+      }
+    ],
+    "Education": [
+      {
+        "name": "Paradiso, Catherine",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Professor",
+        "employer": "College of Staten Island"
+      },
+      {
+        "name": "De La Galla, Gloria",
+        "amount": 400,
+        "donorType": "IND",
+        "city": "Hewlett",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "NYC Dept of Education"
+      },
+      {
+        "name": "McCabe, John",
+        "amount": 300,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "NYC DOE"
+      },
+      {
+        "name": "Adolphe, Michele",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Business/Education Consultant",
+        "employer": "Self Employed"
+      },
+      {
+        "name": "De La Gala, Liz",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Hewlett",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "NYC Dept of Education"
+      },
+      {
+        "name": "Verderber, Ann",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "NYC DOE"
+      },
+      {
+        "name": "Silverstein, Brian",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Marlboro Township",
+        "state": "NJ",
+        "occupation": "Teacher",
+        "employer": "IS2 George I Egbert"
+      },
+      {
+        "name": "Mclaughlin, Brian",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "Apex Technical School"
+      },
+      {
+        "name": "Arcuria, Rosalba",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "School Aide",
+        "employer": "Department of Education"
+      },
+      {
+        "name": "Furia, Mallory",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "NYC DOE"
+      },
+      {
+        "name": "Marra, Christine",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "NYC DOE"
+      }
+    ],
+    "Legal": [
+      {
+        "name": "Stearns, Carla",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Lawyer",
+        "employer": "Self"
+      },
+      {
+        "name": "Gentile, Vincent",
+        "amount": 375,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "NYC/OATH"
+      },
+      {
+        "name": "Pope, Anthony",
+        "amount": 350,
+        "donorType": "IND",
+        "city": "South Orange Village",
+        "state": "NJ",
+        "occupation": "Attorney",
+        "employer": "Anthony Pope Law PC"
+      },
+      {
+        "name": "Aidala, Arthur",
+        "amount": 275,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Self Employed"
+      },
+      {
+        "name": "Alicandro, A",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "White Plains",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Alicandro Law Firm, PLLC"
+      },
+      {
+        "name": "Isaacs, Daniel",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Mount Kisco",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Self Employed"
+      },
+      {
+        "name": "kuharski, Lisa",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Lawyer",
+        "employer": "Kuharski, Levitz & Giovinazzo"
+      },
+      {
+        "name": "recchia, Domenic",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Attorney/lobbyist",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Rooney, Kathryn",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Tagliavia, Jennifer",
+        "amount": 220,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Legal Secretary",
+        "employer": "Dechert LLP"
+      },
+      {
+        "name": "Del Virginia, Gabriel",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Lawyer",
+        "employer": "Self Employed"
+      },
+      {
+        "name": "Gonchar, Nicholas",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Lawyer",
+        "employer": "Krinzel Guzman"
+      },
+      {
+        "name": "Mure, Joseph",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Belle Harbor",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Self Employed"
+      },
+      {
+        "name": "Scamardella, Robert",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Brick",
+        "state": "NJ",
+        "occupation": "Attorney",
+        "employer": "Scamardella, Gervasi & Kasegra"
+      },
+      {
+        "name": "Straniere, Robert",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "The Straniere Law Firm"
+      },
+      {
+        "name": "Fernich, Marc",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn Heights",
+        "state": "NY",
+        "occupation": "Lawyer",
+        "employer": "Self Employed"
+      },
+      {
+        "name": "Schwartz, David",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Roslyn Heights",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Gotham GR"
+      },
+      {
+        "name": "Eaton, Craig",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Eaton & Torrenzano LLP"
+      },
+      {
+        "name": "Spring, David",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Self Employed"
+      },
+      {
+        "name": "Delaney, David",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Law Enforcement",
+        "employer": "Realty Operations Group"
+      }
+    ],
+    "Finance": [
+      {
+        "name": "Russo, Joanne",
+        "amount": 625,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Finance",
+        "employer": "Fontbonne Hall Academy"
+      },
+      {
+        "name": "Guarnieri, Philip",
+        "amount": 350,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Banking Teller",
+        "employer": "Empire State Bank"
+      },
+      {
+        "name": "Wasneuski, James",
+        "amount": 325,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Computer Application Security",
+        "employer": "NYC Dept of Finance"
+      },
+      {
+        "name": "Alemany, Lauren",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "North Arlington",
+        "state": "NJ",
+        "occupation": "Finance",
+        "employer": "ASME"
+      },
+      {
+        "name": "Hochum, Brett",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Glen Head",
+        "state": "NY",
+        "occupation": "Mortgage Banker",
+        "employer": "Self Employed"
+      },
+      {
+        "name": "Vartanian, Gregory",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Edgewater",
+        "state": "NJ",
+        "occupation": "CEO",
+        "employer": "Recadia Capital LLC"
+      },
+      {
+        "name": "Grant, William",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Summit",
+        "state": "NJ",
+        "occupation": "Managing Director",
+        "employer": "JSB Capital"
+      },
+      {
+        "name": "Rassi, Fred",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Finance Manager",
+        "employer": "Stanford Health Care"
+      }
+    ],
+    "Healthcare": [
+      {
+        "name": "LeRoy, Karen",
+        "amount": 310,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Nursing",
+        "employer": "Hospital for Special Surgery"
+      },
+      {
+        "name": "LaRocca, Joseph",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Hospitality",
+        "employer": "Campania Provisions LLC"
+      },
+      {
+        "name": "Maresca, Sandra",
+        "amount": 160,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Surgery Scheduler",
+        "employer": "Richmond University Hospital"
+      },
+      {
+        "name": "Birkhead, Robert",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Executive",
+        "employer": "New York Presbyterian Hospital"
+      },
+      {
+        "name": "McWhorter, Sherry",
+        "amount": 75,
+        "donorType": "IND",
+        "city": "Corsicana",
+        "state": "TX",
+        "occupation": "Registered Nurse",
+        "employer": "Baylor Scott & White Hospital"
+      },
+      {
+        "name": "Kneidl, Charlotte",
+        "amount": 60,
+        "donorType": "IND",
+        "city": "Coram",
+        "state": "NY",
+        "occupation": "Medical Technologist",
+        "employer": "New York Cancer and Blood Spec"
+      },
+      {
+        "name": "Dillon, James",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Motor Vehicle Operator",
+        "employer": "NYC Health & Hospitals"
+      },
+      {
+        "name": "Ania, Tamara",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "EMT",
+        "employer": "Richmond University Medical Ce"
+      },
+      {
+        "name": "Lupo, Dominik",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Safety",
+        "employer": "Northwell Health"
+      }
+    ],
+    "Small Business / Retail": [
+      {
+        "name": "Jaffe, Vladmir",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Palace Imports Inc"
+      },
+      {
+        "name": "Verderber, Joseph",
+        "amount": 400,
+        "donorType": "IND",
+        "city": "St James",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Corporate Transfer & Storage"
+      },
+      {
+        "name": "Aversa, Frank",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Aversa Bros Industrial Contrac"
+      },
+      {
+        "name": "Falcone-Lewis, Kristin",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Salon owner / retired nypd",
+        "employer": "TheStudioSalonbykristinandnikk"
+      },
+      {
+        "name": "Gonchar, Andrew",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Member/Owner",
+        "employer": "Vertus Asset Management"
+      },
+      {
+        "name": "Pennisi, Guy",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Member/Owner",
+        "employer": "Vertus Asset Management"
+      },
+      {
+        "name": "Quinn, Ken",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Business Owner",
+        "employer": "Ameraquin Woodworking Inc"
+      },
+      {
+        "name": "Zarzano, Joe",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Member/Owner",
+        "employer": "Vertus Asset Management"
+      },
+      {
+        "name": "Glick, Mordechai",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "ATI Group Corp"
+      },
+      {
+        "name": "Wax, Gavin",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "The Beeswax Group"
+      },
+      {
+        "name": "Matteo, Stephen",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Wappingers Falls",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Metro Response Corp"
+      },
+      {
+        "name": "Castaldo, Richard",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Port Monmouth",
+        "state": "NJ",
+        "occupation": "Owner",
+        "employer": "BPM Marketing LLC"
+      },
+      {
+        "name": "Fabozzi, Salvatore",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Self Employed"
+      },
+      {
+        "name": "Della Salla, Steven",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Fuzz on the Lens Production"
+      }
+    ],
+    "Real Estate": [
+      {
+        "name": "Berman, Myron",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Real Estate",
+        "employer": "Myron | Berman"
+      },
+      {
+        "name": "Zelnik, Cory",
+        "amount": 925,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Real Estate",
+        "employer": "Zelnik & Company LLC"
+      },
+      {
+        "name": "Sepe, Nancy",
+        "amount": 400,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Real Estate Broker/Property Ma",
+        "employer": "Manhattan Best Realty Inc"
+      },
+      {
+        "name": "Berman, Corey",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Real Estate",
+        "employer": "MJB Properties"
+      },
+      {
+        "name": "Corrado, John",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Associate Real Estate Broker",
+        "employer": "Equity Essentials"
+      },
+      {
+        "name": "Franza, Randy",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Redl Estate Developer",
+        "employer": "Rand Group"
+      },
+      {
+        "name": "Teitelbaum, Bruce",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Real Estate",
+        "employer": "RiverLlnC"
+      },
+      {
+        "name": "Sukhoruko, Yuriy",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Developer",
+        "employer": "Ohei"
+      },
+      {
+        "name": "Santora, John",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Real Estate",
+        "employer": "WeWork"
+      },
+      {
+        "name": "Madonna, Frank",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Pleasantville",
+        "state": "NY",
+        "occupation": "Real Estate",
+        "employer": "self employed"
+      },
+      {
+        "name": "Furia, Maria",
+        "amount": 30,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Licensed Real Estate Broker",
+        "employer": "Diane Realty"
+      }
+    ],
+    "Government / Public Sector": [
+      {
+        "name": "Blosser-Bernardo, Terry",
+        "amount": 1010,
+        "donorType": "IND",
+        "city": "Rock Hill",
+        "state": "NY",
+        "occupation": "ILS Date Officer",
+        "employer": "Orange County NY Government"
+      },
+      {
+        "name": "Skelly, Michael",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Stewart Manor",
+        "state": "NY",
+        "occupation": "Public Relations",
+        "employer": "Self Employed"
+      },
+      {
+        "name": "Spence, Ronald",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Advisor",
+        "employer": "Government"
+      },
+      {
+        "name": "Sliwa, Maria",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "Haskell",
+        "state": "NJ",
+        "occupation": "Publicist",
+        "employer": "Self"
+      },
+      {
+        "name": "Lewis, Matthew",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Engineer",
+        "employer": "City of New York"
+      }
+    ]
+  },
+  "grassrootsScore": 72,
+  "grassrootsGrade": "B",
   "explanatoryNotes": [
     "Public matching funds make up 76% of this campaign's total resources.",
     "Small-dollar donors contributed 55% of reported private fundraising across 423 contributions.",

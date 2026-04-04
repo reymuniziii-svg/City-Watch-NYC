@@ -4,7 +4,7 @@
   "candidateName": "Marte, Christopher",
   "candidateId": "1987",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:14:51.042Z",
+  "updatedAt": "2026-04-04T17:24:30.298Z",
   "contributorCount": 852,
   "totalRaised": 97232.38,
   "publicFunds": 398928,
@@ -143,6 +143,937 @@
       "contributorCount": 7
     }
   ],
+  "donorsByIndustry": {
+    "Other / Mixed": [
+      {
+        "name": "Kattan, Christine",
+        "amount": 2100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "vidich, paul",
+        "amount": 2100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "writer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Allen, Nicholas",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "CTO",
+        "employer": "Issuance"
+      },
+      {
+        "name": "Choi, Michelle",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Homemaker",
+        "employer": ""
+      },
+      {
+        "name": "Coler, Erik",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Boulder",
+        "state": "CO",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Corman, Richard",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Business Consultant",
+        "employer": "Downtown Independent Democrats"
+      },
+      {
+        "name": "Doctors Council SEIU",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Hirose, George",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Film maker Producer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Holmes, Kareem",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "CEO",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "James, Meredith",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Artist",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "McKemie, Gordon",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Miller, Judith",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "NEW YORK",
+        "state": "NY",
+        "occupation": "Artist",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "NYSNA PAC",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "Albany",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Stein, Linda",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Adjunct Lecturer",
+        "employer": "Hunter College"
+      },
+      {
+        "name": "Chen, Bao Shun",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "College Point",
+        "state": "NY",
+        "occupation": "Home Care",
+        "employer": "Abi Fi Corp"
+      },
+      {
+        "name": "Huang, Xi Jia",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "College Point",
+        "state": "NY",
+        "occupation": "Specialist, Data analysis",
+        "employer": "Merck"
+      },
+      {
+        "name": "Lee, Miyoung",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Xu, Zhou",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Great Neck",
+        "state": "NY",
+        "occupation": "Engineer",
+        "employer": "Times Buildings PC"
+      },
+      {
+        "name": "Lam, Philip",
+        "amount": 850,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": "Retired"
+      },
+      {
+        "name": "Genovese, Laura",
+        "amount": 750,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      }
+    ],
+    "Education": [
+      {
+        "name": "Wong, Elizabeth",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "NYC Dept of Education"
+      },
+      {
+        "name": "Wolff, Jessica",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "policy and research director",
+        "employer": "Teachers College"
+      },
+      {
+        "name": "Novack, Ellen",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "teacher, coach",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Lim, Tendy",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "Self-employed"
+      },
+      {
+        "name": "DeLaney, Charles",
+        "amount": 75,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Training Manager",
+        "employer": "CUNY School of Professional St"
+      },
+      {
+        "name": "Rothman, Barbara Katz",
+        "amount": 75,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Professor",
+        "employer": "CUNY"
+      },
+      {
+        "name": "Bartlett, Paul",
+        "amount": 27,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Adjunct Assistant Professor",
+        "employer": "City University of New York, J"
+      },
+      {
+        "name": "Li, Eva",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "NYC Department of Education"
+      },
+      {
+        "name": "Pettit, Jennifer",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Yoga teacher",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Torres, Rhina Ivette",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Education Administration",
+        "employer": "NYCDOE"
+      },
+      {
+        "name": "Balog, Katalin",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Professor",
+        "employer": "Rutgers University-Newark"
+      },
+      {
+        "name": "Williams, Natalie",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "NYC DOE"
+      }
+    ],
+    "Small Business / Retail": [
+      {
+        "name": "Chen, Zhao Yin",
+        "amount": 1250,
+        "donorType": "IND",
+        "city": "Queens",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Lake Laundromat Inc"
+      },
+      {
+        "name": "Bengio, Moche",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Shop Owner",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Chen, Ai Ming",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "College Point",
+        "state": "NY",
+        "occupation": "Business Owner",
+        "employer": "Seafood Business"
+      },
+      {
+        "name": "Niu, Tianze",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Restaurant Fan Szechuan"
+      },
+      {
+        "name": "Lam, Kin",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Lam Group"
+      },
+      {
+        "name": "Liang, Zhong Li",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "LV Jeans Trading Inc"
+      },
+      {
+        "name": "Gallo, Adele",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Casabella Ristorante"
+      },
+      {
+        "name": "Su, William",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Wyndham Garden"
+      },
+      {
+        "name": "Zhao, Xueying",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Seng Seafood Restaurant"
+      },
+      {
+        "name": "Yap, Li Chow",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Queens",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Marly Building Supply Corp"
+      },
+      {
+        "name": "Cai, Yu Ming",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Bon Voyage USA Inc."
+      },
+      {
+        "name": "Deng, Wen Sheng",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "TZ Building Supply Inc."
+      },
+      {
+        "name": "Dominguez, Guillermo",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Caffe dela Venezia"
+      },
+      {
+        "name": "Mei, Bin Ting",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Canal Street",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Chinese Association"
+      },
+      {
+        "name": "Wu, Xiu Qing",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Qing's Hair Salon"
+      },
+      {
+        "name": "Young, Dao Ju",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Chinese Association Inc."
+      },
+      {
+        "name": "Zhang, Zi Nan",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Owner",
+        "employer": "Lucky Florist"
+      },
+      {
+        "name": "Derosia, Elyse",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Art Gallery Owner",
+        "employer": "Self-Employed"
+      }
+    ],
+    "Real Estate": [
+      {
+        "name": "Woodward, Adam",
+        "amount": 1550,
+        "donorType": "IND",
+        "city": "New York City",
+        "state": "NY",
+        "occupation": "Real estate owner",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "yeung, shing wah",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Real Estate",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "ferrari, james",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "real estate",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Gruber, David",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Real Estate brokrr",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Hewitt, Herman F",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Real Estate Broker",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Lam, Jeffrey",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Real estate",
+        "employer": "Lam generation"
+      },
+      {
+        "name": "Ireland, Barbara",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York (332, 646)",
+        "state": "NY",
+        "occupation": "Real Estate",
+        "employer": "BI Connection LLC"
+      },
+      {
+        "name": "Moy, Wayne",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Queens",
+        "state": "NY",
+        "occupation": "Real estate",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Sweeney, Sean",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "property management",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Berti, Barbara",
+        "amount": 35,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Book Developer, Author Represe",
+        "employer": "Self-Employed"
+      }
+    ],
+    "Healthcare": [
+      {
+        "name": "Wu, Janice",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Pharmacist",
+        "employer": "7th Avenue Pharmacy Inc."
+      },
+      {
+        "name": "Chan, Jonathan",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Software engineer",
+        "employer": "Parachute Health"
+      },
+      {
+        "name": "Gao, Yi Meng",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Nurse",
+        "employer": "Life Improvement Home Care Inc"
+      },
+      {
+        "name": "Guan, May",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Nurse",
+        "employer": "VNS"
+      },
+      {
+        "name": "Kelmar, Evan",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Alexandria",
+        "state": "VA",
+        "occupation": "Business development",
+        "employer": "ventricle health"
+      },
+      {
+        "name": "Li, Henry",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "",
+        "employer": "NYU Hospital"
+      },
+      {
+        "name": "Singh, Simi",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Santa Monica",
+        "state": "CA",
+        "occupation": "Doctor",
+        "employer": "Cedars-Sinai Medical Group"
+      },
+      {
+        "name": "Huang, Yan Hao",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Home Attendant",
+        "employer": "Healthy Lite Home Care"
+      }
+    ],
+    "Legal": [
+      {
+        "name": "Cormicle, Bruce",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Los Angeles",
+        "state": "CA",
+        "occupation": "Attorney",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Keenan, Edward",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Workers’ Rights Trial Lawyer",
+        "employer": "Keenan & Bhatia, LLC"
+      },
+      {
+        "name": "Wind, Kenneth",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Lawyer",
+        "employer": "Robbins Geller"
+      },
+      {
+        "name": "Wong, Timothy",
+        "amount": 750,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Legal",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Cuccia, Edward",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Edward J. Cuccia PC"
+      },
+      {
+        "name": "Troy, John",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Troy Law, PLLC"
+      },
+      {
+        "name": "Cheng, Nolan",
+        "amount": 425,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Self"
+      },
+      {
+        "name": "MInsley, Morton",
+        "amount": 300,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Davidson, Karie",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Fariello, Vittoria",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Balestriere Law Firm"
+      },
+      {
+        "name": "Feffer, Bruce",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Scarcini Hollenbeck"
+      },
+      {
+        "name": "Vega, Elisa",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Paul Hastings LLP"
+      },
+      {
+        "name": "Levario, Michael",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "City of New York"
+      },
+      {
+        "name": "Townley, Kate",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Florentino & Grimshaw LLC"
+      },
+      {
+        "name": "Limm, Bright",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Lawyer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Newell, Paul",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Sung, Vera",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Sung & Co., P.C."
+      },
+      {
+        "name": "Hsi, Kevin",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Elmhurst",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "City of New York"
+      },
+      {
+        "name": "Kennell, Patrick",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "NEW YORK",
+        "state": "NY",
+        "occupation": "Lawyer",
+        "employer": "Kaufman Dolowich LLP"
+      },
+      {
+        "name": "Law, Joey",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Legal assistant",
+        "employer": "Law Office of Edward J Cuccia"
+      }
+    ],
+    "Government / Public Sector": [
+      {
+        "name": "Hillman, Ann",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Accounting Manager",
+        "employer": "The New York Public Library"
+      },
+      {
+        "name": "Corbae, Mark",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Public Relations Executive",
+        "employer": "ICR Inc."
+      },
+      {
+        "name": "Rudder, Chelsea-Lyn",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Public Relations",
+        "employer": "Breakthrough T1D"
+      }
+    ],
+    "Nonprofit / Advocacy": [
+      {
+        "name": "Zhu, Rong Bing",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "NYS Licensed Acupuncturist",
+        "employer": "American Mazu Foundation Inc."
+      },
+      {
+        "name": "Pedinoff, Lee",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Nonprofit management",
+        "employer": "Floodlight"
+      },
+      {
+        "name": "Jin, Feng Ai",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Woodhaven",
+        "state": "NY",
+        "occupation": "Home Attendant",
+        "employer": "NY Foundation for Senior Citiz"
+      }
+    ],
+    "Finance": [
+      {
+        "name": "Marte, Carolina",
+        "amount": 375,
+        "donorType": "IND",
+        "city": "Hammersmith and Fulham, L",
+        "state": "NY",
+        "occupation": "Banker",
+        "employer": "Bank of America"
+      },
+      {
+        "name": "Law, Grace",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Banker",
+        "employer": "Abacus Federal Savings Bank"
+      },
+      {
+        "name": "Pascarella, Megg",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Risk Officer",
+        "employer": "Bank of America"
+      },
+      {
+        "name": "Lin, Wei ru Amanda",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Woodside",
+        "state": "NY",
+        "occupation": "Bank Teller",
+        "employer": "Preferred Bank"
+      },
+      {
+        "name": "Solomon, Amit",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Investment Management",
+        "employer": "Neuberger Berman"
+      },
+      {
+        "name": "Moody, Laurel",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Investor Relations",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Zeng, Xiao Yan",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "Bank Clerk",
+        "employer": "Preferred Bank"
+      }
+    ]
+  },
+  "grassrootsScore": 76,
+  "grassrootsGrade": "B+",
   "explanatoryNotes": [
     "Public matching funds make up 80% of this campaign's total resources.",
     "Small-dollar donors contributed 54% of reported private fundraising across 769 contributions.",

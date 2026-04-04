@@ -4,7 +4,7 @@
   "candidateName": "Salaam, Yusef",
   "candidateId": "2756",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:14:51.306Z",
+  "updatedAt": "2026-04-04T17:24:30.567Z",
   "contributorCount": 268,
   "totalRaised": 37730,
   "publicFunds": null,
@@ -143,6 +143,721 @@
       "contributorCount": 8
     }
   ],
+  "donorsByIndustry": {
+    "Other / Mixed": [
+      {
+        "name": "UNITED FEDERATION OF TEACHERS",
+        "amount": 1700,
+        "donorType": "OTHR",
+        "city": "BOWLING GREEN",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "32BJ UNITED ADF",
+        "amount": 1600,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "JULIE MENIN 2025",
+        "amount": 1600,
+        "donorType": "PCOMZ",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "2025, Farias",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Candidate Committee",
+        "employer": "Farias 2025"
+      },
+      {
+        "name": "DOCTORS COUNCIL SEIU COPE",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "STRIVING FOR A BETTER NEW YORK",
+        "amount": 1050,
+        "donorType": "OTHR",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "1199 SEIU NYS POLITICAL ACTION",
+        "amount": 1000,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "COMMITTEE OF INTERNS AND RESID",
+        "amount": 1000,
+        "donorType": "OTHR",
+        "city": "LONG ISLAND CITY",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "LOWE, MELVIN",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "CONSULTANT",
+        "employer": "MATURITY WORKS"
+      },
+      {
+        "name": "Bent, Santressa",
+        "amount": 800,
+        "donorType": "IND",
+        "city": "West Hempstead",
+        "state": "NY",
+        "occupation": "HR Director",
+        "employer": "SLM Architecture"
+      },
+      {
+        "name": "Lotfi, Shahram",
+        "amount": 800,
+        "donorType": "IND",
+        "city": "Mineola",
+        "state": "NY",
+        "occupation": "Consulting Engineer",
+        "employer": "EMTG CONSULTING ENGINEERS"
+      },
+      {
+        "name": "Cornelius, Yasmin",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Ellis, Rodney",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Houston",
+        "state": "TX",
+        "occupation": "Commissioner",
+        "employer": "Harris County"
+      },
+      {
+        "name": "Great Public Schools Political",
+        "amount": 500,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Horsford, Robert",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Yonkers",
+        "state": "NY",
+        "occupation": "Contractor",
+        "employer": "Robert Horsford"
+      },
+      {
+        "name": "Hudson 2025, Crystal",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Contribution from Campaign Com",
+        "employer": "Crystal Hudson 2025"
+      },
+      {
+        "name": "JACKSON FOR SENATE 2024",
+        "amount": 500,
+        "donorType": "PCOMZ",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Bradley, Valerie",
+        "amount": 350,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Lewis, Herb",
+        "amount": 300,
+        "donorType": "IND",
+        "city": "Jersey City",
+        "state": "NJ",
+        "occupation": "Professional Driver",
+        "employer": "Langer Transport"
+      },
+      {
+        "name": "Multer, Susan",
+        "amount": 300,
+        "donorType": "IND",
+        "city": "Ithaca",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      }
+    ],
+    "Legal": [
+      {
+        "name": "Moore, Jonathan",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Beldock Levine & Hoffman LLP"
+      },
+      {
+        "name": "Kirkpatrick, Steven",
+        "amount": 400,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Lawyer",
+        "employer": "Romer Debbas LLP"
+      },
+      {
+        "name": "Lipsman, Sandra",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "lawyer",
+        "employer": "Joseph Hage Aaronson"
+      },
+      {
+        "name": "Adejobi, Adeola",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "HPD"
+      },
+      {
+        "name": "Ballard, Cameron",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Financial Counselor",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Grannis, Eric",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Newell, Paul",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Law Office of Paul D Newell"
+      },
+      {
+        "name": "PERKINS, ORINTHIA",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "ATTORNEY",
+        "employer": "NYS DEPT OF FIN SERVICES"
+      },
+      {
+        "name": "SHERVINGTON, MARK",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "South Ozone Park",
+        "state": "NY",
+        "occupation": "Paralegal II",
+        "employer": "The Legal Aid Society"
+      },
+      {
+        "name": "McKew, Mark",
+        "amount": 75,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "McKew Law Firm, PLLC"
+      },
+      {
+        "name": "Teich, Howard",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "attorney/ consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "DIPIETRO, SYLVIA",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "ATTORNEY",
+        "employer": "SELF EMPLOYED"
+      },
+      {
+        "name": "ROSKOFF, DANIEL",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Hollis",
+        "state": "NY",
+        "occupation": "ATTORNEY",
+        "employer": "GUTMAN MINTZ ET AL"
+      },
+      {
+        "name": "Szkatulski, Anne",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "San Francisco",
+        "state": "CA",
+        "occupation": "Lawyer",
+        "employer": "UPSIDE Foods"
+      },
+      {
+        "name": "Krist, Brian",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Associate Court Attorney",
+        "employer": "NYS Unified Court System"
+      },
+      {
+        "name": "Penn, Robert",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Sher Tremonte LLC"
+      },
+      {
+        "name": "Shawhan, Mark",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "New York State Courts"
+      },
+      {
+        "name": "UNDERWOOD, KIM",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Egg Harbor Township",
+        "state": "NJ",
+        "occupation": "MENTAL HEALTH COUNSEL",
+        "employer": "Montefiore Medical"
+      },
+      {
+        "name": "UNDERWOOD, SAMUEL",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Egg Harbor Township",
+        "state": "NJ",
+        "occupation": "COUNSELOR",
+        "employer": "UPPER MANHATTAN MENTAL CTR"
+      }
+    ],
+    "Small Business / Retail": [
+      {
+        "name": "beckles canton, sanayi",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Business owner",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "FOSTER-HERNANDEZ, ARNYCE F",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "ENTREPRENEUR",
+        "employer": "CAFE OWNER"
+      },
+      {
+        "name": "ZAYES, EVETTE",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "OWNER",
+        "employer": "CAKE BURGERS"
+      }
+    ],
+    "Healthcare": [
+      {
+        "name": "CLARK, ALI",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "HEALTHCARE",
+        "employer": "GREEN DOT DIRECTION"
+      },
+      {
+        "name": "Dickens, Kim",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Healthcare Professional",
+        "employer": "Elevance Health, Inc."
+      },
+      {
+        "name": "RICCO, DARLENE AYANNA",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "NURSE",
+        "employer": "MT SINAI HOSP"
+      },
+      {
+        "name": "BLACK, MUHREER",
+        "amount": 80,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "HEALTHCARD",
+        "employer": "TRANSGLOBALCARE"
+      },
+      {
+        "name": "Ward-Evans, Randreta",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Adminstration",
+        "employer": "NYC Health + Hospitals"
+      },
+      {
+        "name": "NELSON, BARBARA",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "MSW",
+        "employer": "Montefiore Medical CTR"
+      },
+      {
+        "name": "Payne, Michelle",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Mental Health Consultant",
+        "employer": "Self-Employed"
+      }
+    ],
+    "Education": [
+      {
+        "name": "Haynes, Michelle",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York City",
+        "state": "NY",
+        "occupation": "Principal",
+        "employer": "Sisulu-Walker Charter School o"
+      },
+      {
+        "name": "Maldonado, Nancy",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Yonkers",
+        "state": "NY",
+        "occupation": "Public safety officer",
+        "employer": "Yonkers public schools"
+      },
+      {
+        "name": "Blanc, Rolanda",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Special Education",
+        "employer": "Department of Education"
+      },
+      {
+        "name": "Harrison, Marquis",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Teacher",
+        "employer": "New York City Department of Ed"
+      },
+      {
+        "name": "Hipsh, Miriam",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "NYC",
+        "state": "NY",
+        "occupation": "Reading teacher",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "REYES, NESTOR",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "TEACHER",
+        "employer": "NYCDOE"
+      },
+      {
+        "name": "SHULER, RUSSEL",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "EDUCATION ADMIN",
+        "employer": "SELF EMPLOYED"
+      }
+    ],
+    "Real Estate": [
+      {
+        "name": "Brathwaite, Lee",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "White Plains",
+        "state": "NY",
+        "occupation": "Developer/General Contractor",
+        "employer": "Apex Building Group"
+      },
+      {
+        "name": "Perry, Elaine",
+        "amount": 300,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Real estate Broker",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Gordon, Keith",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New Rochelle",
+        "state": "NY",
+        "occupation": "Developer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Grey, Maurice",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Real estate",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Marshall, Meredith",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Real estate",
+        "employer": "BRP development corp"
+      },
+      {
+        "name": "NOTICE, DONALD",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "COMMUNITY DEVELOPER",
+        "employer": "WEST HARLEM GRP ASSISTANCE INC"
+      },
+      {
+        "name": "POTEAT, EDWARD",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "REAL ESTATE",
+        "employer": "CARTHAGE ADVISORS"
+      },
+      {
+        "name": "Delaine, Jerrod",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "White Plains",
+        "state": "NY",
+        "occupation": "Real Estate Developer",
+        "employer": "The Delaine Companies"
+      },
+      {
+        "name": "CLAYTON, DONALD",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Housing specialist",
+        "employer": "Housing Works/Bailey House"
+      },
+      {
+        "name": "MCRAE, ERNESTINE",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "REAL ESTATE SALES PERSON",
+        "employer": "SELF EMPLOYED"
+      }
+    ],
+    "Labor": [
+      {
+        "name": "Council, Lauren",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Montebello",
+        "state": "NY",
+        "occupation": "Advocate",
+        "employer": "UFT"
+      }
+    ],
+    "Government / Public Sector": [
+      {
+        "name": "O'Luck, Mark",
+        "amount": 425,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Business & Government Consulta",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Harley, Richard",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New Rochelle",
+        "state": "NY",
+        "occupation": "Public Relations",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Evans, Rhonda",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Acting Deputy",
+        "employer": "City of New York"
+      },
+      {
+        "name": "Quent, James",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Copiague",
+        "state": "NY",
+        "occupation": "Lobbyist",
+        "employer": "Statewide Public Affairs"
+      },
+      {
+        "name": "Garcia, Elvin",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Director of Government Affairs",
+        "employer": "New York University"
+      },
+      {
+        "name": "JONES, DAWN",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "AJOSI/SUPERVISOR",
+        "employer": "THE CITY OF NEW YORK"
+      },
+      {
+        "name": "Shearman, Nicolas",
+        "amount": 5,
+        "donorType": "IND",
+        "city": "Long Island City",
+        "state": "NY",
+        "occupation": "City Planner 2",
+        "employer": "City of New York"
+      }
+    ],
+    "Nonprofit / Advocacy": [
+      {
+        "name": "HIGGINSEN, VY",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "EXEC DIRECTOR",
+        "employer": "MAMA FOUNDATION"
+      },
+      {
+        "name": "Neely, Carmen",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Nonprofit Administrator",
+        "employer": "Harlem Pride,  Incorporated"
+      },
+      {
+        "name": "Richardson, Jerika",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "West New York",
+        "state": "NJ",
+        "occupation": "Nonprofit Executive",
+        "employer": "National Urban League"
+      }
+    ]
+  },
+  "grassrootsScore": 64,
+  "grassrootsGrade": "C+",
   "explanatoryNotes": [
     "Small-dollar donors contributed 50% of reported private fundraising across 242 contributions.",
     "Private fundraising is relatively concentrated: the top ten donors account for 32% of reported private contributions.",
