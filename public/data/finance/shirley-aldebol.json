@@ -4,7 +4,7 @@
   "candidateName": "Aldebol, Shirley",
   "candidateId": "2902",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.019Z",
+  "updatedAt": "2026-04-04T17:37:55.256Z",
   "contributorCount": 764,
   "totalRaised": 89733.15,
   "publicFunds": 357088,
@@ -7043,6 +7043,62 @@
   },
   "grassrootsScore": 76,
   "grassrootsGrade": "B+",
+  "expenditures": {
+    "totalSpent": 421100.24,
+    "byCategory": [
+      {
+        "label": "Mail / Print",
+        "amount": 195612.92
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 133334.43
+      },
+      {
+        "label": "Consulting",
+        "amount": 43862.62
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 33811.8
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 14028.47
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 450
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Red Horse Strategies",
+        "amount": 239743.39,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Brown, Sophia",
+        "amount": 42408.82,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Magno, Sydney",
+        "amount": 36375.39,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "My Brnd Inc",
+        "amount": 18000,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Bedford Grove LLC",
+        "amount": 17500,
+        "category": "Consulting"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 80% of this campaign's total resources.",
     "Small-dollar donors contributed 61% of reported private fundraising across 715 contributions.",

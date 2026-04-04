@@ -4,7 +4,7 @@
   "candidateName": "Schulman, Lynn",
   "candidateId": "433",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.631Z",
+  "updatedAt": "2026-04-04T17:37:55.968Z",
   "contributorCount": 503,
   "totalRaised": 128712.12,
   "publicFunds": 202667,
@@ -4694,6 +4694,66 @@
   },
   "grassrootsScore": 68,
   "grassrootsGrade": "B-",
+  "expenditures": {
+    "totalSpent": 243593.47,
+    "byCategory": [
+      {
+        "label": "Staff / Payroll",
+        "amount": 99525
+      },
+      {
+        "label": "Consulting",
+        "amount": 50272.9
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 32052.2
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 20750.77
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 20233.63
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 15267.06
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 5491.91
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "The Hamilton Campaign Network,",
+        "amount": 131295.55,
+        "category": "Consulting"
+      },
+      {
+        "name": "Kesselman-Basu, Javed",
+        "amount": 26314.44,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Culver Place Strategies",
+        "amount": 17000,
+        "category": "Events / Fundraising"
+      },
+      {
+        "name": "Meridian Strategies",
+        "amount": 11750,
+        "category": "Legal / Compliance"
+      },
+      {
+        "name": "Harlem Strategies LLC",
+        "amount": 10500,
+        "category": "Consulting"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds account for about 61% of the campaign's total resources.",
     "Private fundraising looks relatively diffuse: the top ten donors account for only 10% of reported private contributions.",

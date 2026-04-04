@@ -4,7 +4,7 @@
   "candidateName": "Ariola, Joann",
   "candidateId": "504",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.752Z",
+  "updatedAt": "2026-04-04T17:37:56.118Z",
   "contributorCount": 333,
   "totalRaised": 56436,
   "publicFunds": null,
@@ -3160,6 +3160,66 @@
   },
   "grassrootsScore": 74,
   "grassrootsGrade": "B",
+  "expenditures": {
+    "totalSpent": 47405.87,
+    "byCategory": [
+      {
+        "label": "Staff / Payroll",
+        "amount": 15000
+      },
+      {
+        "label": "Consulting",
+        "amount": 14000
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 7143
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 6857.33
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 3375
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 982.43
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 48.11
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Inserillo, Phyllis",
+        "amount": 15000,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Faulisi & Company CPAs LLP",
+        "amount": 8000,
+        "category": "Consulting"
+      },
+      {
+        "name": "Raffinello, Jill",
+        "amount": 6196.08,
+        "category": "Consulting"
+      },
+      {
+        "name": "Villa Erasmo",
+        "amount": 4371.33,
+        "category": "Events / Fundraising"
+      },
+      {
+        "name": "Lennys Clam Bar & Restaurant",
+        "amount": 2486,
+        "category": "Events / Fundraising"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Small-dollar donors contributed 61% of reported private fundraising across 294 contributions.",
     "9 donors gave at the legal maximum, totaling $9,450.",

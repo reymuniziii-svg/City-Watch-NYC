@@ -4,7 +4,7 @@
   "candidateName": "Menin, Julie",
   "candidateId": "1529",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:23.706Z",
+  "updatedAt": "2026-04-04T17:37:54.920Z",
   "contributorCount": 1402,
   "totalRaised": 753068.74,
   "publicFunds": null,
@@ -12785,6 +12785,66 @@
   },
   "grassrootsScore": 60,
   "grassrootsGrade": "C+",
+  "expenditures": {
+    "totalSpent": 584221.71,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 239273.16
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 162014.42
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 121419.59
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 40938.59
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 17500
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 2601.37
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 474.58
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Threshold Group, Inc.",
+        "amount": 353102.43,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Patrick B. Jenkins & Associate",
+        "amount": 45000,
+        "category": "Consulting"
+      },
+      {
+        "name": "Actum II, LLC",
+        "amount": 37500,
+        "category": "Consulting"
+      },
+      {
+        "name": "Stripe - Contribute",
+        "amount": 19628.22,
+        "category": "Legal / Compliance"
+      },
+      {
+        "name": "Gale, Harrison",
+        "amount": 18502.65,
+        "category": "Operations / Other"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Private fundraising looks relatively diffuse: the top ten donors account for only 4% of reported private contributions.",
     "288 donors gave at the legal maximum, totaling $448,843.",

@@ -4,7 +4,7 @@
   "candidateName": "Brooks-Powers, Selvena",
   "candidateId": "1624",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.721Z",
+  "updatedAt": "2026-04-04T17:37:56.072Z",
   "contributorCount": 566,
   "totalRaised": 215050.17,
   "publicFunds": null,
@@ -5261,6 +5261,62 @@
   },
   "grassrootsScore": 60,
   "grassrootsGrade": "C+",
+  "expenditures": {
+    "totalSpent": 184775.62,
+    "byCategory": [
+      {
+        "label": "Operations / Other",
+        "amount": 115996.47
+      },
+      {
+        "label": "Consulting",
+        "amount": 53367.39
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 11415.81
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 2055
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 1930
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 10.95
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Culver Place Strategies",
+        "amount": 72362.12,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Dyker Beach Golf Course",
+        "amount": 28135.15,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Stevens, Tyrone",
+        "amount": 8750,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Stripe - Contribute",
+        "amount": 4712.52,
+        "category": "Legal / Compliance"
+      },
+      {
+        "name": "My Brnd Inc",
+        "amount": 4500,
+        "category": "Legal / Compliance"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Private fundraising looks relatively diffuse: the top ten donors account for only 9% of reported private contributions.",
     "60 donors gave at the legal maximum, totaling $91,895.",

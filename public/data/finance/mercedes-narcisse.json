@@ -4,7 +4,7 @@
   "candidateName": "Narcisse, Mercedes",
   "candidateId": "1159",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:25.156Z",
+  "updatedAt": "2026-04-04T17:37:56.726Z",
   "contributorCount": 628,
   "totalRaised": 143464.68,
   "publicFunds": 305736,
@@ -5819,6 +5819,66 @@
   },
   "grassrootsScore": 70,
   "grassrootsGrade": "B",
+  "expenditures": {
+    "totalSpent": 423760.06,
+    "byCategory": [
+      {
+        "label": "Staff / Payroll",
+        "amount": 123962.5
+      },
+      {
+        "label": "Consulting",
+        "amount": 96636.5
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 83468.22
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 69578.19
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 24711.52
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 17091.13
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 8312
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Boucher, Omar",
+        "amount": 105862.83,
+        "category": "Consulting"
+      },
+      {
+        "name": "Parris & Burgis LLC",
+        "amount": 65953,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Raven Strategies",
+        "amount": 60572.15,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Burgis, Andrenia",
+        "amount": 33370.7,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Graubard, Howard",
+        "amount": 20490.48,
+        "category": "Legal / Compliance"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 68% of this campaign's total resources.",
     "Private fundraising looks relatively diffuse: the top ten donors account for only 9% of reported private contributions.",

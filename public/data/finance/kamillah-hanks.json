@@ -4,7 +4,7 @@
   "candidateName": "Hanks, Kamillah",
   "candidateId": "1996",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:25.242Z",
+  "updatedAt": "2026-04-04T17:37:56.834Z",
   "contributorCount": 457,
   "totalRaised": 135742.88,
   "publicFunds": 246845,
@@ -4278,6 +4278,66 @@
   },
   "grassrootsScore": 65,
   "grassrootsGrade": "B-",
+  "expenditures": {
+    "totalSpent": 357261.52,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 137147.35
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 92976.51
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 62510.44
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 22722.5
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 22056.92
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 18877.91
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 969.89
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "The Advance Group",
+        "amount": 68695.43,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Bright Future Fundraising",
+        "amount": 35000,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Casali, Paul",
+        "amount": 34000,
+        "category": "Consulting"
+      },
+      {
+        "name": "Graubard, Howard",
+        "amount": 26487.11,
+        "category": "Consulting"
+      },
+      {
+        "name": "Grey, Selina",
+        "amount": 22948.5,
+        "category": "Consulting"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds account for about 65% of the campaign's total resources.",
     "Private fundraising looks relatively diffuse: the top ten donors account for only 9% of reported private contributions.",

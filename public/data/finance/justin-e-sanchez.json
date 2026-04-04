@@ -4,7 +4,7 @@
   "candidateName": "Sanchez, Justin",
   "candidateId": "2029",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.187Z",
+  "updatedAt": "2026-04-04T17:37:55.437Z",
   "contributorCount": 578,
   "totalRaised": 97409.11,
   "publicFunds": 253334,
@@ -5369,6 +5369,62 @@
   },
   "grassrootsScore": 69,
   "grassrootsGrade": "B-",
+  "expenditures": {
+    "totalSpent": 353146.46,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 113166.66
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 89269.25
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 88665.49
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 33513.21
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 17255.98
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 11275.87
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Parkside Group LLC",
+        "amount": 90141.16,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Leshaw, Sayief",
+        "amount": 58578.76,
+        "category": "Consulting"
+      },
+      {
+        "name": "Presser Compliance LLC",
+        "amount": 32250,
+        "category": "Consulting"
+      },
+      {
+        "name": "Melendez, Abigail",
+        "amount": 22500,
+        "category": "Consulting"
+      },
+      {
+        "name": "Beltran Felix, Mayra Gissel",
+        "amount": 7991,
+        "category": "Staff / Payroll"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 72% of this campaign's total resources.",
     "Private fundraising looks relatively diffuse: the top ten donors account for only 11% of reported private contributions.",

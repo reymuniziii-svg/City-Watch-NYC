@@ -4,7 +4,7 @@
   "candidateName": "Wong, Phil",
   "candidateId": "2942",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.675Z",
+  "updatedAt": "2026-04-04T17:37:56.027Z",
   "contributorCount": 581,
   "totalRaised": 58881,
   "publicFunds": 359380,
@@ -5394,6 +5394,62 @@
   },
   "grassrootsScore": 90,
   "grassrootsGrade": "A+",
+  "expenditures": {
+    "totalSpent": 377955.25,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 154210.14
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 91246.92
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 83640.48
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 39995.53
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 7436.18
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 1426
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Top Mark Inc",
+        "amount": 70966.84,
+        "category": "Consulting"
+      },
+      {
+        "name": "CCC ENTERPRISES",
+        "amount": 56340.61,
+        "category": "Advertising / Media"
+      },
+      {
+        "name": "NY Prints LLC",
+        "amount": 43273.45,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Tri-Star Offset Corp",
+        "amount": 13058.59,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Troia Brothers",
+        "amount": 12500,
+        "category": "Operations / Other"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 86% of this campaign's total resources.",
     "Small-dollar donors contributed 85% of reported private fundraising across 542 contributions.",

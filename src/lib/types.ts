@@ -183,6 +183,23 @@ export interface FinanceIndustryBreakdown {
   contributorCount: number;
 }
 
+export interface ExpenditureCategory {
+  label: string;
+  amount: number;
+}
+
+export interface ExpenditureTopPayee {
+  name: string;
+  amount: number;
+  category: string;
+}
+
+export interface ExpenditureProfile {
+  totalSpent: number;
+  byCategory: ExpenditureCategory[];
+  topPayees: ExpenditureTopPayee[];
+}
+
 export interface MemberFinanceProfile {
   slug: string;
   cycle: string;
@@ -210,6 +227,7 @@ export interface MemberFinanceProfile {
   grassrootsScore: number | null;
   grassrootsGrade: string | null;
   explanatoryNotes: string[];
+  expenditures: ExpenditureProfile | null;
 }
 
 export interface MemberProfile {

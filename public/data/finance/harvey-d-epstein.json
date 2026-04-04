@@ -4,7 +4,7 @@
   "candidateName": "Epstein, Harvey",
   "candidateId": "2860",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:23.598Z",
+  "updatedAt": "2026-04-04T17:37:54.820Z",
   "contributorCount": 773,
   "totalRaised": 102346.03,
   "publicFunds": 370552,
@@ -7124,6 +7124,66 @@
   },
   "grassrootsScore": 76,
   "grassrootsGrade": "B+",
+  "expenditures": {
+    "totalSpent": 461130.64,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 212414
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 164287.71
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 61541.79
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 9341.5
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 6834.05
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 4284.33
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 2427.26
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Trip Yang Strategies LLC",
+        "amount": 190062.87,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Momentum",
+        "amount": 64042,
+        "category": "Consulting"
+      },
+      {
+        "name": "Smith, Katherine",
+        "amount": 39796.88,
+        "category": "Consulting"
+      },
+      {
+        "name": "Gupta, Maanika",
+        "amount": 20080,
+        "category": "Consulting"
+      },
+      {
+        "name": "Ostroff, Amara D",
+        "amount": 18000,
+        "category": "Consulting"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 78% of this campaign's total resources.",
     "Small-dollar donors contributed 58% of reported private fundraising across 706 contributions.",

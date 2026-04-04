@@ -4,7 +4,7 @@
   "candidateName": "Nurse, Sandy",
   "candidateId": "2310",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.908Z",
+  "updatedAt": "2026-04-04T17:37:56.372Z",
   "contributorCount": 375,
   "totalRaised": 42075.08,
   "publicFunds": null,
@@ -3542,6 +3542,58 @@
   },
   "grassrootsScore": 65,
   "grassrootsGrade": "B-",
+  "expenditures": {
+    "totalSpent": 38652.46,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 21800
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 9500
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 5011.69
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 2070.76
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 270.01
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Law Office of Ali Najmi",
+        "amount": 11800,
+        "category": "Consulting"
+      },
+      {
+        "name": "Bartos, John",
+        "amount": 10193.83,
+        "category": "Consulting"
+      },
+      {
+        "name": "Highet, Jessica",
+        "amount": 9500,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "New York State Democratic Comm",
+        "amount": 3500,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Nurse, Sandy",
+        "amount": 1022.86,
+        "category": "Operations / Other"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Small-dollar donors contributed 53% of reported private fundraising across 350 contributions.",
     "9 donors gave at the legal maximum, totaling $9,450.",

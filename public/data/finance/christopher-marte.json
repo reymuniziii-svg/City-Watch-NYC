@@ -4,7 +4,7 @@
   "candidateName": "Marte, Christopher",
   "candidateId": "1987",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:23.540Z",
+  "updatedAt": "2026-04-04T17:37:54.755Z",
   "contributorCount": 852,
   "totalRaised": 97232.38,
   "publicFunds": 398928,
@@ -7833,6 +7833,66 @@
   },
   "grassrootsScore": 76,
   "grassrootsGrade": "B+",
+  "expenditures": {
+    "totalSpent": 484256.25,
+    "byCategory": [
+      {
+        "label": "Mail / Print",
+        "amount": 178883.61
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 129925
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 102695.48
+      },
+      {
+        "label": "Consulting",
+        "amount": 50952.59
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 10772.82
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 7442
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 3584.75
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Metro Graphics",
+        "amount": 142078.33,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Winking Group LLC",
+        "amount": 52862.5,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Chou, Alice",
+        "amount": 34500,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Jalloh, Khadyja",
+        "amount": 33504.6,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Sampson, Suzuka",
+        "amount": 30452.54,
+        "category": "Staff / Payroll"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 80% of this campaign's total resources.",
     "Small-dollar donors contributed 54% of reported private fundraising across 769 contributions.",

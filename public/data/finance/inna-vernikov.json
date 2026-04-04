@@ -4,7 +4,7 @@
   "candidateName": "Vernikov, Inna",
   "candidateId": "2423",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:25.215Z",
+  "updatedAt": "2026-04-04T17:37:56.805Z",
   "contributorCount": 335,
   "totalRaised": 51466.98,
   "publicFunds": 179196,
@@ -3178,6 +3178,66 @@
   },
   "grassrootsScore": 73,
   "grassrootsGrade": "B",
+  "expenditures": {
+    "totalSpent": 220476.45,
+    "byCategory": [
+      {
+        "label": "Operations / Other",
+        "amount": 95485.06
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 55171.29
+      },
+      {
+        "label": "Consulting",
+        "amount": 37500
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 20200
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 5660
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 5151.81
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 1308.29
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Axel Print",
+        "amount": 43742.57,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Kessar, Nathaniel S",
+        "amount": 21500,
+        "category": "Consulting"
+      },
+      {
+        "name": "The Vues",
+        "amount": 10750,
+        "category": "Advertising / Media"
+      },
+      {
+        "name": "YMY85 Consulting Inc",
+        "amount": 10000,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Mostovsky, Nachman",
+        "amount": 9733.39,
+        "category": "Mail / Print"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 78% of this campaign's total resources.",
     "Small-dollar donors contributed 55% of reported private fundraising across 292 contributions.",

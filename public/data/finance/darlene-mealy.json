@@ -4,7 +4,7 @@
   "candidateName": "Mealy, Darlene",
   "candidateId": "846",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:25.041Z",
+  "updatedAt": "2026-04-04T17:37:56.578Z",
   "contributorCount": 232,
   "totalRaised": 29072.12,
   "publicFunds": 75130,
@@ -2249,6 +2249,62 @@
   },
   "grassrootsScore": 56,
   "grassrootsGrade": "C",
+  "expenditures": {
+    "totalSpent": 67033.46,
+    "byCategory": [
+      {
+        "label": "Staff / Payroll",
+        "amount": 27687.88
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 14536.06
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 6413.61
+      },
+      {
+        "label": "Consulting",
+        "amount": 6403.85
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 6066.98
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 5925.08
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Threshold Group, Inc.",
+        "amount": 20227.77,
+        "category": "Consulting"
+      },
+      {
+        "name": "Baskerville, Devenir",
+        "amount": 8750,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Desir, Lisa",
+        "amount": 3850,
+        "category": "Legal / Compliance"
+      },
+      {
+        "name": "Benjamin J. Kallos attorney at",
+        "amount": 2500,
+        "category": "Legal / Compliance"
+      },
+      {
+        "name": "guillaume, jennifer",
+        "amount": 2500,
+        "category": "Events / Fundraising"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 72% of this campaign's total resources.",
     "Private fundraising is relatively concentrated: the top ten donors account for 39% of reported private contributions.",

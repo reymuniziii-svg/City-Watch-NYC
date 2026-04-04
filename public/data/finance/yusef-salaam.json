@@ -4,7 +4,7 @@
   "candidateName": "Salaam, Yusef",
   "candidateId": "2756",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:23.853Z",
+  "updatedAt": "2026-04-04T17:37:55.077Z",
   "contributorCount": 268,
   "totalRaised": 37730,
   "publicFunds": null,
@@ -2577,6 +2577,58 @@
   },
   "grassrootsScore": 64,
   "grassrootsGrade": "C+",
+  "expenditures": {
+    "totalSpent": 35006.36,
+    "byCategory": [
+      {
+        "label": "Operations / Other",
+        "amount": 17957.73
+      },
+      {
+        "label": "Consulting",
+        "amount": 14800
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 1181.68
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 1034.32
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 32.63
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "CHARLETTE MIMIASIE LLC",
+        "amount": 8800,
+        "category": "Consulting"
+      },
+      {
+        "name": "LONDEL DAVIS ASSOCIATES",
+        "amount": 6000,
+        "category": "Consulting"
+      },
+      {
+        "name": "Manna's Restaurant",
+        "amount": 2925.61,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "FREDERICK SAMUEL DEMOCRATIC CL",
+        "amount": 2000,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Fairmont El San Juan Hotel",
+        "amount": 1789.16,
+        "category": "Operations / Other"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Small-dollar donors contributed 50% of reported private fundraising across 242 contributions.",
     "Private fundraising is relatively concentrated: the top ten donors account for 32% of reported private contributions.",

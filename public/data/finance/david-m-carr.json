@@ -4,7 +4,7 @@
   "candidateName": "Carr, David",
   "candidateId": "2382",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:25.268Z",
+  "updatedAt": "2026-04-04T17:37:56.875Z",
   "contributorCount": 263,
   "totalRaised": 56035,
   "publicFunds": 180326,
@@ -2532,6 +2532,66 @@
   },
   "grassrootsScore": 69,
   "grassrootsGrade": "B-",
+  "expenditures": {
+    "totalSpent": 212271.48,
+    "byCategory": [
+      {
+        "label": "Operations / Other",
+        "amount": 98311.76
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 48973.89
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 21650
+      },
+      {
+        "label": "Consulting",
+        "amount": 21136.1
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 11351.1
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 9309.18
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 1539.45
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Politika",
+        "amount": 40245.94,
+        "category": "Consulting"
+      },
+      {
+        "name": "Universal Mailing Service",
+        "amount": 31094.86,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Strategic Red",
+        "amount": 30000,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Meta Platforms, Inc.",
+        "amount": 11328,
+        "category": "Advertising / Media"
+      },
+      {
+        "name": "Pallarino, Richard",
+        "amount": 10000,
+        "category": "Staff / Payroll"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 76% of this campaign's total resources.",
     "5 donors gave at the legal maximum, totaling $5,250.",

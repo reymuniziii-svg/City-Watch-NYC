@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Legend, CartesianGrid } from 'recharts';
-import { DollarSign, TrendingUp, Users, Landmark, MapPin, AlertCircle, ChevronDown, ChevronUp, ChevronsUpDown, Building2, Star, ArrowRightLeft } from 'lucide-react';
+import { DollarSign, TrendingUp, Users, Landmark, MapPin, AlertCircle, ChevronDown, ChevronUp, ChevronsUpDown, Building2, Star, ArrowRightLeft, ShoppingBag } from 'lucide-react';
 import { CampaignFinance } from '../types';
 
 const COLORS = ['#F27D26', '#14B8A6', '#8B5CF6', '#F43F5E', '#EAB308', '#3B82F6', '#10B981', '#F97316'];
@@ -476,6 +476,65 @@ export default function FinanceView({ data }: { data: CampaignFinance | null }) 
           )}
         </div>
       </div>
+
+      {/* How They Spend */}
+      {data.expenditures && (
+        <div className="p-8 bg-white border-editorial">
+          <div className="flex items-center gap-2 mb-2">
+            <ShoppingBag className="w-5 h-5 text-slate-400" />
+            <h3 className="font-editorial text-2xl font-bold text-black">How They Spend</h3>
+          </div>
+          <p className="text-xs text-slate-400 mb-8">
+            Total campaign expenditures: {formatCurrency(data.expenditures.totalSpent)} — broken down by category.
+          </p>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Spending Bar Chart */}
+            <div>
+              <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-4">Spending by Category</p>
+              <div className="h-64">
+                <ResponsiveContainer width="100%" height="100%">
+                  <BarChart
+                    data={data.expenditures.byCategory.map(c => ({ category: c.label, amount: c.amount }))}
+                    layout="vertical"
+                    margin={{ left: 20 }}
+                  >
+                    <CartesianGrid strokeDasharray="3 3" horizontal={false} stroke="#E2E8F0" />
+                    <XAxis type="number" tickFormatter={(val) => `$${val >= 1000 ? (val / 1000).toFixed(0) + 'k' : val}`} stroke="#64748B" fontSize={12} />
+                    <YAxis dataKey="category" type="category" width={140} tick={{ fontSize: 11, fill: '#334155' }} />
+                    <Tooltip
+                      formatter={(value: number) => [formatCurrency(value), 'Spent']}
+                      contentStyle={{ borderRadius: '8px', border: 'none', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)' }}
+                      cursor={{ fill: '#F1F5F9' }}
+                    />
+                    <Bar dataKey="amount" radius={[0, 4, 4, 0]}>
+                      {data.expenditures.byCategory.map((_, index) => (
+                        <Cell key={`spend-${index}`} fill={COLORS[index % COLORS.length]} />
+                      ))}
+                    </Bar>
+                  </BarChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+
+            {/* Top Payees */}
+            <div>
+              <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-4">Top Payees</p>
+              <div className="space-y-0">
+                {data.expenditures.topPayees.map((payee, i) => (
+                  <div key={i} className="flex items-start justify-between py-3 border-b border-slate-50 hover:bg-slate-50 transition-colors -mx-2 px-2">
+                    <div className="min-w-0 flex-1 pr-4">
+                      <p className="font-medium text-black text-sm truncate">{payee.name}</p>
+                      <span className="text-xs text-slate-400 bg-slate-100 px-1.5 py-0.5 font-mono">{payee.category}</span>
+                    </div>
+                    <span className="font-editorial font-bold text-sm text-black shrink-0">{formatCurrency(payee.amount)}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Explanatory Notes */}
       <div className="p-12 bg-black text-white border-editorial relative overflow-hidden">

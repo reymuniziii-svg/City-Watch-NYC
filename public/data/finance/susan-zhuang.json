@@ -4,7 +4,7 @@
   "candidateName": "Zhuang, Susan",
   "candidateId": "2758",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:25.094Z",
+  "updatedAt": "2026-04-04T17:37:56.653Z",
   "contributorCount": 579,
   "totalRaised": 94829.93,
   "publicFunds": null,
@@ -5374,6 +5374,62 @@
   },
   "grassrootsScore": 76,
   "grassrootsGrade": "B+",
+  "expenditures": {
+    "totalSpent": 87587.81,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 54361.72
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 16274.73
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 6786.42
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 6400
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 1963.38
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 1801.56
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Actum II LLC",
+        "amount": 25000,
+        "category": "Consulting"
+      },
+      {
+        "name": "Sheinkopf Communications",
+        "amount": 19500,
+        "category": "Consulting"
+      },
+      {
+        "name": "Cozen O'Connor Political Actio",
+        "amount": 8500,
+        "category": "Consulting"
+      },
+      {
+        "name": "Fortune Palace Restaurant",
+        "amount": 5787,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "HoWong Seafood Restaurant INC",
+        "amount": 5246,
+        "category": "Events / Fundraising"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Small-dollar donors contributed 54% of reported private fundraising across 494 contributions.",
     "Private fundraising looks relatively diffuse: the top ten donors account for only 11% of reported private contributions.",

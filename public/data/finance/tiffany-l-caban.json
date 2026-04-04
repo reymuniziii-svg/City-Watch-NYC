@@ -4,7 +4,7 @@
   "candidateName": "Caban, Tiffany",
   "candidateId": "2436",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.376Z",
+  "updatedAt": "2026-04-04T17:37:55.678Z",
   "contributorCount": 715,
   "totalRaised": 82651.95,
   "publicFunds": null,
@@ -6602,6 +6602,66 @@
   },
   "grassrootsScore": 72,
   "grassrootsGrade": "B",
+  "expenditures": {
+    "totalSpent": 81878.44,
+    "byCategory": [
+      {
+        "label": "Operations / Other",
+        "amount": 25484.9
+      },
+      {
+        "label": "Consulting",
+        "amount": 23338.63
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 22106.16
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 6152.3
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 2200
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 1862.76
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 733.69
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Bartos, John",
+        "amount": 13950,
+        "category": "Consulting"
+      },
+      {
+        "name": "Castellan, Celia",
+        "amount": 12086.59,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Mailchimp",
+        "amount": 8168.75,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Caban, Tiffany",
+        "amount": 7657.04,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "New York State Democratic Comm",
+        "amount": 3500,
+        "category": "Operations / Other"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Small-dollar donors contributed 51% of reported private fundraising across 655 contributions.",
     "Private fundraising looks relatively diffuse: the top ten donors account for only 13% of reported private contributions.",

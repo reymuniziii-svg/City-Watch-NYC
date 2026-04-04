@@ -20,5 +20,6 @@ export const DISTRICT_DATASET_URL = "https://data.cityofnewyork.us/resource/872g
 export const CITYMEETINGS_COUNCIL_URL = "https://citymeetings.nyc/meetings/new-york-city-council/";
 export const CFB_BASE_URL = "https://www.nyccfb.info";
 export const CFB_CONTRIBUTIONS_URL = `${CFB_BASE_URL}/datalibrary/2025_Contributions.csv`;
+export const CFB_EXPENDITURES_URL = `${CFB_BASE_URL}/datalibrary/2025_Expenditures.csv`;
 export const CFB_FINANCIAL_ANALYSIS_URL = `${CFB_BASE_URL}/DataLibrary/EC2025_FinancialAnalysis.csv`;
 export const CFB_PAYMENTS_URL = `${CFB_BASE_URL}/DataLibrary/2025_Payments.csv`;

@@ -4,7 +4,7 @@
   "candidateName": "Riley, Kevin",
   "candidateId": "2327",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:23.976Z",
+  "updatedAt": "2026-04-04T17:37:55.206Z",
   "contributorCount": 579,
   "totalRaised": 106163.12,
   "publicFunds": 161201,
@@ -5378,6 +5378,62 @@
   },
   "grassrootsScore": 70,
   "grassrootsGrade": "B",
+  "expenditures": {
+    "totalSpent": 236535.58,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 86137.4
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 58097
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 52646.74
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 32807.03
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 3829.4
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 3018.01
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Mark Gumma Communications Inc.",
+        "amount": 63097,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Chief Strategies",
+        "amount": 30935,
+        "category": "Consulting"
+      },
+      {
+        "name": "JYC Connects",
+        "amount": 16000,
+        "category": "Consulting"
+      },
+      {
+        "name": "Stewart, Michelle",
+        "amount": 14000,
+        "category": "Consulting"
+      },
+      {
+        "name": "My Brnd Inc",
+        "amount": 10000,
+        "category": "Operations / Other"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds account for about 60% of the campaign's total resources.",
     "Small-dollar donors contributed 50% of reported private fundraising across 502 contributions.",

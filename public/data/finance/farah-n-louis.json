@@ -4,7 +4,7 @@
   "candidateName": "Louis, Farah",
   "candidateId": "2207",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:25.127Z",
+  "updatedAt": "2026-04-04T17:37:56.689Z",
   "contributorCount": 272,
   "totalRaised": 51399,
   "publicFunds": 45592,
@@ -2615,6 +2615,62 @@
   },
   "grassrootsScore": 72,
   "grassrootsGrade": "B",
+  "expenditures": {
+    "totalSpent": 116328.61,
+    "byCategory": [
+      {
+        "label": "Mail / Print",
+        "amount": 43706.04
+      },
+      {
+        "label": "Consulting",
+        "amount": 27339.89
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 22833
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 17041.87
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 4521.25
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 886.56
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Trip Yang Strategies LLC",
+        "amount": 21000,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Stephen, Daphney",
+        "amount": 15000,
+        "category": "Consulting"
+      },
+      {
+        "name": "Blendx Graphics",
+        "amount": 8663.29,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Raven Strategies",
+        "amount": 7000,
+        "category": "Consulting"
+      },
+      {
+        "name": "Epic Signs & Graphics Inc.",
+        "amount": 5841.2,
+        "category": "Mail / Print"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds account for about 47% of the campaign's total resources.",
     "Small-dollar donors contributed 54% of reported private fundraising across 234 contributions.",

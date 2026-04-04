@@ -4,7 +4,7 @@
   "candidateName": "Feliz, Oswald",
   "candidateId": "2311",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.113Z",
+  "updatedAt": "2026-04-04T17:37:55.364Z",
   "contributorCount": 227,
   "totalRaised": 43199,
   "publicFunds": 71910,
@@ -2208,6 +2208,62 @@
   },
   "grassrootsScore": 58,
   "grassrootsGrade": "C",
+  "expenditures": {
+    "totalSpent": 113318.25,
+    "byCategory": [
+      {
+        "label": "Advertising / Media",
+        "amount": 54099.57
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 35440.68
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 12722.5
+      },
+      {
+        "label": "Consulting",
+        "amount": 7714.94
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 2200
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 1140.56
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "A4 Media LLC",
+        "amount": 40006,
+        "category": "Advertising / Media"
+      },
+      {
+        "name": "Westerleigh Press LLC",
+        "amount": 7680,
+        "category": "Advertising / Media"
+      },
+      {
+        "name": "Schlein, Stanley",
+        "amount": 7000,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Facebook",
+        "amount": 6413.57,
+        "category": "Advertising / Media"
+      },
+      {
+        "name": "Scale to Win",
+        "amount": 6128.45,
+        "category": "Operations / Other"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds account for about 63% of the campaign's total resources.",
     "15 donors gave at the legal maximum, totaling $15,750.",

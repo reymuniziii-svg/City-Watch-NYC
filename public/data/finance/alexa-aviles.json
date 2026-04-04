@@ -4,7 +4,7 @@
   "candidateName": "Aviles, Alexa",
   "candidateId": "2306",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.942Z",
+  "updatedAt": "2026-04-04T17:37:56.424Z",
   "contributorCount": 838,
   "totalRaised": 84357.8,
   "publicFunds": 392600,
@@ -7709,6 +7709,66 @@
   },
   "grassrootsScore": 80,
   "grassrootsGrade": "A-",
+  "expenditures": {
+    "totalSpent": 285786.92,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 121038.96
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 92070.53
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 31863.42
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 19935.9
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 15707.78
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 3978.1
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 1192.23
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "CenturyDirect LLC",
+        "amount": 63194.13,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Kruvelis, Melanie",
+        "amount": 47245.16,
+        "category": "Consulting"
+      },
+      {
+        "name": "Triboro Printing Corp",
+        "amount": 26435.42,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Kennedy, India",
+        "amount": 22159.25,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Meta",
+        "amount": 15132.78,
+        "category": "Advertising / Media"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 82% of this campaign's total resources.",
     "Small-dollar donors contributed 66% of reported private fundraising across 778 contributions.",

@@ -4,7 +4,7 @@
   "candidateName": "Dinowitz, Eric",
   "candidateId": "2192",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:23.932Z",
+  "updatedAt": "2026-04-04T17:37:55.160Z",
   "contributorCount": 342,
   "totalRaised": 94778.11,
   "publicFunds": 228544,
@@ -3243,6 +3243,62 @@
   },
   "grassrootsScore": 65,
   "grassrootsGrade": "B-",
+  "expenditures": {
+    "totalSpent": 322929.9,
+    "byCategory": [
+      {
+        "label": "Mail / Print",
+        "amount": 189682.49
+      },
+      {
+        "label": "Consulting",
+        "amount": 79216.68
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 49758.78
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 3171.95
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 1000
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 100
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Red Horse Strategies",
+        "amount": 242833.69,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Kuperberg, Matthew",
+        "amount": 28248.1,
+        "category": "Consulting"
+      },
+      {
+        "name": "O'Donnell, John",
+        "amount": 11030.44,
+        "category": "Consulting"
+      },
+      {
+        "name": "Schlein, Stanley K",
+        "amount": 7000,
+        "category": "Consulting"
+      },
+      {
+        "name": "Chestnut Holdings of New York,",
+        "amount": 5275.1,
+        "category": "Operations / Other"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 71% of this campaign's total resources.",
     "Private fundraising looks relatively diffuse: the top ten donors account for only 12% of reported private contributions.",

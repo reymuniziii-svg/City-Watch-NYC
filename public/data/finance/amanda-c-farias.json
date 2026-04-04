@@ -4,7 +4,7 @@
   "candidateName": "Farias, Amanda",
   "candidateId": "1945",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.220Z",
+  "updatedAt": "2026-04-04T17:37:55.478Z",
   "contributorCount": 597,
   "totalRaised": 185407.15,
   "publicFunds": null,
@@ -5540,6 +5540,66 @@
   },
   "grassrootsScore": 63,
   "grassrootsGrade": "C+",
+  "expenditures": {
+    "totalSpent": 121162.96,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 74874.17
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 30967.98
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 5948.81
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 3984.63
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 3827.65
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 1000
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 559.72
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Pythia Public",
+        "amount": 30075,
+        "category": "Consulting"
+      },
+      {
+        "name": "DisruptX Consulting Group",
+        "amount": 18000,
+        "category": "Consulting"
+      },
+      {
+        "name": "Sparrow Strategies",
+        "amount": 10903.33,
+        "category": "Consulting"
+      },
+      {
+        "name": "WInds of Change Strategies",
+        "amount": 8500,
+        "category": "Consulting"
+      },
+      {
+        "name": "Consense, Inc.",
+        "amount": 5850,
+        "category": "Consulting"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Private fundraising looks relatively diffuse: the top ten donors account for only 9% of reported private contributions.",
     "39 donors gave at the legal maximum, totaling $54,350.",

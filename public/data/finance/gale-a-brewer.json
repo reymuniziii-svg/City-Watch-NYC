@@ -4,7 +4,7 @@
   "candidateName": "Brewer, Gale",
   "candidateId": "399",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:23.744Z",
+  "updatedAt": "2026-04-04T17:37:54.966Z",
   "contributorCount": 295,
   "totalRaised": 58751,
   "publicFunds": null,
@@ -2822,6 +2822,54 @@
   },
   "grassrootsScore": 67,
   "grassrootsGrade": "B-",
+  "expenditures": {
+    "totalSpent": 55967.23,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 39500
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 9681.36
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 3500
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 3285.87
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Kristofer Graham CPA",
+        "amount": 22000,
+        "category": "Consulting"
+      },
+      {
+        "name": "Trip Yang Strategies LLC",
+        "amount": 9000,
+        "category": "Consulting"
+      },
+      {
+        "name": "Cozen O'Connor",
+        "amount": 8500,
+        "category": "Consulting"
+      },
+      {
+        "name": "Brewer, Gale",
+        "amount": 5570.84,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "McEvoy & Associates",
+        "amount": 3500,
+        "category": "Events / Fundraising"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "13 donors gave at the legal maximum, totaling $15,600.",
     "Committees, unions, or other non-individual donors made up 23% of reported private fundraising.",

@@ -4,7 +4,7 @@
   "candidateName": "Hankerson, Ty",
   "candidateId": "2867",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.591Z",
+  "updatedAt": "2026-04-04T17:37:55.930Z",
   "contributorCount": 406,
   "totalRaised": 67880,
   "publicFunds": 202667,
@@ -3821,6 +3821,66 @@
   },
   "grassrootsScore": 70,
   "grassrootsGrade": "B",
+  "expenditures": {
+    "totalSpent": 259626.39,
+    "byCategory": [
+      {
+        "label": "Mail / Print",
+        "amount": 67892.91
+      },
+      {
+        "label": "Consulting",
+        "amount": 65450
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 62241.94
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 18333.35
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 17644.47
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 14565.6
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 13498.12
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Connective Strategies LLC",
+        "amount": 175612.85,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Denasty, Clivenson",
+        "amount": 11000,
+        "category": "Consulting"
+      },
+      {
+        "name": "Dynamic SRG",
+        "amount": 10500,
+        "category": "Events / Fundraising"
+      },
+      {
+        "name": "BlaQue",
+        "amount": 9000,
+        "category": "Consulting"
+      },
+      {
+        "name": "TDP Bookkeeping LLC",
+        "amount": 7850,
+        "category": "Operations / Other"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 75% of this campaign's total resources.",
     "Small-dollar donors contributed 54% of reported private fundraising across 355 contributions.",

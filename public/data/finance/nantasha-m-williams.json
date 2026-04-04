@@ -4,7 +4,7 @@
   "candidateName": "Williams, Nantasha",
   "candidateId": "2285",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.552Z",
+  "updatedAt": "2026-04-04T17:37:55.895Z",
   "contributorCount": 418,
   "totalRaised": 85005,
   "publicFunds": null,
@@ -3929,6 +3929,62 @@
   },
   "grassrootsScore": 69,
   "grassrootsGrade": "B-",
+  "expenditures": {
+    "totalSpent": 75060,
+    "byCategory": [
+      {
+        "label": "Events / Fundraising",
+        "amount": 20573.55
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 17870.39
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 13527.38
+      },
+      {
+        "label": "Consulting",
+        "amount": 13050
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 9179.68
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 859
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Harlem Strategies LLC",
+        "amount": 14000,
+        "category": "Consulting"
+      },
+      {
+        "name": "Bartholomew Communications & S",
+        "amount": 10000,
+        "category": "Legal / Compliance"
+      },
+      {
+        "name": "Sharina Bryce",
+        "amount": 10000,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Mich'Chique EP LLC",
+        "amount": 5500,
+        "category": "Consulting"
+      },
+      {
+        "name": "Abbady, Amir",
+        "amount": 5250,
+        "category": "Staff / Payroll"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Small-dollar donors contributed 51% of reported private fundraising across 354 contributions.",
     "Private fundraising looks relatively diffuse: the top ten donors account for only 14% of reported private contributions.",

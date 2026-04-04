@@ -4,7 +4,7 @@
   "candidateName": "Ung, Sandra",
   "candidateId": "2343",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.294Z",
+  "updatedAt": "2026-04-04T17:37:55.572Z",
   "contributorCount": 397,
   "totalRaised": 79812.26,
   "publicFunds": 202432,
@@ -3736,6 +3736,66 @@
   },
   "grassrootsScore": 70,
   "grassrootsGrade": "B",
+  "expenditures": {
+    "totalSpent": 226298.74,
+    "byCategory": [
+      {
+        "label": "Mail / Print",
+        "amount": 99150.36
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 33664.59
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 32550
+      },
+      {
+        "label": "Consulting",
+        "amount": 25261.7
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 22945.2
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 7655.46
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 5071.43
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "The Parkside Group",
+        "amount": 109782.95,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Hart, Alexander",
+        "amount": 9566.79,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Law Office of Ali Najmi",
+        "amount": 8861.94,
+        "category": "Consulting"
+      },
+      {
+        "name": "H & C Consulting",
+        "amount": 8200,
+        "category": "Consulting"
+      },
+      {
+        "name": "Wang, Yuehlu",
+        "amount": 6300,
+        "category": "Staff / Payroll"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 72% of this campaign's total resources.",
     "Private fundraising looks relatively diffuse: the top ten donors account for only 13% of reported private contributions.",

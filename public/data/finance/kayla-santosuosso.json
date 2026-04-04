@@ -4,7 +4,7 @@
   "candidateName": "Santosuosso, Kayla",
   "candidateId": "2918",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:25.187Z",
+  "updatedAt": "2026-04-04T17:37:56.769Z",
   "contributorCount": 660,
   "totalRaised": 87116.73,
   "publicFunds": 381124,
@@ -6107,6 +6107,62 @@
   },
   "grassrootsScore": 78,
   "grassrootsGrade": "B+",
+  "expenditures": {
+    "totalSpent": 444469.3,
+    "byCategory": [
+      {
+        "label": "Operations / Other",
+        "amount": 267618.69
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 136948.98
+      },
+      {
+        "label": "Consulting",
+        "amount": 21500
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 9402.46
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 6280
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 2719.17
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Power Play Strategies",
+        "amount": 215766.36,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Loonam, Joseph",
+        "amount": 40628.94,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Fikhman, Ben",
+        "amount": 35116.56,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Rahman, Amber",
+        "amount": 30076.37,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Tramontano, Frank",
+        "amount": 22250,
+        "category": "Operations / Other"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 81% of this campaign's total resources.",
     "Small-dollar donors contributed 63% of reported private fundraising across 598 contributions.",

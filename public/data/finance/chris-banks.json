@@ -4,7 +4,7 @@
   "candidateName": "Banks, Christopher",
   "candidateId": "1683",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:25.067Z",
+  "updatedAt": "2026-04-04T17:37:56.609Z",
   "contributorCount": 121,
   "totalRaised": 22985,
   "publicFunds": null,
@@ -1252,6 +1252,50 @@
   },
   "grassrootsScore": 56,
   "grassrootsGrade": "C",
+  "expenditures": {
+    "totalSpent": 20374.17,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 14300
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 3509.54
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 2564.63
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Howard, Narrel",
+        "amount": 12500,
+        "category": "Consulting"
+      },
+      {
+        "name": "Alter & Barbaro",
+        "amount": 2250,
+        "category": "Legal / Compliance"
+      },
+      {
+        "name": "The Miracles Brand",
+        "amount": 1800,
+        "category": "Consulting"
+      },
+      {
+        "name": "JetBlue",
+        "amount": 756.42,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Cypress Hills Residents Associ",
+        "amount": 550,
+        "category": "Operations / Other"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Private fundraising is relatively concentrated: the top ten donors account for 49% of reported private contributions.",
     "8 donors gave at the legal maximum, totaling $9,350.",

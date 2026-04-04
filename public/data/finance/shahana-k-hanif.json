@@ -4,7 +4,7 @@
   "candidateName": "Hanif, Shahana",
   "candidateId": "2256",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.979Z",
+  "updatedAt": "2026-04-04T17:37:56.484Z",
   "contributorCount": 1027,
   "totalRaised": 103198.78,
   "publicFunds": 253334,
@@ -9410,6 +9410,66 @@
   },
   "grassrootsScore": 83,
   "grassrootsGrade": "A-",
+  "expenditures": {
+    "totalSpent": 352815.68,
+    "byCategory": [
+      {
+        "label": "Mail / Print",
+        "amount": 136886.15
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 89018
+      },
+      {
+        "label": "Consulting",
+        "amount": 60635
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 41163.34
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 19480.11
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 4677.74
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 955.34
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "The Baseline Agency",
+        "amount": 100278.84,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Lavin, Simone",
+        "amount": 58157.09,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Waltman, Benjamin",
+        "amount": 32375,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Century Direct Solutions LLC",
+        "amount": 18881.05,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Radix Media",
+        "amount": 17545.42,
+        "category": "Mail / Print"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 71% of this campaign's total resources.",
     "Small-dollar donors contributed 69% of reported private fundraising across 958 contributions.",

@@ -4,7 +4,7 @@
   "candidateName": "Encarnacion, Elsie",
   "candidateId": "2843",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:23.816Z",
+  "updatedAt": "2026-04-04T17:37:55.043Z",
   "contributorCount": 418,
   "totalRaised": 67966,
   "publicFunds": 211389,
@@ -3929,6 +3929,66 @@
   },
   "grassrootsScore": 73,
   "grassrootsGrade": "B",
+  "expenditures": {
+    "totalSpent": 284133.12,
+    "byCategory": [
+      {
+        "label": "Operations / Other",
+        "amount": 89318.98
+      },
+      {
+        "label": "Consulting",
+        "amount": 84223
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 36686.84
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 23595.11
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 20000
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 15959.19
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 14350
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Hamilton Campaign Network",
+        "amount": 129955.05,
+        "category": "Consulting"
+      },
+      {
+        "name": "Padilla, Jimmy",
+        "amount": 30680,
+        "category": "Consulting"
+      },
+      {
+        "name": "Rael Strategies LLC",
+        "amount": 25121.83,
+        "category": "Consulting"
+      },
+      {
+        "name": "Presser Compliance LLC",
+        "amount": 17540,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Schlein, Stanley K",
+        "amount": 13768,
+        "category": "Legal / Compliance"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 76% of this campaign's total resources.",
     "Small-dollar donors contributed 60% of reported private fundraising across 376 contributions.",

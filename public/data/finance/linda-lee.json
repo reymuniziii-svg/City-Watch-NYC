@@ -4,7 +4,7 @@
   "candidateName": "Lee, Linda",
   "candidateId": "2453",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.409Z",
+  "updatedAt": "2026-04-04T17:37:55.720Z",
   "contributorCount": 312,
   "totalRaised": 45546,
   "publicFunds": 198432,
@@ -2975,6 +2975,66 @@
   },
   "grassrootsScore": 79,
   "grassrootsGrade": "B+",
+  "expenditures": {
+    "totalSpent": 202676.83,
+    "byCategory": [
+      {
+        "label": "Mail / Print",
+        "amount": 128989.01
+      },
+      {
+        "label": "Consulting",
+        "amount": 35425.61
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 14305.9
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 11500
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 7863.64
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 3592.67
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 1000
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Red Horse Strategies",
+        "amount": 135489.01,
+        "category": "Consulting"
+      },
+      {
+        "name": "North Shore Strategies",
+        "amount": 27440,
+        "category": "Consulting"
+      },
+      {
+        "name": "Sparrow, Daniel",
+        "amount": 10000,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "FCS LLC",
+        "amount": 5500,
+        "category": "Consulting"
+      },
+      {
+        "name": "Law Office of Ali Najmi",
+        "amount": 4035.61,
+        "category": "Consulting"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 81% of this campaign's total resources.",
     "Small-dollar donors contributed 70% of reported private fundraising across 289 contributions.",

@@ -4,7 +4,7 @@
   "candidateName": "Morano, Frank",
   "candidateId": "2949",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:25.294Z",
+  "updatedAt": "2026-04-04T17:37:56.919Z",
   "contributorCount": 498,
   "totalRaised": 83490.94,
   "publicFunds": 266586,
@@ -4645,6 +4645,66 @@
   },
   "grassrootsScore": 72,
   "grassrootsGrade": "B",
+  "expenditures": {
+    "totalSpent": 359304.53,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 115119.8
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 114418.73
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 88177.04
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 24052.33
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 11611.7
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 3500
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 2424.93
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Universal Mailing Service",
+        "amount": 74986.73,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Politika",
+        "amount": 68650,
+        "category": "Consulting"
+      },
+      {
+        "name": "PRcision",
+        "amount": 38077.02,
+        "category": "Consulting"
+      },
+      {
+        "name": "Faztec Industries",
+        "amount": 16499.98,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "The Campaign Group LLC",
+        "amount": 15000,
+        "category": "Operations / Other"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 76% of this campaign's total resources.",
     "Small-dollar donors contributed 55% of reported private fundraising across 423 contributions.",

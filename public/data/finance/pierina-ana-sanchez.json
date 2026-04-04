@@ -4,7 +4,7 @@
   "candidateName": "Sanchez, Pierina",
   "candidateId": "2348",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.071Z",
+  "updatedAt": "2026-04-04T17:37:55.321Z",
   "contributorCount": 728,
   "totalRaised": 101902.86,
   "publicFunds": 202667,
@@ -6719,6 +6719,62 @@
   },
   "grassrootsScore": 71,
   "grassrootsGrade": "B",
+  "expenditures": {
+    "totalSpent": 305701.99,
+    "byCategory": [
+      {
+        "label": "Staff / Payroll",
+        "amount": 120185.67
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 93567.14
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 71865.75
+      },
+      {
+        "label": "Consulting",
+        "amount": 16360
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 3182.56
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 540.87
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Mark Guma Communications Inc.",
+        "amount": 87260,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Zethner, Zak",
+        "amount": 39000,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Garcia, Rebecca",
+        "amount": 25500,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Beacon",
+        "amount": 24500,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Van Ness Creative Strategies",
+        "amount": 18000,
+        "category": "Operations / Other"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 67% of this campaign's total resources.",
     "Private fundraising looks relatively diffuse: the top ten donors account for only 11% of reported private contributions.",

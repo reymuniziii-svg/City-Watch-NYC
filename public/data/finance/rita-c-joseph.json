@@ -4,7 +4,7 @@
   "candidateName": "Joseph, Rita",
   "candidateId": "2246",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:25.012Z",
+  "updatedAt": "2026-04-04T17:37:56.538Z",
   "contributorCount": 575,
   "totalRaised": 130245.46,
   "publicFunds": null,
@@ -5342,6 +5342,58 @@
   },
   "grassrootsScore": 70,
   "grassrootsGrade": "B",
+  "expenditures": {
+    "totalSpent": 117514.2,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 53766.82
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 29596.36
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 27055.25
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 6745.77
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 350
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Raven Strategies, Inc.",
+        "amount": 69657,
+        "category": "Consulting"
+      },
+      {
+        "name": "Henderson, Paul",
+        "amount": 9017.03,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "West Indian American Day Carni",
+        "amount": 5000,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Graubard, Howard",
+        "amount": 4000,
+        "category": "Legal / Compliance"
+      },
+      {
+        "name": "Constant Contact",
+        "amount": 3223.83,
+        "category": "Operations / Other"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Private fundraising looks relatively diffuse: the top ten donors account for only 10% of reported private contributions.",
     "22 donors gave at the legal maximum, totaling $23,100.",

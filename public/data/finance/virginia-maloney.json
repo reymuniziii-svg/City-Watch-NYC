@@ -4,7 +4,7 @@
   "candidateName": "Maloney, Virginia",
   "candidateId": "2909",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:23.648Z",
+  "updatedAt": "2026-04-04T17:37:54.866Z",
   "contributorCount": 931,
   "totalRaised": 208814.3,
   "publicFunds": 405234,
@@ -8546,6 +8546,66 @@
   },
   "grassrootsScore": 66,
   "grassrootsGrade": "B-",
+  "expenditures": {
+    "totalSpent": 606616.92,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 219690.37
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 186755.04
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 134165
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 31886.11
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 21360
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 6822.18
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 5938.22
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Red Horse Strategies",
+        "amount": 385862.94,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Garner, Shelby",
+        "amount": 61622.35,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Barot, Tamanna",
+        "amount": 24415.99,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Leslie, Cade",
+        "amount": 20350,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Cozen O'Connor",
+        "amount": 15500,
+        "category": "Consulting"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 66% of this campaign's total resources.",
     "Private fundraising looks relatively diffuse: the top ten donors account for only 9% of reported private contributions.",

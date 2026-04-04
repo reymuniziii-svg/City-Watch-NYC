@@ -4,7 +4,7 @@
   "candidateName": "Thomas-Henry, Shanel",
   "candidateId": "2923",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.327Z",
+  "updatedAt": "2026-04-04T17:37:55.627Z",
   "contributorCount": 574,
   "totalRaised": 109822,
   "publicFunds": 223368,
@@ -5333,6 +5333,66 @@
   },
   "grassrootsScore": 70,
   "grassrootsGrade": "B",
+  "expenditures": {
+    "totalSpent": 346541.88,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 129808
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 58302.58
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 55447.34
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 44829.92
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 30774.14
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 20067.6
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 7312.3
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Legion Outreach Consulting LLC",
+        "amount": 85403.3,
+        "category": "Consulting"
+      },
+      {
+        "name": "Orange32",
+        "amount": 53231.83,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Coles, Tarik H",
+        "amount": 34500,
+        "category": "Consulting"
+      },
+      {
+        "name": "My Brnd Inc.",
+        "amount": 25000,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Nohtorious",
+        "amount": 22229.5,
+        "category": "Consulting"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 67% of this campaign's total resources.",
     "Small-dollar donors contributed 51% of reported private fundraising across 482 contributions.",

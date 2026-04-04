@@ -4,7 +4,7 @@
   "candidateName": "Krishnan, Shekar",
   "candidateId": "2206",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.468Z",
+  "updatedAt": "2026-04-04T17:37:55.802Z",
   "contributorCount": 481,
   "totalRaised": 102983,
   "publicFunds": 308992,
@@ -4494,6 +4494,66 @@
   },
   "grassrootsScore": 70,
   "grassrootsGrade": "B",
+  "expenditures": {
+    "totalSpent": 396574.11,
+    "byCategory": [
+      {
+        "label": "Mail / Print",
+        "amount": 140769.54
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 90607.7
+      },
+      {
+        "label": "Consulting",
+        "amount": 86950
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 63765.37
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 11206.86
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 2324.9
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 949.74
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Trip Yang Strategies LLC",
+        "amount": 212290.05,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Divinagracia, Hunter",
+        "amount": 51107.7,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "North Shore Strategies",
+        "amount": 35000,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Van Ness Creative Strategies",
+        "amount": 29000,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Momentum",
+        "amount": 25000,
+        "category": "Consulting"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 75% of this campaign's total resources.",
     "Private fundraising looks relatively diffuse: the top ten donors account for only 10% of reported private contributions.",

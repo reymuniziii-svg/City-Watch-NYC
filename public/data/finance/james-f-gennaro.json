@@ -4,7 +4,7 @@
   "candidateName": "Gennaro, James",
   "candidateId": "283",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.434Z",
+  "updatedAt": "2026-04-04T17:37:55.754Z",
   "contributorCount": 137,
   "totalRaised": 86125,
   "publicFunds": null,
@@ -1398,6 +1398,58 @@
   },
   "grassrootsScore": 54,
   "grassrootsGrade": "C-",
+  "expenditures": {
+    "totalSpent": 44061.79,
+    "byCategory": [
+      {
+        "label": "Legal / Compliance",
+        "amount": 24233.14
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 11203.75
+      },
+      {
+        "label": "Consulting",
+        "amount": 5000
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 2624.9
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 1000
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Legion Outreach Consulting",
+        "amount": 26582.5,
+        "category": "Legal / Compliance"
+      },
+      {
+        "name": "Tramontano, Frank",
+        "amount": 5500,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "NYS Democratic Committee",
+        "amount": 3500,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "The Parkside Group",
+        "amount": 2613,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Stripe - Contribute",
+        "amount": 1485.44,
+        "category": "Legal / Compliance"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Private fundraising looks relatively diffuse: the top ten donors account for only 13% of reported private contributions.",
     "45 donors gave at the legal maximum, totaling $48,300.",

@@ -4,7 +4,7 @@
   "candidateName": "Hudson, Crystal",
   "candidateId": "2267",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.833Z",
+  "updatedAt": "2026-04-04T17:37:56.245Z",
   "contributorCount": 834,
   "totalRaised": 182480.85,
   "publicFunds": 247644,
@@ -7673,6 +7673,62 @@
   },
   "grassrootsScore": 71,
   "grassrootsGrade": "B",
+  "expenditures": {
+    "totalSpent": 423319.35,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 136035
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 128291.41
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 86111.93
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 52307.51
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 14484.65
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 6088.85
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Red Horse Strategies",
+        "amount": 133791.41,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Hunter, Jacob",
+        "amount": 78797.65,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Wright, Andrew",
+        "amount": 34750,
+        "category": "Consulting"
+      },
+      {
+        "name": "New Deal Strategies",
+        "amount": 34000,
+        "category": "Consulting"
+      },
+      {
+        "name": "Bartos, John",
+        "amount": 22500,
+        "category": "Consulting"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds account for about 58% of the campaign's total resources.",
     "Private fundraising looks relatively diffuse: the top ten donors account for only 8% of reported private contributions.",

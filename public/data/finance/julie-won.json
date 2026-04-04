@@ -4,7 +4,7 @@
   "candidateName": "Won, Julie",
   "candidateId": "2380",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.505Z",
+  "updatedAt": "2026-04-04T17:37:55.848Z",
   "contributorCount": 280,
   "totalRaised": 76221.5,
   "publicFunds": null,
@@ -2685,6 +2685,62 @@
   },
   "grassrootsScore": 59,
   "grassrootsGrade": "C",
+  "expenditures": {
+    "totalSpent": 75681.23,
+    "byCategory": [
+      {
+        "label": "Mail / Print",
+        "amount": 26117.85
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 18057.38
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 17583.97
+      },
+      {
+        "label": "Consulting",
+        "amount": 9576.92
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 3414.69
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 930.42
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "New York Campaign Strategies",
+        "amount": 29394.35,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Triboro Printing",
+        "amount": 12312.25,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "LAW OFFICE OF ALI NAJMI",
+        "amount": 7500,
+        "category": "Consulting"
+      },
+      {
+        "name": "Won, Julie",
+        "amount": 6781.42,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Litchinut Studios, LLC",
+        "amount": 5071.55,
+        "category": "Operations / Other"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "40 donors gave at the legal maximum, totaling $42,000.",
     "A noticeable share of reported private fundraising, 24%, came from outside New York City.",

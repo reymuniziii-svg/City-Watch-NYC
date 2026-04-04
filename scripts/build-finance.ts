@@ -2,6 +2,7 @@ import path from "node:path";
 import {
   CFB_BASE_URL,
   CFB_CONTRIBUTIONS_URL,
+  CFB_EXPENDITURES_URL,
   CFB_FINANCIAL_ANALYSIS_URL,
   CFB_PAYMENTS_URL,
   CONTENT_DIR,
@@ -11,7 +12,7 @@ import {
 import { parseCsv } from "./lib/csv";
 import { ensureDir, readJsonFile, writeJsonFile } from "./lib/fs-utils";
 import { normalizePersonName } from "./lib/normalize";
-import type { FinanceIndustryBreakdown, FinanceTopDonor, MemberFinanceProfile } from "../src/lib/types";
+import type { ExpenditureProfile, FinanceIndustryBreakdown, FinanceTopDonor, MemberFinanceProfile } from "../src/lib/types";
 
 interface SupplementalRow {
   slug: string | null;
@@ -100,6 +101,64 @@ function classifyIndustry(occupation: string, employer: string): string {
   }
 
   return "Other / Mixed";
+}
+
+const EXPENDITURE_CATEGORY_LABELS: Record<string, string> = {
+  WAGES: "Staff / Payroll",
+  CONSL: "Consulting",
+  PROFL: "Consulting",
+  TVADS: "Advertising / Media",
+  PRINT: "Advertising / Media",
+  POLLS: "Advertising / Media",
+  CMAIL: "Mail / Print",
+  LITER: "Mail / Print",
+  POSTA: "Mail / Print",
+  FUNDR: "Events / Fundraising",
+  PETIT: "Legal / Compliance",
+  BCFEES: "Legal / Compliance",
+};
+
+const DIGITAL_AD_PAYEES = /\b(meta|facebook|instagram|google|youtube|twitter|x\.com|tiktok|snapchat|linkedin|reddit)\b/i;
+
+function classifyExpenditure(purposeCode: string, payeeName: string): string {
+  if (DIGITAL_AD_PAYEES.test(payeeName)) return "Advertising / Media";
+  return EXPENDITURE_CATEGORY_LABELS[purposeCode.trim().toUpperCase()] ?? "Operations / Other";
+}
+
+function buildExpenditureProfile(
+  expenditureRows: Array<Record<string, string>>,
+): ExpenditureProfile | null {
+  if (expenditureRows.length === 0) return null;
+
+  const categoryTotals = new Map<string, number>();
+  const payeeTotals = new Map<string, { amount: number; category: string }>();
+
+  for (const row of expenditureRows) {
+    const amount = Number.parseFloat((row.AMNT ?? "").replace(/,/g, "").trim());
+    if (!Number.isFinite(amount) || amount <= 0) continue;
+
+    const payeeName = (row.NAME ?? "").trim() || "Unknown";
+    const category = classifyExpenditure(row.PURPOSECD ?? "", payeeName);
+    categoryTotals.set(category, (categoryTotals.get(category) ?? 0) + amount);
+
+    const existing = payeeTotals.get(payeeName) ?? { amount: 0, category };
+    existing.amount += amount;
+    payeeTotals.set(payeeName, existing);
+  }
+
+  const totalSpent = Array.from(categoryTotals.values()).reduce((s, v) => s + v, 0);
+  if (totalSpent === 0) return null;
+
+  const byCategory = Array.from(categoryTotals.entries())
+    .map(([label, amount]) => ({ label, amount: Math.round(amount * 100) / 100 }))
+    .sort((a, b) => b.amount - a.amount);
+
+  const topPayees = Array.from(payeeTotals.entries())
+    .map(([name, { amount, category }]) => ({ name, amount: Math.round(amount * 100) / 100, category }))
+    .sort((a, b) => b.amount - a.amount)
+    .slice(0, 5);
+
+  return { totalSpent: Math.round(totalSpent * 100) / 100, byCategory, topPayees };
 }
 
 function isNycContributor(row: Record<string, string>): boolean {
@@ -269,15 +328,17 @@ function findCandidateForMember(
 }
 
 export async function buildFinance(): Promise<Map<string, MemberFinanceProfile>> {
-  const [analysisCsv, contributionsCsv, paymentsCsv] = await Promise.all([
+  const [analysisCsv, contributionsCsv, paymentsCsv, expendituresCsv] = await Promise.all([
     fetch(CFB_FINANCIAL_ANALYSIS_URL).then((response) => response.text()),
     fetch(CFB_CONTRIBUTIONS_URL).then((response) => response.text()),
     fetch(CFB_PAYMENTS_URL).then((response) => response.text()),
+    fetch(CFB_EXPENDITURES_URL).then((response) => response.text()),
   ]);
 
   const analysisRows = parseCsv(analysisCsv).filter((row) => row.office === "5");
   const contributionRows = parseCsv(contributionsCsv).filter((row) => row.OFFICECD.trim() === "5");
   const paymentRows = parseCsv(paymentsCsv).filter((row) => row.OFFICECD.trim() === "5");
+  const expenditureRows = parseCsv(expendituresCsv).filter((row) => row.OFFICECD.trim() === "5");
   const supplemental = await readJsonFile<SupplementalRow[]>(path.join(CONTENT_DIR, "member-supplemental.json"));
   const overrides = await readJsonFile<FinanceOverrideMap>(path.join(CONTENT_DIR, "campaign-finance-overrides.json")).catch(() => ({}));
 
@@ -393,6 +454,11 @@ export async function buildFinance(): Promise<Map<string, MemberFinanceProfile>>
       outsideCityShare,
     );
 
+    const candidateExpenditures = candidateId
+      ? expenditureRows.filter((row) => row.CANDID.trim() === candidateId)
+      : [];
+    const expenditures = buildExpenditureProfile(candidateExpenditures);
+
     const profile: MemberFinanceProfile = {
       slug: member.slug,
       cycle: "2025",
@@ -419,6 +485,7 @@ export async function buildFinance(): Promise<Map<string, MemberFinanceProfile>>
       donorsByIndustry,
       grassrootsScore,
       grassrootsGrade,
+      expenditures,
       explanatoryNotes: buildExplanatoryNotes({
         contributorCount,
         publicFunds: publicFunds || null,

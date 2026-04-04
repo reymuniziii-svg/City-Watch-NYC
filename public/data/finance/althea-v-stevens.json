@@ -4,7 +4,7 @@
   "candidateName": "Stevens, Althea",
   "candidateId": "2259",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.154Z",
+  "updatedAt": "2026-04-04T17:37:55.400Z",
   "contributorCount": 157,
   "totalRaised": 30629,
   "publicFunds": null,
@@ -1576,6 +1576,62 @@
   },
   "grassrootsScore": 63,
   "grassrootsGrade": "C+",
+  "expenditures": {
+    "totalSpent": 37192.32,
+    "byCategory": [
+      {
+        "label": "Operations / Other",
+        "amount": 13774.7
+      },
+      {
+        "label": "Consulting",
+        "amount": 13665
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 5400
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 2933.08
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 968.76
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 450.78
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Rael Strategies, LLC",
+        "amount": 12065,
+        "category": "Advertising / Media"
+      },
+      {
+        "name": "Lewis, Michelle",
+        "amount": 5000,
+        "category": "Consulting"
+      },
+      {
+        "name": "Uber Technologies",
+        "amount": 1994.35,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Power Play Strategies, LLC.",
+        "amount": 1974.25,
+        "category": "Legal / Compliance"
+      },
+      {
+        "name": "Giovanni G-Bar",
+        "amount": 1974,
+        "category": "Operations / Other"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Small-dollar donors contributed 51% of reported private fundraising across 136 contributions.",
     "Private fundraising is relatively concentrated: the top ten donors account for 35% of reported private contributions.",

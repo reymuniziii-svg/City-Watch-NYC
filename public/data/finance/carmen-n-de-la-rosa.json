@@ -4,7 +4,7 @@
   "candidateName": "De La Rosa, Carmen",
   "candidateId": "2349",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:23.886Z",
+  "updatedAt": "2026-04-04T17:37:55.121Z",
   "contributorCount": 445,
   "totalRaised": 71296,
   "publicFunds": 101334,
@@ -4172,6 +4172,66 @@
   },
   "grassrootsScore": 66,
   "grassrootsGrade": "B-",
+  "expenditures": {
+    "totalSpent": 194559.28,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 78500
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 62600.1
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 20305
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 11431.11
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 10331.4
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 6591.67
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 4800
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "The Advance Group",
+        "amount": 43105.65,
+        "category": "Consulting"
+      },
+      {
+        "name": "Presser Compliance LLC",
+        "amount": 29500,
+        "category": "Consulting"
+      },
+      {
+        "name": "Food Makers Marks",
+        "amount": 13156.25,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "The Hudson",
+        "amount": 10000,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Effective Media Strategies",
+        "amount": 8000,
+        "category": "Consulting"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds account for about 59% of the campaign's total resources.",
     "14 donors gave at the legal maximum, totaling $14,700.",

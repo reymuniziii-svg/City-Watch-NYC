@@ -4,7 +4,7 @@
   "candidateName": "Restler, Lincoln",
   "candidateId": "2455",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.779Z",
+  "updatedAt": "2026-04-04T17:37:56.155Z",
   "contributorCount": 430,
   "totalRaised": 101280,
   "publicFunds": 202667,
@@ -4037,6 +4037,62 @@
   },
   "grassrootsScore": 65,
   "grassrootsGrade": "B-",
+  "expenditures": {
+    "totalSpent": 304218.42,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 121875.62
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 61938.5
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 53015.75
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 52286.5
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 9464.54
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 5637.51
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Red Horse Strategies",
+        "amount": 157733.52,
+        "category": "Consulting"
+      },
+      {
+        "name": "Impact Research, Inc.",
+        "amount": 27600,
+        "category": "Advertising / Media"
+      },
+      {
+        "name": "FriedCo Media",
+        "amount": 25000,
+        "category": "Advertising / Media"
+      },
+      {
+        "name": "Haley, Molly",
+        "amount": 24500,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Mooney, Nieve",
+        "amount": 24500,
+        "category": "Staff / Payroll"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 67% of this campaign's total resources.",
     "Private fundraising looks relatively diffuse: the top ten donors account for only 13% of reported private contributions.",

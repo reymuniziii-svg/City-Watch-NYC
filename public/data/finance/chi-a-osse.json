@@ -4,7 +4,7 @@
   "candidateName": "Osse, Chi",
   "candidateId": "2371",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.870Z",
+  "updatedAt": "2026-04-04T17:37:56.309Z",
   "contributorCount": 1401,
   "totalRaised": 74298.96,
   "publicFunds": 48134,
@@ -12776,6 +12776,62 @@
   },
   "grassrootsScore": 83,
   "grassrootsGrade": "A-",
+  "expenditures": {
+    "totalSpent": 92774.28,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 69175.32
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 12766.35
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 4522.14
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 2666.51
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 2575
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 1068.96
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Spring, Paul",
+        "amount": 38300,
+        "category": "Consulting"
+      },
+      {
+        "name": "Fox, Elijah",
+        "amount": 11800,
+        "category": "Consulting"
+      },
+      {
+        "name": "Graubard, Howard",
+        "amount": 7500,
+        "category": "Consulting"
+      },
+      {
+        "name": "Gilroy, Thomas",
+        "amount": 3300,
+        "category": "Consulting"
+      },
+      {
+        "name": "North Shore Strategies",
+        "amount": 3250,
+        "category": "Consulting"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds account for about 39% of the campaign's total resources.",
     "Small-dollar donors contributed 75% of reported private fundraising across 1358 contributions.",

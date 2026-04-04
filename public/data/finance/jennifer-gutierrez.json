@@ -4,7 +4,7 @@
   "candidateName": "Gutierrez, Jennifer",
   "candidateId": "2357",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.804Z",
+  "updatedAt": "2026-04-04T17:37:56.205Z",
   "contributorCount": 103,
   "totalRaised": 17981,
   "publicFunds": null,
@@ -1088,6 +1088,58 @@
   },
   "grassrootsScore": 55,
   "grassrootsGrade": "C",
+  "expenditures": {
+    "totalSpent": 18176.7,
+    "byCategory": [
+      {
+        "label": "Legal / Compliance",
+        "amount": 10374.21
+      },
+      {
+        "label": "Consulting",
+        "amount": 5000
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 1050
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 990.64
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 761.85
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Howard Graubard",
+        "amount": 7000,
+        "category": "Legal / Compliance"
+      },
+      {
+        "name": "Get Lucid Strategies LLC",
+        "amount": 5000,
+        "category": "Consulting"
+      },
+      {
+        "name": "Trade Media Partners",
+        "amount": 2389.81,
+        "category": "Legal / Compliance"
+      },
+      {
+        "name": "Kataria, Varun",
+        "amount": 1050,
+        "category": "Events / Fundraising"
+      },
+      {
+        "name": "Jennifer Gutierrez 2023",
+        "amount": 761.85,
+        "category": "Mail / Print"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Private fundraising is relatively concentrated: the top ten donors account for 49% of reported private contributions.",
     "5 donors gave at the legal maximum, totaling $5,250.",

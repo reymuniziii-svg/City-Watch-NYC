@@ -4,7 +4,7 @@
   "candidateName": "Abreu, Shaun",
   "candidateId": "2243",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:23.777Z",
+  "updatedAt": "2026-04-04T17:37:55.003Z",
   "contributorCount": 644,
   "totalRaised": 114099.93,
   "publicFunds": 336498,
@@ -5963,6 +5963,62 @@
   },
   "grassrootsScore": 72,
   "grassrootsGrade": "B",
+  "expenditures": {
+    "totalSpent": 447404.41,
+    "byCategory": [
+      {
+        "label": "Mail / Print",
+        "amount": 253805.61
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 75606.68
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 68273.12
+      },
+      {
+        "label": "Consulting",
+        "amount": 40478.8
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 5220.39
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 4019.81
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "Red Horse Strategies",
+        "amount": 274328.34,
+        "category": "Mail / Print"
+      },
+      {
+        "name": "Tavarez, Taslim",
+        "amount": 31500,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Boldiston, Ian",
+        "amount": 25999.34,
+        "category": "Staff / Payroll"
+      },
+      {
+        "name": "Scale to Win",
+        "amount": 10176.65,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Mailchimp",
+        "amount": 5754.8,
+        "category": "Operations / Other"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds make up 75% of this campaign's total resources.",
     "Private fundraising looks relatively diffuse: the top ten donors account for only 10% of reported private contributions.",

@@ -4,7 +4,7 @@
   "candidateName": "Paladino, Vickie",
   "candidateId": "2384",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:30:24.255Z",
+  "updatedAt": "2026-04-04T17:37:55.523Z",
   "contributorCount": 571,
   "totalRaised": 154386.44,
   "publicFunds": 192534,
@@ -5304,6 +5304,66 @@
   },
   "grassrootsScore": 66,
   "grassrootsGrade": "B-",
+  "expenditures": {
+    "totalSpent": 347615.16,
+    "byCategory": [
+      {
+        "label": "Consulting",
+        "amount": 123854.93
+      },
+      {
+        "label": "Operations / Other",
+        "amount": 90473.96
+      },
+      {
+        "label": "Advertising / Media",
+        "amount": 72380.64
+      },
+      {
+        "label": "Mail / Print",
+        "amount": 26214.55
+      },
+      {
+        "label": "Events / Fundraising",
+        "amount": 17009.77
+      },
+      {
+        "label": "Staff / Payroll",
+        "amount": 13011.88
+      },
+      {
+        "label": "Legal / Compliance",
+        "amount": 4669.43
+      }
+    ],
+    "topPayees": [
+      {
+        "name": "SpearTip LLC",
+        "amount": 45500,
+        "category": "Consulting"
+      },
+      {
+        "name": "Schneps Media LLC",
+        "amount": 35460,
+        "category": "Advertising / Media"
+      },
+      {
+        "name": "Paladino Printing",
+        "amount": 20556.45,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Vistaprint",
+        "amount": 15758.02,
+        "category": "Operations / Other"
+      },
+      {
+        "name": "Bronco Consulting",
+        "amount": 15450,
+        "category": "Consulting"
+      }
+    ]
+  },
   "explanatoryNotes": [
     "Public matching funds account for about 56% of the campaign's total resources.",
     "Private fundraising looks relatively diffuse: the top ten donors account for only 8% of reported private contributions.",

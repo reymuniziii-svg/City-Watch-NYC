@@ -105,6 +105,11 @@ export interface CampaignFinance {
   grassrootsScore: number | null;
   grassrootsGrade: string | null;
   explanatoryNotes: string[];
+  expenditures: {
+    totalSpent: number;
+    byCategory: { label: string; amount: number }[];
+    topPayees: { name: string; amount: number; category: string }[];
+  } | null;
 }
 
 export interface FinanceIndexRow {
