@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { DollarSign, TrendingUp, Users, ChevronUp, ChevronDown, ChevronsUpDown, Filter, AlertCircle, Loader2 } from 'lucide-react';
 import { motion } from 'motion/react';
 import { FinanceIndexRow } from '../types';
@@ -18,7 +18,7 @@ function fmtPct(value: number | null): string {
 type SortKey = keyof Pick<
   FinanceIndexRow,
   'districtNumber' | 'totalRaised' | 'publicFundsShare' | 'smallDollarShare' | 'topTenDonorShare' | 'avgContribution' | 'contributorCount'
->;
+> | 'realEstatePct';
 
 type SortDir = 'asc' | 'desc';
 
@@ -27,10 +27,16 @@ interface SortState {
   dir: SortDir;
 }
 
-function avg(rows: FinanceIndexRow[], key: SortKey): number | null {
+function avg(rows: FinanceIndexRow[], key: keyof FinanceIndexRow): number | null {
   const vals = rows.map(r => r[key] as number | null).filter((v): v is number => v !== null);
   if (!vals.length) return null;
   return vals.reduce((a, b) => a + b, 0) / vals.length;
+}
+
+function realEstatePct(row: FinanceIndexRow): number | null {
+  const re = row.topIndustries.find(i => i.label.toLowerCase().includes('real estate'));
+  if (!re || !row.totalRaised) return null;
+  return re.amount / row.totalRaised;
 }
 
 interface SortHeaderProps {
@@ -83,12 +89,6 @@ function partyBadge(party: string) {
   );
 }
 
-function realEstatePct(row: FinanceIndexRow): number | null {
-  const re = row.topIndustries.find(i => i.label.toLowerCase().includes('real estate'));
-  if (!re || !row.totalRaised) return null;
-  return re.amount / row.totalRaised;
-}
-
 const BOROUGHS = ['All Boroughs', 'Manhattan', 'Bronx', 'Brooklyn', 'Queens', 'Staten Island'];
 const PARTIES = ['All Parties', 'Democrat', 'Republican', 'Working Families', 'Independent'];
 
@@ -99,6 +99,7 @@ export default function MoneyPage() {
   const [borough, setBorough] = useState('All Boroughs');
   const [party, setParty] = useState('All Parties');
   const [realEstateOnly, setRealEstateOnly] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchFinanceIndex().then(data => {
@@ -125,8 +126,15 @@ export default function MoneyPage() {
 
   const sorted = useMemo(() => {
     return [...filtered].sort((a, b) => {
-      const av = a[sort.key] as number | null;
-      const bv = b[sort.key] as number | null;
+      let av: number | null;
+      let bv: number | null;
+      if (sort.key === 'realEstatePct') {
+        av = realEstatePct(a);
+        bv = realEstatePct(b);
+      } else {
+        av = a[sort.key] as number | null;
+        bv = b[sort.key] as number | null;
+      }
       if (av === null && bv === null) return 0;
       if (av === null) return 1;
       if (bv === null) return -1;
@@ -227,7 +235,7 @@ export default function MoneyPage() {
 
       {/* Table */}
       <div className="bg-white border-editorial overflow-x-auto">
-        <table className="w-full min-w-[800px]">
+        <table className="w-full min-w-[960px]">
           <thead className="border-b-editorial bg-slate-50">
             <tr>
               <SortHeader label="District" col="districtNumber" sort={sort} onSort={handleSort} />
@@ -236,6 +244,7 @@ export default function MoneyPage() {
               <SortHeader label="Public Funds %" col="publicFundsShare" sort={sort} onSort={handleSort} tooltip="Public matching funds as share of total campaign resources" />
               <SortHeader label="Small-Dollar %" col="smallDollarShare" sort={sort} onSort={handleSort} tooltip="Contributions under $250 as share of private funds" />
               <SortHeader label="Top-10 Conc." col="topTenDonorShare" sort={sort} onSort={handleSort} tooltip="Share of private funds from the top 10 donors — higher = more concentrated" />
+              <SortHeader label="Real Estate %" col="realEstatePct" sort={sort} onSort={handleSort} tooltip="Real estate industry contributions as share of private fundraising" />
               <SortHeader label="Donors" col="contributorCount" sort={sort} onSort={handleSort} tooltip="Number of unique contributors" />
               <SortHeader label="Avg. Gift" col="avgContribution" sort={sort} onSort={handleSort} tooltip="Average contribution per donor" />
               <th className="px-4 py-3 text-left text-[10px] font-bold uppercase tracking-widest text-slate-500">Flags</th>
@@ -244,20 +253,24 @@ export default function MoneyPage() {
           <tbody>
             {sorted.length === 0 && (
               <tr>
-                <td colSpan={9} className="px-4 py-12 text-center text-slate-500">
+                <td colSpan={10} className="px-4 py-12 text-center text-slate-500">
                   No members match the current filters.
                 </td>
               </tr>
             )}
             {sorted.map((row, i) => {
               const rePct = realEstatePct(row);
+              const rowBg = row.hasRealEstateFlag
+                ? 'bg-amber-50 hover:bg-amber-100'
+                : 'hover:bg-slate-50';
               return (
                 <motion.tr
                   key={row.slug}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: i * 0.015 }}
-                  className="border-b border-slate-100 hover:bg-slate-50 transition-colors group"
+                  onClick={() => navigate(`/members/${row.slug}`)}
+                  className={`border-b border-slate-100 transition-colors cursor-pointer group ${rowBg}`}
                 >
                   <td className="px-4 py-3">
                     <span className="font-editorial font-bold text-lg text-black">{row.districtNumber}</span>
@@ -265,9 +278,10 @@ export default function MoneyPage() {
                   <td className="px-4 py-3">
                     <Link
                       to={`/members/${row.slug}`}
-                      className="group-hover:text-black transition-colors"
+                      onClick={e => e.stopPropagation()}
+                      className="block"
                     >
-                      <p className="font-semibold text-black text-sm leading-tight">{row.fullName}</p>
+                      <p className="font-semibold text-black text-sm leading-tight group-hover:underline">{row.fullName}</p>
                       <div className="flex items-center gap-2 mt-1">
                         {partyBadge(row.party)}
                         <span className="text-xs text-slate-400">{row.borough}</span>
@@ -295,6 +309,12 @@ export default function MoneyPage() {
                       }
                     />
                   </td>
+                  <td className="px-4 py-3">
+                    <PctBar
+                      value={rePct}
+                      color={row.hasRealEstateFlag ? 'bg-amber-500' : 'bg-slate-300'}
+                    />
+                  </td>
                   <td className="px-4 py-3 text-sm text-slate-700 font-medium">
                     {row.contributorCount.toLocaleString()}
                   </td>
@@ -304,7 +324,7 @@ export default function MoneyPage() {
                   <td className="px-4 py-3">
                     <div className="flex flex-wrap gap-1">
                       {row.hasRealEstateFlag && (
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-bold uppercase tracking-widest">
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-amber-200 text-amber-900 text-[10px] font-bold uppercase tracking-widest">
                           <AlertCircle className="w-3 h-3" />
                           RE
                         </span>
@@ -330,8 +350,8 @@ export default function MoneyPage() {
         <p><strong className="text-black">Public Funds %</strong> — The NYC matching funds program amplifies small donations. A high percentage signals a grassroots fundraising base.</p>
         <p><strong className="text-black">Small-Dollar %</strong> — Donations under $250 as a share of private fundraising. Higher values indicate broader community support.</p>
         <p><strong className="text-black">Top-10 Concentration</strong> — The share of private money controlled by the top 10 donors. Values above 40% are flagged as concentrated.</p>
-        <p><strong className="text-black">RE Flag</strong> — Real Estate industry contributions exceed 10% of private fundraising, a common threshold for potential land-use conflicts of interest.</p>
-        <p className="text-xs text-slate-400 pt-2">Source: NYC Campaign Finance Board public data export. 2025 election cycle.</p>
+        <p><strong className="text-black">Real Estate %</strong> — Real estate industry contributions as a share of private fundraising. Rows highlighted in amber exceed 10%, the common threshold for potential land-use conflicts of interest.</p>
+        <p className="text-xs text-slate-400 pt-2">Source: NYC Campaign Finance Board public data export. 2025 election cycle. Click any row to view the member's full finance profile.</p>
       </div>
     </div>
   );
