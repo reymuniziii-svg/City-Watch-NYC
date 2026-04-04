@@ -356,7 +356,12 @@ export default function FinanceView({ data }: { data: CampaignFinance | null }) 
           {selectedIndustry && (
             <div className="mt-6 border-t border-slate-100 pt-4">
               <div className="flex items-center justify-between mb-3">
-                <p className="text-xs font-bold text-black uppercase tracking-widest">{selectedIndustry} Donors</p>
+                <p className="text-xs font-bold text-black uppercase tracking-widest">
+                  {selectedIndustry} Donors
+                  <span className="ml-2 font-normal text-slate-400 normal-case tracking-normal">
+                    ({industryDonors.length} total)
+                  </span>
+                </p>
                 <button
                   onClick={() => setSelectedIndustry(null)}
                   className="text-xs text-slate-400 hover:text-black transition-colors"

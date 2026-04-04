@@ -371,8 +371,7 @@ export async function buildFinance(): Promise<Map<string, MemberFinanceProfile>>
     }
     for (const label of Object.keys(donorsByIndustry)) {
       donorsByIndustry[label] = donorsByIndustry[label]
-        .sort((a, b) => b.amount - a.amount)
-        .slice(0, 20);
+        .sort((a, b) => b.amount - a.amount);
     }
 
     const totalRaised = parseAmount(candidate.net_cntns);

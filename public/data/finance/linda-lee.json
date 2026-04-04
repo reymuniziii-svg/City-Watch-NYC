@@ -4,7 +4,7 @@
   "candidateName": "Lee, Linda",
   "candidateId": "2453",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:24:30.964Z",
+  "updatedAt": "2026-04-04T17:30:24.409Z",
   "contributorCount": 312,
   "totalRaised": 45546,
   "publicFunds": 198432,
@@ -321,6 +321,1932 @@
         "amount": 250,
         "donorType": "IND",
         "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Lee, Sharon",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Ichor Strategies"
+      },
+      {
+        "name": "Lee, Victoria",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Executive Director",
+        "employer": "Welcome to Chinatown Inc."
+      },
+      {
+        "name": "Lemma, Anthony",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Bayville",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Lin, Yu",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "manager",
+        "employer": "D Sushi Inc"
+      },
+      {
+        "name": "NYC Local 246",
+        "amount": 250,
+        "donorType": "EMPO",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "UFOA 527",
+        "amount": 250,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Zimmerman, Robert",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Great Neck",
+        "state": "NY",
+        "occupation": "Marketing and Communications",
+        "employer": "ZE Creative Communications"
+      },
+      {
+        "name": "Chi, Hsuanyu",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Ghosh, Deepmalya",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Bellerose",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Hellenbrecht, Richard",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Bellerose",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Kim, Seong Mook",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Self",
+        "employer": "Self"
+      },
+      {
+        "name": "Lee, Geom",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Manager",
+        "employer": "Hahm Ji Bach"
+      },
+      {
+        "name": "Lee, Yoonjoo",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "business",
+        "employer": "self"
+      },
+      {
+        "name": "Martin, Marissa",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Zheng, Feng Sheng",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Queens",
+        "state": "NY",
+        "occupation": "retired",
+        "employer": "retired"
+      },
+      {
+        "name": "Zheng, Quan Cai",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "retired",
+        "employer": "retired"
+      },
+      {
+        "name": "Harris, Drexel",
+        "amount": 187.5,
+        "donorType": "IND",
+        "city": "Hollis",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Harris, Robin",
+        "amount": 187.5,
+        "donorType": "IND",
+        "city": "Hollis",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "2025, Nantasha",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Council Member",
+        "employer": "NYC City Council"
+      },
+      {
+        "name": "Ahn, Helen",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Social service",
+        "employer": "KCS"
+      },
+      {
+        "name": "Chan, Irene",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "Analyst",
+        "employer": "FINRA"
+      },
+      {
+        "name": "Cho, Won Hoon",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "President",
+        "employer": "Korean American Senior Society"
+      },
+      {
+        "name": "Cho, Young Mi",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Chowdhury, Tanbir",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Chung, Grace",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Homemaker",
+        "employer": ""
+      },
+      {
+        "name": "Class, Facia",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Lemma Strategies"
+      },
+      {
+        "name": "Dromm, Daniel",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Margaretville",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Fischer, Jesse",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Software Engineer",
+        "employer": "Accenture"
+      },
+      {
+        "name": "Florez, Alex",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Jackson Heights",
+        "state": "NY",
+        "occupation": "Filmmaker",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Fu, Yueqing",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Glendale",
+        "state": "NY",
+        "occupation": "Coordinator",
+        "employer": "Friends of the High Line"
+      },
+      {
+        "name": "Goldberg, Ayelet",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Social worker",
+        "employer": "Meadowbrook Care Center"
+      },
+      {
+        "name": "Goldberg, Tova",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Goldsmith, Stanley",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Floral Park",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Gonzalez, Teresa",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Lobbyist",
+        "employer": "Bolton-St. Johns"
+      },
+      {
+        "name": "Guillergan, Eve",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Sunnyside",
+        "state": "NY",
+        "occupation": "Director",
+        "employer": "NYC Bar Association"
+      },
+      {
+        "name": "Huang, Tianzhou",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "retired",
+        "employer": "retired"
+      },
+      {
+        "name": "Hwang, Jin Wan",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Little Neck",
+        "state": "NY",
+        "occupation": "Dry Cleaner",
+        "employer": "Sunlim Corp"
+      },
+      {
+        "name": "Hwang, Seok Jin",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Little Neck",
+        "state": "NY",
+        "occupation": "Dry Cleaner",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Kang, Yunjeoung",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Forest Hills",
+        "state": "NY",
+        "occupation": "Homemaker",
+        "employer": ""
+      },
+      {
+        "name": "Kim, choongsik",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Kim, Eunhye",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Executive Director",
+        "employer": "The Korean American Senior Cit"
+      },
+      {
+        "name": "Kim, Jihong",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "CEO",
+        "employer": "Coqueta of NY Corp"
+      },
+      {
+        "name": "kim, kihoon",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "kim, kyunghee",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Krishnan, Shekar",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Jackson Heights",
+        "state": "NY",
+        "occupation": "NYC Council Member",
+        "employer": "New York City Council"
+      },
+      {
+        "name": "Kumar, Nikhil",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Artist / Advisor",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Lee, Jongkwon",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Astoria",
+        "state": "NY",
+        "occupation": "Accountant",
+        "employer": "NCheng LLP"
+      },
+      {
+        "name": "Lee, Kay Soon",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Lee, Lois",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Douglaston",
+        "state": "NY",
+        "occupation": "retired",
+        "employer": "retired"
+      },
+      {
+        "name": "Lee, Min Hee",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Little Neck",
+        "state": "NY",
+        "occupation": "Codinater",
+        "employer": "KCS"
+      },
+      {
+        "name": "Lee, Richard",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Lee, Seung Seok",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Little Neck",
+        "state": "NY",
+        "occupation": "Building Manager",
+        "employer": "KASCS"
+      },
+      {
+        "name": "Levijoki, Clint",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Programmer",
+        "employer": "Epic Games"
+      },
+      {
+        "name": "Levijoki, Julia",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Publisher",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "lim, kyung sook",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Douglaston",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Louis, Nelson",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Narcisse, Mercedes",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Council Member",
+        "employer": "Nyc"
+      },
+      {
+        "name": "Pahk, Elizabeth",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Parhar, Satnam",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Cedarhurst",
+        "state": "NY",
+        "occupation": "Contractor",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Park, Bok",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Douglaston",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Park, Daniel",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Douglaston",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Park, Jeannie",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Park, Jennifer",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Executive coach",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "pelman, jonathan",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Far Rockaway",
+        "state": "NY",
+        "occupation": "lnha",
+        "employer": "mcc"
+      },
+      {
+        "name": "Rahman, Shahriar",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Woodside",
+        "state": "NY",
+        "occupation": "Business Management",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Razvi, Moe",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Social worker",
+        "employer": "Copo"
+      },
+      {
+        "name": "Razvi, Narjis",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Homemaker",
+        "employer": ""
+      },
+      {
+        "name": "Restler, Lincoln",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Council Member",
+        "employer": "New York City Council"
+      },
+      {
+        "name": "Sweeney, Will",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Jackson Heights",
+        "state": "NY",
+        "occupation": "Filmmaker",
+        "employer": "BOB Films"
+      },
+      {
+        "name": "Tinna, Avtar",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Dentist",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Tsiang, Grace",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Risk Manager",
+        "employer": "Citi"
+      },
+      {
+        "name": "ung, sandra",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Councilmember",
+        "employer": "New York City"
+      },
+      {
+        "name": "Wong, Allen",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "IT",
+        "employer": "NYC DOT"
+      },
+      {
+        "name": "Yang, Suejin",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Homemaker",
+        "employer": ""
+      },
+      {
+        "name": "Yang, Trip",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Self-Employed",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "yoon, sang chul",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Douglaston",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Yoon, Tae Kyung",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "Preisdent",
+        "employer": "Electronic Land"
+      },
+      {
+        "name": "Zheng, Shi",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "retired",
+        "employer": "retired"
+      },
+      {
+        "name": "Lallman, Kapadia",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Oakland garden",
+        "state": "NY",
+        "occupation": "Chef",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Marisi, Paula",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Elmhurst",
+        "state": "NY",
+        "occupation": "Director",
+        "employer": "FIS"
+      },
+      {
+        "name": "Moran, Teresa",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "Writer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Sturm, Sol",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Fresh Meadows",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Hart, Alexander",
+        "amount": 125,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Chief of Staff",
+        "employer": "NYC Council"
+      },
+      {
+        "name": "Park, Charles",
+        "amount": 125,
+        "donorType": "IND",
+        "city": "Jackson Heights",
+        "state": "NY",
+        "occupation": "Aide",
+        "employer": "New York City Council"
+      },
+      {
+        "name": "Chan, K.P.",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Choi, Mak Lae",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "housemaker",
+        "employer": "housemaker"
+      },
+      {
+        "name": "Choi, Sang Ill",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "unemployed",
+        "employer": "unemployed"
+      },
+      {
+        "name": "Dhamrait, Balbir",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Uber driver",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "DiLeonardo, Doreen",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Bellerose",
+        "state": "NY",
+        "occupation": "Development",
+        "employer": "Visions Services for the Blind"
+      },
+      {
+        "name": "Euler, Henry",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Foronda, Ceres",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Bayside Hills",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Gelbard, Jerry",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Grech, Thomas",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Malverne",
+        "state": "NY",
+        "occupation": "President & CEO",
+        "employer": "Queens Chamber of Commerce"
+      },
+      {
+        "name": "Hawkins, Laura Jean",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Sunnyside",
+        "state": "NY",
+        "occupation": "Lobbyist",
+        "employer": "Hawkins Consulting, Inc."
+      },
+      {
+        "name": "Israel, Lee",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Kang, Hye Kyoung",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Kim, Jonglim",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "manager",
+        "employer": "self"
+      },
+      {
+        "name": "Kim, Lina",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "retired",
+        "employer": "retired"
+      },
+      {
+        "name": "Kim, Sunghoon",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "OAKLAND GARDENS",
+        "state": "NY",
+        "occupation": "Insurance",
+        "employer": "Solomon agency"
+      },
+      {
+        "name": "Kim, Young ja",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "East meadow",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Lastres, Craig",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Whitestone",
+        "state": "NY",
+        "occupation": "COO",
+        "employer": "Commonpoint"
+      },
+      {
+        "name": "Lee, Chloe",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "housewife",
+        "employer": "housewife"
+      },
+      {
+        "name": "Lee, Kevin",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "unemployed",
+        "employer": "unemployed"
+      },
+      {
+        "name": "Lee, Kyu Chul",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "unemployed",
+        "employer": "unemployed"
+      },
+      {
+        "name": "Lee, Shirley",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "College consultant",
+        "employer": "self"
+      },
+      {
+        "name": "Lee, Young sook",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Lin, Li Feng",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "retired",
+        "employer": "retired"
+      },
+      {
+        "name": "Moon, Youngwun",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "GREAT NCK PLZ",
+        "state": "NY",
+        "occupation": "President",
+        "employer": "AK Shipping Inc."
+      },
+      {
+        "name": "Mulligan, Robert",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "WHITESTONE",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Nepali, Phurbu",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "accountant",
+        "employer": "A & E Networks"
+      },
+      {
+        "name": "O’Keeffe, Michael",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Bellerose",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Oh, Paul",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Financial professional",
+        "employer": "Self"
+      },
+      {
+        "name": "Pan, Qingting",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "worker",
+        "employer": "Infinity A Fashion Inc"
+      },
+      {
+        "name": "Park, David",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Rego Park",
+        "state": "NY",
+        "occupation": "Acupuncturist",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Park, Gloria",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Accounting Firm",
+        "employer": "PwC"
+      },
+      {
+        "name": "Park, Ileen",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Jackson Heights",
+        "state": "NY",
+        "occupation": "RN",
+        "employer": "Memorial Sloan Kettering Cance"
+      },
+      {
+        "name": "Park, Lisa",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "office assistant",
+        "employer": "Edward Kim"
+      },
+      {
+        "name": "park, Young kyu",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Redlich, Steve",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Floral Park",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Schwartzman, Martin",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Floral Park",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Schweinsburg, Michael",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "SHON, OKA J",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Bellerose",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Shon, Sung",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Bellerose",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Sim, Amy",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "housewife",
+        "employer": "housewife"
+      },
+      {
+        "name": "Singh, Gurvinder",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Glen Oaks",
+        "state": "NY",
+        "occupation": "Sergeant",
+        "employer": "NYPD"
+      },
+      {
+        "name": "Terry, Ann",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Bellerose",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Weprin, Mark",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Clean Energy Development",
+        "employer": "Invenergy"
+      },
+      {
+        "name": "You, Jin",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Kew Gardens Hills",
+        "state": "NY",
+        "occupation": "worker",
+        "employer": "Yoshi Studio"
+      },
+      {
+        "name": "Ellman, Danielle",
+        "amount": 75,
+        "donorType": "IND",
+        "city": "Hollis",
+        "state": "NY",
+        "occupation": "Social Services",
+        "employer": "Commonpoint"
+      },
+      {
+        "name": "Agin, Susan",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Executive Director",
+        "employer": "Variety Boy and Girls Club"
+      },
+      {
+        "name": "Anderson, Alex",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Lobbyist",
+        "employer": "Bolton St Johns"
+      },
+      {
+        "name": "Bonilla, Grace",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Bellerose",
+        "state": "NY",
+        "occupation": "President & CEO",
+        "employer": "United Way of New York City"
+      },
+      {
+        "name": "Caifano, Anthony",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "retired",
+        "employer": "retired"
+      },
+      {
+        "name": "Canter, Edwin",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Fresh Meadows",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Clendenin, Michael",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Queens Village",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Frye, Laura",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Jackson Heights",
+        "state": "NY",
+        "occupation": "Scientist",
+        "employer": "FHI 360"
+      },
+      {
+        "name": "Grodenchik, Barry",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Queens Village",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Hong, Jimmy",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Douglaton",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Kaur, Gurminder",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Floral Park",
+        "state": "NY",
+        "occupation": "Homemaker",
+        "employer": ""
+      },
+      {
+        "name": "Kim, Eun-Kyung",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Whitestone",
+        "state": "NY",
+        "occupation": "staff",
+        "employer": "YWCA of Queens"
+      },
+      {
+        "name": "Kim, Jean",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Kim, Jeanhee",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Kim, Katherine",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "Social worker",
+        "employer": "Nyc"
+      },
+      {
+        "name": "kim, Myeong",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Insurance  Broker",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Leavy, Brendan",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "VP of Development",
+        "employer": "Queens Chamber of Commerce"
+      },
+      {
+        "name": "Lee, Bo Ra",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Little Neck",
+        "state": "NY",
+        "occupation": "Chief of Staff",
+        "employer": "Fifth Avenue Committee"
+      },
+      {
+        "name": "Lee, Kathleen Wah",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Forest Hills",
+        "state": "NY",
+        "occupation": "Special Asst to Managing Attor",
+        "employer": "NYC Dept. Of Social Services"
+      },
+      {
+        "name": "Martin, Howie",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Suffern",
+        "state": "NY",
+        "occupation": "CEO",
+        "employer": "Bronx House"
+      },
+      {
+        "name": "Ng, Henry",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Architect",
+        "employer": "Ideas of Order Architecture PL"
+      },
+      {
+        "name": "Otero, Michael",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Bellerose",
+        "state": "NY",
+        "occupation": "National Circulation Manager",
+        "employer": "The Financial Times"
+      },
+      {
+        "name": "Park, shinwha",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Douglaston",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Ramgarib, Ram",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Shivprasad, Amit",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Security Infrastructure",
+        "employer": "Allied Universal Services"
+      },
+      {
+        "name": "Skutch, JoAnn",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Bayside Hills",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Slade, Catherine",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Vazquez, Amanda",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "North Bellmore",
+        "state": "NY",
+        "occupation": "Chief of Staff",
+        "employer": "NYC Council"
+      },
+      {
+        "name": "Vladimir, Judy",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Great Neck",
+        "state": "NY",
+        "occupation": "Fundraiser",
+        "employer": "Commonpoint"
+      },
+      {
+        "name": "Yu, Mon Yuck",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Asa, Sinan",
+        "amount": 35,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "Computer Programmer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Asa, Kerem",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "EVR",
+        "employer": "Renewal by Andersen"
+      },
+      {
+        "name": "Beato, Carlos",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Elmhurst",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Brandsdorfer, Ian",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Queens Village",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Cho, Heayung",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Homemaker",
+        "employer": ""
+      },
+      {
+        "name": "cho, michelle",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Floral park",
+        "state": "NY",
+        "occupation": "President",
+        "employer": "Evergreen cosmetics"
+      },
+      {
+        "name": "gaska, jonathan",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Queens Village",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Grodenchik, David",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Hollis Hills",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Higgins, Walter",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Hong, Daniel",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Team Lead",
+        "employer": "FlexStaff"
+      },
+      {
+        "name": "Hong, David",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Office Staff",
+        "employer": "Times Square Church"
+      },
+      {
+        "name": "Hong, Grace",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "KIM, Sung",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Utility system maintainer",
+        "employer": "Port authority"
+      },
+      {
+        "name": "Lajszky, Casey",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Financial Analyst",
+        "employer": "NYC Council"
+      },
+      {
+        "name": "Lam, Gerald",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Director of Business Developme",
+        "employer": "IEX Group Inc."
+      },
+      {
+        "name": "Lee, Linda",
+        "amount": 25,
+        "donorType": "CAN",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "Councilmember",
+        "employer": "NYC Council"
+      },
+      {
+        "name": "Morgan, William",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Bellerose",
+        "state": "NY",
+        "occupation": "Social worker",
+        "employer": "South Beach Psychiatric"
+      },
+      {
+        "name": "Otero, Caleb",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Bellerose",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Otero, Lucas",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Bellerose",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Rigalos, Margo",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "Homemaker",
+        "employer": ""
+      },
+      {
+        "name": "Tablizo, John",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Queens Village",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Yam, Henry",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Council Aide",
+        "employer": "New York City Council"
+      },
+      {
+        "name": "Ahn, Joann",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "retired",
+        "employer": "retired"
+      },
+      {
+        "name": "Colby, Steven",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "Floral Park",
+        "state": "NY",
+        "occupation": "Physician",
+        "employer": "Self"
+      },
+      {
+        "name": "Abramowitz, Arnold",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Queens Village",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Abramowitz, Karen",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Queens Village",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Asa, Zeynep",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "District Director",
+        "employer": "City council"
+      },
+      {
+        "name": "Bernstein, Deborah",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Queens Village",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Chang, Haeri",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Homemaker",
+        "employer": ""
+      },
+      {
+        "name": "Chiao, Patty",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "OAKLAND GARDENS",
+        "state": "NY",
+        "occupation": "Senior sourcing specialist",
+        "employer": "Concept 3 LLC"
+      },
+      {
+        "name": "Colby, Carole",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Floral Park",
+        "state": "NY",
+        "occupation": "Homemaker",
+        "employer": ""
+      },
+      {
+        "name": "Ellman, Lila",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Hollis",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Handel, Fanny",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Floral Park",
+        "state": "NY",
+        "occupation": "retired",
+        "employer": "retired"
+      },
+      {
+        "name": "Handel, Sheldon",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Floral Park",
+        "state": "NY",
+        "occupation": "fabric importer",
+        "employer": "self"
+      },
+      {
+        "name": "Heibisch, Helen",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Glen Oaks",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Heibisch, Joseph",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Glen Oaks",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Hong, Sook A",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Karlin, Judith",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Floral Park",
+        "state": "NY",
+        "occupation": "retired",
+        "employer": "retired"
+      },
+      {
+        "name": "Kim, Jee Sun",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Fresh Meadows",
+        "state": "NY",
+        "occupation": "Community Liaison",
+        "employer": "New York City Council"
+      },
+      {
+        "name": "Kim, Jeonga",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Douglaston",
+        "state": "NY",
+        "occupation": "homecare",
+        "employer": "x-treme care"
+      },
+      {
+        "name": "Kim, Jung Sik",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Lee, JONGWAN",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Fresh Meadows",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Levy, Jo-Anne",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Floral Park",
+        "state": "NY",
+        "occupation": "retired",
+        "employer": "retired"
+      },
+      {
+        "name": "Martin, Jean",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Office manager",
+        "employer": "Dr. R Martin"
+      },
+      {
+        "name": "Martin, Renato",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Veterinarian",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Moon, Eungtae",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Sales representative",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Nicolas, Christina",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Secretary",
+        "employer": "St. John’s University"
+      },
+      {
+        "name": "Noh, Mary",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Parker, Rosemary",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bellerose",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Shivprasad, Ragendra",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Shivprasad, Ramrattie",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Weprin, Isaiah",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Trigyn Technologies"
+      },
+      {
+        "name": "Weprin, Ronni",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Holliswood",
+        "state": "NY",
+        "occupation": "Director Special Events",
+        "employer": "Queensborough Community Colleg"
+      },
+      {
+        "name": "Yang, Hi sun",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Yun, Jiye",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Homemaker",
+        "employer": ""
+      },
+      {
+        "name": "Salomon, Rada",
+        "amount": 5,
+        "donorType": "IND",
+        "city": "Glen Oaks",
         "state": "NY",
         "occupation": "Retired",
         "employer": ""

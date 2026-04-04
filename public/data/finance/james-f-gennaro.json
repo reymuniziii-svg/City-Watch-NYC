@@ -4,7 +4,7 @@
   "candidateName": "Gennaro, James",
   "candidateId": "283",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:24:30.986Z",
+  "updatedAt": "2026-04-04T17:30:24.434Z",
   "contributorCount": 137,
   "totalRaised": 86125,
   "publicFunds": null,
@@ -324,6 +324,744 @@
         "state": "NY",
         "occupation": "Agent",
         "employer": "Self-Employed"
+      },
+      {
+        "name": "Nusbaum, Theodore",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Educator",
+        "employer": "NYC DOE"
+      },
+      {
+        "name": "NYC District Council of Carpen",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Police Benevolent Association",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Poulon, Yvette",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "",
+        "employer": "Retired"
+      },
+      {
+        "name": "Sachakov, Solomon",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Briarwood",
+        "state": "NY",
+        "occupation": "Tailor",
+        "employer": "Nordstrom"
+      },
+      {
+        "name": "Sengul, George",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "CEO",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "SenGupta, Sumita",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Shimhayiv, Elizabeth",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Accountant",
+        "employer": "RP Management"
+      },
+      {
+        "name": "Slifkin, Joshua",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Port Washington",
+        "state": "NY",
+        "occupation": "Advertising",
+        "employer": "NBCU"
+      },
+      {
+        "name": "Taxpayers for an Affordable Ne",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Tebele, Charles",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "President",
+        "employer": "Digital Gadgets LLC"
+      },
+      {
+        "name": "Transport Workers Union",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "Washington",
+        "state": "DC",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Transport Workers Union Local",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "United Federation of Teachers",
+        "amount": 1050,
+        "donorType": "EMPO",
+        "city": "BOWLING GREEN",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Yushuvayev, Iosif",
+        "amount": 1050,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Jewelry",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "BENACCHIO, CARLA",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "PRODUCTION MANAGER",
+        "employer": "PANI DOLCI"
+      },
+      {
+        "name": "Caliendo, Gerald",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Architect",
+        "employer": "Gerald J Caliendo ArchitectPC"
+      },
+      {
+        "name": "Davydov, Bella",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Briarwood",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Davydov, Erica",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Briarwood",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Local 94-94A-94B PAC",
+        "amount": 1000,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Mirzakandov, Daniel",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Briarwood",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Orlow, Steven",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "BOYNTON BEACH",
+        "state": "FL",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Orlow, Susan",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "BOYNTON BEACH",
+        "state": "FL",
+        "occupation": "Homemaker",
+        "employer": ""
+      },
+      {
+        "name": "Sachakov, Sergey",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Briarwood",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Sumba, Miguel",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "PRODUCTION MANAGER",
+        "employer": "PANI DOLCI"
+      },
+      {
+        "name": "Suratwala, Hiren",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Briarwood",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Uniformed Sanitationmen's Unio",
+        "amount": 1000,
+        "donorType": "EMPO",
+        "city": "PECK SLIP",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Virdone, Sebastian",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Whitestone",
+        "state": "NY",
+        "occupation": "Super",
+        "employer": "Sebalb inc"
+      },
+      {
+        "name": "Yakubov, Leonid",
+        "amount": 1000,
+        "donorType": "IND",
+        "city": "Roslyn Heights",
+        "state": "NY",
+        "occupation": "Director",
+        "employer": "Sholom daycare"
+      },
+      {
+        "name": "ATU New York COPE Fund",
+        "amount": 800,
+        "donorType": "PCOMP",
+        "city": "Silver Spring",
+        "state": "MD",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Ciampa II, Douglas A",
+        "amount": 750,
+        "donorType": "IND",
+        "city": "Cold Spring Harbor",
+        "state": "NY",
+        "occupation": "Office Manager",
+        "employer": "Ciampa Management"
+      },
+      {
+        "name": "Ciampa, Douglas",
+        "amount": 750,
+        "donorType": "IND",
+        "city": "Cold Spring Harbor",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Ciampa, Joseph",
+        "amount": 750,
+        "donorType": "IND",
+        "city": "Glen Head",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "New York Apartment Association",
+        "amount": 750,
+        "donorType": "PCOMP",
+        "city": "PECK SLIP",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Zogby, Lawrence",
+        "amount": 750,
+        "donorType": "IND",
+        "city": "Franklin Square",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Rashid, Muhammad",
+        "amount": 550,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "32BJ United ADF",
+        "amount": 500,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "allegretti, vincent",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Kings County",
+        "state": "NY",
+        "occupation": "executive",
+        "employer": "Bayside Fuel Oil Depot"
+      },
+      {
+        "name": "Kharieh, Faraj Tommy",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Partner",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "New York City Local 246",
+        "amount": 500,
+        "donorType": "EMPO",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "rashid, muhammad",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Uniformed Fire Alarm Dispatche",
+        "amount": 500,
+        "donorType": "EMPO",
+        "city": "Beechhurst",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Uniformed FireFighters Assn. F",
+        "amount": 500,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Virdone, Vincenza",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Floral Park",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Argyriou, Hercles",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Brooklyn Heights",
+        "state": "NY",
+        "occupation": "Vice President",
+        "employer": "Mega Contracting LLC"
+      },
+      {
+        "name": "Chung, Edward",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": "Retired"
+      },
+      {
+        "name": "CWA District One PAC",
+        "amount": 250,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "D & M P.A.C.",
+        "amount": 250,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Elka, Craig",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "BAYSIDE",
+        "state": "NY",
+        "occupation": "Construction",
+        "employer": "Briarwood Organization"
+      },
+      {
+        "name": "Falcone, Daniel",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New Fairfield",
+        "state": "CT",
+        "occupation": "Wholesale Manager",
+        "employer": "Approved Oil"
+      },
+      {
+        "name": "Fradenburg, Scott",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Floral Park",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Jain, Pramod",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Chief Executive Officer",
+        "employer": "Innovative Operations Solution"
+      },
+      {
+        "name": "Kasirer, Gloria",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Glendale",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Kokinakis, Emanuel N",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Long Island City",
+        "state": "NY",
+        "occupation": "Builder",
+        "employer": "Mega Contracting Group LLC"
+      },
+      {
+        "name": "Kumar, Ravindra",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Lacertosa, Rocco",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Bayside",
+        "state": "NY",
+        "occupation": "CEO",
+        "employer": "New York State Energy Coalitio"
+      },
+      {
+        "name": "Levy, Steven",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New Rochelle",
+        "state": "NY",
+        "occupation": "Managing Director",
+        "employer": "Sprague"
+      },
+      {
+        "name": "Miller, Zachary",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Poulon, George",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "",
+        "employer": "Mega Contracting LLC"
+      },
+      {
+        "name": "Sherman, Ronald",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Tenafly",
+        "state": "NJ",
+        "occupation": "Executive",
+        "employer": "Midtown Operating Corp."
+      },
+      {
+        "name": "Sosa, Danna",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Lobbyist",
+        "employer": "CMW strategies"
+      },
+      {
+        "name": "Goldberg, Ayelet",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Social work",
+        "employer": "Meadowbrook Care Center"
+      },
+      {
+        "name": "Kaeser, Katrina",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Sunnyside",
+        "state": "NY",
+        "occupation": "HR Director",
+        "employer": "Ethical Culture Fieldston Scho"
+      },
+      {
+        "name": "MACALUSO, MICHAEL",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "WESTON",
+        "state": "CT",
+        "occupation": "ARCHITECT",
+        "employer": "ACAM DEVELOPMENT"
+      },
+      {
+        "name": "Norwalk, Stan F",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Kew Gardens Hills",
+        "state": "NY",
+        "occupation": "Landlord",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "pelman, jonathan",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Far Rockaway",
+        "state": "NY",
+        "occupation": "lnha",
+        "employer": "mcc"
+      },
+      {
+        "name": "Sherman, Alan",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Gennaro, James",
+        "amount": 175,
+        "donorType": "CAN",
+        "city": "Jamaica Estates",
+        "state": "NY",
+        "occupation": "Council Member",
+        "employer": "NYC Council"
+      },
+      {
+        "name": "gorichev, alexei",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "SVP",
+        "employer": "We Lend LLC"
+      },
+      {
+        "name": "Kassel, Richard",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "AJW"
+      },
+      {
+        "name": "Shimon, Daniel",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Development",
+        "employer": "ASN management"
+      },
+      {
+        "name": "Ocana, Natalia",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Homemaker",
+        "employer": ""
+      },
+      {
+        "name": "Izgelov, Isak",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Construction Manager",
+        "employer": "We Lend"
+      },
+      {
+        "name": "Phaff Gennaro, Wendy",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Jamaica Estates",
+        "state": "NY",
+        "occupation": "Development Director",
+        "employer": "QCP"
+      },
+      {
+        "name": "Simon, Ilyaich",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Hewlett",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Tramontano, Frank",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "CPA",
+        "employer": "Self-employed"
+      },
+      {
+        "name": "Farah, Samia",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Rego Park",
+        "state": "NY",
+        "occupation": "Director",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Felsenfeld, Keith",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Fresh Meadows",
+        "state": "NY",
+        "occupation": "Chief of Staff",
+        "employer": "NYC Council"
+      },
+      {
+        "name": "Gennaro, Wendy",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Jamaica Estates",
+        "state": "NY",
+        "occupation": "Development Director",
+        "employer": "QCP"
+      },
+      {
+        "name": "weinman, harold",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Oakland Gardens",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "NARDIELLO, MICHAEL",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Jackson Heights",
+        "state": "NY",
+        "occupation": "SUPERVISOR",
+        "employer": "NYC DEP"
+      },
+      {
+        "name": "nardiello, michael",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Jackson Heights",
+        "state": "NY",
+        "occupation": "SUPERVISOR",
+        "employer": "NYC DEP"
       }
     ],
     "Legal": [

@@ -4,7 +4,7 @@
   "candidateName": "Sanchez, Justin",
   "candidateId": "2029",
   "sourceUrl": "https://www.nyccfb.info/follow-the-money/",
-  "updatedAt": "2026-04-04T17:24:30.805Z",
+  "updatedAt": "2026-04-04T17:30:24.187Z",
   "contributorCount": 578,
   "totalRaised": 97409.11,
   "publicFunds": 253334,
@@ -324,6 +324,3912 @@
         "state": "NY",
         "occupation": "",
         "employer": ""
+      },
+      {
+        "name": "NYSNA PAC",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "Albany",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Sanchez, Justin",
+        "amount": 1050,
+        "donorType": "CAN",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Chief of Staff",
+        "employer": "New York State Senate"
+      },
+      {
+        "name": "Transport Workers Union Local",
+        "amount": 1050,
+        "donorType": "PCOMP",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "United Federation of Teachers",
+        "amount": 1050,
+        "donorType": "EMPO",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Kumar, Arvin",
+        "amount": 1001,
+        "donorType": "IND",
+        "city": "Chicago",
+        "state": "IL",
+        "occupation": "Bontiva",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Int'l Union of Operating Engin",
+        "amount": 1000,
+        "donorType": "PCOMP",
+        "city": "Astoria",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Uniformed Sanitationmen's Assn",
+        "amount": 1000,
+        "donorType": "EMPO",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "NYC District Council of Carpen",
+        "amount": 822.12,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "draizin, mitchell",
+        "amount": 700,
+        "donorType": "IND",
+        "city": "Sag Harbor",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Steinmetz, Isaac",
+        "amount": 700,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Media Strategist",
+        "employer": "Antenna Group"
+      },
+      {
+        "name": "Langley, Chad",
+        "amount": 600,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Executive",
+        "employer": "DLA"
+      },
+      {
+        "name": "Nahar, Kamrun",
+        "amount": 550,
+        "donorType": "IND",
+        "city": "Jackson Heights",
+        "state": "NY",
+        "occupation": "Manager",
+        "employer": "City University of New York"
+      },
+      {
+        "name": "Carmen for NYC 2025",
+        "amount": 500,
+        "donorType": "PCOMC",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Crystal Hudson 2025",
+        "amount": 500,
+        "donorType": "PCOMC",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Contribution from Campaign Com",
+        "employer": "Crystal Hudson 2025"
+      },
+      {
+        "name": "Greenberg Traurig P.A. PAC",
+        "amount": 500,
+        "donorType": "PCOMP",
+        "city": "Albany",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Int'l Assn of Bridge, Structur",
+        "amount": 500,
+        "donorType": "PCOMP",
+        "city": "Washington",
+        "state": "DC",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Johnson, James",
+        "amount": 500,
+        "donorType": "IND",
+        "city": "Lambertville",
+        "state": "NJ",
+        "occupation": "Executive",
+        "employer": "Trinity church"
+      },
+      {
+        "name": "Latino Victory Fund",
+        "amount": 500,
+        "donorType": "PCOMP",
+        "city": "Washington",
+        "state": "DC",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Local 891 IUOE State EPEC",
+        "amount": 500,
+        "donorType": "PCOMP",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Montefiore PAC, Inc.",
+        "amount": 500,
+        "donorType": "PCOMP",
+        "city": "Albany",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "National Association of Social",
+        "amount": 500,
+        "donorType": "EMPO",
+        "city": "Albany",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "New York Apartment Association",
+        "amount": 500,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "New York UAW Region 9A PAC Cou",
+        "amount": 500,
+        "donorType": "PCOMP",
+        "city": "East Hartford",
+        "state": "CT",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "No More 24",
+        "amount": 500,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Patriot PAC NY",
+        "amount": 500,
+        "donorType": "PCOMP",
+        "city": "Kingston",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "PSC PAC",
+        "amount": 500,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Social Service Employees Local",
+        "amount": 500,
+        "donorType": "EMPO",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Uniformed Fire Officers Assn.",
+        "amount": 500,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Mallon, Michael",
+        "amount": 475,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Executive Assistant",
+        "employer": "Queens Borough President's Off"
+      },
+      {
+        "name": "Bueno, Serena",
+        "amount": 350,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Crespo, Elisa",
+        "amount": 350,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Executive",
+        "employer": "Npa"
+      },
+      {
+        "name": "IBEW New York PAC",
+        "amount": 350,
+        "donorType": "PCOMP",
+        "city": "Washington",
+        "state": "DC",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Roque, Alexander",
+        "amount": 350,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Salazar Rodriguez, Prisca",
+        "amount": 350,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Partner",
+        "employer": "Bolton-St.Johns"
+      },
+      {
+        "name": "Smith, Thomas",
+        "amount": 350,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Allman, Richard",
+        "amount": 325,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Manager",
+        "employer": "Arc"
+      },
+      {
+        "name": "Rodgers, Richard",
+        "amount": 300,
+        "donorType": "IND",
+        "city": "Buffalo",
+        "state": "NY",
+        "occupation": "Legislative Director",
+        "employer": "NYS Senate"
+      },
+      {
+        "name": "Thompson, Mark",
+        "amount": 300,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "EVP",
+        "employer": "Capalino"
+      },
+      {
+        "name": "Rivera, Sage",
+        "amount": 280,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Ayon, Martha",
+        "amount": 275,
+        "donorType": "IND",
+        "city": "Queens",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Cooper, Jordan",
+        "amount": 275,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Writer/Director/Performer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Mai, Judy",
+        "amount": 275,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Assistant Director",
+        "employer": "Hunter College"
+      },
+      {
+        "name": "Rivera, Carmen",
+        "amount": 275,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "SVP Vocational & Community Aff",
+        "employer": "VIP Community Services, Inc."
+      },
+      {
+        "name": "vanible, randi",
+        "amount": 275,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "artist services",
+        "employer": "lincoln center"
+      },
+      {
+        "name": "Anzalone, AnneMarie",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Hampton Bays",
+        "state": "NY",
+        "occupation": "Lobbyist",
+        "employer": "Bolton stJohns"
+      },
+      {
+        "name": "Borrero, Taina",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "NY",
+        "state": "NY",
+        "occupation": "Senior Vice President",
+        "employer": "The Hayes Initiative"
+      },
+      {
+        "name": "Del Giorno, Jon",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Pitta Bishop Del Giorno LLC"
+      },
+      {
+        "name": "Garcia, Ivan",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Senior Manager",
+        "employer": "DoorDash"
+      },
+      {
+        "name": "Giannoulis, Harry",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Douglaston",
+        "state": "NY",
+        "occupation": "CEO",
+        "employer": "The Parkside Group"
+      },
+      {
+        "name": "Gonzalez, Teresa",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Lobbyist",
+        "employer": "Bolton-St. Johns"
+      },
+      {
+        "name": "Izquierdo Arroyo, Richard",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "West Harrison",
+        "state": "NY",
+        "occupation": "COO",
+        "employer": "NAICA"
+      },
+      {
+        "name": "Jenkins, Patrick",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Patrick B. Jenkins & Associate"
+      },
+      {
+        "name": "Johnson, Craig",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Port Washington",
+        "state": "NY",
+        "occupation": "CEO",
+        "employer": "Long Point Advisors"
+      },
+      {
+        "name": "Klein, Jeff",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Govt Affairs",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Krompinger, Virginia",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Risk Management",
+        "employer": "Wells Fargo"
+      },
+      {
+        "name": "Lewis, Jeffrey",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Managing Director",
+        "employer": "Oaktree Solutions"
+      },
+      {
+        "name": "Local 94-94A-94B IUOE PAC",
+        "amount": 250,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Marte 2025",
+        "amount": 250,
+        "donorType": "PCOMC",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Contribution from Campaign Com",
+        "employer": "Marte 2025"
+      },
+      {
+        "name": "Martin, James",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Managing Director",
+        "employer": "Bamberger & Vlasto"
+      },
+      {
+        "name": "Ocasio, David",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Yonkers",
+        "state": "NY",
+        "occupation": "Fitness Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Olson, E. Alexander",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Philadelphia",
+        "state": "PA",
+        "occupation": "Senior Specialist, Local Gover",
+        "employer": "Comcast"
+      },
+      {
+        "name": "Picillo, Ashley",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "NYC",
+        "state": "NY",
+        "occupation": "Coo",
+        "employer": "Growv"
+      },
+      {
+        "name": "Pitta, Vito",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Co-Managing Member",
+        "employer": "Pitta Bishop & Del Giorno LLC"
+      },
+      {
+        "name": "Rodriguez, Marysol",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Small, Abraham",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Press Secretary",
+        "employer": "New York State"
+      },
+      {
+        "name": "Stavisky, Evan",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Saratoga Springs",
+        "state": "NY",
+        "occupation": "Founding Partner & President",
+        "employer": "The Parkside Group"
+      },
+      {
+        "name": "Stonewall Democratic Club of N",
+        "amount": 250,
+        "donorType": "PCOMP",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Van Bramer, James",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Yoswein New York"
+      },
+      {
+        "name": "van Capelle, Alan",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Executive Director",
+        "employer": "FHL"
+      },
+      {
+        "name": "Younus, Abdullah",
+        "amount": 250,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "VP",
+        "employer": "United Way of New York City"
+      },
+      {
+        "name": "Jekic, Dorde",
+        "amount": 240,
+        "donorType": "IND",
+        "city": "Jersey City",
+        "state": "NJ",
+        "occupation": "Project Director",
+        "employer": "Code LLC"
+      },
+      {
+        "name": "Mojica, Indhira",
+        "amount": 225,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Empire Consulting Group"
+      },
+      {
+        "name": "Dromm, Daniel",
+        "amount": 209,
+        "donorType": "IND",
+        "city": "Margaretville",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Adler, Gillian",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Astoria",
+        "state": "NY",
+        "occupation": "Fundraiser",
+        "employer": "Nylag"
+      },
+      {
+        "name": "Crespo, Roberto",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Diaz jr, Ruben",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "SVP Strategic Initiatives",
+        "employer": "Montefiore/ Einstein"
+      },
+      {
+        "name": "Finkelstein, Jerry",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Psychologist",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Kasmin, Rebecca",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "NEW YORK",
+        "state": "NY",
+        "occupation": "Business Manager",
+        "employer": "Artsy"
+      },
+      {
+        "name": "Lee, Joseph S",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Jackson Heights",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "The Parkside Group"
+      },
+      {
+        "name": "Macario, Cristian",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Central Islip",
+        "state": "NY",
+        "occupation": "Chief of Staff",
+        "employer": "NYS Assembly"
+      },
+      {
+        "name": "Marocco, Andrew",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Greenfield Center",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Albany Strategic Advisors"
+      },
+      {
+        "name": "Reber, Alexander",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Millersburg",
+        "state": "PA",
+        "occupation": "Accountant",
+        "employer": "Miller Dixon Drake, PC"
+      },
+      {
+        "name": "Rivera, Joyce",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "President",
+        "employer": "SACHR"
+      },
+      {
+        "name": "Sena, Pedro",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Brooklyn borough president off",
+        "employer": "NYC employee"
+      },
+      {
+        "name": "Sklarz, Melissa",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Woodside",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Townley, Brad",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Millcreek",
+        "state": "UT",
+        "occupation": "Chief Deputy Treasurer",
+        "employer": "Salt Lake County"
+      },
+      {
+        "name": "Vreeland, Reed",
+        "amount": 200,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Policy Analyst",
+        "employer": "NYC DOHMH"
+      },
+      {
+        "name": "Forrester, Jonathan",
+        "amount": 185,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Server",
+        "employer": "Sugar Factory Queens"
+      },
+      {
+        "name": "Julca, Frank",
+        "amount": 180,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Community Liaison",
+        "employer": "NYC Council"
+      },
+      {
+        "name": "Abreu, Shaun",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Council Member",
+        "employer": "New York City Council"
+      },
+      {
+        "name": "Alvi, Meshail",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "VIP operations",
+        "employer": "Tao group"
+      },
+      {
+        "name": "Bores, Alex",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Assembly",
+        "employer": "New York State"
+      },
+      {
+        "name": "Brady, Michael",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Principal",
+        "employer": "Canon Strategy Group"
+      },
+      {
+        "name": "Buder, Andrew",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Director",
+        "employer": "MTA"
+      },
+      {
+        "name": "Cephas, Ephraim",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Class, Facia",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Lemma Strategies"
+      },
+      {
+        "name": "Collado, Yovan",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Director of Community Relation",
+        "employer": "Carpenter Contractor Alliance"
+      },
+      {
+        "name": "Coston, Najah",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Entrepreneur",
+        "employer": "Financially Lit Kids"
+      },
+      {
+        "name": "Croke, Jennifer",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Math Tutor",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Cruz, Catalina",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Jackson Heights",
+        "state": "NY",
+        "occupation": "Assembly Member",
+        "employer": "NYS Assembly"
+      },
+      {
+        "name": "Cujic, Milica",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Server",
+        "employer": "The Group NYC"
+      },
+      {
+        "name": "Day, Leehe",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Day, Shai",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Waitess",
+        "employer": "Dove diner"
+      },
+      {
+        "name": "Del Vecchio, Rebecca",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Chief of staff",
+        "employer": "NYS Senate"
+      },
+      {
+        "name": "Delgado, Daniel",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Lieutenant",
+        "employer": "NYPD"
+      },
+      {
+        "name": "Enes, Robyn",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Chief of Staff",
+        "employer": "NYSA"
+      },
+      {
+        "name": "Ennis, JT",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Campaign Manager",
+        "employer": "Kim Keiserman for State Senate"
+      },
+      {
+        "name": "Fernandez, Nathalia",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Senator",
+        "employer": "NYS Senate"
+      },
+      {
+        "name": "Fujimura, Taylor",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Executive",
+        "employer": "Element451"
+      },
+      {
+        "name": "Gallegos, Larry",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Woodside",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Clear"
+      },
+      {
+        "name": "Garbutt, Christian",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Kew Gardens Hills",
+        "state": "NY",
+        "occupation": "Administrative Services Manage",
+        "employer": "Columbia University"
+      },
+      {
+        "name": "Gonzalez-Rojas, Jessica",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Jackson Heights",
+        "state": "NY",
+        "occupation": "NYS Assemblymember",
+        "employer": "New York State"
+      },
+      {
+        "name": "Greenberg, Helen",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Assistant Director",
+        "employer": "Nyu"
+      },
+      {
+        "name": "Hernandez, Giovannie",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "WeBridge Solutions"
+      },
+      {
+        "name": "Holung, Meagan",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Project manager",
+        "employer": "Patients & Purpose"
+      },
+      {
+        "name": "Hoylman-Sigal, Brad",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Senator",
+        "employer": "NYS Senate"
+      },
+      {
+        "name": "Hoyte, Jahad",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Dix Hills",
+        "state": "NY",
+        "occupation": "LD",
+        "employer": "NYS Senate"
+      },
+      {
+        "name": "Jacobs, Bob",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Kallman, Matthew",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Communications",
+        "employer": "Uber Technologies Inc"
+      },
+      {
+        "name": "KERNS, Joseph",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Executive",
+        "employer": "Meta"
+      },
+      {
+        "name": "Koffman, Cameron",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "COO",
+        "employer": "Havenly Ventures"
+      },
+      {
+        "name": "Laidley, Jason",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "London House"
+      },
+      {
+        "name": "Lamont, Lindsay",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Lee, Grace",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Assemblymember",
+        "employer": "NYS Assembly"
+      },
+      {
+        "name": "LeFrancois, Jeffrey",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Executive Director",
+        "employer": "Meatpacking District Managemen"
+      },
+      {
+        "name": "Leshaw, Sayief",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Program Manager",
+        "employer": "Stonewall Community Developmen"
+      },
+      {
+        "name": "Lewis, Caitlin",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Louis, Farah N",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Council Memeber",
+        "employer": "NYC Council"
+      },
+      {
+        "name": "Maloney, Virginia",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Product Manager",
+        "employer": "Meta"
+      },
+      {
+        "name": "Mangia, Loren",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Makeup artist",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Mansur, David",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Partner",
+        "employer": "Culver Place"
+      },
+      {
+        "name": "Martinez, Rosalba",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Caregiver",
+        "employer": "Melissa Singer"
+      },
+      {
+        "name": "McDermott, Moira",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Douglaston",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "McMorrow, Matthew",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Meeks, Ebony",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Lobbyist",
+        "employer": "Empire Consulting Group"
+      },
+      {
+        "name": "Mogilnitsky, Mark",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "SEO Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Montelongo, Daniel",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Marketing",
+        "employer": "The Gaygency"
+      },
+      {
+        "name": "olson, erika",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "NEW YORK",
+        "state": "NY",
+        "occupation": "marketing consultant",
+        "employer": "FWD"
+      },
+      {
+        "name": "Otero, Cyndi",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Otero, Keily",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "Bartender",
+        "employer": "Flyfish"
+      },
+      {
+        "name": "Patel, Meehir",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Peyre, Brice",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Ramirez, Roberto",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Katonah",
+        "state": "NY",
+        "occupation": "Partner",
+        "employer": "MirRam Group"
+      },
+      {
+        "name": "Ramos, Tomas",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Community",
+        "employer": "Oyate Group"
+      },
+      {
+        "name": "Richards, Bria",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Astoria",
+        "state": "NY",
+        "occupation": "Risk manager",
+        "employer": "Accenture"
+      },
+      {
+        "name": "Richardson, Diana",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Dir of Statewide Engagement",
+        "employer": "NYS Comptroller"
+      },
+      {
+        "name": "Rodriguez, Jose",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Lobbyist",
+        "employer": "Bolton St. Johns"
+      },
+      {
+        "name": "rugovac, alisa",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "manager",
+        "employer": "flyfish"
+      },
+      {
+        "name": "Sanchez, Ruth",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "BRONX",
+        "state": "NY",
+        "occupation": "Cost Manager",
+        "employer": "Clayco"
+      },
+      {
+        "name": "Scatterday, David",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Marketing Director",
+        "employer": "Wolters Kluwer"
+      },
+      {
+        "name": "Schmale, Michael",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Schulman, Lynn",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Forest Hills",
+        "state": "NY",
+        "occupation": "Council Member",
+        "employer": "NYC COUNCIL"
+      },
+      {
+        "name": "Simone, Tony",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "NYS Assemblymember.",
+        "employer": "NYS Assembly"
+      },
+      {
+        "name": "Solomon, James",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Filmmaker",
+        "employer": "Five More Minutes Productions"
+      },
+      {
+        "name": "Solomon, Vanita",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Graphic Designer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Sutton, Victoria",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Manager",
+        "employer": "SBH Community Service Network"
+      },
+      {
+        "name": "Tineo, Odetty",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Political Director",
+        "employer": "District council 37"
+      },
+      {
+        "name": "Torres, Anderson",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "President and CEO",
+        "employer": "R.A.I.N."
+      },
+      {
+        "name": "Torres, Christopher",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Executive Director",
+        "employer": "Leadership for Democracy and S"
+      },
+      {
+        "name": "Torres, Louis",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Vanible, Lysa",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Manhattan",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Weinberg, Barry",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Software",
+        "employer": "Palantir Technologies"
+      },
+      {
+        "name": "Wing, Matthew",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Wright, Andrew",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Chief of Staff",
+        "employer": "NYC Council"
+      },
+      {
+        "name": "Zack, Martin",
+        "amount": 175,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Alvarez, Luis Pablo",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Biederman, Sam",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "SVP",
+        "employer": "BerlinRosen"
+      },
+      {
+        "name": "Greenwald, Jesse",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Ethics Officer",
+        "employer": "Citi"
+      },
+      {
+        "name": "Hersh, Samuel",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Project Manager",
+        "employer": "Arcadis"
+      },
+      {
+        "name": "Lewenstein, Gabriel",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Comms",
+        "employer": "C40 Cities"
+      },
+      {
+        "name": "Lozito, Paul",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Urban planner",
+        "employer": "NYC"
+      },
+      {
+        "name": "Mckenzie, Michael",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "North Babylon’s",
+        "state": "NY",
+        "occupation": "Artist",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Montalvo, Jennifer",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "NY",
+        "state": "NY",
+        "occupation": "Chief of staff",
+        "employer": "NYCEDC"
+      },
+      {
+        "name": "Rivera, Jon",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Buffalo",
+        "state": "NY",
+        "occupation": "Assemblymember",
+        "employer": "NYS Assembly"
+      },
+      {
+        "name": "Salaam, Zenab",
+        "amount": 150,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Treasury associate",
+        "employer": "Bc partners"
+      },
+      {
+        "name": "Sepulveda, Julian",
+        "amount": 125,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Deputy Director IGA",
+        "employer": "New York State Department of L"
+      },
+      {
+        "name": "Thomas Toussaint, Whitney",
+        "amount": 125,
+        "donorType": "IND",
+        "city": "Long Island City",
+        "state": "NY",
+        "occupation": "Program Specialist",
+        "employer": "FDIC"
+      },
+      {
+        "name": "Vasquez, Angel",
+        "amount": 125,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Deputy Secretary",
+        "employer": "Executive Chamber"
+      },
+      {
+        "name": "Prado, Maria A",
+        "amount": 110,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Achibar, Kathleen",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Niagara Falls",
+        "state": "NY",
+        "occupation": "Lobbyist",
+        "employer": "Bolton St. John’s"
+      },
+      {
+        "name": "Adams, Amelia",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Adams Advisors"
+      },
+      {
+        "name": "Algarin, Henry",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Program Director",
+        "employer": "EAC"
+      },
+      {
+        "name": "Arizanovic, Suzana",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Forest Hills",
+        "state": "NY",
+        "occupation": "Manager",
+        "employer": "Petite"
+      },
+      {
+        "name": "Atterbury, Robert",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Executive",
+        "employer": "Hudson River Park Trust"
+      },
+      {
+        "name": "Basi, Hariqbal",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Buckner, Yvette",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Buckner Group"
+      },
+      {
+        "name": "Burnett, Miles",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Deputy Chief of Staff",
+        "employer": "Office of Sen .Lea Webb"
+      },
+      {
+        "name": "Cehonski, Irak",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Astoria",
+        "state": "NY",
+        "occupation": "Budget Director",
+        "employer": "Queens Borough President"
+      },
+      {
+        "name": "Chafkin, Martin",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Manufacturer",
+        "employer": "Perfection Electricks"
+      },
+      {
+        "name": "Chireno, Ana",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Lobbyist",
+        "employer": "MirRam Grouo"
+      },
+      {
+        "name": "Dimoska, Katerina",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Astoria",
+        "state": "NY",
+        "occupation": "Manager",
+        "employer": "The Group"
+      },
+      {
+        "name": "Gallagher, Jennifer",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Bridgeport",
+        "state": "CT",
+        "occupation": "Senior Client Success Manager",
+        "employer": "Indeed, Inc"
+      },
+      {
+        "name": "Goodwin-Raab, Miranda",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Granados, Claudia",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Newark",
+        "state": "NJ",
+        "occupation": "Consultant",
+        "employer": "The Carnelian Group, LLC"
+      },
+      {
+        "name": "Harris, Essem",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Group Lead, Product R&D",
+        "employer": "National Basketball Associatio"
+      },
+      {
+        "name": "Ibata chavarria, Cristian fabian",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Astoria",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Jordon, David",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "IT Manager",
+        "employer": "United Nations"
+      },
+      {
+        "name": "Jursik, Julie",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Lobbyist",
+        "employer": "Bolton-St. Johns"
+      },
+      {
+        "name": "Kaufmann, Kathy",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Lighting designer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Kelles, Anna",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Freeville",
+        "state": "NY",
+        "occupation": "Elected official",
+        "employer": "NYS Assembly"
+      },
+      {
+        "name": "Knezevic, Marija",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Apex",
+        "state": "NC",
+        "occupation": "Operations mng",
+        "employer": "Natuzzi Americas"
+      },
+      {
+        "name": "Mendez, Martha",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Millstein, Scott",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Executive Director",
+        "employer": "IMentor"
+      },
+      {
+        "name": "Mrkulic, Semira",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Astoria",
+        "state": "NY",
+        "occupation": "Cleaner",
+        "employer": "GFP 40 Worth"
+      },
+      {
+        "name": "Mueller, Leon",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Product Lead",
+        "employer": "Spring Care Inc."
+      },
+      {
+        "name": "Naplatarski, Kristina",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Nowakowski, Mitchell",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "BUFFALO",
+        "state": "NY",
+        "occupation": "Council Member",
+        "employer": "City of Buffalo"
+      },
+      {
+        "name": "Pichardo-Erskine, Katharine",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "North Bellmore",
+        "state": "NY",
+        "occupation": "Executive Director",
+        "employer": "Latino Victory"
+      },
+      {
+        "name": "Puerto, Daniel",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "East Elmhurst",
+        "state": "NY",
+        "occupation": "Manager",
+        "employer": "UnLocal"
+      },
+      {
+        "name": "Roman, Christopher",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Philadelphia",
+        "state": "PA",
+        "occupation": "Chief Operating Officer",
+        "employer": "Soapbox Solutions"
+      },
+      {
+        "name": "Roman, Maria",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Romero, Brian",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Jackson Heights",
+        "state": "NY",
+        "occupation": "Chief of Staff",
+        "employer": "NY Senate"
+      },
+      {
+        "name": "Rosenthal, Linda",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "NYS Assemblymember",
+        "employer": "New York State"
+      },
+      {
+        "name": "Sánchez, Raymond",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Shabshaikhes, Lazar",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Car equipment",
+        "employer": "Mta"
+      },
+      {
+        "name": "Shaw, Connor",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Long Branch",
+        "state": "NJ",
+        "occupation": "Political director",
+        "employer": "IUJAT"
+      },
+      {
+        "name": "Sheth, Tushar",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Northville",
+        "state": "MI",
+        "occupation": "Founder",
+        "employer": "Superfocus"
+      },
+      {
+        "name": "Siegel, Jill",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Larchmont",
+        "state": "NY",
+        "occupation": "Researcher",
+        "employer": "Apple"
+      },
+      {
+        "name": "Simon, Jo Anne",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Elected Official",
+        "employer": "NY Assembly"
+      },
+      {
+        "name": "Swanson, Nadia",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Social Work",
+        "employer": "The Ali Forney Center"
+      },
+      {
+        "name": "Tirado, Olga Luz",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Beacon",
+        "state": "NY",
+        "occupation": "O Comm Solutions",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Trivundza, Saska",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Artist",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Turturro, Summer",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Trinity",
+        "state": "NY",
+        "occupation": "Recruitr",
+        "employer": "Thorn Ellis"
+      },
+      {
+        "name": "Valenzuela, Sara",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Warner, Brian",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Cohoes",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Wilkerson, Jamal",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Laurelton",
+        "state": "NY",
+        "occupation": "Manager",
+        "employer": "New York Transco"
+      },
+      {
+        "name": "Williams, Alali",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Eastchester",
+        "state": "NY",
+        "occupation": "Director Brand Marketing",
+        "employer": "Wacoal America"
+      },
+      {
+        "name": "Zimmerman, Robert",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Great Neck",
+        "state": "NY",
+        "occupation": "Marketing Advertising Communic",
+        "employer": "ZE Creative Communications"
+      },
+      {
+        "name": "Madio, Nick",
+        "amount": 92.99,
+        "donorType": "IND",
+        "city": "Mahopac",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Dela Cruz, Aries",
+        "amount": 75,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Executive Dir.",
+        "employer": "NYC Emergency Management"
+      },
+      {
+        "name": "Hart, Everett",
+        "amount": 75,
+        "donorType": "IND",
+        "city": "Albany",
+        "state": "NY",
+        "occupation": "Policy Director",
+        "employer": "EANY"
+      },
+      {
+        "name": "Kimbarow, Jacob",
+        "amount": 75,
+        "donorType": "IND",
+        "city": "New york",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Migliore, Nicole",
+        "amount": 75,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Chief of Staff",
+        "employer": "NY State"
+      },
+      {
+        "name": "Ryan, Casey",
+        "amount": 75,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "William Daniel LLC"
+      },
+      {
+        "name": "Singh, Ramdat",
+        "amount": 75,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Chief of Staff",
+        "employer": "NYS Assembly"
+      },
+      {
+        "name": "Sorin, Lisa",
+        "amount": 75,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "President",
+        "employer": "The Bronx Chamber of Commerce"
+      },
+      {
+        "name": "Trittas, Yanni",
+        "amount": 75,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Senior Vice President",
+        "employer": "Constantinople & Vallone Consu"
+      },
+      {
+        "name": "Adams, Ryan",
+        "amount": 72,
+        "donorType": "IND",
+        "city": "Forest Hills",
+        "state": "NY",
+        "occupation": "Senior Vice President",
+        "employer": "Actum LLC"
+      },
+      {
+        "name": "GOLDSTEIN, LEWIS",
+        "amount": 72,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NV",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Hernandez, Yuby",
+        "amount": 60,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Associate Director of Institut",
+        "employer": "The New York Foundling"
+      },
+      {
+        "name": "Lund, Makayla",
+        "amount": 60,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Adams, Elizabeth",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Deputy ED",
+        "employer": "Transportation Alternatives"
+      },
+      {
+        "name": "Alayeto, Clarisa",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Edu",
+        "employer": "Dream"
+      },
+      {
+        "name": "Albert, Matthew",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "CEO",
+        "employer": "Malbert Media"
+      },
+      {
+        "name": "Anderson, Alex",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Lobbyist",
+        "employer": "Bolton St Johns"
+      },
+      {
+        "name": "Arettines, Maria",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Conusltant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Bagga, Amit",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Woodside",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Beatty, Tyrone",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New york",
+        "state": "NY",
+        "occupation": "IT Financial Systems, Product",
+        "employer": "CPC"
+      },
+      {
+        "name": "Bittker, Harry",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Bedford Hills",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Bottcher, Erik",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Council Member",
+        "employer": "NYC Council"
+      },
+      {
+        "name": "Brown, Katie",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Communications & Marketing Dir",
+        "employer": "Children’s Rescue Fund"
+      },
+      {
+        "name": "Ceballo, Rosalinda",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Conigliaro, Saida",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Homemaker",
+        "employer": ""
+      },
+      {
+        "name": "Cowen, Carlyn",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Policy Director",
+        "employer": "Chinese-American Planning Coun"
+      },
+      {
+        "name": "Cramer, Christina",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Johnson City",
+        "state": "NY",
+        "occupation": "Senior Manager of Engagement a",
+        "employer": "Full Frame Initiative"
+      },
+      {
+        "name": "Dinowitz, Jeffrey",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Assemblyman",
+        "employer": "New York State"
+      },
+      {
+        "name": "Doyle, John",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Director",
+        "employer": "NYCHHC"
+      },
+      {
+        "name": "Figueroa, Marcello",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "suffern",
+        "state": "NY",
+        "occupation": "Legislative Director",
+        "employer": "Westchester County Board of Le"
+      },
+      {
+        "name": "Garcia, Felix",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Chief of staff",
+        "employer": "New York State Assembly"
+      },
+      {
+        "name": "Griffith, Pharein",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Hammerstad, Jasmine",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Physician Assistant",
+        "employer": "Montefiore"
+      },
+      {
+        "name": "Hernandez, Steven",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "COO",
+        "employer": "St. Ann’s Corner of Harm Reduc"
+      },
+      {
+        "name": "Holocher-Furletti, Kimberly",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "BRONX",
+        "state": "NY",
+        "occupation": "Founder",
+        "employer": "Rosewater Media"
+      },
+      {
+        "name": "Hua, Helen",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "NMT",
+        "employer": "New York proton center"
+      },
+      {
+        "name": "Kessler, Ryder",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Co-Executive Director",
+        "employer": "Abundance New York"
+      },
+      {
+        "name": "Lopez, Linette",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "BROOKLYN",
+        "state": "NY",
+        "occupation": "Director",
+        "employer": "ValueWorks"
+      },
+      {
+        "name": "Lurie, Rebecca",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Educator",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Martin-Chapman, Quincey",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Kew Gardens",
+        "state": "NY",
+        "occupation": "Editor",
+        "employer": "Cosmo Street Editorial"
+      },
+      {
+        "name": "Montilla, David",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Communications Director",
+        "employer": "New York State"
+      },
+      {
+        "name": "Morrison, Tunisia",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "self-employed"
+      },
+      {
+        "name": "Mozeak, Andre",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Pitta Bishop & Del Giorno LLC"
+      },
+      {
+        "name": "Nogueira, Nicolas",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Valley Stream",
+        "state": "NY",
+        "occupation": "chief of staff",
+        "employer": "NYS assembly"
+      },
+      {
+        "name": "Person, Sarah",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "East Hampton",
+        "state": "NY",
+        "occupation": "Psychotherapisr",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Pimentel, Michael",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Pitter, Janet",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "CHESTNUT RDG",
+        "state": "NY",
+        "occupation": "Hearing Officer",
+        "employer": "NYC-OATH"
+      },
+      {
+        "name": "Plaske, Kyle",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Albany",
+        "state": "NY",
+        "occupation": "Project Director",
+        "employer": "RFMH"
+      },
+      {
+        "name": "Rabbitts, David",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Monroe",
+        "state": "NY",
+        "occupation": "Chief of Staff",
+        "employer": "NY Assembly"
+      },
+      {
+        "name": "Rivera, Camille",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Sanchez, Jasmin",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "NY",
+        "state": "NY",
+        "occupation": "Director",
+        "employer": "Greenwich House"
+      },
+      {
+        "name": "Sivin, Alana",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "state director",
+        "employer": "Fwd.us"
+      },
+      {
+        "name": "Tighe, Matt",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Woodside",
+        "state": "NY",
+        "occupation": "Staffer",
+        "employer": "NYS Assembly"
+      },
+      {
+        "name": "Torres, Ashley",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Yonkers",
+        "state": "NY",
+        "occupation": "District Director",
+        "employer": "House of Representatives"
+      },
+      {
+        "name": "Toussaint, Whitney",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Long Island City",
+        "state": "NY",
+        "occupation": "Senior Program Specialist",
+        "employer": "FDIC"
+      },
+      {
+        "name": "Van Ness, Lorenzo",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Director of Community orgnazin",
+        "employer": "NYC Commission on Racial Equit"
+      },
+      {
+        "name": "Weinberger, Samuel",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Account Executive",
+        "employer": "Geto & de Milly"
+      },
+      {
+        "name": "Won, Julie",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Long Island City",
+        "state": "NY",
+        "occupation": "Council Member",
+        "employer": "City Council"
+      },
+      {
+        "name": "Bosa, Maria",
+        "amount": 45,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Brown, Howard",
+        "amount": 45,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Freelance Software Tester",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Olier, Orlando",
+        "amount": 34,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Videographer",
+        "employer": "Cathedral of St. John the Divi"
+      },
+      {
+        "name": "Battle, Jamey",
+        "amount": 30,
+        "donorType": "IND",
+        "city": "Astoria",
+        "state": "NY",
+        "occupation": "Legislative Director",
+        "employer": "New York State Assembly,Assemb"
+      },
+      {
+        "name": "McCambridge, Matt",
+        "amount": 30,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "CEO",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Basham, Ryan",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Los Angeles",
+        "state": "CA",
+        "occupation": "CEO",
+        "employer": "Stonewall Network"
+      },
+      {
+        "name": "Bassett, Courtney",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Portland",
+        "state": "ME",
+        "occupation": "Fundraiser and consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Bleuel, Tyler",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Associate, strategic initiativ",
+        "employer": "Metropolitan Transportation Au"
+      },
+      {
+        "name": "Bratescu, Maximilian",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Hastings-on-Hudson",
+        "state": "NY",
+        "occupation": "Staffer",
+        "employer": "NYS Assembly"
+      },
+      {
+        "name": "Castillo, Fabiana",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Sr. Litigation Assistant",
+        "employer": "Earthjustice"
+      },
+      {
+        "name": "Castillo, Oscar",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Albany",
+        "state": "NY",
+        "occupation": "Executive director",
+        "employer": "NYS Assembly"
+      },
+      {
+        "name": "Chase, James",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "NYC",
+        "state": "NY",
+        "occupation": "Writer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Connors, Jack",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Research & Communications Asso",
+        "employer": "Permanent Citizens Advisory Co"
+      },
+      {
+        "name": "Cruz, Nicholas",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Homemaker",
+        "employer": ""
+      },
+      {
+        "name": "Davidson, Benjamin",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Germantown",
+        "state": "NY",
+        "occupation": "Lead Designer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Edwards, Gene",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "District Leader",
+        "employer": "Bronx Dems"
+      },
+      {
+        "name": "Ferrari, Rachel",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Astoria",
+        "state": "NY",
+        "occupation": "Chief of Staff",
+        "employer": "NYS Senate"
+      },
+      {
+        "name": "Fleming, Victor A",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": "Retired"
+      },
+      {
+        "name": "Garcia, Matthew",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Albany",
+        "state": "NY",
+        "occupation": "LD",
+        "employer": "Comrie"
+      },
+      {
+        "name": "Hu, Whitney",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Director Civic Engagement & Re",
+        "employer": "Churches United for Fair Housi"
+      },
+      {
+        "name": "Hushla Re, Nicole",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Penfield",
+        "state": "NY",
+        "occupation": "Chief of Staff",
+        "employer": "NYS Assembly"
+      },
+      {
+        "name": "Ishmael, Patricia",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "James, Leah",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Project Manger",
+        "employer": "AECOM"
+      },
+      {
+        "name": "Joseph, Joshua",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Elmont",
+        "state": "NY",
+        "occupation": "Executive Director",
+        "employer": "NYS Assembly"
+      },
+      {
+        "name": "Kazi, Jamie",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Senior Advisor",
+        "employer": "NYS Assembly"
+      },
+      {
+        "name": "Ketchum, Shelby",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Seattle",
+        "state": "WA",
+        "occupation": "Urban planner",
+        "employer": "City of Seattle"
+      },
+      {
+        "name": "Kissoon, Joel",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Project Manager",
+        "employer": "Code LLC"
+      },
+      {
+        "name": "Lupi, Hollyanne",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Halfmoon",
+        "state": "NY",
+        "occupation": "Legislative Aide",
+        "employer": "NYS Senate"
+      },
+      {
+        "name": "Mahee, Andrea",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Associate",
+        "employer": "Canon Strategy Group"
+      },
+      {
+        "name": "Mann, Judy",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Markham, Susan",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Melendez, Abigail",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Albany",
+        "state": "NY",
+        "occupation": "Deputy Legislative Director",
+        "employer": "NYS Senate"
+      },
+      {
+        "name": "Melendez, Jannette",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Unit clerk",
+        "employer": "Acacia Network"
+      },
+      {
+        "name": "Monk, Diandra",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Moody-Wusik, Xavier",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Cicero",
+        "state": "NY",
+        "occupation": "Legislative Coordinator",
+        "employer": "NYS Assembly"
+      },
+      {
+        "name": "Morales, Tiffany",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Leasing Administrator",
+        "employer": "Domain Companies"
+      },
+      {
+        "name": "Napoli, Timothy",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Creative Director",
+        "employer": "Scholastic"
+      },
+      {
+        "name": "Nunez, Cesar",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": "Hostos Community College"
+      },
+      {
+        "name": "O'Hanlon, Katie",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Astoria",
+        "state": "NY",
+        "occupation": "Marketing Manager",
+        "employer": "Google"
+      },
+      {
+        "name": "Ortiz Bravo, Ana",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Albany",
+        "state": "NY",
+        "occupation": "Chief of staff",
+        "employer": "Nys senate"
+      },
+      {
+        "name": "Palmer, Taylor",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "New Rochelle",
+        "state": "NY",
+        "occupation": "Lobbyist",
+        "employer": "ACEC new york"
+      },
+      {
+        "name": "Pinto, Carlene",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Organizer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Ramirez, Steve",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Astoria",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Robins, Henry",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Long Island City",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "BerlinRosen"
+      },
+      {
+        "name": "SeWelch, Robbie",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Director",
+        "employer": "City council"
+      },
+      {
+        "name": "Sfikas, Alexis",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Organizer",
+        "employer": "Transportation Alternatives"
+      },
+      {
+        "name": "Tamborra, Nicholas",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Staten Island",
+        "state": "NY",
+        "occupation": "Therapist",
+        "employer": "The Jewish Board"
+      },
+      {
+        "name": "Toledo, Andy",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Bridgeport",
+        "state": "CT",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Whitaker, Ny",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Consultant",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Williams, Adrian",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Executive Director",
+        "employer": "NYS Assembly"
+      },
+      {
+        "name": "Wolosz-Ramphir, Monika",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Project Completion Manager",
+        "employer": "Code LLC"
+      },
+      {
+        "name": "Yacco, Patrick",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Albany",
+        "state": "NY",
+        "occupation": "Empire Fellow",
+        "employer": "NYS Parks"
+      },
+      {
+        "name": "Boksznajder, Joanna",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Project Completion Supervisor",
+        "employer": "CODE LLC"
+      },
+      {
+        "name": "Ghidetti, Luigi",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Gordillo, Andrea",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Development Director",
+        "employer": "The Clemente Soto Velez Cultur"
+      },
+      {
+        "name": "Harris, Joseph",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "Verona",
+        "state": "NJ",
+        "occupation": "Senior Regional Manager",
+        "employer": "AUX Cloud Commerce"
+      },
+      {
+        "name": "Lu, Xu",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Mrkulic, Safet",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "Astoria",
+        "state": "NY",
+        "occupation": "Resident Manager",
+        "employer": "Douglas Elliman"
+      },
+      {
+        "name": "Presser, Steven",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Ramos, David N",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Vukel, Ervina",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "Astoria",
+        "state": "NY",
+        "occupation": "R.S. Specialist",
+        "employer": "Beam Living"
+      },
+      {
+        "name": "Rosen, Jenna",
+        "amount": 18,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Campaign Manager",
+        "employer": "Andrea for Council"
+      },
+      {
+        "name": "Bhatti, Mashaal",
+        "amount": 15,
+        "donorType": "IND",
+        "city": "South Ozone Park",
+        "state": "NY",
+        "occupation": "Director of Operations",
+        "employer": "NY State Senate"
+      },
+      {
+        "name": "Dieguez, Katherine",
+        "amount": 15,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Not Employed",
+        "employer": "Not Employed"
+      },
+      {
+        "name": "Mayhew, Greer",
+        "amount": 15,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Community Coordinator",
+        "employer": "NYC Comptroller's Office"
+      },
+      {
+        "name": "Polanco, Franklin",
+        "amount": 15,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Superintendent",
+        "employer": "RJ Block"
+      },
+      {
+        "name": "Adela, Lopez",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Program Director",
+        "employer": "NAICA"
+      },
+      {
+        "name": "Adem, Faisel H",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Aguirre, Omi",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": "Student"
+      },
+      {
+        "name": "Akberova, Madina",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Producer",
+        "employer": "OCC"
+      },
+      {
+        "name": "Alexander, Brian",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Alexander, Pamela",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Amponsah, Boakye",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Arroyo, Iris",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Homemaker",
+        "employer": "Homemaker"
+      },
+      {
+        "name": "Askew, Linda",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": "Retired"
+      },
+      {
+        "name": "Atkins, Keisha",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "BERRY, DENISE",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": ""
+      },
+      {
+        "name": "Brown, Arnold",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": "Retired"
+      },
+      {
+        "name": "Burgos, Wanda",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Carey, Steven",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": "Retired"
+      },
+      {
+        "name": "Carr, Diane",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Castillo, Alexander",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Landlord",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Cirrito, Meghan",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Clayton",
+        "state": "MO",
+        "occupation": "Homemaker",
+        "employer": ""
+      },
+      {
+        "name": "Corley, Tony",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Case manager",
+        "employer": "NYCHA"
+      },
+      {
+        "name": "divine, leana",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Entity Management",
+        "employer": "Sunrun Inc."
+      },
+      {
+        "name": "Dunay, Stephen",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Fischer, Eric",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Director",
+        "employer": "Tonio Burgos & Associates"
+      },
+      {
+        "name": "Flowers, Justin",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Fyffe, Kadeem",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Fashion Designer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Garcia, Jason",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Goodwin McCollin, Gayle",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Gual, Erasmo",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Hassell, Rosanne",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Hodge, Oscar",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": "Student"
+      },
+      {
+        "name": "Holman, Derrick",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Hunter, Ian",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Actuary",
+        "employer": "New York life"
+      },
+      {
+        "name": "Ibrahim, Shamira",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "BROOKLYN",
+        "state": "NY",
+        "occupation": "Writer",
+        "employer": "Self-Employed"
+      },
+      {
+        "name": "Jimenez, Amable",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Jimenez, Mario",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Tech Support",
+        "employer": "CPG"
+      },
+      {
+        "name": "Johnson, Mildred",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Jones, Paula",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": "Retired"
+      },
+      {
+        "name": "Jose, Katherin",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Administrative Assistant",
+        "employer": "United States Council for Inte"
+      },
+      {
+        "name": "Kane, Hassane",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "LaCroix, Tamara",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Homemaker",
+        "employer": ""
+      },
+      {
+        "name": "Marcano, Wesley",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Not Employed",
+        "employer": "Not Employed"
+      },
+      {
+        "name": "Martin, Brianna",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": "Student"
+      },
+      {
+        "name": "Martin, Muradadeen",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Office Manager",
+        "employer": "Feder Kaszovitz LLC"
+      },
+      {
+        "name": "Meeks, Monique",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Not Employed",
+        "employer": "Not Employed"
+      },
+      {
+        "name": "Mercer, Ralph",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Timekeeping Analyst",
+        "employer": "DOHMH"
+      },
+      {
+        "name": "Miranda, Elvira",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Childcare provider",
+        "employer": "MEHRETU COMMISSION STUDIO"
+      },
+      {
+        "name": "Moreno, Skye",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Not Employed",
+        "employer": "Not Employed"
+      },
+      {
+        "name": "Moukoury, NAIMY",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Munson, Nate",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Staffer",
+        "employer": "Delgado for NY"
+      },
+      {
+        "name": "Najera Demoraes, Bryan",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Ortiz, Jessica",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Administrative Assistant",
+        "employer": "BronxWorks"
+      },
+      {
+        "name": "Ortiz, Linda",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Painter, Jacqui",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Artistic Director",
+        "employer": "Red Hook Art Project"
+      },
+      {
+        "name": "Polanco, Maria",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": "Student"
+      },
+      {
+        "name": "Regalado, Angela",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "HR",
+        "employer": "Gart"
+      },
+      {
+        "name": "Robinson, Barry",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Rolle, Elyse",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": "Retired"
+      },
+      {
+        "name": "Rosa, Persida",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Social Worker",
+        "employer": "NAICA"
+      },
+      {
+        "name": "Ruiz, Madelyn A",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Supervisor",
+        "employer": "Liberty Coca-Cola"
+      },
+      {
+        "name": "Scott, Hannah",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Implementation Manager",
+        "employer": "CreatorIQ"
+      },
+      {
+        "name": "Seal, Iris",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": "Student"
+      },
+      {
+        "name": "Speight, Briya",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Executive Assistant/Office Man",
+        "employer": "Concertiv"
+      },
+      {
+        "name": "Spencer-Joe, Jelani",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Suarez, Carlos",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Limo Driver",
+        "employer": "Elegante Car Service"
+      },
+      {
+        "name": "Swanson, Strickland",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Software Engineer",
+        "employer": "TripleLift"
+      },
+      {
+        "name": "Thomas, Danielle",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Thomas, Silina",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Thompson, Renee",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Valentin, Alyssa",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Wahlmeier, John",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Ward, Aubrey",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Warren, Vince",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Jamaica",
+        "state": "NY",
+        "occupation": "Resident Assistant",
+        "employer": "NAICA"
+      },
+      {
+        "name": "Washington, Ebony",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Watler, Valerie",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Retired",
+        "employer": "Retired"
+      },
+      {
+        "name": "Williams, Deborah",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Cuautle, Luisa",
+        "amount": 5,
+        "donorType": "IND",
+        "city": "Astoria",
+        "state": "NY",
+        "occupation": "Campaign associate",
+        "employer": "Mrny"
+      },
+      {
+        "name": "Duran, Danny",
+        "amount": 5,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Unemployed",
+        "employer": ""
+      },
+      {
+        "name": "Gal-Oz, Roni",
+        "amount": 5,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Hollar, Rondane",
+        "amount": 5,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "First Year Experience Coordina",
+        "employer": "Monroe College"
+      },
+      {
+        "name": "James, Samantha",
+        "amount": 5,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Speech therapist",
+        "employer": "Dekalb County"
+      },
+      {
+        "name": "Thomas, Rukezha",
+        "amount": 5,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Student",
+        "employer": ""
+      },
+      {
+        "name": "Townsend, Rod",
+        "amount": 5,
+        "donorType": "IND",
+        "city": "Astoria",
+        "state": "NY",
+        "occupation": "Manager",
+        "employer": "Carlton House Restoration, Inc"
+      },
+      {
+        "name": "Martinez, Jose",
+        "amount": 3,
+        "donorType": "IND",
+        "city": "Flushing",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
+      },
+      {
+        "name": "Lacy, Theresa",
+        "amount": 1,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "",
+        "employer": ""
       }
     ],
     "Legal": [
@@ -506,6 +4412,78 @@
         "state": "NY",
         "occupation": "Lawyer",
         "employer": "Sheppard Mullin"
+      },
+      {
+        "name": "Segarra, Pablo",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "SideHustle.law"
+      },
+      {
+        "name": "shavolian, michael",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "Kings Point",
+        "state": "NY",
+        "occupation": "Lawyer",
+        "employer": "Fried Frank"
+      },
+      {
+        "name": "Smalls, Matthew",
+        "amount": 100,
+        "donorType": "IND",
+        "city": "South Orange",
+        "state": "NJ",
+        "occupation": "Attorney",
+        "employer": "MirRam Group"
+      },
+      {
+        "name": "Guzman, Francisco",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Attorney",
+        "employer": "Amazon.com"
+      },
+      {
+        "name": "Jerrolds, Christopher",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Lawyer",
+        "employer": "Independent Contractor"
+      },
+      {
+        "name": "Maldonado, Robert",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Lawyer",
+        "employer": "Wolf Greenfield & Sacks"
+      },
+      {
+        "name": "Thomas, Joseph",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Assistant Counsel",
+        "employer": "NY State Executive Chamber"
+      },
+      {
+        "name": "Arader, Jared",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Agency attorney",
+        "employer": "NYC Department of Education"
       }
     ],
     "Government / Public Sector": [
@@ -688,6 +4666,123 @@
         "state": "NY",
         "occupation": "Member of Assembly",
         "employer": "State of New York"
+      },
+      {
+        "name": "Meza, Ashley",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Glen Oaks",
+        "state": "NY",
+        "occupation": "Government",
+        "employer": "Department of State"
+      },
+      {
+        "name": "Nurse, Sandy",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Council Member",
+        "employer": "City of New York"
+      },
+      {
+        "name": "Spector, Julian",
+        "amount": 50,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Government",
+        "employer": "Brooklyn DA"
+      },
+      {
+        "name": "Wylie, Megan",
+        "amount": 30,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Government Relations",
+        "employer": "New York Building Congress"
+      },
+      {
+        "name": "Hankins, Courtland",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "The Bronx",
+        "state": "NY",
+        "occupation": "Government",
+        "employer": "Bronx community board three"
+      },
+      {
+        "name": "Vazquez, Mario",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Menands",
+        "state": "NY",
+        "occupation": "Asst Director of Government Af",
+        "employer": "The Business Council of NYS"
+      },
+      {
+        "name": "Wheaton, Stephanie",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Scheduler",
+        "employer": "City of New York"
+      },
+      {
+        "name": "Williams, Tevin",
+        "amount": 25,
+        "donorType": "IND",
+        "city": "Brooklyn",
+        "state": "NY",
+        "occupation": "Government Staffer",
+        "employer": "US House of Rep."
+      },
+      {
+        "name": "Cardenas, Samantha",
+        "amount": 20,
+        "donorType": "IND",
+        "city": "New York",
+        "state": "NY",
+        "occupation": "Government Affairs",
+        "employer": "Urban Resource Institute"
+      },
+      {
+        "name": "Littman, Jayson",
+        "amount": 18,
+        "donorType": "IND",
+        "city": "NEW YORK",
+        "state": "NY",
+        "occupation": "Events",
+        "employer": "City of New York"
+      },
+      {
+        "name": "King, Anna",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Architecture",
+        "employer": "City of New York"
+      },
+      {
+        "name": "Mathews, Amber",
+        "amount": 10,
+        "donorType": "IND",
+        "city": "Bronx",
+        "state": "NY",
+        "occupation": "Program Manager",
+        "employer": "City of New York"
+      },
+      {
+        "name": "Shearman, Nicolas",
+        "amount": 5,
+        "donorType": "IND",
+        "city": "Long Island City",
+        "state": "NY",
+        "occupation": "City Planner 2",
+        "employer": "City of New York"
       }
     ],
     "Healthcare": [
