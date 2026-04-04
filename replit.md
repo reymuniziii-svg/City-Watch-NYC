@@ -47,6 +47,16 @@ A small Express server handles the production deployment:
 - The server handles all data sync and builds automatically — no separate build step needed
 - Data refreshes nightly; each refresh pulls the latest nyc_legislation repo + downloads fresh campaign finance CSVs
 
+## Routes
+- `/` — Address lookup / Find My Member
+- `/members` — Council member directory
+- `/members/:id` — Member profile dashboard
+- `/districts` — District map explorer
+- `/bills` — Bill search and tracking
+- `/hearings` — Upcoming and past hearings
+- `/money` — Campaign finance comparison
+- `/support` — Donation / support page
+
 ## Known Issues / Notes
 - Vite file watcher is configured to ignore `.local/**`, `data/**`, and `node_modules/**` to prevent reload loops from Replit's internal log files and the large raw data directory
 - Tailwind CSS v4 content scanner is configured via `@source "!..."` in `src/index.css` to exclude `.local/`, `data/`, and `node_modules/`

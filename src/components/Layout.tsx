@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Search, Users, FileText, Calendar, Landmark, Map, Menu, X, DollarSign } from 'lucide-react';
+import { Search, Users, FileText, Calendar, Landmark, Map, Menu, X, DollarSign, Heart } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -84,9 +84,24 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             })}
           </nav>
 
-          <div className="mt-auto pt-6 border-t-editorial">
-            <p className="font-editorial text-xs text-black font-bold uppercase tracking-widest mb-4">About</p>
-            <p className="text-sm text-slate-600 leading-relaxed">
+          <div className="mt-auto pt-6 border-t-editorial space-y-4">
+            <Link
+              to="/support"
+              onClick={() => setIsSidebarOpen(false)}
+              className={cn(
+                "flex items-center gap-3 px-4 py-3 rounded-none border-l-2 transition-all duration-200 group w-full",
+                location.pathname === '/support'
+                  ? "bg-slate-100 text-black border-black font-semibold"
+                  : "border-transparent text-slate-500 hover:bg-slate-50 hover:text-black"
+              )}
+            >
+              <Heart className={cn(
+                "w-5 h-5 transition-colors",
+                location.pathname === '/support' ? "text-black" : "text-slate-400 group-hover:text-black"
+              )} />
+              Support the Project
+            </Link>
+            <p className="text-xs text-slate-500 leading-relaxed px-1">
               Demystifying NYC's legislative process for everyday New Yorkers.
             </p>
           </div>
