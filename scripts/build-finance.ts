@@ -472,8 +472,10 @@ export async function buildFinanceIndex(): Promise<void> {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  buildFinance().catch((error) => {
-    console.error("[build-finance] failed", error);
-    process.exitCode = 1;
-  });
+  buildFinance()
+    .then(() => buildFinanceIndex())
+    .catch((error) => {
+      console.error("[build-finance] failed", error);
+      process.exitCode = 1;
+    });
 }

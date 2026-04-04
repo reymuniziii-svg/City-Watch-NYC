@@ -19,9 +19,9 @@ export async function buildAll(): Promise<void> {
   await buildHearings();
   await buildHearingEnrichment();
   await buildFinance();
-  await buildFinanceIndex();
   await buildMetrics();
   await buildMembers();
+  await buildFinanceIndex();
   await buildSearchIndex();
 
   console.log("[build-all] completed");
