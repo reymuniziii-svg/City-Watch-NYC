@@ -23,3 +23,4 @@ public/data/*
 !public/data/search-index.json
 !public/data/finance/
 !public/data/finance/*.json
+.vercel/
