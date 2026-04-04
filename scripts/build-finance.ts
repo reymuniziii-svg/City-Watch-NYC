@@ -6,6 +6,7 @@ import {
   CFB_PAYMENTS_URL,
   CONTENT_DIR,
   PROCESSED_DIR,
+  PUBLIC_DATA_DIR,
 } from "./lib/constants";
 import { parseCsv } from "./lib/csv";
 import { ensureDir, readJsonFile, writeJsonFile } from "./lib/fs-utils";
@@ -251,6 +252,7 @@ export async function buildFinance(): Promise<Map<string, MemberFinanceProfile>>
 
   const financeProfiles = new Map<string, MemberFinanceProfile>();
   await ensureDir(path.join(PROCESSED_DIR, "finance"));
+  await ensureDir(path.join(PUBLIC_DATA_DIR, "finance"));
 
   for (const member of supplemental) {
     if (!member.slug) {
@@ -370,6 +372,7 @@ export async function buildFinance(): Promise<Map<string, MemberFinanceProfile>>
 
     financeProfiles.set(member.slug, profile);
     await writeJsonFile(path.join(PROCESSED_DIR, "finance", `${member.slug}.json`), profile);
+    await writeJsonFile(path.join(PUBLIC_DATA_DIR, "finance", `${member.slug}.json`), profile);
   }
 
   console.log(`[build-finance] wrote finance profiles for ${financeProfiles.size} members`);

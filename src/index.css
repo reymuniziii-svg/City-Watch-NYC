@@ -1,1 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  
+  --color-paper: #F9F8F6;
+  --color-ink: #111111;
+  --color-accent: #D92424; /* A classic editorial red */
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Editorial typography utilities */
+.font-editorial {
+  font-family: var(--font-serif);
+}
+
+/* Sharp borders for editorial feel */
+.border-editorial {
+  border: 1px solid var(--color-ink);
+}
+
+.border-b-editorial {
+  border-bottom: 1px solid var(--color-ink);
+}
+
+.border-t-editorial {
+  border-top: 1px solid var(--color-ink);
+}

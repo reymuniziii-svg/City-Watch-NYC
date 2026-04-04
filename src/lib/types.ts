@@ -53,6 +53,7 @@ export interface MemberSummary {
   fullName: string;
   districtNumber: number;
   party: string;
+  neighborhoods: string[];
   billsSponsored: number;
   billsEnacted: number;
   rankSponsored: number;

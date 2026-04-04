@@ -30,42 +30,42 @@ export default function HearingCard({ hearing }: { hearing: Hearing }) {
   };
 
   return (
-    <div className="bg-white border border-slate-100 rounded-3xl shadow-sm hover:shadow-md transition-all overflow-hidden">
+    <div className="bg-white border-editorial hover:bg-slate-50 transition-colors overflow-hidden">
       <div className="p-8">
         <div className="flex items-start justify-between gap-4 mb-6">
-          <div className="flex items-center gap-3 px-3 py-1 rounded-full bg-slate-50 text-slate-600 text-xs font-bold uppercase tracking-wider">
+          <div className="flex items-center gap-3 px-3 py-1 border-editorial text-black text-xs font-bold uppercase tracking-widest">
             <Calendar className="w-3 h-3" />
             <span>{hearing.date}</span>
           </div>
-          <div className="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider">
+          <div className="px-3 py-1 bg-black text-white text-xs font-bold uppercase tracking-widest">
             {hearing.time}
           </div>
         </div>
 
-        <h3 className="text-xl font-bold text-slate-900 mb-4 leading-snug">
+        <h3 className="font-editorial text-2xl font-bold text-black mb-4 leading-snug">
           {hearing.title}
         </h3>
         
         <div className="space-y-3 mb-8">
-          <div className="flex items-center gap-2 text-slate-500 text-sm">
+          <div className="flex items-center gap-2 text-slate-600 text-sm">
             <MapPin className="w-4 h-4" />
             <span>{hearing.location}</span>
           </div>
-          <div className="flex items-center gap-2 text-slate-500 text-sm">
+          <div className="flex items-center gap-2 text-slate-600 text-sm">
             <Clock className="w-4 h-4" />
             <span>Committee on {hearing.committee}</span>
           </div>
         </div>
 
-        <div className="flex items-center justify-between pt-6 border-t border-slate-50">
-          <div className="text-xs font-medium text-slate-400">
+        <div className="flex items-center justify-between pt-6 border-t-editorial">
+          <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
             {hearing.bills?.length > 0 ? `${hearing.bills.length} Bills Discussed` : 'Oversight Hearing'}
           </div>
           
           <button 
             onClick={handleSummarize}
             disabled={isLoading}
-            className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700 transition-colors disabled:opacity-50"
+            className="flex items-center gap-2 px-5 py-2.5 border-editorial bg-white text-black font-bold text-xs uppercase tracking-widest hover:bg-black hover:text-white transition-colors disabled:opacity-50"
           >
             {isLoading ? (
               <Loader2 className="w-4 h-4 animate-spin" />
@@ -83,31 +83,31 @@ export default function HearingCard({ hearing }: { hearing: Hearing }) {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="bg-blue-50/50 border-t border-blue-100 p-8"
+            className="bg-slate-50 border-t-editorial p-8"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-xs font-bold text-blue-700 uppercase tracking-widest mb-2">What happened</h4>
-                  <p className="text-slate-700 leading-relaxed text-sm">{summary.whatHappened}</p>
+                  <h4 className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">What happened</h4>
+                  <p className="text-black leading-relaxed text-sm">{summary.whatHappened}</p>
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-blue-700 uppercase tracking-widest mb-2">Action Type</h4>
-                  <p className="text-slate-700 leading-relaxed text-sm">{summary.actionType}</p>
+                  <h4 className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">Action Type</h4>
+                  <p className="text-black leading-relaxed text-sm">{summary.actionType}</p>
                 </div>
               </div>
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-xs font-bold text-blue-700 uppercase tracking-widest mb-2">Main Takeaways</h4>
-                  <ul className="list-disc list-inside text-slate-700 text-sm space-y-2">
+                  <h4 className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">Main Takeaways</h4>
+                  <ul className="list-disc list-inside text-black text-sm space-y-2">
                     {summary.takeaways.map((t, i) => <li key={i}>{t}</li>)}
                   </ul>
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-blue-700 uppercase tracking-widest mb-2">Key Quotes</h4>
+                  <h4 className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">Key Quotes</h4>
                   <div className="space-y-3">
                     {summary.keyQuotes.map((q, i) => (
-                      <blockquote key={i} className="text-slate-600 italic text-sm border-l-2 border-blue-200 pl-3">
+                      <blockquote key={i} className="text-slate-600 italic text-sm border-l-2 border-black pl-3">
                         "{q}"
                       </blockquote>
                     ))}

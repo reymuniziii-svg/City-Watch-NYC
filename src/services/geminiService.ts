@@ -1,6 +1,45 @@
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenAI, Type } from "@google/genai";
 
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY || '' });
+
+export async function expandSearchQuery(query: string): Promise<string[]> {
+  try {
+    const response = await ai.models.generateContent({
+      model: "gemini-3-flash-preview",
+      contents: `The user is searching a database of NYC City Council bills for: "${query}". Generate a list of 10-15 specific keywords, synonyms, legal terms, or related concepts that would likely appear in the title or summary of relevant bills. Return ONLY a JSON array of strings.`,
+      config: {
+        responseMimeType: "application/json",
+        responseSchema: {
+          type: Type.ARRAY,
+          items: { type: Type.STRING }
+        }
+      }
+    });
+    return JSON.parse(response.text || "[]");
+  } catch (error) {
+    console.error('Error expanding search query:', error);
+    return [];
+  }
+}
+
+export async function chatWithAssistant(history: { role: 'user' | 'model', parts: { text: string }[] }[], message: string) {
+  try {
+    const response = await ai.models.generateContent({
+      model: "gemini-3-flash-preview",
+      contents: [
+        ...history,
+        { role: 'user', parts: [{ text: message }] }
+      ],
+      config: {
+        systemInstruction: "You are a helpful, non-partisan assistant for 'Council Watch', an app tracking the NYC City Council. Answer questions about NYC local government, how bills become laws, and general civic questions. Keep answers concise and easy to understand for everyday New Yorkers.",
+      }
+    });
+    return response.text;
+  } catch (error) {
+    console.error('Error in chat:', error);
+    return "I'm sorry, I'm having trouble connecting to the council database right now. Please try again later.";
+  }
+}
 
 export async function summarizeBill(billTitle: string, billSummary: string) {
   try {

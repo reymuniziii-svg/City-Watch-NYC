@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, MapPin, ArrowRight, Loader2, FileText, Landmark, Calendar } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { searchAddress, getDistrictFromCoords } from '../services/nycDataService';
+import { searchAddress, getDistrictFromBBL } from '../services/nycDataService';
 
 export default function AddressSearch() {
   const [query, setQuery] = useState('');
@@ -48,12 +48,16 @@ export default function AddressSearch() {
   }, [query, isLocating]);
 
   const handleSelect = async (suggestion: any) => {
-    const [lng, lat] = suggestion.geometry.coordinates;
     setQuery(suggestion.properties.label);
     setSuggestions([]);
     setIsLocating(true);
     try {
-      const district = await getDistrictFromCoords(lat, lng);
+      const bbl = suggestion.properties.addendum?.pad?.bbl;
+      if (!bbl) {
+        alert("We couldn't find a City Council district for this address. Please try a more specific NYC address.");
+        return;
+      }
+      const district = await getDistrictFromBBL(bbl);
       if (district) {
         navigate(`/members/district/${district}`);
       } else {
@@ -94,31 +98,31 @@ export default function AddressSearch() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-sm font-semibold mb-6">
-          <MapPin className="w-4 h-4" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 border-editorial text-black text-xs font-bold uppercase tracking-widest mb-8">
+          <MapPin className="w-3 h-3" />
           <span>NYC Civic Empowerment</span>
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold text-slate-900 tracking-tight mb-6 leading-tight">
-          Find Your Voice in <br />
-          <span className="text-emerald-600">City Hall</span>
+        <h1 className="font-editorial text-6xl md:text-8xl font-black text-black tracking-tighter mb-8 leading-[0.9]">
+          Find Your Voice<br />
+          <span className="italic font-light">in City Hall</span>
         </h1>
-        <p className="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl text-slate-600 mb-12 max-w-2xl mx-auto leading-relaxed">
           Enter your address to find your City Council member, track local bills, and see who's funding your representatives.
         </p>
 
         <form onSubmit={handleSubmit} className="relative group max-w-xl mx-auto" ref={containerRef}>
           <div className="absolute inset-y-0 left-0 pl-5 flex items-center">
             {isLoading ? (
-              <Loader2 className="w-5 h-5 text-emerald-500 animate-spin" />
+              <Loader2 className="w-5 h-5 text-black animate-spin" />
             ) : (
-              <button type="submit" className="p-1 hover:bg-slate-100 rounded-lg transition-colors">
-                <Search className="w-5 h-5 text-slate-400 group-focus-within:text-emerald-500" />
+              <button type="submit" className="p-1 hover:bg-slate-100 transition-colors">
+                <Search className="w-5 h-5 text-slate-400 group-focus-within:text-black" />
               </button>
             )}
           </div>
           <input
             type="text"
-            className="block w-full pl-12 pr-24 py-5 bg-white border border-slate-200 rounded-2xl shadow-sm focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 transition-all text-lg placeholder:text-slate-400"
+            className="block w-full pl-12 pr-24 py-5 bg-white border-editorial focus:ring-1 focus:ring-black focus:border-black transition-all text-lg placeholder:text-slate-400 rounded-none"
             placeholder="Enter your NYC address..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
@@ -126,7 +130,7 @@ export default function AddressSearch() {
           <div className="absolute inset-y-0 right-0 pr-2 flex items-center gap-1">
             <button
               type="submit"
-              className="bg-emerald-600 text-white px-4 py-2 rounded-xl font-semibold text-sm hover:bg-emerald-700 transition-colors mr-2"
+              className="bg-black text-white px-6 py-2 font-bold text-sm uppercase tracking-wider hover:bg-slate-800 transition-colors mr-2 rounded-none"
             >
               Search
             </button>
@@ -138,7 +142,7 @@ export default function AddressSearch() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="absolute z-50 w-full mt-2 bg-white border border-slate-200 rounded-2xl shadow-xl overflow-hidden text-left"
+                className="absolute z-50 w-full mt-2 bg-white border-editorial overflow-hidden text-left rounded-none"
               >
                 {suggestions.map((s, i) => (
                   <button
@@ -148,10 +152,10 @@ export default function AddressSearch() {
                       e.preventDefault();
                       handleSelect(s);
                     }}
-                    className="w-full px-5 py-4 flex items-center gap-3 hover:bg-slate-50 transition-colors border-b border-slate-100 last:border-0"
+                    className="w-full px-5 py-4 flex items-center gap-3 hover:bg-slate-50 transition-colors border-b-editorial last:border-b-0"
                   >
                     <MapPin className="w-4 h-4 text-slate-400" />
-                    <span className="text-slate-700 font-medium">{s.properties.label}</span>
+                    <span className="text-black font-medium">{s.properties.label}</span>
                     <ArrowRight className="w-4 h-4 text-slate-300 ml-auto" />
                   </button>
                 ))}
@@ -161,22 +165,22 @@ export default function AddressSearch() {
         </form>
 
         {isLocating && (
-          <div className="mt-6 flex items-center justify-center gap-2 text-emerald-600 font-medium">
+          <div className="mt-6 flex items-center justify-center gap-2 text-black font-medium">
             <Loader2 className="w-4 h-4 animate-spin" />
             <span>Locating your district...</span>
           </div>
         )}
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-0 text-left border-editorial">
           {[
             { title: 'Track Bills', desc: 'See what laws are being proposed and how they affect you.', icon: FileText },
             { title: 'Follow Money', desc: 'Transparent campaign finance data for every member.', icon: Landmark },
             { title: 'Attend Hearings', desc: 'Stay informed about upcoming committee meetings.', icon: Calendar },
           ].map((feature, i) => (
-            <div key={i} className="p-6 bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-              <feature.icon className="w-8 h-8 text-emerald-600 mb-4" />
-              <h3 className="font-bold text-slate-900 mb-2">{feature.title}</h3>
-              <p className="text-sm text-slate-500 leading-relaxed">{feature.desc}</p>
+            <div key={i} className="p-8 bg-white border-r-editorial last:border-r-0 hover:bg-slate-50 transition-colors">
+              <feature.icon className="w-8 h-8 text-black mb-6" strokeWidth={1.5} />
+              <h3 className="font-editorial font-bold text-xl text-black mb-3">{feature.title}</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">{feature.desc}</p>
             </div>
           ))}
         </div>

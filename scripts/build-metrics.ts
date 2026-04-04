@@ -1,6 +1,6 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { CONTENT_DIR, PROCESSED_DIR, RAW_UPSTREAM_DIR, SESSION_END_YEAR, SESSION_START_YEAR } from "./lib/constants";
+import { CONTENT_DIR, PROCESSED_DIR, PUBLIC_DATA_DIR, RAW_UPSTREAM_DIR, SESSION_END_YEAR, SESSION_START_YEAR } from "./lib/constants";
 import { readJsonFile, writeJsonFile } from "./lib/fs-utils";
 import { isEnactedStatus, normalizeDate } from "../src/lib/status-timeline";
 import { parseCommitteeAssignments, type RawEvent, type RawPerson } from "./lib/legislation";
@@ -210,6 +210,7 @@ export async function buildMetrics(): Promise<Map<string, MetricRow>> {
 
   const map = new Map(rows.map((row) => [row.slug, row]));
   await writeJsonFile(path.join(PROCESSED_DIR, "member-metrics.json"), rows);
+  await writeJsonFile(path.join(PUBLIC_DATA_DIR, "member-metrics.json"), rows);
   console.log(`[build-metrics] wrote metrics for ${rows.length} members`);
 
   return map;

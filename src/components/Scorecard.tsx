@@ -29,20 +29,20 @@ export default function Scorecard({ metrics }: { metrics: MemberMetrics }) {
   ];
 
   return (
-    <section className="rounded-[2rem] border border-slate-100 bg-white p-8 shadow-sm">
-      <div className="mb-6 flex items-start justify-between gap-4">
+    <section className="border-editorial bg-white p-8">
+      <div className="mb-8 flex items-start justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-bold text-slate-900">Activity Scorecard</h2>
-          <p className="mt-2 text-sm text-slate-500">A quick transparency snapshot, not a grade.</p>
+          <h2 className="font-editorial text-3xl font-bold text-black">Activity Scorecard</h2>
+          <p className="mt-2 text-sm text-slate-500 uppercase tracking-widest font-bold">A quick transparency snapshot, not a grade.</p>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-0 border-editorial md:grid-cols-2 xl:grid-cols-4 bg-black">
         {items.map((item) => (
-          <div key={item.label} className="rounded-3xl border border-slate-100 bg-slate-50/80 p-5">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-400">{item.label}</p>
-            <p className="mt-3 text-3xl font-black tracking-tight text-slate-900">{item.value}</p>
-            <p className="mt-2 text-sm leading-relaxed text-slate-500">{item.detail}</p>
+          <div key={item.label} className="bg-white p-6 border-r-editorial border-b-editorial last:border-r-0 xl:border-b-0 md:[&:nth-child(2n)]:border-r-0 xl:[&:nth-child(2n)]:border-r-editorial">
+            <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">{item.label}</p>
+            <p className="font-editorial mt-4 text-4xl font-bold text-black">{item.value}</p>
+            <p className="mt-4 text-sm leading-relaxed text-slate-600">{item.detail}</p>
           </div>
         ))}
       </div>

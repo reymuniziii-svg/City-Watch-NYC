@@ -115,10 +115,10 @@ export default function DistrictExplorerMap({
           const isActive = districtNumber === activeDistrict;
 
           return {
-            color: isActive ? '#0f5ef7' : '#31547c',
-            weight: isActive ? 3 : 1.2,
-            fillColor: isActive ? '#2563eb' : '#9eb7d9',
-            fillOpacity: isActive ? 0.28 : 0.12,
+            color: isActive ? '#000000' : '#000000',
+            weight: isActive ? 3 : 1,
+            fillColor: isActive ? '#000000' : '#000000',
+            fillOpacity: isActive ? 0.2 : 0.05,
           };
         }}
       />
@@ -129,7 +129,7 @@ export default function DistrictExplorerMap({
           pathOptions={{
             color: '#ffffff',
             weight: 3,
-            fillColor: '#ef4444',
+            fillColor: '#000000',
             fillOpacity: 1,
           }}
         />

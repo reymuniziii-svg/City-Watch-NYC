@@ -206,7 +206,12 @@ export async function buildMembers(): Promise<MemberSummary[]> {
 
   const peopleBySlug = new Map(people.map((person) => [person.Slug, person]));
   const supplemental = await readJsonFile<SupplementalRow[]>(path.join(CONTENT_DIR, "member-supplemental.json"));
-  const metrics = await readJsonFile<MemberMetric[]>(path.join(PROCESSED_DIR, "member-metrics.json")).catch((): MemberMetric[] => []);
+  let metrics: MemberMetric[] = [];
+  try {
+    metrics = await readJsonFile<MemberMetric[]>(path.join(PROCESSED_DIR, "member-metrics.json"));
+  } catch {
+    // ignore
+  }
   const metricBySlug = new Map<string, MemberMetric>(metrics.map((row) => [row.slug, row]));
 
   const bills = await loadBillDetails();
@@ -234,6 +239,7 @@ export async function buildMembers(): Promise<MemberSummary[]> {
       fullName: seated ? person!.FullName : entry.displayName,
       districtNumber: entry.districtNumber,
       party: entry.party === "Blank" ? "Unknown" : entry.party,
+      neighborhoods: entry.neighborhoods,
       billsSponsored: metric?.billsSponsored ?? 0,
       billsEnacted: metric?.billsEnacted ?? 0,
       rankSponsored: metric?.rankSponsored ?? 51,
@@ -312,6 +318,8 @@ export async function buildMembers(): Promise<MemberSummary[]> {
 
     await ensureDir(path.join(PROCESSED_DIR, "members"));
     await writeJsonFile(path.join(PROCESSED_DIR, "members", `${entry.slug}.json`), profile);
+    await ensureDir(path.join(PUBLIC_DATA_DIR, "members"));
+    await writeJsonFile(path.join(PUBLIC_DATA_DIR, "members", `${entry.slug}.json`), profile);
   }
 
   membersIndex.sort((a, b) => a.districtNumber - b.districtNumber);

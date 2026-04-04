@@ -1,5 +1,5 @@
 import { CouncilMember, Bill, Hearing, CampaignFinance, MemberMetrics } from '../types';
-import type { MemberSummary, HearingRecord } from '../lib/types';
+import type { MemberSummary, HearingRecord, MemberProfile } from '../lib/types';
 
 // Static data caches
 let membersCache: CouncilMember[] | null = null;
@@ -7,6 +7,7 @@ let billsCache: Bill[] | null = null;
 let hearingsCache: Hearing[] | null = null;
 const financeCache = new Map<string, CampaignFinance | null>();
 let memberMetricsCache: MemberMetrics[] | null = null;
+const memberProfileCache = new Map<string, MemberProfile | null>();
 
 interface BillIndexRecord {
   billId: string;
@@ -28,13 +29,14 @@ function mapMemberToCouncilMember(member: MemberSummary): CouncilMember {
     district: member.districtNumber,
     party: member.party,
     borough: 'NYC',
-    neighborhoods: [],
+    neighborhoods: member.neighborhoods || [],
     committees: [],
     contact: {
       email: slug ? slug.replace(/-/g, '') + '@council.nyc.gov' : '',
       phone: '212-788-7100',
       website: 'https://council.nyc.gov/district-' + member.districtNumber + '/',
     },
+    photoUrl: `https://raw.githubusercontent.com/NewYorkCityCouncil/districts/master/thumbnails/district-${member.districtNumber}.jpg`,
     sponsoredBillsCount: member.billsSponsored,
     enactedBillsCount: member.billsEnacted,
   };
@@ -182,6 +184,20 @@ export async function searchAddress(query: string) {
   return data.features || [];
 }
 
+export async function getDistrictFromBBL(bbl: string) {
+  try {
+    const response = await fetch(`https://data.cityofnewyork.us/resource/64uk-42ks.json?bbl=${bbl}`);
+    if (!response.ok) return null;
+    const data = await response.json();
+    if (data && data.length > 0 && data[0].council) {
+      return parseInt(data[0].council, 10);
+    }
+  } catch (error) {
+    console.error('Error fetching district from BBL:', error);
+  }
+  return null;
+}
+
 export async function getDistrictFromCoords(lat: number, lng: number) {
   try {
     const url = 'https://data.cityofnewyork.us/resource/872g-cjhh.json?$where=intersects(the_geom, \'POINT(' + lng + ' ' + lat + ')\')';
@@ -195,4 +211,26 @@ export async function getDistrictFromCoords(lat: number, lng: number) {
     console.error('Error fetching district from coords:', error);
   }
   return null;
+}
+
+export async function fetchMemberProfile(id: string): Promise<MemberProfile | null> {
+  if (memberProfileCache.has(id)) {
+    return memberProfileCache.get(id) ?? null;
+  }
+
+  try {
+    const response = await fetch('/data/members/' + id + '.json');
+    if (!response.ok) {
+      memberProfileCache.set(id, null);
+      return null;
+    }
+
+    const profile: MemberProfile = await response.json();
+    memberProfileCache.set(id, profile);
+    return profile;
+  } catch (error) {
+    console.error('Error loading member profile:', error);
+    memberProfileCache.set(id, null);
+    return null;
+  }
 }
