@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Mail, Share2, MessageCircle, Twitter, Check, Loader2, MapPin, Copy, Users } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Mail, Share2, MessageCircle, Twitter, Check, Loader2, MapPin, Copy, Users, ArrowRight } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
 import { useMyCM } from '../hooks/useMyCM';
+import { searchAddress } from '../services/nycDataService';
 
 interface CivicActionCenterProps {
   billNumber: string;
@@ -55,8 +56,51 @@ export default function CivicActionCenter({ billNumber, billTitle, billStatus }:
   const [activeTab, setActiveTab] = useState<'contact' | 'share'>('contact');
   const [stance, setStance] = useState<'support' | 'oppose'>('support');
   const [addressInput, setAddressInput] = useState('');
+  const [suggestions, setSuggestions] = useState<any[]>([]);
+  const [isSuggestionsLoading, setIsSuggestionsLoading] = useState(false);
   const [clipboardCopied, setClipboardCopied] = useState(false);
-  const { cmInfo, isResolving, resolveError, inlineResolve, clearCM } = useMyCM();
+  const addressContainerRef = useRef<HTMLDivElement>(null);
+  const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const { cmInfo, isResolving, resolveError, resolveFromBBL, clearCM } = useMyCM();
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (addressContainerRef.current && !addressContainerRef.current.contains(e.target as Node)) {
+        setSuggestions([]);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    if (addressInput.length < 3) {
+      setSuggestions([]);
+      return;
+    }
+    if (debounceTimer.current) clearTimeout(debounceTimer.current);
+    debounceTimer.current = setTimeout(async () => {
+      setIsSuggestionsLoading(true);
+      try {
+        const results = await searchAddress(addressInput);
+        setSuggestions(results);
+      } catch {
+        setSuggestions([]);
+      } finally {
+        setIsSuggestionsLoading(false);
+      }
+    }, 300);
+    return () => { if (debounceTimer.current) clearTimeout(debounceTimer.current); };
+  }, [addressInput]);
+
+  const handleSelectSuggestion = async (s: any) => {
+    const label: string = s.properties?.label ?? addressInput;
+    const bbl: string | undefined = s.properties?.addendum?.pad?.bbl;
+    setAddressInput(label);
+    setSuggestions([]);
+    if (!bbl) return;
+    await resolveFromBBL(bbl, label);
+  };
 
   const billUrl = getBillUrl(billNumber);
   const cmName = cmInfo?.fullName ?? 'your council member';
@@ -66,8 +110,12 @@ export default function CivicActionCenter({ billNumber, billTitle, billStatus }:
 
   const handleResolveAddress = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (addressInput.trim().length < 3) return;
-    await inlineResolve(addressInput.trim());
+    if (suggestions.length > 0) {
+      await handleSelectSuggestion(suggestions[0]);
+    } else if (addressInput.trim().length >= 3) {
+      const results = await searchAddress(addressInput.trim());
+      if (results.length > 0) await handleSelectSuggestion(results[0]);
+    }
   };
 
   const handleSendEmail = () => {
@@ -148,24 +196,62 @@ export default function CivicActionCenter({ billNumber, billTitle, billStatus }:
                   Enter your NYC address to find your council member and send them an email about this bill.
                 </p>
               </div>
-              <form onSubmit={handleResolveAddress} className="flex gap-2">
-                <input
-                  type="text"
-                  value={addressInput}
-                  onChange={(e) => setAddressInput(e.target.value)}
-                  placeholder="e.g. 123 Main St, Brooklyn, NY"
-                  className="flex-1 px-4 py-2.5 border-editorial text-sm focus:ring-1 focus:ring-black focus:outline-none"
-                  disabled={isResolving}
-                />
-                <button
-                  type="submit"
-                  disabled={isResolving || addressInput.trim().length < 3}
-                  className="px-5 py-2.5 bg-black text-white font-bold text-xs uppercase tracking-widest hover:bg-slate-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-                >
-                  {isResolving ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : null}
-                  {isResolving ? 'Finding...' : 'Find'}
-                </button>
-              </form>
+              <div ref={addressContainerRef} className="relative">
+                <form onSubmit={handleResolveAddress} className="flex gap-2">
+                  <div className="relative flex-1">
+                    <input
+                      type="text"
+                      value={addressInput}
+                      onChange={(e) => setAddressInput(e.target.value)}
+                      placeholder="e.g. 123 Main St, Brooklyn, NY"
+                      className="w-full px-4 py-2.5 border-editorial text-sm focus:ring-1 focus:ring-black focus:outline-none"
+                      disabled={isResolving}
+                      autoComplete="off"
+                    />
+                    {isSuggestionsLoading && (
+                      <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                        <Loader2 className="w-3.5 h-3.5 animate-spin text-slate-400" />
+                      </div>
+                    )}
+                  </div>
+                  <button
+                    type="submit"
+                    disabled={isResolving || addressInput.trim().length < 3}
+                    className="px-5 py-2.5 bg-black text-white font-bold text-xs uppercase tracking-widest hover:bg-slate-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shrink-0"
+                  >
+                    {isResolving ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : null}
+                    {isResolving ? 'Finding...' : 'Find'}
+                  </button>
+                </form>
+
+                <AnimatePresence>
+                  {suggestions.length > 0 && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -6 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -6 }}
+                      transition={{ duration: 0.15 }}
+                      className="absolute z-50 left-0 right-0 mt-1 bg-white border-editorial overflow-hidden text-left"
+                    >
+                      {suggestions.map((s, i) => (
+                        <button
+                          key={i}
+                          type="button"
+                          onMouseDown={(e) => {
+                            e.preventDefault();
+                            handleSelectSuggestion(s);
+                          }}
+                          className="w-full px-4 py-3 flex items-center gap-3 hover:bg-slate-50 transition-colors border-b border-slate-100 last:border-b-0 text-left"
+                        >
+                          <MapPin className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                          <span className="text-sm text-black font-medium flex-1 truncate">{s.properties?.label}</span>
+                          <ArrowRight className="w-3.5 h-3.5 text-slate-300 shrink-0" />
+                        </button>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
               {resolveError && (
                 <p className="mt-2 text-xs text-red-600">{resolveError}</p>
               )}

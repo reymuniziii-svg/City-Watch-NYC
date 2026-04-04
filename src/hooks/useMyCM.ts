@@ -44,21 +44,10 @@ export function useMyCM() {
   const [isResolving, setIsResolving] = useState(false);
   const [resolveError, setResolveError] = useState<string | null>(null);
 
-  const inlineResolve = useCallback(async (address: string): Promise<CMInfo | null> => {
+  const resolveFromBBL = useCallback(async (bbl: string, label: string): Promise<CMInfo | null> => {
     setIsResolving(true);
     setResolveError(null);
     try {
-      const results = await searchAddress(address);
-      if (!results || results.length === 0) {
-        setResolveError("No address found. Please try a more specific NYC address.");
-        return null;
-      }
-      const first = results[0];
-      const bbl = first.properties?.addendum?.pad?.bbl;
-      if (!bbl) {
-        setResolveError("Couldn't find a Borough-Block-Lot for this address.");
-        return null;
-      }
       const district = await getDistrictFromBBL(bbl);
       if (!district) {
         setResolveError("Couldn't find a City Council district for this address. Make sure it's in NYC.");
@@ -84,7 +73,7 @@ export function useMyCM() {
         memberSlug: member.slug,
         fullName: member.fullName,
         email: makeEmail(member.slug),
-        address: first.properties?.label || address,
+        address: label,
       };
       saveToStorage(info);
       setCmInfo(info);
@@ -98,11 +87,38 @@ export function useMyCM() {
     }
   }, []);
 
+  const inlineResolve = useCallback(async (address: string): Promise<CMInfo | null> => {
+    setIsResolving(true);
+    setResolveError(null);
+    try {
+      const results = await searchAddress(address);
+      if (!results || results.length === 0) {
+        setResolveError("No address found. Please try a more specific NYC address.");
+        return null;
+      }
+      const first = results[0];
+      const bbl = first.properties?.addendum?.pad?.bbl;
+      const label: string = first.properties?.label || address;
+      if (!bbl) {
+        setResolveError("Couldn't find a Borough-Block-Lot for this address.");
+        return null;
+      }
+      setIsResolving(false);
+      return resolveFromBBL(bbl, label);
+    } catch (err) {
+      console.error('CM resolution error:', err);
+      setResolveError("Something went wrong. Please try again.");
+      return null;
+    } finally {
+      setIsResolving(false);
+    }
+  }, [resolveFromBBL]);
+
   const clearCM = useCallback(() => {
     clearStorage();
     setCmInfo(null);
     setResolveError(null);
   }, []);
 
-  return { cmInfo, isResolving, resolveError, inlineResolve, clearCM };
+  return { cmInfo, isResolving, resolveError, inlineResolve, resolveFromBBL, clearCM };
 }
