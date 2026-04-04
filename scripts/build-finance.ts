@@ -131,7 +131,8 @@ function buildExpenditureProfile(
   if (expenditureRows.length === 0) return null;
 
   const categoryTotals = new Map<string, number>();
-  const payeeTotals = new Map<string, { amount: number; category: string }>();
+  // Track per-payee totals AND a per-payee-per-category breakdown to assign dominant category
+  const payeeTotals = new Map<string, { total: number; byCategory: Map<string, number> }>();
 
   for (const row of expenditureRows) {
     const amount = Number.parseFloat((row.AMNT ?? "").replace(/,/g, "").trim());
@@ -141,8 +142,9 @@ function buildExpenditureProfile(
     const category = classifyExpenditure(row.PURPOSECD ?? "", payeeName);
     categoryTotals.set(category, (categoryTotals.get(category) ?? 0) + amount);
 
-    const existing = payeeTotals.get(payeeName) ?? { amount: 0, category };
-    existing.amount += amount;
+    const existing = payeeTotals.get(payeeName) ?? { total: 0, byCategory: new Map<string, number>() };
+    existing.total += amount;
+    existing.byCategory.set(category, (existing.byCategory.get(category) ?? 0) + amount);
     payeeTotals.set(payeeName, existing);
   }
 
@@ -154,7 +156,15 @@ function buildExpenditureProfile(
     .sort((a, b) => b.amount - a.amount);
 
   const topPayees = Array.from(payeeTotals.entries())
-    .map(([name, { amount, category }]) => ({ name, amount: Math.round(amount * 100) / 100, category }))
+    .map(([name, { total, byCategory: catMap }]) => {
+      // Use the category where the most money was spent for this payee
+      let dominantCategory = "Operations / Other";
+      let maxCatAmount = 0;
+      for (const [cat, amt] of catMap.entries()) {
+        if (amt > maxCatAmount) { maxCatAmount = amt; dominantCategory = cat; }
+      }
+      return { name, amount: Math.round(total * 100) / 100, category: dominantCategory };
+    })
     .sort((a, b) => b.amount - a.amount)
     .slice(0, 5);
 
