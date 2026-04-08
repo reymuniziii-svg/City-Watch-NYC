@@ -11,26 +11,36 @@ import InfluenceMapperPage from './components/InfluenceMapperPage';
 import SupportPage from './components/SupportPage';
 import PricingPage from './components/PricingPage';
 import WatchlistPage from './components/WatchlistPage';
+import ActionKitMicrosite from './components/ActionKitMicrosite';
+
+function AppRoutes() {
+  return (
+    <Layout>
+      <Routes>
+        <Route path="/" element={<AddressSearch />} />
+        <Route path="/members" element={<MemberList />} />
+        <Route path="/members/:id" element={<MemberDashboard />} />
+        <Route path="/members/district/:district" element={<MemberDashboard />} />
+        <Route path="/districts" element={<DistrictsPage />} />
+        <Route path="/bills" element={<BillList />} />
+        <Route path="/hearings" element={<HearingList />} />
+        <Route path="/money" element={<MoneyPage />} />
+        <Route path="/influence" element={<InfluenceMapperPage />} />
+        <Route path="/watchlist" element={<WatchlistPage />} />
+        <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/support" element={<SupportPage />} />
+      </Routes>
+    </Layout>
+  );
+}
 
 export default function App() {
   return (
     <Router>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<AddressSearch />} />
-          <Route path="/members" element={<MemberList />} />
-          <Route path="/members/:id" element={<MemberDashboard />} />
-          <Route path="/members/district/:district" element={<MemberDashboard />} />
-          <Route path="/districts" element={<DistrictsPage />} />
-          <Route path="/bills" element={<BillList />} />
-          <Route path="/hearings" element={<HearingList />} />
-          <Route path="/money" element={<MoneyPage />} />
-          <Route path="/influence" element={<InfluenceMapperPage />} />
-          <Route path="/watchlist" element={<WatchlistPage />} />
-          <Route path="/pricing" element={<PricingPage />} />
-          <Route path="/support" element={<SupportPage />} />
-        </Routes>
-      </Layout>
+      <Routes>
+        <Route path="/kit/:slug" element={<ActionKitMicrosite />} />
+        <Route path="*" element={<AppRoutes />} />
+      </Routes>
     </Router>
   );
 }
