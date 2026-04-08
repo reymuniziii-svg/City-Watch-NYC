@@ -21,6 +21,7 @@
     "data:finance": "tsx scripts/build-finance.ts",
     "data:metrics": "tsx scripts/build-metrics.ts",
     "data:search": "tsx scripts/build-search-index.ts",
+    "data:transcripts": "tsx scripts/build-transcript-index.ts",
     "check-env": "tsx scripts/check-env.ts"
   },
   "dependencies": {
