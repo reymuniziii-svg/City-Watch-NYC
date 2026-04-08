@@ -23,10 +23,18 @@ const groups: VarGroup[] = [
     vars: [{ name: 'GEMINI_API_KEY', required: true }],
   },
   {
-    label: 'Frontend (Vite)',
+    label: 'Supabase (Database + Edge Functions)',
     vars: [
       { name: 'VITE_SUPABASE_URL', required: true },
       { name: 'VITE_SUPABASE_ANON_KEY', required: true },
+      { name: 'SUPABASE_SERVICE_ROLE_KEY', required: true },
+      { name: 'SUPABASE_PROJECT_REF', required: true },
+      { name: 'SUPABASE_ACCESS_TOKEN', required: true },
+    ],
+  },
+  {
+    label: 'Clerk (Authentication)',
+    vars: [
       { name: 'VITE_CLERK_PUBLISHABLE_KEY', required: true },
     ],
   },
