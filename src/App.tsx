@@ -8,6 +8,7 @@ import HearingList from './components/HearingList';
 import DistrictsPage from './components/DistrictsPage';
 import MoneyPage from './components/MoneyPage';
 import SupportPage from './components/SupportPage';
+import PricingPage from './components/PricingPage';
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/bills" element={<BillList />} />
           <Route path="/hearings" element={<HearingList />} />
           <Route path="/money" element={<MoneyPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
           <Route path="/support" element={<SupportPage />} />
         </Routes>
       </Layout>
