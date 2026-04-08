@@ -11,6 +11,7 @@ import InfluenceMapperPage from './components/InfluenceMapperPage';
 import SupportPage from './components/SupportPage';
 import PricingPage from './components/PricingPage';
 import WatchlistPage from './components/WatchlistPage';
+import HearingSuperSearch from './components/HearingSuperSearch';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/districts" element={<DistrictsPage />} />
           <Route path="/bills" element={<BillList />} />
           <Route path="/hearings" element={<HearingList />} />
+          <Route path="/hearing-search" element={<HearingSuperSearch />} />
           <Route path="/money" element={<MoneyPage />} />
           <Route path="/influence" element={<InfluenceMapperPage />} />
           <Route path="/watchlist" element={<WatchlistPage />} />
