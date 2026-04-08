@@ -5,6 +5,9 @@ const JWKS_URL =
   Deno.env.get('CLERK_JWKS_URL') ??
   'https://welcomed-griffon-77.clerk.accounts.dev/.well-known/jwks.json';
 
+// Extract issuer from JWKS URL (e.g. https://welcomed-griffon-77.clerk.accounts.dev)
+const EXPECTED_ISSUER = JWKS_URL.replace('/.well-known/jwks.json', '');
+
 let _jwks: ReturnType<typeof createRemoteJWKSet> | null = null;
 function getJWKS() {
   if (!_jwks) _jwks = createRemoteJWKSet(new URL(JWKS_URL));
@@ -15,8 +18,13 @@ export async function validateClerkJWT(authHeader: string | null): Promise<strin
   if (!authHeader?.startsWith('Bearer ')) return null;
   const token = authHeader.slice(7);
   try {
-    const { payload } = await jwtVerify(token, getJWKS(), { clockTolerance: 60 });
-    return (payload.sub as string) ?? null;
+    const { payload } = await jwtVerify(token, getJWKS(), {
+      issuer: EXPECTED_ISSUER,
+      clockTolerance: 60,
+    });
+    const sub = payload.sub;
+    if (!sub || typeof sub !== 'string') return null;
+    return sub;
   } catch {
     return null;
   }

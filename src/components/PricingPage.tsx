@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Check, X, Zap, Shield, Building2, ChevronDown } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
+import { useSession } from '@clerk/clerk-react';
 import { useProUser, type ProTier } from '../hooks/useProUser';
-import { isSupabaseConfigured, supabase } from '../services/supabaseClient';
+import { isSupabaseConfigured, callEdgeFunction } from '../services/supabaseClient';
 import SubscriptionStatus from './SubscriptionStatus';
 
 /* ------------------------------------------------------------------ */
@@ -373,15 +374,19 @@ function FAQSection() {
 
 export default function PricingPage() {
   const { tier: currentTier, isAuthenticated, subscriptionStatus } = useProUser();
+  const { session } = useSession();
   const [billing, setBilling] = useState<'monthly' | 'yearly'>('monthly');
   const [searchParams] = useSearchParams();
   const showSuccess = searchParams.get('success') === 'true';
 
   const handleCheckout = async (plan: ProTier) => {
-    if (!isSupabaseConfigured() || !supabase) return;
+    if (!isSupabaseConfigured() || !session) return;
 
     try {
-      const { data, error } = await supabase.functions.invoke('create-checkout-session', {
+      const token = await session.getToken();
+      const data = await callEdgeFunction<{ url?: string }>('create-checkout-session', {
+        method: 'POST',
+        token,
         body: {
           plan,
           successUrl: window.location.origin + '/pricing?success=true',
@@ -389,7 +394,6 @@ export default function PricingPage() {
         },
       });
 
-      if (error) throw error;
       if (data?.url) {
         window.location.href = data.url;
       }
