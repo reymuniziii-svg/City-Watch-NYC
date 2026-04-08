@@ -43,11 +43,13 @@ export function useProUser(): ProUserState {
       return;
     }
     setIsLoading(true);
-    supabase!
-      .from('profiles')
-      .select('tier')
-      .eq('id', clerkUser.id)
-      .single()
+    Promise.resolve(
+      supabase!
+        .from('profiles')
+        .select('tier')
+        .eq('id', clerkUser.id)
+        .single()
+    )
       .then(({ data }: { data: { tier?: string } | null }) => {
         setTier((data?.tier as Tier) ?? 'free');
       })
