@@ -11,6 +11,7 @@ import InfluenceMapperPage from './components/InfluenceMapperPage';
 import SupportPage from './components/SupportPage';
 import PricingPage from './components/PricingPage';
 import WatchlistPage from './components/WatchlistPage';
+import ActionKitList from './components/ActionKitList';
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/money" element={<MoneyPage />} />
           <Route path="/influence" element={<InfluenceMapperPage />} />
           <Route path="/watchlist" element={<WatchlistPage />} />
+          <Route path="/action-kits" element={<ActionKitList />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/support" element={<SupportPage />} />
         </Routes>
