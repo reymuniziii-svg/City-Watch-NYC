@@ -25,9 +25,43 @@ A React web application for tracking NYC City Council activities. Allows residen
 - `content/` - Supplemental member profile data and campaign finance overrides
 - `public/data/` - Generated processed JSON files consumed by the frontend
 
+## Backend Services
+
+### Authentication — Clerk
+- `VITE_CLERK_PUBLISHABLE_KEY` — Clerk publishable key (frontend)
+- App wraps with `<ClerkProvider>` only when key is present (graceful degradation)
+- Clerk user ID is used as the primary user identifier throughout
+
+### Database — Supabase
+- `VITE_SUPABASE_URL` — Supabase project URL
+- `VITE_SUPABASE_ANON_KEY` — Supabase anon/public key (frontend)
+- `SUPABASE_PROJECT_REF` — Project reference ID (for CLI operations)
+- 6 migrations applied: profiles, watchlist_items, subscriptions, policy_platforms, alert_preferences, impact_reports
+- RLS is enabled; all data access for authenticated operations goes through edge functions
+
+### Supabase Edge Functions (8 deployed)
+- `watchlist` — GET/POST/DELETE watchlist items
+- `get-user-profile` — Fetch profile + subscription for authenticated user
+- `send-digest` — Email digest (requires RESEND_API_KEY in Supabase secrets)
+- `analyze-impact` — AI policy impact analysis (requires Pro subscription)
+- `generate-impact-pdf` — Generate PDF impact report
+- `upload-platform` — Upload policy platform file to Storage
+- `create-checkout-session` — Stripe checkout (requires Stripe secrets)
+- `stripe-webhook` — Handle Stripe subscription events
+
+All edge functions validate Clerk JWTs via Clerk's JWKS endpoint (`_shared/auth.ts`) and use the Supabase service role client (bypasses RLS). Supabase secrets needed: `CLERK_JWKS_URL`, `GEMINI_API_KEY`, `APP_URL`, `RESEND_API_KEY` (for email), `STRIPE_SECRET_KEY` / `STRIPE_ADVOCATE_PRICE_ID` / `STRIPE_ENTERPRISE_PRICE_ID` (for payments).
+
+### Storage
+- Bucket: `policy-platforms` (private, 10MB limit, pdf/txt only)
+- Used for uploaded policy files and generated PDF impact reports
+
 ## Environment Variables
 - `GEMINI_API_KEY` - Required for AI features (bill summaries, chat assistant)
 - `APP_URL` - The URL where the app is hosted
+- `VITE_SUPABASE_URL` - Supabase project URL
+- `VITE_SUPABASE_ANON_KEY` - Supabase anonymous key
+- `VITE_CLERK_PUBLISHABLE_KEY` - Clerk publishable key
+- `SUPABASE_PROJECT_REF` - Supabase project reference (for CLI)
 
 ## Development
 - Dev server runs on port 5000 at 0.0.0.0
@@ -55,6 +89,8 @@ A small Express server handles the production deployment:
 - `/bills` — Bill search and tracking
 - `/hearings` — Upcoming and past hearings
 - `/money` — Campaign finance comparison
+- `/watchlist` — Personal watchlist (Clerk auth required)
+- `/pricing` — Pro subscription plans
 - `/support` — Donation / support page
 
 ## Known Issues / Notes

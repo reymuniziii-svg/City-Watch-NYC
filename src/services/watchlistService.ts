@@ -1,4 +1,4 @@
-import { supabase, isSupabaseConfigured } from './supabaseClient';
+import { callEdgeFunction, isSupabaseConfigured } from './supabaseClient';
 
 export interface WatchlistItem {
   id: string;
@@ -9,71 +9,51 @@ export interface WatchlistItem {
   created_at: string;
 }
 
-export async function getWatchlist(userId: string): Promise<WatchlistItem[]> {
+export async function getWatchlist(token: string): Promise<WatchlistItem[]> {
   if (!isSupabaseConfigured()) return [];
-
-  const { data, error } = await supabase!
-    .from('watchlist_items')
-    .select('*')
-    .eq('user_id', userId)
-    .order('created_at', { ascending: false });
-
-  if (error) {
-    console.error('Error fetching watchlist:', error);
+  try {
+    return await callEdgeFunction<WatchlistItem[]>('watchlist', { method: 'GET', token });
+  } catch (err) {
+    console.error('Error fetching watchlist:', err);
     return [];
   }
-  return data as WatchlistItem[];
 }
 
 export async function addToWatchlist(
-  userId: string,
+  token: string,
   item: Omit<WatchlistItem, 'id' | 'user_id' | 'created_at'>
 ): Promise<void> {
   if (!isSupabaseConfigured()) return;
-
-  const { error } = await supabase!
-    .from('watchlist_items')
-    .insert({ user_id: userId, ...item });
-
-  if (error) {
-    console.error('Error adding to watchlist:', error);
-    throw error;
-  }
+  await callEdgeFunction('watchlist', { method: 'POST', token, body: item });
 }
 
-export async function removeFromWatchlist(userId: string, itemId: string): Promise<void> {
+export async function removeFromWatchlist(token: string, itemId: string): Promise<void> {
   if (!isSupabaseConfigured()) return;
-
-  const { error } = await supabase!
-    .from('watchlist_items')
-    .delete()
-    .eq('id', itemId)
-    .eq('user_id', userId);
-
-  if (error) {
-    console.error('Error removing from watchlist:', error);
-    throw error;
+  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string;
+  const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string;
+  const res = await fetch(`${supabaseUrl}/functions/v1/watchlist?id=${encodeURIComponent(itemId)}`, {
+    method: 'DELETE',
+    headers: {
+      Authorization: `Bearer ${token}`,
+      apikey: supabaseAnonKey,
+    },
+  });
+  if (!res.ok) {
+    const data = await res.json().catch(() => ({}));
+    throw new Error(data?.error ?? 'Failed to remove item');
   }
 }
 
 export async function isWatched(
-  userId: string,
+  token: string,
   itemType: string,
   itemValue: string
 ): Promise<boolean> {
   if (!isSupabaseConfigured()) return false;
-
-  const { data, error } = await supabase!
-    .from('watchlist_items')
-    .select('id')
-    .eq('user_id', userId)
-    .eq('item_type', itemType)
-    .eq('item_value', itemValue)
-    .maybeSingle();
-
-  if (error) {
-    console.error('Error checking watchlist:', error);
+  try {
+    const items = await getWatchlist(token);
+    return items.some(i => i.item_type === itemType && i.item_value === itemValue);
+  } catch {
     return false;
   }
-  return data !== null;
 }

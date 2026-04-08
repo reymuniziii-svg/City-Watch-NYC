@@ -59,3 +59,7 @@ timeoutMs = 60000
 
 [userenv.shared]
 VITE_CLERK_PUBLISHABLE_KEY = "pk_test_d2VsY29tZWQtZ3JpZmZvbi03Ny5jbGVyay5hY2NvdW50cy5kZXYk"
+VITE_SUPABASE_URL = "https://hkpoitxmdtczatrjppog.supabase.co"
+VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhrcG9pdHhtZHRjemF0cmpwcG9nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU2MzEwOTEsImV4cCI6MjA5MTIwNzA5MX0.BK845NDemqSGBAiD6nhFf0fg87YESuVOY0nzeXs4BYs"
+APP_URL = "https://b254a514-ae53-4ba7-bd3b-0c3c7bfde450-00-z0d47nhjif8d.riker.replit.dev"
+SUPABASE_PROJECT_REF = "hkpoitxmdtczatrjppog"

@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
+import { useSession } from '@clerk/clerk-react';
 import { useProUser } from '../hooks/useProUser';
 import { isSupabaseConfigured } from '../services/supabaseClient';
-import { addToWatchlist, removeFromWatchlist, isWatched, getWatchlist } from '../services/watchlistService';
+import { addToWatchlist, removeFromWatchlist, getWatchlist } from '../services/watchlistService';
 
 interface WatchButtonProps {
   itemType: 'bill' | 'member';
@@ -12,34 +13,41 @@ interface WatchButtonProps {
 
 export default function WatchButton({ itemType, itemValue, itemLabel }: WatchButtonProps) {
   const { isAuthenticated, user } = useProUser();
+  const { session } = useSession();
   const [watched, setWatched] = useState(false);
   const [watchId, setWatchId] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (!user || !isSupabaseConfigured()) return;
-    isWatched(user.id, itemType, itemValue).then(setWatched);
-    getWatchlist(user.id).then(items => {
-      const match = items.find(i => i.item_type === itemType && i.item_value === itemValue);
-      if (match) setWatchId(match.id);
+    if (!user || !isSupabaseConfigured() || !session) return;
+    session.getToken().then(token => {
+      if (!token) return;
+      getWatchlist(token).then(items => {
+        const match = items.find(i => i.item_type === itemType && i.item_value === itemValue);
+        setWatched(!!match);
+        if (match) setWatchId(match.id);
+      });
     });
-  }, [user?.id, itemType, itemValue]);
+  }, [user?.id, itemType, itemValue, session]);
 
   if (!isSupabaseConfigured()) return null;
 
   const handleToggle = async () => {
-    if (!isAuthenticated || !user) return;
+    if (!isAuthenticated || !user || !session) return;
 
     setLoading(true);
     try {
+      const token = await session.getToken();
+      if (!token) return;
+
       if (watched && watchId) {
         setWatched(false);
-        await removeFromWatchlist(user.id, watchId);
+        await removeFromWatchlist(token, watchId);
         setWatchId(null);
       } else {
         setWatched(true);
-        await addToWatchlist(user.id, { item_type: itemType, item_value: itemValue, item_label: itemLabel });
-        const items = await getWatchlist(user.id);
+        await addToWatchlist(token, { item_type: itemType, item_value: itemValue, item_label: itemLabel });
+        const items = await getWatchlist(token);
         const match = items.find(i => i.item_type === itemType && i.item_value === itemValue);
         if (match) setWatchId(match.id);
       }

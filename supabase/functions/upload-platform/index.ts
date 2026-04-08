@@ -1,13 +1,12 @@
 import { serve } from 'https://deno.land/std@0.177.0/http/server.ts';
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+import { validateClerkJWT, createAdminClient } from '../_shared/auth.ts';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
-const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB
-const ALLOWED_TYPES = ['application/pdf', 'text/plain'];
+const MAX_FILE_SIZE = 10 * 1024 * 1024;
 const ALLOWED_EXTENSIONS = ['pdf', 'txt'];
 
 serve(async (req) => {
@@ -22,27 +21,15 @@ serve(async (req) => {
     });
   }
 
-  const authHeader = req.headers.get('Authorization');
-  if (!authHeader) {
-    return new Response(JSON.stringify({ error: 'Missing authorization' }), {
-      status: 401,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    });
-  }
-
-  const supabase = createClient(
-    Deno.env.get('SUPABASE_URL') ?? '',
-    Deno.env.get('SUPABASE_ANON_KEY') ?? '',
-    { global: { headers: { Authorization: authHeader } } }
-  );
-
-  const { data: { user }, error: authError } = await supabase.auth.getUser();
-  if (authError || !user) {
+  const userId = await validateClerkJWT(req.headers.get('Authorization'));
+  if (!userId) {
     return new Response(JSON.stringify({ error: 'Unauthorized' }), {
       status: 401,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   }
+
+  const supabase = createAdminClient();
 
   try {
     const formData = await req.formData();
@@ -55,7 +42,6 @@ serve(async (req) => {
       });
     }
 
-    // Validate file type
     const extension = file.name.split('.').pop()?.toLowerCase() ?? '';
     if (!ALLOWED_EXTENSIONS.includes(extension)) {
       return new Response(JSON.stringify({ error: 'Only PDF and TXT files are allowed' }), {
@@ -64,7 +50,6 @@ serve(async (req) => {
       });
     }
 
-    // Validate file size
     if (file.size > MAX_FILE_SIZE) {
       return new Response(JSON.stringify({ error: 'File must be 10MB or smaller' }), {
         status: 400,
@@ -73,21 +58,19 @@ serve(async (req) => {
     }
 
     const fileId = crypto.randomUUID();
-    const storagePath = `${user.id}/${fileId}/${file.name}`;
+    const storagePath = `${userId}/${fileId}/${file.name}`;
 
-    // Upload to storage
     const { error: uploadError } = await supabase.storage
       .from('policy-platforms')
       .upload(storagePath, file, { contentType: file.type });
 
     if (uploadError) throw uploadError;
 
-    // Create record
     const { data, error: insertError } = await supabase
       .from('policy_platforms')
       .insert({
         id: fileId,
-        user_id: user.id,
+        user_id: userId,
         filename: file.name,
         storage_path: storagePath,
         file_type: extension as 'pdf' | 'txt',

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Eye, FileText, Users, Hash, Trash2, Plus, Loader2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useSession } from '@clerk/clerk-react';
 import { useProUser } from '../hooks/useProUser';
 import { isSupabaseConfigured } from '../services/supabaseClient';
 import { getWatchlist, addToWatchlist, removeFromWatchlist, WatchlistItem } from '../services/watchlistService';
@@ -10,6 +11,7 @@ import AlertPreferences from './AlertPreferences';
 
 export default function WatchlistPage() {
   const { isAuthenticated, user, isLoading: authLoading } = useProUser();
+  const { session } = useSession();
   const [items, setItems] = useState<WatchlistItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [keywordInput, setKeywordInput] = useState('');
@@ -17,25 +19,29 @@ export default function WatchlistPage() {
   const [removingId, setRemovingId] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!user || !isSupabaseConfigured()) {
+    if (!user || !isSupabaseConfigured() || !session) {
       setLoading(false);
       return;
     }
     setLoading(true);
-    getWatchlist(user.id)
+    session.getToken()
+      .then(token => token ? getWatchlist(token) : [])
       .then(setItems)
+      .catch(() => setItems([]))
       .finally(() => setLoading(false));
-  }, [user?.id]);
+  }, [user?.id, session]);
 
   const bills = items.filter(i => i.item_type === 'bill');
   const members = items.filter(i => i.item_type === 'member');
   const keywords = items.filter(i => i.item_type === 'keyword');
 
   const handleRemove = async (itemId: string) => {
-    if (!user) return;
+    if (!session) return;
     setRemovingId(itemId);
     try {
-      await removeFromWatchlist(user.id, itemId);
+      const token = await session.getToken();
+      if (!token) return;
+      await removeFromWatchlist(token, itemId);
       setItems(prev => prev.filter(i => i.id !== itemId));
     } catch {
       // failed to remove
@@ -45,15 +51,17 @@ export default function WatchlistPage() {
   };
 
   const handleAddKeyword = async () => {
-    if (!user || !keywordInput.trim()) return;
+    if (!session || !keywordInput.trim()) return;
     setAddingKeyword(true);
     try {
-      await addToWatchlist(user.id, {
+      const token = await session.getToken();
+      if (!token) return;
+      await addToWatchlist(token, {
         item_type: 'keyword',
         item_value: keywordInput.trim().toLowerCase(),
         item_label: keywordInput.trim(),
       });
-      const refreshed = await getWatchlist(user.id);
+      const refreshed = await getWatchlist(token);
       setItems(refreshed);
       setKeywordInput('');
     } catch {

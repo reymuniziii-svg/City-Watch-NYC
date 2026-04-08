@@ -1,5 +1,5 @@
 import { serve } from 'https://deno.land/std@0.177.0/http/server.ts';
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+import { validateClerkJWT, createAdminClient } from '../_shared/auth.ts';
 import Stripe from 'https://esm.sh/stripe@14?target=deno';
 
 const corsHeaders = {
@@ -12,30 +12,15 @@ serve(async (req) => {
     return new Response('ok', { headers: corsHeaders });
   }
 
-  const authHeader = req.headers.get('Authorization');
-  if (!authHeader) {
-    return new Response(JSON.stringify({ error: 'Missing authorization' }), {
-      status: 401,
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    });
-  }
-
-  const supabase = createClient(
-    Deno.env.get('SUPABASE_URL') ?? '',
-    Deno.env.get('SUPABASE_ANON_KEY') ?? '',
-    { global: { headers: { Authorization: authHeader } } }
-  );
-
-  const {
-    data: { user },
-    error: authError,
-  } = await supabase.auth.getUser();
-  if (authError || !user) {
+  const userId = await validateClerkJWT(req.headers.get('Authorization'));
+  if (!userId) {
     return new Response(JSON.stringify({ error: 'Unauthorized' }), {
       status: 401,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   }
+
+  const supabase = createAdminClient();
 
   try {
     const { plan, successUrl, cancelUrl } = await req.json();
@@ -59,15 +44,22 @@ serve(async (req) => {
       });
     }
 
+    // Get user email from profiles
+    const { data: profile } = await supabase
+      .from('profiles')
+      .select('email')
+      .eq('id', userId)
+      .single();
+
     const stripe = new Stripe(Deno.env.get('STRIPE_SECRET_KEY') ?? '', {
       apiVersion: '2023-10-16',
     });
 
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
-      customer_email: user.email,
+      customer_email: profile?.email,
       line_items: [{ price: priceId, quantity: 1 }],
-      metadata: { user_id: user.id, plan },
+      metadata: { user_id: userId, plan },
       success_url: successUrl ?? `${req.headers.get('origin')}/billing?success=true`,
       cancel_url: cancelUrl ?? `${req.headers.get('origin')}/billing?canceled=true`,
     });

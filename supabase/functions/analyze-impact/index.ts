@@ -1,5 +1,5 @@
 import { serve } from 'https://deno.land/std@0.177.0/http/server.ts';
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
+import { validateClerkJWT, createAdminClient } from '../_shared/auth.ts';
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -30,31 +30,20 @@ serve(async (req) => {
     });
   }
 
-  const authHeader = req.headers.get('Authorization');
-  if (!authHeader) {
-    return new Response(JSON.stringify({ error: 'Missing authorization' }), {
-      status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-    });
-  }
-
-  const supabase = createClient(
-    Deno.env.get('SUPABASE_URL') ?? '',
-    Deno.env.get('SUPABASE_ANON_KEY') ?? '',
-    { global: { headers: { Authorization: authHeader } } }
-  );
-
-  const { data: { user }, error: authError } = await supabase.auth.getUser();
-  if (authError || !user) {
+  const userId = await validateClerkJWT(req.headers.get('Authorization'));
+  if (!userId) {
     return new Response(JSON.stringify({ error: 'Unauthorized' }), {
       status: 401, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   }
 
+  const supabase = createAdminClient();
+
   // Check Pro subscription
   const { data: sub } = await supabase
     .from('subscriptions')
     .select('status')
-    .eq('user_id', user.id)
+    .eq('user_id', userId)
     .eq('status', 'active')
     .maybeSingle();
 
@@ -72,12 +61,11 @@ serve(async (req) => {
       });
     }
 
-    // Get platform record
     const { data: platform, error: platError } = await supabase
       .from('policy_platforms')
       .select('*')
       .eq('id', platformId)
-      .eq('user_id', user.id)
+      .eq('user_id', userId)
       .single();
 
     if (platError || !platform) {
@@ -86,7 +74,6 @@ serve(async (req) => {
       });
     }
 
-    // Download platform file
     const { data: fileData, error: dlError } = await supabase.storage
       .from('policy-platforms')
       .download(platform.storage_path);
@@ -97,16 +84,7 @@ serve(async (req) => {
       });
     }
 
-    // Extract text from file
-    let platformText: string;
-    if (platform.file_type === 'txt') {
-      platformText = await fileData.text();
-    } else {
-      // For PDF, attempt basic text extraction
-      // In Deno we can try reading the raw text — won't work perfectly for all PDFs
-      // but provides a reasonable best-effort approach
-      platformText = await fileData.text();
-    }
+    const platformText = await fileData.text();
 
     if (!platformText.trim()) {
       return new Response(JSON.stringify({ error: 'Could not extract text from platform file' }), {
@@ -114,28 +92,16 @@ serve(async (req) => {
       });
     }
 
-    // Create impact report record
     const { data: report, error: reportError } = await supabase
       .from('impact_reports')
-      .insert({
-        user_id: user.id,
-        platform_id: platformId,
-        status: 'processing',
-      })
+      .insert({ user_id: userId, platform_id: platformId, status: 'processing' })
       .select('id')
       .single();
 
-    if (reportError || !report) {
-      throw new Error('Failed to create impact report');
-    }
+    if (reportError || !report) throw new Error('Failed to create impact report');
 
-    // Update platform status
-    await supabase
-      .from('policy_platforms')
-      .update({ status: 'processing' })
-      .eq('id', platformId);
+    await supabase.from('policy_platforms').update({ status: 'processing' }).eq('id', platformId);
 
-    // Fetch bills data
     const appUrl = Deno.env.get('APP_URL') ?? '';
     let billsData: any[] = [];
     try {
@@ -158,7 +124,6 @@ serve(async (req) => {
       });
     }
 
-    // Process bills in batches
     const allResults: BillClassification[] = [];
     const batches: any[][] = [];
     for (let i = 0; i < billsData.length; i += BATCH_SIZE) {
@@ -194,10 +159,7 @@ serve(async (req) => {
         `${GEMINI_API_BASE}/models/${GEMINI_MODEL}:generateContent`,
         {
           method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'x-goog-api-key': geminiApiKey,
-          },
+          headers: { 'Content-Type': 'application/json', 'x-goog-api-key': geminiApiKey },
           body: JSON.stringify({
             systemInstruction: {
               parts: [{ text: 'You are a policy analyst. Given an organization\'s policy platform and a list of legislative bills, classify each bill relative to the platform as: Opportunity (aligns with platform goals), Threat (contradicts platform goals), Conflict (mixed impact), or Neutral (no clear relationship). Provide reasoning and a confidence score between 0 and 1.' }],
@@ -224,25 +186,15 @@ serve(async (req) => {
         if (text) {
           try {
             const parsed = JSON.parse(text);
-            if (parsed.results) {
-              allResults.push(...parsed.results);
-            }
+            if (parsed.results) allResults.push(...parsed.results);
           } catch { /* skip malformed batch */ }
         }
       }
     }
 
-    // Store results
     const reportJson = { results: allResults };
-    await supabase
-      .from('impact_reports')
-      .update({ status: 'complete', report_json: reportJson })
-      .eq('id', report.id);
-
-    await supabase
-      .from('policy_platforms')
-      .update({ status: 'analyzed' })
-      .eq('id', platformId);
+    await supabase.from('impact_reports').update({ status: 'complete', report_json: reportJson }).eq('id', report.id);
+    await supabase.from('policy_platforms').update({ status: 'analyzed' }).eq('id', platformId);
 
     return new Response(JSON.stringify({ reportId: report.id, billsAnalyzed: allResults.length }), {
       status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
