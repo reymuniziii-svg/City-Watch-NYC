@@ -3,7 +3,7 @@ import { supabase, isSupabaseConfigured } from './supabaseClient';
 export interface WatchlistItem {
   id: string;
   user_id: string;
-  item_type: 'bill' | 'member' | 'keyword';
+  item_type: 'bill' | 'member' | 'keyword' | 'hearing_keyword';
   item_value: string;
   item_label: string | null;
   created_at: string;
