@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Search, Users, FileText, Calendar, Landmark, Map, Menu, X, DollarSign, Heart, Zap, Network, Eye, Crosshair } from 'lucide-react';
+import { Search, Users, FileText, Calendar, Landmark, Map, Menu, X, DollarSign, Heart, Zap, Network, Eye, Crosshair, LayoutDashboard } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -31,6 +31,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: 'Influence', icon: Network, path: '/influence' },
     { name: 'Impact', icon: Crosshair, path: '/impact' },
     { name: 'Watchlist', icon: Eye, path: '/watchlist' },
+    { name: 'Dashboard', icon: LayoutDashboard, path: '/dashboard' },
     { name: 'Pro', icon: Zap, path: '/pricing' },
   ];
 
