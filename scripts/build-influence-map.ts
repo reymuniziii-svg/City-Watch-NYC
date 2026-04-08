@@ -41,6 +41,8 @@ interface Donor {
 
 interface FinanceProfile {
   slug: string;
+  updatedAt: string;
+  cycle: string;
   topDonors: Donor[];
   donorsByIndustry: Record<string, Donor[]>;
 }
@@ -62,8 +64,21 @@ interface InfluenceMapEntry {
   relatedBills: RelatedBill[];
 }
 
+interface ConflictAlert {
+  memberSlug: string;
+  memberName: string;
+  donorName: string;
+  donorIndustry: string;
+  donationAmount: number;
+  donationDate: string;
+  billIntroNumber: string;
+  billTitle: string;
+  billIntroDate: string;
+  daysDelta: number;
+}
+
 /* ------------------------------------------------------------------ */
-/*  Main                                                              */
+/*  Build Influence Map                                               */
 /* ------------------------------------------------------------------ */
 
 export async function buildInfluenceMap(): Promise<void> {
@@ -172,12 +187,108 @@ export async function buildInfluenceMap(): Promise<void> {
 }
 
 /* ------------------------------------------------------------------ */
+/*  Build Conflict Alerts                                             */
+/* ------------------------------------------------------------------ */
+
+export async function buildConflictAlerts(): Promise<void> {
+  console.log("[build-conflict-alerts] starting...");
+
+  const now = new Date();
+
+  // 1. Load members, filter to seated
+  const members = (
+    await readJsonFile<Member[]>(path.join(PUBLIC_DATA_DIR, "members-index.json"))
+  ).filter((m) => m.status === "seated");
+
+  // 2. Load bills
+  const bills = await readJsonFile<Bill[]>(path.join(PUBLIC_DATA_DIR, "bills-index.json"));
+
+  // Index bills by leadSponsorSlug
+  const billsBySponsor = new Map<string, Bill[]>();
+  for (const bill of bills) {
+    if (!bill.leadSponsorSlug) continue;
+    const list = billsBySponsor.get(bill.leadSponsorSlug) ?? [];
+    list.push(bill);
+    billsBySponsor.set(bill.leadSponsorSlug, list);
+  }
+
+  // 3. Generate conflict alerts
+  const alerts: ConflictAlert[] = [];
+
+  for (const member of members) {
+    const financePath = path.join(PUBLIC_DATA_DIR, "finance", `${member.slug}.json`);
+    if (!(await fileExists(financePath))) continue;
+
+    const finance = await readJsonFile<FinanceProfile>(financePath);
+    const memberBills = billsBySponsor.get(member.slug) ?? [];
+    if (memberBills.length === 0) continue;
+
+    // Use the finance profile's updatedAt as the proxy donation date
+    const donationDate = finance.updatedAt ?? now.toISOString();
+    const donationTs = new Date(donationDate).getTime();
+
+    // Collect all unique donors
+    const donorsByName = new Map<string, Donor>();
+    for (const donor of finance.topDonors ?? []) {
+      donorsByName.set(donor.name, donor);
+    }
+    for (const donors of Object.values(finance.donorsByIndustry ?? {})) {
+      for (const donor of donors) {
+        const existing = donorsByName.get(donor.name);
+        if (!existing || donor.amount > existing.amount) {
+          donorsByName.set(donor.name, donor);
+        }
+      }
+    }
+
+    // For each donor, check for industry-committee matches with bills
+    for (const donor of donorsByName.values()) {
+      const industry = classifyIndustry(donor.occupation ?? "", donor.employer ?? "");
+      if (industry === "Other / Mixed") continue;
+
+      for (const bill of memberBills) {
+        if (!bill.committee || !bill.introDate) continue;
+        const committeeIndustries = getIndustriesForCommittee(bill.committee);
+        if (!committeeIndustries.includes(industry)) continue;
+
+        const introTs = new Date(bill.introDate).getTime();
+        const msPerDay = 1000 * 60 * 60 * 24;
+        const daysDelta = Math.round((donationTs - introTs) / msPerDay);
+
+        alerts.push({
+          memberSlug: member.slug,
+          memberName: member.fullName,
+          donorName: donor.name,
+          donorIndustry: industry,
+          donationAmount: donor.amount,
+          donationDate,
+          billIntroNumber: bill.introNumber,
+          billTitle: bill.title,
+          billIntroDate: bill.introDate,
+          daysDelta,
+        });
+      }
+    }
+  }
+
+  // 4. Sort by abs(daysDelta) ascending (closest temporal matches first)
+  alerts.sort((a, b) => Math.abs(a.daysDelta) - Math.abs(b.daysDelta));
+
+  // 5. Write output
+  const outPath = path.join(PUBLIC_DATA_DIR, "conflict-alerts.json");
+  await writeJsonFile(outPath, alerts);
+  console.log(`[build-conflict-alerts] wrote ${alerts.length} alerts to ${outPath}`);
+}
+
+/* ------------------------------------------------------------------ */
 /*  CLI entry                                                         */
 /* ------------------------------------------------------------------ */
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  buildInfluenceMap().catch((error) => {
-    console.error("[build-influence-map] failed", error);
-    process.exitCode = 1;
-  });
+  buildInfluenceMap()
+    .then(() => buildConflictAlerts())
+    .catch((error) => {
+      console.error("[build-influence-map] failed", error);
+      process.exitCode = 1;
+    });
 }
