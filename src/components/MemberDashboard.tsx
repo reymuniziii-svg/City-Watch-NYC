@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Mail, Phone, Globe, Twitter, FileText, Landmark, Calendar, BarChart3, Loader2, Share2, Check, Network, AlertTriangle } from 'lucide-react';
+import { Mail, Phone, Globe, Twitter, FileText, Landmark, Calendar, BarChart3, Loader2, Share2, Check, Network, AlertTriangle, Eye } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Bill, Hearing, CampaignFinance, MemberMetrics } from '../types';
 import { fetchMemberProfile, fetchInfluenceMap, fetchConflictAlerts } from '../services/nycDataService';
@@ -12,6 +12,7 @@ import Scorecard from './Scorecard';
 import ActivityFeed from './ActivityFeed';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import WatchButton from './WatchButton';
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -225,6 +226,7 @@ export default function MemberDashboard() {
                     <span className="text-sm uppercase tracking-wider">@{member.socials.x}</span>
                   </a>
                 )}
+                <WatchButton itemType="member" itemValue={member.slug} itemLabel={member.fullName} />
                 <button onClick={handleShare} title="Share Profile" className="flex items-center gap-2 text-slate-600 hover:text-black active:scale-95 transition-all font-medium">
                   {copied ? <Check className="w-4 h-4 text-green-600" /> : <Share2 className="w-4 h-4" />}
                   <span className="text-sm uppercase tracking-wider">{copied ? 'Copied!' : 'Share'}</span>

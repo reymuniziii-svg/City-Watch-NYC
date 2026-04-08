@@ -5,6 +5,7 @@ import { Bill } from '../types';
 import { summarizeBill } from '../services/geminiService';
 import CivicActionCenter from './CivicActionCenter';
 import SourceContext from './SourceContext';
+import WatchButton from './WatchButton';
 
 type OpenPanel = 'none' | 'summary' | 'action';
 
@@ -98,7 +99,8 @@ export default function BillCard({ bill }: { bill: Bill }) {
           </div>
           
           <div className="flex items-center gap-3">
-            <button 
+            <WatchButton itemType="bill" itemValue={bill.number} itemLabel={bill.title} />
+            <button
               onClick={handleShare}
               className="flex items-center gap-2 px-4 py-2.5 text-slate-500 hover:text-black active:scale-95 transition-all font-bold text-xs uppercase tracking-widest"
               title="Share Bill"
