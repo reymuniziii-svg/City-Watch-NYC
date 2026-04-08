@@ -18,6 +18,7 @@ import { fetchBills } from '../services/nycDataService';
 import { createKit, updateKit, type ActionKit } from '../services/actionKitService';
 import type { Bill } from '../types';
 import ProGate from './ProGate';
+import ActionKitAnalytics from './ActionKitAnalytics';
 
 interface ActionKitBuilderProps {
   editingKit?: ActionKit | null;
@@ -463,6 +464,17 @@ export default function ActionKitBuilder({ editingKit, onSaved, onCancel }: Acti
             </button>
           )}
         </motion.div>
+
+        {/* Analytics section — shown when editing an existing kit */}
+        {editingKit?.id && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+          >
+            <ActionKitAnalytics kitId={editingKit.id} />
+          </motion.div>
+        )}
       </motion.div>
     </ProGate>
   );
