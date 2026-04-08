@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Check, X, Zap, Shield, Building2, ChevronDown } from 'lucide-react';
+import { useSearchParams } from 'react-router-dom';
 import { useProUser, type ProTier } from '../hooks/useProUser';
+import { isSupabaseConfigured, supabase } from '../services/supabaseClient';
+import SubscriptionStatus from './SubscriptionStatus';
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -174,11 +177,15 @@ function TierCard({
   billing,
   currentTier,
   index,
+  onUpgrade,
+  isAuthenticated,
 }: {
   tier: Tier;
   billing: 'monthly' | 'yearly';
   currentTier: ProTier;
   index: number;
+  onUpgrade?: (plan: ProTier) => void;
+  isAuthenticated?: boolean;
 }) {
   const isCurrent = currentTier === tier.id;
   const price = billing === 'monthly' ? tier.monthlyPrice : tier.yearlyPrice;
@@ -236,10 +243,25 @@ function TierCard({
         >
           Contact Us
         </a>
+      ) : onUpgrade && isAuthenticated ? (
+        <button
+          onClick={() => onUpgrade(tier.id)}
+          className="w-full py-3.5 border-editorial bg-black text-white text-xs font-bold uppercase tracking-widest hover:bg-slate-800 transition-colors mb-8"
+        >
+          {tier.cta}
+        </button>
+      ) : onUpgrade && !isAuthenticated ? (
+        <button
+          disabled
+          className="w-full py-3.5 border-editorial bg-black text-white text-xs font-bold uppercase tracking-widest mb-8 disabled:opacity-60 disabled:cursor-not-allowed"
+          title="Sign in to upgrade"
+        >
+          Sign in to Upgrade
+        </button>
       ) : (
         <button
           disabled
-          className="w-full py-3.5 border-editorial bg-black text-white text-xs font-bold uppercase tracking-widest hover:bg-slate-800 transition-colors mb-8 disabled:opacity-60 disabled:cursor-not-allowed"
+          className="w-full py-3.5 border-editorial bg-black text-white text-xs font-bold uppercase tracking-widest mb-8 disabled:opacity-60 disabled:cursor-not-allowed"
           title="Coming soon"
         >
           {tier.cta}
@@ -350,11 +372,52 @@ function FAQSection() {
 /* ------------------------------------------------------------------ */
 
 export default function PricingPage() {
-  const { tier: currentTier } = useProUser();
+  const { tier: currentTier, isAuthenticated, subscriptionStatus } = useProUser();
   const [billing, setBilling] = useState<'monthly' | 'yearly'>('monthly');
+  const [searchParams] = useSearchParams();
+  const showSuccess = searchParams.get('success') === 'true';
+
+  const handleCheckout = async (plan: ProTier) => {
+    if (!isSupabaseConfigured() || !supabase) return;
+
+    try {
+      const { data, error } = await supabase.functions.invoke('create-checkout-session', {
+        body: {
+          plan,
+          successUrl: window.location.origin + '/pricing?success=true',
+          cancelUrl: window.location.origin + '/pricing',
+        },
+      });
+
+      if (error) throw error;
+      if (data?.url) {
+        window.location.href = data.url;
+      }
+    } catch (err) {
+      console.error('Checkout error:', err);
+    }
+  };
+
+  const upgradeHandler = isSupabaseConfigured() ? handleCheckout : undefined;
 
   return (
     <div className="space-y-16">
+      {/* Success banner */}
+      {showSuccess && (
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-green-50 border border-green-200 p-4 text-center"
+        >
+          <p className="text-green-800 font-bold text-sm">
+            Welcome to Council Watch Pro! Your subscription is now active.
+          </p>
+        </motion.div>
+      )}
+
+      {/* Subscription status for subscribed users */}
+      {subscriptionStatus !== 'none' && <SubscriptionStatus />}
+
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
@@ -386,6 +449,8 @@ export default function PricingPage() {
             billing={billing}
             currentTier={currentTier}
             index={i}
+            onUpgrade={upgradeHandler}
+            isAuthenticated={isAuthenticated}
           />
         ))}
       </div>
@@ -402,9 +467,11 @@ export default function PricingPage() {
       <FAQSection />
 
       {/* Footer note */}
-      <p className="text-[10px] text-slate-400 uppercase tracking-widest text-center leading-relaxed pb-4">
-        Pricing is informational. Payment integration coming soon.
-      </p>
+      {!isSupabaseConfigured() && (
+        <p className="text-[10px] text-slate-400 uppercase tracking-widest text-center leading-relaxed pb-4">
+          Pricing is informational. Payment integration coming soon.
+        </p>
+      )}
     </div>
   );
 }
