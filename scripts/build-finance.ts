@@ -61,7 +61,7 @@ function pctText(value: number | null): string {
   return value === null ? "N/A" : `${Math.round(value * 100)}%`;
 }
 
-function classifyIndustry(occupation: string, employer: string): string {
+export function classifyIndustry(occupation: string, employer: string): string {
   const combined = `${occupation} ${employer}`.toUpperCase();
 
   if (/REAL ESTATE|PROPERTY|DEVELOPER|HOUSING/.test(combined)) {
