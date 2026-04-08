@@ -389,6 +389,7 @@ export default function PricingPage() {
         token,
         body: {
           plan,
+          billing,
           successUrl: window.location.origin + '/pricing?success=true',
           cancelUrl: window.location.origin + '/pricing',
         },
