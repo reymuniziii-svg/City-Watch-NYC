@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Network, DollarSign, Users, Loader2, Filter, ChevronUp, ChevronDown, ChevronsUpDown, FileText, Search } from 'lucide-react';
-import { fetchInfluenceMap } from '../services/nycDataService';
-import type { InfluenceMapEntry } from '../lib/types';
+import { Network, DollarSign, Users, Loader2, Filter, ChevronUp, ChevronDown, ChevronsUpDown, FileText, Search, AlertTriangle } from 'lucide-react';
+import { fetchInfluenceMap, fetchConflictAlerts } from '../services/nycDataService';
+import type { InfluenceMapEntry, ConflictAlert } from '../lib/types';
+import ConflictAlertCard from './ConflictAlertCard';
+import ProGate from './ProGate';
 
 /* ── helpers ──────────────────────────────────────────────── */
 
@@ -98,6 +100,7 @@ function industryBadge(industry: string) {
 
 export default function InfluenceMapperPage() {
   const [data, setData] = useState<InfluenceMapEntry[]>([]);
+  const [conflictAlerts, setConflictAlerts] = useState<ConflictAlert[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [sort, setSort] = useState<SortState>({ key: 'totalAmount', dir: 'desc' });
   const [industry, setIndustry] = useState('All Industries');
@@ -106,10 +109,15 @@ export default function InfluenceMapperPage() {
   const [expandedRows, setExpandedRows] = useState<Set<number>>(new Set());
 
   useEffect(() => {
-    fetchInfluenceMap().then(entries => {
-      setData(entries);
-      setIsLoading(false);
-    });
+    Promise.all([fetchInfluenceMap(), fetchConflictAlerts()]).then(
+      ([entries, alerts]) => {
+        setData(entries);
+        setConflictAlerts(
+          [...alerts].sort((a, b) => Math.abs(a.daysDelta) - Math.abs(b.daysDelta)),
+        );
+        setIsLoading(false);
+      },
+    );
   }, []);
 
   /* derive unique industries from data */
@@ -401,6 +409,24 @@ export default function InfluenceMapperPage() {
         <p><strong className="text-black">Industry</strong> --- Donors are categorized by industry based on their employer and occupation data from NYC Campaign Finance Board filings.</p>
         <p><strong className="text-black">Related Bills</strong> --- Bills sponsored by the receiving Council member. These are shown for context --- a donor-bill connection does not imply direct influence.</p>
         <p className="text-xs text-slate-400 pt-2">Source: NYC Campaign Finance Board public data export. 2025 election cycle. Click any member name to view their full profile.</p>
+      </div>
+
+      {/* Conflict Alerts section */}
+      <div className="space-y-6">
+        <div className="flex items-center gap-3 border-b-editorial pb-4">
+          <AlertTriangle className="w-5 h-5 text-amber-500" />
+          <h2 className="font-editorial text-3xl font-bold text-black">Conflict Alerts</h2>
+          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+            {conflictAlerts.length} potential conflicts detected
+          </span>
+        </div>
+        <ProGate feature="Conflict Alerts">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {conflictAlerts.slice(0, 20).map((alert, i) => (
+              <ConflictAlertCard key={`${alert.memberSlug}-${alert.billIntroNumber}-${alert.donorName}-${i}`} alert={alert} index={i} />
+            ))}
+          </div>
+        </ProGate>
       </div>
     </div>
   );
