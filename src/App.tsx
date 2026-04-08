@@ -15,6 +15,7 @@ import ImpactAnalysisPage from './components/ImpactAnalysisPage';
 import ProDashboard from './components/ProDashboard';
 import ActionKitList from './components/ActionKitList';
 import ActionKitMicrosite from './components/ActionKitMicrosite';
+import HearingSuperSearch from './components/HearingSuperSearch';
 
 function AppRoutes() {
   return (
@@ -27,6 +28,7 @@ function AppRoutes() {
         <Route path="/districts" element={<DistrictsPage />} />
         <Route path="/bills" element={<BillList />} />
         <Route path="/hearings" element={<HearingList />} />
+        <Route path="/hearing-search" element={<HearingSuperSearch />} />
         <Route path="/money" element={<MoneyPage />} />
         <Route path="/influence" element={<InfluenceMapperPage />} />
         <Route path="/impact" element={<ImpactAnalysisPage />} />

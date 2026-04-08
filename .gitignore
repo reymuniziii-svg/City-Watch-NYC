@@ -23,6 +23,7 @@ public/data/*
 !public/data/search-index.json
 !public/data/influence-map.json
 !public/data/conflict-alerts.json
+!public/data/transcript-search-index.json
 !public/data/finance/
 !public/data/finance/*.json
 .vercel/
