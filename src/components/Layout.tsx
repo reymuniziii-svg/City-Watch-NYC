@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import GlobalSearch from './GlobalSearch';
+import AuthButton from './AuthButton';
 import ScrollToTop from './ScrollToTop';
 import ChatAssistant from './ChatAssistant';
 
@@ -57,6 +58,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           <div className="mb-6">
             <GlobalSearch />
+          </div>
+
+          <div className="mb-6">
+            <AuthButton />
           </div>
 
           <nav className="flex-1 space-y-2">
