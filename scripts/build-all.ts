@@ -12,6 +12,7 @@ import { buildInfluenceMap, buildConflictAlerts } from "./build-influence-map";
 import { buildMetrics } from "./build-metrics";
 import { buildMembers } from "./build-members";
 import { buildSearchIndex } from "./build-search-index";
+import { buildTranscriptIndex } from "./build-transcript-index";
 
 async function publishHearingEnrichment(): Promise<void> {
   const src = path.join(PROCESSED_DIR, "hearing-enrichment.json");
@@ -37,6 +38,7 @@ export async function buildAll(): Promise<void> {
   await buildInfluenceMap();
   await buildConflictAlerts();
   await buildSearchIndex();
+  await buildTranscriptIndex();
 
   console.log("[build-all] completed");
 }
