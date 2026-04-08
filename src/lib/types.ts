@@ -310,3 +310,31 @@ export interface ExportCardPayload {
   points: string[];
   footer: string;
 }
+
+export interface InfluenceMapEntry {
+  memberSlug: string;
+  memberName: string;
+  districtNumber: number;
+  donorName: string;
+  donorIndustry: string;
+  totalAmount: number;
+  relatedBills: {
+    introNumber: string;
+    title: string;
+    committee: string;
+    introDate: string;
+  }[];
+}
+
+export interface ConflictAlert {
+  memberSlug: string;
+  memberName: string;
+  donorName: string;
+  donorIndustry: string;
+  donationAmount: number;
+  donationDate: string;
+  billIntroNumber: string;
+  billTitle: string;
+  billIntroDate: string;
+  daysDelta: number;
+}

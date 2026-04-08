@@ -1,5 +1,5 @@
 import { CouncilMember, Bill, Hearing, HearingEnrichment, CampaignFinance, MemberMetrics, FinanceIndexRow } from '../types';
-import type { MemberSummary, HearingRecord, MemberProfile, HearingSummary } from '../lib/types';
+import type { MemberSummary, HearingRecord, MemberProfile, HearingSummary, InfluenceMapEntry, ConflictAlert } from '../lib/types';
 
 interface HearingEnrichmentIndex {
   byEventId: Map<string, HearingEnrichment>;
@@ -16,6 +16,8 @@ const financeCache = new Map<string, CampaignFinance | null>();
 let memberMetricsCache: MemberMetrics[] | null = null;
 const memberProfileCache = new Map<string, MemberProfile | null>();
 let financeIndexCache: FinanceIndexRow[] | null = null;
+let influenceMapCache: InfluenceMapEntry[] | null = null;
+let conflictAlertsCache: ConflictAlert[] | null = null;
 
 interface BillIndexRecord {
   billId: string;
@@ -303,6 +305,32 @@ export async function fetchFinanceIndex(): Promise<FinanceIndexRow[]> {
     return financeIndexCache;
   } catch (error) {
     console.error('Error loading finance index:', error);
+    return [];
+  }
+}
+
+export async function fetchInfluenceMap(): Promise<InfluenceMapEntry[]> {
+  if (influenceMapCache) return influenceMapCache;
+
+  try {
+    const data = await fetchJson<InfluenceMapEntry[]>('/data/influence-map.json');
+    influenceMapCache = data;
+    return influenceMapCache;
+  } catch (error) {
+    console.error('Error loading influence map:', error);
+    return [];
+  }
+}
+
+export async function fetchConflictAlerts(): Promise<ConflictAlert[]> {
+  if (conflictAlertsCache) return conflictAlertsCache;
+
+  try {
+    const data = await fetchJson<ConflictAlert[]>('/data/conflict-alerts.json');
+    conflictAlertsCache = data;
+    return conflictAlertsCache;
+  } catch (error) {
+    console.error('Error loading conflict alerts:', error);
     return [];
   }
 }
