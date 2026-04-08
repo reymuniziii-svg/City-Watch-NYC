@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Eye, FileText, Users, Hash, Trash2, Plus, Loader2 } from 'lucide-react';
+import { Eye, FileText, Users, Hash, Trash2, Plus, Loader2, MessageSquareText } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useProUser } from '../hooks/useProUser';
 import { isSupabaseConfigured } from '../services/supabaseClient';
@@ -14,6 +14,8 @@ export default function WatchlistPage() {
   const [loading, setLoading] = useState(true);
   const [keywordInput, setKeywordInput] = useState('');
   const [addingKeyword, setAddingKeyword] = useState(false);
+  const [hearingKeywordInput, setHearingKeywordInput] = useState('');
+  const [addingHearingKeyword, setAddingHearingKeyword] = useState(false);
   const [removingId, setRemovingId] = useState<string | null>(null);
 
   useEffect(() => {
@@ -30,6 +32,7 @@ export default function WatchlistPage() {
   const bills = items.filter(i => i.item_type === 'bill');
   const members = items.filter(i => i.item_type === 'member');
   const keywords = items.filter(i => i.item_type === 'keyword');
+  const hearingKeywords = items.filter(i => i.item_type === 'hearing_keyword');
 
   const handleRemove = async (itemId: string) => {
     if (!user) return;
@@ -63,11 +66,31 @@ export default function WatchlistPage() {
     }
   };
 
+  const handleAddHearingKeyword = async () => {
+    if (!user || !hearingKeywordInput.trim()) return;
+    setAddingHearingKeyword(true);
+    try {
+      await addToWatchlist(user.id, {
+        item_type: 'hearing_keyword',
+        item_value: hearingKeywordInput.trim().toLowerCase(),
+        item_label: hearingKeywordInput.trim(),
+      });
+      const refreshed = await getWatchlist(user.id);
+      setItems(refreshed);
+      setHearingKeywordInput('');
+    } catch {
+      // failed to add
+    } finally {
+      setAddingHearingKeyword(false);
+    }
+  };
+
   const typeIcon = (type: WatchlistItem['item_type']) => {
     switch (type) {
       case 'bill': return <FileText className="w-3.5 h-3.5" />;
       case 'member': return <Users className="w-3.5 h-3.5" />;
       case 'keyword': return <Hash className="w-3.5 h-3.5" />;
+      case 'hearing_keyword': return <MessageSquareText className="w-3.5 h-3.5" />;
     }
   };
 
@@ -76,6 +99,7 @@ export default function WatchlistPage() {
       case 'bill': return `/bills?q=${encodeURIComponent(item.item_value)}`;
       case 'member': return `/members/${item.item_value}`;
       case 'keyword': return `/bills?q=${encodeURIComponent(item.item_value)}`;
+      case 'hearing_keyword': return `/hearing-search?q=${encodeURIComponent(item.item_value)}`;
     }
   };
 
@@ -347,6 +371,87 @@ export default function WatchlistPage() {
                 </div>
               ) : (
                 <p className="text-sm text-slate-500 py-4">Add keywords to get alerted when new bills or hearings match your interests.</p>
+              )}
+            </motion.div>
+
+            {/* Hearing Keywords Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <div className="flex items-center justify-between border-b-editorial pb-4 mb-6">
+                <div className="flex items-center gap-3">
+                  <MessageSquareText className="w-5 h-5 text-black" />
+                  <h2 className="font-editorial text-3xl font-bold text-black">Hearing Keywords</h2>
+                </div>
+                <span className="text-sm font-bold uppercase tracking-widest text-slate-500">
+                  {hearingKeywords.length} Tracked
+                </span>
+              </div>
+
+              <p className="text-sm text-slate-500 mb-4">Get notified when this term appears in hearing transcripts</p>
+
+              {/* Add Hearing Keyword Form */}
+              <div className="flex gap-3 mb-6">
+                <input
+                  type="text"
+                  value={hearingKeywordInput}
+                  onChange={e => setHearingKeywordInput(e.target.value)}
+                  onKeyDown={e => { if (e.key === 'Enter') handleAddHearingKeyword(); }}
+                  placeholder="e.g. rezoning, budget, NYPD..."
+                  className="flex-1 px-4 py-3 border-editorial text-sm focus:outline-none focus:ring-2 focus:ring-black placeholder:text-slate-400"
+                />
+                <button
+                  onClick={handleAddHearingKeyword}
+                  disabled={addingHearingKeyword || !hearingKeywordInput.trim()}
+                  className="flex items-center gap-2 px-6 py-3 bg-black text-white font-bold uppercase tracking-widest text-sm hover:bg-slate-800 transition-colors disabled:opacity-50 disabled:hover:bg-black"
+                >
+                  {addingHearingKeyword ? (
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                  ) : (
+                    <Plus className="w-4 h-4" />
+                  )}
+                  Add
+                </button>
+              </div>
+
+              {hearingKeywords.length > 0 ? (
+                <div className="flex flex-wrap gap-3">
+                  <AnimatePresence>
+                    {hearingKeywords.map(item => (
+                      <motion.div
+                        key={item.id}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.9 }}
+                        className="flex items-center gap-2 bg-white border-editorial px-4 py-2.5 group"
+                      >
+                        <Link
+                          to={itemLink(item)}
+                          className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-black hover:text-slate-600 transition-colors"
+                        >
+                          <MessageSquareText className="w-3.5 h-3.5" />
+                          {item.item_label ?? item.item_value}
+                        </Link>
+                        <button
+                          onClick={() => handleRemove(item.id)}
+                          disabled={removingId === item.id}
+                          className="p-1 text-slate-400 hover:text-red-600 transition-colors opacity-0 group-hover:opacity-100 disabled:opacity-50"
+                          title="Remove hearing keyword"
+                        >
+                          {removingId === item.id ? (
+                            <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                          ) : (
+                            <Trash2 className="w-3.5 h-3.5" />
+                          )}
+                        </button>
+                      </motion.div>
+                    ))}
+                  </AnimatePresence>
+                </div>
+              ) : (
+                <p className="text-sm text-slate-500 py-4">Add hearing keywords to get alerted when specific terms appear in council hearing transcripts.</p>
               )}
             </motion.div>
           </div>
