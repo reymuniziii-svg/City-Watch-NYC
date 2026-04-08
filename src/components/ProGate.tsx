@@ -2,17 +2,22 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Lock } from 'lucide-react';
 import { useProUser } from '../hooks/useProUser';
+import { useFeatureFlags } from '../hooks/useFeatureFlags';
+import type { FeatureFlags } from '../lib/featureFlags';
 
 interface ProGateProps {
   children: React.ReactNode;
   fallbackCount?: number;
   feature?: string;
+  flag?: keyof FeatureFlags;
 }
 
-export default function ProGate({ children, feature = 'this feature' }: ProGateProps) {
+export default function ProGate({ children, feature = 'this feature', flag }: ProGateProps) {
   const { isPro } = useProUser();
+  const flags = useFeatureFlags();
 
-  if (isPro) return <>{children}</>;
+  const hasAccess = flag ? flags[flag] : isPro;
+  if (hasAccess) return <>{children}</>;
 
   return (
     <div className="relative">
