@@ -8,6 +8,7 @@ import { generateSummaries } from "./generate-summaries";
 import { buildHearings } from "./build-hearings";
 import { buildHearingEnrichment } from "./build-hearing-enrichment";
 import { buildFinance, buildFinanceIndex } from "./build-finance";
+import { buildInfluenceMap, buildConflictAlerts } from "./build-influence-map";
 import { buildMetrics } from "./build-metrics";
 import { buildMembers } from "./build-members";
 import { buildSearchIndex } from "./build-search-index";
@@ -33,6 +34,8 @@ export async function buildAll(): Promise<void> {
   await buildMetrics();
   await buildMembers();
   await buildFinanceIndex();
+  await buildInfluenceMap();
+  await buildConflictAlerts();
   await buildSearchIndex();
 
   console.log("[build-all] completed");
