@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Mail, Phone, Globe, Twitter, FileText, Landmark, Calendar, BarChart3, Loader2, Share2, Check } from 'lucide-react';
+import { Mail, Phone, Globe, Twitter, FileText, Landmark, Calendar, BarChart3, Loader2, Share2, Check, Network, AlertTriangle } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Bill, Hearing, CampaignFinance, MemberMetrics } from '../types';
-import { fetchMemberProfile } from '../services/nycDataService';
-import type { MemberProfile, BillRecord, HearingRecord } from '../lib/types';
+import { fetchMemberProfile, fetchInfluenceMap, fetchConflictAlerts } from '../services/nycDataService';
+import type { MemberProfile, BillRecord, HearingRecord, InfluenceMapEntry, ConflictAlert } from '../lib/types';
 import BillCard from './BillCard';
 import HearingCard from './HearingCard';
 import FinanceView from './FinanceView';
@@ -52,6 +52,23 @@ function mapHearingRecordToHearing(hearing: HearingRecord): Hearing {
   };
 }
 
+const INDUSTRY_COLORS: Record<string, string> = {
+  'Real Estate': 'bg-amber-100 text-amber-800',
+  'Finance': 'bg-blue-100 text-blue-800',
+  'Legal': 'bg-purple-100 text-purple-800',
+  'Labor': 'bg-green-100 text-green-800',
+  'Healthcare': 'bg-rose-100 text-rose-800',
+  'Education': 'bg-teal-100 text-teal-800',
+  'Nonprofit / Advocacy': 'bg-indigo-100 text-indigo-800',
+  'Government / Public Sector': 'bg-slate-200 text-slate-700',
+  'Small Business / Retail': 'bg-orange-100 text-orange-800',
+  'Other / Mixed': 'bg-gray-100 text-gray-600',
+};
+
+function fmt$(value: number): string {
+  return '$' + value.toLocaleString('en-US', { maximumFractionDigits: 0 });
+}
+
 export default function MemberDashboard() {
   const { id, district } = useParams();
   const [member, setMember] = useState<MemberProfile | null>(null);
@@ -59,6 +76,8 @@ export default function MemberDashboard() {
   const [hearings, setHearings] = useState<Hearing[]>([]);
   const [finance, setFinance] = useState<CampaignFinance | null>(null);
   const [metrics, setMetrics] = useState<MemberMetrics | null>(null);
+  const [influenceData, setInfluenceData] = useState<InfluenceMapEntry[]>([]);
+  const [memberAlerts, setMemberAlerts] = useState<ConflictAlert[]>([]);
   const [activeTab, setActiveTab] = useState<'activity' | 'bills' | 'money' | 'hearings'>('activity');
   const [isLoading, setIsLoading] = useState(true);
   const [copied, setCopied] = useState(false);
@@ -106,6 +125,13 @@ export default function MemberDashboard() {
               rankEnacted: profile.scorecard.billsEnactedRank,
             });
           }
+
+          const [allInfluence, allAlerts] = await Promise.all([
+            fetchInfluenceMap(),
+            fetchConflictAlerts(),
+          ]);
+          setInfluenceData(allInfluence.filter(e => e.memberSlug === memberId).slice(0, 5));
+          setMemberAlerts(allAlerts.filter(a => a.memberSlug === memberId).slice(0, 3));
         }
       } catch (error) {
         console.error('Error loading member data:', error);
@@ -317,6 +343,92 @@ export default function MemberDashboard() {
           )}
         </AnimatePresence>
       </div>
+
+      {/* Influence Connections */}
+      {influenceData.length > 0 && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="space-y-6"
+        >
+          <div className="flex items-center justify-between border-b-editorial pb-4">
+            <div className="flex items-center gap-3">
+              <Network className="w-5 h-5 text-black" />
+              <h2 className="font-editorial text-3xl font-bold text-black">Influence Connections</h2>
+            </div>
+            <Link
+              to={`/influence?member=${member.slug}`}
+              className="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-black transition-colors"
+            >
+              View Full Map &rarr;
+            </Link>
+          </div>
+
+          {/* Top donor-to-bill connections */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {influenceData.map((entry, i) => (
+              <motion.div
+                key={`${entry.donorName}-${i}`}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.05 }}
+                className="bg-white border-editorial p-5 space-y-3"
+              >
+                <div className="flex items-center justify-between">
+                  <p className="font-semibold text-sm text-black truncate">{entry.donorName}</p>
+                  <span className={`px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest ${
+                    INDUSTRY_COLORS[entry.donorIndustry] ?? 'bg-gray-100 text-gray-600'
+                  }`}>
+                    {entry.donorIndustry}
+                  </span>
+                </div>
+                <p className="font-editorial text-2xl font-bold text-black">
+                  {fmt$(entry.totalAmount)}
+                </p>
+                <div className="space-y-1">
+                  {entry.relatedBills.slice(0, 2).map((bill) => (
+                    <p key={bill.introNumber} className="text-xs text-slate-500 truncate">
+                      {bill.introNumber} — {bill.title}
+                    </p>
+                  ))}
+                  {entry.relatedBills.length > 2 && (
+                    <p className="text-xs text-slate-400">
+                      +{entry.relatedBills.length - 2} more bills
+                    </p>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Conflict alerts for this member */}
+          {memberAlerts.length > 0 && (
+            <div className="p-6 bg-amber-50 border border-amber-200 space-y-3">
+              <div className="flex items-center gap-2">
+                <AlertTriangle className="w-4 h-4 text-amber-600" />
+                <p className="text-xs font-bold uppercase tracking-widest text-amber-800">
+                  Potential Conflicts Detected
+                </p>
+              </div>
+              {memberAlerts.map((alert, i) => (
+                <div key={`alert-${i}`} className="flex items-start gap-3 text-sm">
+                  <span className={`shrink-0 px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest ${
+                    Math.abs(alert.daysDelta) < 7 ? 'bg-red-100 text-red-800' :
+                    Math.abs(alert.daysDelta) < 14 ? 'bg-orange-100 text-orange-800' :
+                    'bg-yellow-100 text-yellow-800'
+                  }`}>
+                    {Math.abs(alert.daysDelta)}d
+                  </span>
+                  <p className="text-slate-700">
+                    <strong>{alert.donorName}</strong> ({alert.donorIndustry}) donated {fmt$(alert.donationAmount)} near {alert.billIntroNumber}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
+        </motion.div>
+      )}
     </div>
   );
 }
