@@ -28,6 +28,7 @@ export default function App() {
           <Route path="/influence" element={<InfluenceMapperPage />} />
           <Route path="/watchlist" element={<WatchlistPage />} />
           <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/watchlist" element={<WatchlistPage />} />
           <Route path="/support" element={<SupportPage />} />
         </Routes>
       </Layout>
