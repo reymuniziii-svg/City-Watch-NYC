@@ -13,6 +13,7 @@ import PricingPage from './components/PricingPage';
 import WatchlistPage from './components/WatchlistPage';
 import ImpactAnalysisPage from './components/ImpactAnalysisPage';
 import ProDashboard from './components/ProDashboard';
+import ActionKitList from './components/ActionKitList';
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="/impact" element={<ImpactAnalysisPage />} />
           <Route path="/dashboard" element={<ProDashboard />} />
           <Route path="/watchlist" element={<WatchlistPage />} />
+          <Route path="/action-kits" element={<ActionKitList />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/support" element={<SupportPage />} />
         </Routes>
