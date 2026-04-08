@@ -2,7 +2,8 @@ import { useUser } from '@clerk/clerk-react';
 import { useEffect, useState } from 'react';
 import { supabase, isSupabaseConfigured } from '../services/supabaseClient';
 
-type Tier = 'free' | 'advocate' | 'enterprise';
+export type ProTier = 'free' | 'advocate' | 'enterprise';
+type Tier = ProTier;
 
 export interface ProUserState {
   isAuthenticated: boolean;
