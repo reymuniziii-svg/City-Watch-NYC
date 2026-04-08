@@ -54,3 +54,8 @@ run = ["node", "server.js"]
 [postMerge]
 path = "scripts/post-merge.sh"
 timeoutMs = 60000
+
+[userenv]
+
+[userenv.shared]
+VITE_CLERK_PUBLISHABLE_KEY = "pk_test_d2VsY29tZWQtZ3JpZmZvbi03Ny5jbGVyay5hY2NvdW50cy5kZXYk"
