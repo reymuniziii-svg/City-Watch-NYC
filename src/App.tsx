@@ -7,6 +7,7 @@ import BillList from './components/BillList';
 import HearingList from './components/HearingList';
 import DistrictsPage from './components/DistrictsPage';
 import MoneyPage from './components/MoneyPage';
+import InfluenceMapperPage from './components/InfluenceMapperPage';
 import SupportPage from './components/SupportPage';
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/bills" element={<BillList />} />
           <Route path="/hearings" element={<HearingList />} />
           <Route path="/money" element={<MoneyPage />} />
+          <Route path="/influence" element={<InfluenceMapperPage />} />
           <Route path="/support" element={<SupportPage />} />
         </Routes>
       </Layout>
