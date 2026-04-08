@@ -26,3 +26,6 @@ public/data/*
 !public/data/finance/
 !public/data/finance/*.json
 .vercel/
+
+# Supabase CLI local artifacts
+supabase/.temp/

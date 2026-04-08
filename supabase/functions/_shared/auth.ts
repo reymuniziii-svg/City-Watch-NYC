@@ -1,25 +1,34 @@
 import { createRemoteJWKSet, jwtVerify } from 'https://esm.sh/jose@5';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
-const JWKS_URL =
-  Deno.env.get('CLERK_JWKS_URL') ??
-  'https://welcomed-griffon-77.clerk.accounts.dev/.well-known/jwks.json';
-
-// Extract issuer from JWKS URL (e.g. https://welcomed-griffon-77.clerk.accounts.dev)
-const EXPECTED_ISSUER = JWKS_URL.replace('/.well-known/jwks.json', '');
+function getClerkConfig(): { jwksUrl: string; issuer: string } {
+  const jwksUrl = Deno.env.get('CLERK_JWKS_URL');
+  if (!jwksUrl) {
+    throw new Error('CLERK_JWKS_URL environment variable is required but not set');
+  }
+  const issuer = jwksUrl.replace('/.well-known/jwks.json', '');
+  return { jwksUrl, issuer };
+}
 
 let _jwks: ReturnType<typeof createRemoteJWKSet> | null = null;
-function getJWKS() {
-  if (!_jwks) _jwks = createRemoteJWKSet(new URL(JWKS_URL));
-  return _jwks;
+let _issuer: string | null = null;
+
+function getJWKS(): { jwks: ReturnType<typeof createRemoteJWKSet>; issuer: string } {
+  if (!_jwks || !_issuer) {
+    const { jwksUrl, issuer } = getClerkConfig();
+    _jwks = createRemoteJWKSet(new URL(jwksUrl));
+    _issuer = issuer;
+  }
+  return { jwks: _jwks, issuer: _issuer };
 }
 
 export async function validateClerkJWT(authHeader: string | null): Promise<string | null> {
   if (!authHeader?.startsWith('Bearer ')) return null;
   const token = authHeader.slice(7);
   try {
-    const { payload } = await jwtVerify(token, getJWKS(), {
-      issuer: EXPECTED_ISSUER,
+    const { jwks, issuer } = getJWKS();
+    const { payload } = await jwtVerify(token, jwks, {
+      issuer,
       clockTolerance: 60,
     });
     const sub = payload.sub;
