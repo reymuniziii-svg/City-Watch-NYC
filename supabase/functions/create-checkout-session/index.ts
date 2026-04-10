@@ -83,7 +83,7 @@ serve(async (req) => {
       subscription_data: {
         metadata: { user_id: userId, plan, billing },
       },
-      success_url: successUrl ?? `${origin}/pricing?success=true`,
+      success_url: successUrl ?? `${origin}/pricing?success=true&session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: cancelUrl ?? `${origin}/pricing`,
     });
 

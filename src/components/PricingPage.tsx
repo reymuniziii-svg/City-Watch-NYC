@@ -371,6 +371,7 @@ export default function PricingPage() {
   const [billing, setBilling] = useState<'monthly' | 'yearly'>('monthly');
   const [searchParams] = useSearchParams();
   const showSuccess = searchParams.get('success') === 'true';
+  const sessionId = searchParams.get('session_id');
 
   const handleCheckout = async (plan: ProTier) => {
     if (!isSupabaseConfigured() || !session) return;
@@ -383,7 +384,7 @@ export default function PricingPage() {
         body: {
           plan,
           billing,
-          successUrl: window.location.origin + '/pricing?success=true',
+          successUrl: window.location.origin + '/pricing?success=true&session_id={CHECKOUT_SESSION_ID}',
           cancelUrl: window.location.origin + '/pricing',
         },
       });
@@ -405,11 +406,16 @@ export default function PricingPage() {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-green-50 border border-green-200 p-4 text-center"
+          className="bg-green-50 border border-green-200 p-4 text-center space-y-1"
         >
           <p className="text-green-800 font-bold text-sm">
             Welcome to Council Watch Pro! Your subscription is now active.
           </p>
+          {sessionId && (
+            <p className="text-green-700 text-xs">
+              Confirmation: <span className="font-mono">{sessionId}</span>
+            </p>
+          )}
         </motion.div>
       )}
 
