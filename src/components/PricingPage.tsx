@@ -64,9 +64,9 @@ const tiers: Tier[] = [
     name: 'Enterprise',
     icon: Building2,
     monthlyPrice: 29,
-    yearlyPrice: 249,
+    yearlyPrice: 279,
     tagline: 'Built for newsrooms, orgs, and researchers',
-    cta: 'Contact Us',
+    cta: 'Upgrade',
     features: [
       'Everything in Advocate',
       'API access',
@@ -237,13 +237,6 @@ function TierCard({
         <div className="w-full py-3.5 border-editorial bg-slate-50 text-center text-xs font-bold uppercase tracking-widest text-slate-500 mb-8">
           Current Plan
         </div>
-      ) : tier.id === 'enterprise' ? (
-        <a
-          href="mailto:hello@councilwatch.nyc?subject=Enterprise%20Inquiry"
-          className="w-full block py-3.5 border-editorial bg-black text-center text-white text-xs font-bold uppercase tracking-widest hover:bg-slate-800 transition-colors mb-8"
-        >
-          Contact Us
-        </a>
       ) : onUpgrade && isAuthenticated ? (
         <button
           onClick={() => onUpgrade(tier.id)}
@@ -396,7 +389,7 @@ export default function PricingPage() {
       });
 
       if (data?.url) {
-        window.location.href = data.url;
+        window.open(data.url, '_blank', 'noopener,noreferrer');
       }
     } catch (err) {
       console.error('Checkout error:', err);
