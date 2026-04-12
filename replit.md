@@ -93,6 +93,17 @@ A small Express server handles the production deployment:
 - `/pricing` — Pro subscription plans
 - `/support` — Donation / support page
 
+## Mobile Optimization
+- All major cards (BillCard, HearingCard, PricingPage TierCard) use responsive padding: `p-4 md:p-8`
+- BillCard action buttons use flex-wrap to avoid overflow on narrow screens
+- MemberDashboard tab bar uses `sticky top-[57px] md:top-0` to avoid colliding with the mobile header
+- MemberDashboard profile photo is `w-32 h-32 md:w-48 md:h-48`
+- MoneyPage has a mobile card-list view (`sm:hidden`) alongside the desktop table (`hidden sm:block`)
+- MoneyPage summary strip shows 3 stats (Real Estate Flagged stat removed)
+- Mobile header includes a search icon that opens a slide-down search drawer
+- ChatAssistant uses `inset-x-3 bottom-3` on mobile, `bottom-8 right-8` on desktop, z-50
+- ScrollToTop button uses `bottom-16 right-3` on mobile, `bottom-8 right-20` on desktop, z-40 (below chat)
+
 ## Known Issues / Notes
 - Vite file watcher is configured to ignore `.local/**`, `data/**`, and `node_modules/**` to prevent reload loops from Replit's internal log files and the large raw data directory
 - Tailwind CSS v4 content scanner is configured via `@source "!..."` in `src/index.css` to exclude `.local/`, `data/`, and `node_modules/`
