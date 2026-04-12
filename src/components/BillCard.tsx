@@ -10,6 +10,17 @@ import LobbyingInsights from './LobbyingInsights';
 
 type OpenPanel = 'none' | 'summary' | 'action';
 
+const STATUS_TIPS: Record<string, string> = {
+  'Committee': 'Being reviewed by a specialized council committee',
+  'Laid Over in Committee': 'Temporarily set aside by the committee for later review',
+  'Hearing Held': 'A public hearing has taken place on this bill',
+  'Enacted': 'Passed by the Council and signed into law',
+  'Approved': 'Passed by the full Council',
+  'Vetoed': 'Rejected by the Mayor after Council approval',
+  'Withdrawn': 'Pulled from consideration by the sponsor',
+  'Filed': 'Officially submitted but not yet assigned to a committee',
+};
+
 export default function BillCard({ bill }: { bill: Bill }) {
   const [openPanel, setOpenPanel] = useState<OpenPanel>('none');
   const [summary, setSummary] = useState<Bill['plainEnglishSummary'] | null>(null);
@@ -64,11 +75,17 @@ export default function BillCard({ bill }: { bill: Bill }) {
     <div className="bg-white border-editorial hover:bg-slate-50 transition-colors overflow-hidden">
       <div className="p-4 md:p-8">
         <div className="flex items-start justify-between gap-4 mb-6">
-          <div className="flex items-center gap-3 px-3 py-1 border-editorial text-black text-xs font-bold uppercase tracking-widest">
+          <div
+            className="flex items-center gap-3 px-3 py-1 border-editorial text-black text-xs font-bold uppercase tracking-widest"
+            title="Introduction number — the bill's official ID in the Council"
+          >
             <FileText className="w-3 h-3" />
             <span>{bill.number}</span>
           </div>
-          <div className="px-3 py-1 bg-black text-white text-xs font-bold uppercase tracking-widest">
+          <div
+            className="px-3 py-1 bg-black text-white text-xs font-bold uppercase tracking-widest cursor-help"
+            title={STATUS_TIPS[bill.status] || bill.status}
+          >
             {bill.status}
           </div>
         </div>

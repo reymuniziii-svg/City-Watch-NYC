@@ -11,6 +11,7 @@ import InfluenceMapperPage from './components/InfluenceMapperPage';
 import SupportPage from './components/SupportPage';
 import PricingPage from './components/PricingPage';
 import WatchlistPage from './components/WatchlistPage';
+import NotFoundPage from './components/NotFoundPage';
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
           <Route path="/watchlist" element={<WatchlistPage />} />
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/support" element={<SupportPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Layout>
     </Router>
