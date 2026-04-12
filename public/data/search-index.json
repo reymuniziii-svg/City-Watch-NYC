@@ -9877,5 +9877,341 @@
     "hearingDate": "2026-04-30",
     "committeeName": "City Council",
     "searchText": "City Council Council Chambers - City Hall 2026-04-30 "
+  },
+  {
+    "id": "lobbying:airbnb-inc-",
+    "type": "lobbying",
+    "label": "AIRBNB, Inc.",
+    "subtitle": "Travel & Tourism · 0 bills · 48 members",
+    "route": "/influence?search=AIRBNB%2C%20Inc.",
+    "searchText": "AIRBNB, Inc. Travel & Tourism lobbying"
+  },
+  {
+    "id": "lobbying:homeowners-ffe-llc",
+    "type": "lobbying",
+    "label": "Homeowners FFE LLC",
+    "subtitle": "Small Business / Retail · 3 bills · 40 members",
+    "route": "/influence?search=Homeowners%20FFE%20LLC",
+    "searchText": "Homeowners FFE LLC Small Business / Retail lobbying"
+  },
+  {
+    "id": "lobbying:maplebear-inc-",
+    "type": "lobbying",
+    "label": "Maplebear, Inc.",
+    "subtitle": "Technology, Telecommunications & Other Media · 2 bills · 39 members",
+    "route": "/influence?search=Maplebear%2C%20Inc.",
+    "searchText": "Maplebear, Inc. Technology, Telecommunications & Other Media lobbying"
+  },
+  {
+    "id": "lobbying:united-federation-of-teachers",
+    "type": "lobbying",
+    "label": "United Federation of Teachers",
+    "subtitle": "Labor · 0 bills · 48 members",
+    "route": "/influence?search=United%20Federation%20of%20Teachers",
+    "searchText": "United Federation of Teachers Labor lobbying"
+  },
+  {
+    "id": "lobbying:hotel-trades-council-afl-cio-and-hotel-association-of-new-york-city-inc-labor-management-cooperation-trust-fund",
+    "type": "lobbying",
+    "label": "Hotel Trades Council, AFL-CIO and Hotel Association of New York City, Inc. Labor Management Cooperation Trust Fund",
+    "subtitle": "Labor · 0 bills · 48 members",
+    "route": "/influence?search=Hotel%20Trades%20Council%2C%20AFL-CIO%20and%20Hotel%20Association%20of%20New%20York%20City%2C%20Inc.%20Labor%20Management%20Cooperation%20Trust%20Fund",
+    "searchText": "Hotel Trades Council, AFL-CIO and Hotel Association of New York City, Inc. Labor Management Cooperation Trust Fund Labor lobbying"
+  },
+  {
+    "id": "lobbying:rhoar-inc-",
+    "type": "lobbying",
+    "label": "Rhoar, Inc.",
+    "subtitle": "Government / Public Sector · 0 bills · 39 members",
+    "route": "/influence?search=Rhoar%2C%20Inc.",
+    "searchText": "Rhoar, Inc. Government / Public Sector lobbying"
+  },
+  {
+    "id": "lobbying:aarp",
+    "type": "lobbying",
+    "label": "AARP",
+    "subtitle": "Government / Public Sector · 3 bills · 48 members",
+    "route": "/influence?search=AARP",
+    "searchText": "AARP Government / Public Sector lobbying"
+  },
+  {
+    "id": "lobbying:queens-future-llc",
+    "type": "lobbying",
+    "label": "Queens Future, LLC",
+    "subtitle": "Real Estate · 3 bills · 47 members",
+    "route": "/influence?search=Queens%20Future%2C%20LLC",
+    "searchText": "Queens Future, LLC Real Estate lobbying"
+  },
+  {
+    "id": "lobbying:takeroot-justice",
+    "type": "lobbying",
+    "label": "TakeRoot Justice",
+    "subtitle": "Government / Public Sector · 4 bills · 48 members",
+    "route": "/influence?search=TakeRoot%20Justice",
+    "searchText": "TakeRoot Justice Government / Public Sector lobbying"
+  },
+  {
+    "id": "lobbying:genting-new-york-llc",
+    "type": "lobbying",
+    "label": "Genting New York LLC",
+    "subtitle": "Entertainment & Sports · 0 bills · 39 members",
+    "route": "/influence?search=Genting%20New%20York%20LLC",
+    "searchText": "Genting New York LLC Entertainment & Sports lobbying"
+  },
+  {
+    "id": "lobbying:rai-services-company",
+    "type": "lobbying",
+    "label": "RAI Services Company",
+    "subtitle": "Manufacturing · 1 bills · 48 members",
+    "route": "/influence?search=RAI%20Services%20Company",
+    "searchText": "RAI Services Company Manufacturing lobbying"
+  },
+  {
+    "id": "lobbying:doordash-inc-",
+    "type": "lobbying",
+    "label": "DoorDash, Inc.",
+    "subtitle": "Technology, Telecommunications & Other Media · 14 bills · 47 members",
+    "route": "/influence?search=DoorDash%2C%20Inc.",
+    "searchText": "DoorDash, Inc. Technology, Telecommunications & Other Media lobbying"
+  },
+  {
+    "id": "lobbying:american-beverage-association",
+    "type": "lobbying",
+    "label": "American Beverage Association",
+    "subtitle": "Trade Associations · 0 bills · 39 members",
+    "route": "/influence?search=American%20Beverage%20Association",
+    "searchText": "American Beverage Association Trade Associations lobbying"
+  },
+  {
+    "id": "lobbying:new-york-state-trial-lawyers-association-inc-",
+    "type": "lobbying",
+    "label": "New York State Trial Lawyers Association, Inc.",
+    "subtitle": "Legal · 0 bills · 36 members",
+    "route": "/influence?search=New%20York%20State%20Trial%20Lawyers%20Association%2C%20Inc.",
+    "searchText": "New York State Trial Lawyers Association, Inc. Legal lobbying"
+  },
+  {
+    "id": "lobbying:legal-services-nyc",
+    "type": "lobbying",
+    "label": "Legal Services NYC",
+    "subtitle": "Legal · 1 bills · 35 members",
+    "route": "/influence?search=Legal%20Services%20NYC",
+    "searchText": "Legal Services NYC Legal lobbying"
+  },
+  {
+    "id": "lobbying:greater-new-york-hospital-association-inc-",
+    "type": "lobbying",
+    "label": "Greater New York Hospital Association, Inc.",
+    "subtitle": "Healthcare · 1 bills · 4 members",
+    "route": "/influence?search=Greater%20New%20York%20Hospital%20Association%2C%20Inc.",
+    "searchText": "Greater New York Hospital Association, Inc. Healthcare lobbying"
+  },
+  {
+    "id": "lobbying:the-related-companies-lp",
+    "type": "lobbying",
+    "label": "The Related Companies, LP",
+    "subtitle": "Real Estate · 0 bills · 3 members",
+    "route": "/influence?search=The%20Related%20Companies%2C%20LP",
+    "searchText": "The Related Companies, LP Real Estate lobbying"
+  },
+  {
+    "id": "lobbying:maddd-equities-llc",
+    "type": "lobbying",
+    "label": "MADDD Equities LLC",
+    "subtitle": "Real Estate · 0 bills · 3 members",
+    "route": "/influence?search=MADDD%20Equities%20LLC",
+    "searchText": "MADDD Equities LLC Real Estate lobbying"
+  },
+  {
+    "id": "lobbying:five-boroughs-jobs-campaign-inc-",
+    "type": "lobbying",
+    "label": "Five Boroughs Jobs Campaign, Inc.",
+    "subtitle": "Real Estate · 0 bills · 9 members",
+    "route": "/influence?search=Five%20Boroughs%20Jobs%20Campaign%2C%20Inc.",
+    "searchText": "Five Boroughs Jobs Campaign, Inc. Real Estate lobbying"
+  },
+  {
+    "id": "lobbying:common-cause-ny",
+    "type": "lobbying",
+    "label": "Common Cause/NY",
+    "subtitle": "Government / Public Sector · 7 bills · 2 members",
+    "route": "/influence?search=Common%20Cause%2FNY",
+    "searchText": "Common Cause/NY Government / Public Sector lobbying"
+  },
+  {
+    "id": "lobbying:american-hotel-lodging-association",
+    "type": "lobbying",
+    "label": "American Hotel & Lodging Association",
+    "subtitle": "Labor · 0 bills · 1 members",
+    "route": "/influence?search=American%20Hotel%20%26%20Lodging%20Association",
+    "searchText": "American Hotel & Lodging Association Labor lobbying"
+  },
+  {
+    "id": "lobbying:lesbian-and-gay-community-services-center-inc",
+    "type": "lobbying",
+    "label": "Lesbian and Gay Community Services Center, Inc",
+    "subtitle": "Government / Public Sector · 0 bills · 2 members",
+    "route": "/influence?search=Lesbian%20and%20Gay%20Community%20Services%20Center%2C%20Inc",
+    "searchText": "Lesbian and Gay Community Services Center, Inc Government / Public Sector lobbying"
+  },
+  {
+    "id": "lobbying:tsg-coney-island-entertainment-holdco-llc",
+    "type": "lobbying",
+    "label": "TSG Coney Island Entertainment Holdco LLC",
+    "subtitle": "Entertainment & Sports · 0 bills · 1 members",
+    "route": "/influence?search=TSG%20Coney%20Island%20Entertainment%20Holdco%20LLC",
+    "searchText": "TSG Coney Island Entertainment Holdco LLC Entertainment & Sports lobbying"
+  },
+  {
+    "id": "lobbying:success-academy-charter-schools-inc-",
+    "type": "lobbying",
+    "label": "Success Academy Charter Schools, Inc.",
+    "subtitle": "Education · 0 bills · 2 members",
+    "route": "/influence?search=Success%20Academy%20Charter%20Schools%2C%20Inc.",
+    "searchText": "Success Academy Charter Schools, Inc. Education lobbying"
+  },
+  {
+    "id": "lobbying:bally-s-corporation",
+    "type": "lobbying",
+    "label": "Bally's Corporation",
+    "subtitle": "Entertainment & Sports · 0 bills · 9 members",
+    "route": "/influence?search=Bally's%20Corporation",
+    "searchText": "Bally's Corporation Entertainment & Sports lobbying"
+  },
+  {
+    "id": "lobbying:fund-for-the-city-of-new-york-inc-",
+    "type": "lobbying",
+    "label": "Fund for the City of New York, Inc.",
+    "subtitle": "Education · 0 bills · 7 members",
+    "route": "/influence?search=Fund%20for%20the%20City%20of%20New%20York%2C%20Inc.",
+    "searchText": "Fund for the City of New York, Inc. Education lobbying"
+  },
+  {
+    "id": "lobbying:amazon-com-services-llc",
+    "type": "lobbying",
+    "label": "Amazon.com Services LLC",
+    "subtitle": "Technology, Telecommunications & Other Media · 0 bills · 4 members",
+    "route": "/influence?search=Amazon.com%20Services%20LLC",
+    "searchText": "Amazon.com Services LLC Technology, Telecommunications & Other Media lobbying"
+  },
+  {
+    "id": "lobbying:aecom-usa-inc-",
+    "type": "lobbying",
+    "label": "AECOM USA, Inc.",
+    "subtitle": "Real Estate · 0 bills · 5 members",
+    "route": "/influence?search=AECOM%20USA%2C%20Inc.",
+    "searchText": "AECOM USA, Inc. Real Estate lobbying"
+  },
+  {
+    "id": "lobbying:new-yorkers-for-clean-livable-safe-streets-inc-",
+    "type": "lobbying",
+    "label": "New Yorkers for Clean Livable & Safe Streets Inc.",
+    "subtitle": "Government / Public Sector · 0 bills · 2 members",
+    "route": "/influence?search=New%20Yorkers%20for%20Clean%20Livable%20%26%20Safe%20Streets%20Inc.",
+    "searchText": "New Yorkers for Clean Livable & Safe Streets Inc. Government / Public Sector lobbying"
+  },
+  {
+    "id": "lobbying:new-green-willets-llc-for-the-benefit-of-queens-future-llc",
+    "type": "lobbying",
+    "label": "New Green Willets, LLC for the benefit of Queens Future, LLC",
+    "subtitle": "Real Estate · 0 bills · 1 members",
+    "route": "/influence?search=New%20Green%20Willets%2C%20LLC%20for%20the%20benefit%20of%20Queens%20Future%2C%20LLC",
+    "searchText": "New Green Willets, LLC for the benefit of Queens Future, LLC Real Estate lobbying"
+  },
+  {
+    "id": "lobbying:bank-of-america-corporation",
+    "type": "lobbying",
+    "label": "Bank of America Corporation",
+    "subtitle": "Finance · 0 bills · 3 members",
+    "route": "/influence?search=Bank%20of%20America%20Corporation",
+    "searchText": "Bank of America Corporation Finance lobbying"
+  },
+  {
+    "id": "lobbying:sanctuary-for-families-inc-",
+    "type": "lobbying",
+    "label": "Sanctuary for Families, Inc.",
+    "subtitle": "Government / Public Sector · 0 bills · 2 members",
+    "route": "/influence?search=Sanctuary%20for%20Families%2C%20Inc.",
+    "searchText": "Sanctuary for Families, Inc. Government / Public Sector lobbying"
+  },
+  {
+    "id": "lobbying:transport-workers-union-of-america",
+    "type": "lobbying",
+    "label": "Transport Workers Union of America",
+    "subtitle": "Labor · 0 bills · 1 members",
+    "route": "/influence?search=Transport%20Workers%20Union%20of%20America",
+    "searchText": "Transport Workers Union of America Labor lobbying"
+  },
+  {
+    "id": "lobbying:100-gold-st-gp-llc",
+    "type": "lobbying",
+    "label": "100 Gold ST GP LLC",
+    "subtitle": "Real Estate · 0 bills · 3 members",
+    "route": "/influence?search=100%20Gold%20ST%20GP%20LLC",
+    "searchText": "100 Gold ST GP LLC Real Estate lobbying"
+  },
+  {
+    "id": "lobbying:retail-council-of-new-york-state-inc-",
+    "type": "lobbying",
+    "label": "Retail Council of New York State, Inc.",
+    "subtitle": "Small Business / Retail · 3 bills · 1 members",
+    "route": "/influence?search=Retail%20Council%20of%20New%20York%20State%2C%20Inc.",
+    "searchText": "Retail Council of New York State, Inc. Small Business / Retail lobbying"
+  },
+  {
+    "id": "lobbying:cirrus-wfha-funding-llc",
+    "type": "lobbying",
+    "label": "Cirrus WFHA Funding LLC",
+    "subtitle": "Real Estate · 0 bills · 1 members",
+    "route": "/influence?search=Cirrus%20WFHA%20Funding%20LLC",
+    "searchText": "Cirrus WFHA Funding LLC Real Estate lobbying"
+  },
+  {
+    "id": "lobbying:amigos-del-museo-del-barrio",
+    "type": "lobbying",
+    "label": "Amigos del Museo del Barrio",
+    "subtitle": "Government / Public Sector · 0 bills · 1 members",
+    "route": "/influence?search=Amigos%20del%20Museo%20del%20Barrio",
+    "searchText": "Amigos del Museo del Barrio Government / Public Sector lobbying"
+  },
+  {
+    "id": "lobbying:samaritan-daytop-foundation-inc-",
+    "type": "lobbying",
+    "label": "Samaritan Daytop Foundation, Inc.",
+    "subtitle": "Nonprofit / Advocacy · 0 bills · 1 members",
+    "route": "/influence?search=Samaritan%20Daytop%20Foundation%2C%20Inc.",
+    "searchText": "Samaritan Daytop Foundation, Inc. Nonprofit / Advocacy lobbying"
+  },
+  {
+    "id": "lobbying:nyu-langone-hospitals-on-behalf-of-nyu-langone-hospitals-and-sunset-park-health-council-inc-",
+    "type": "lobbying",
+    "label": "NYU Langone Hospitals on behalf of NYU Langone Hospitals and Sunset Park Health Council, Inc.",
+    "subtitle": "Healthcare · 0 bills · 1 members",
+    "route": "/influence?search=NYU%20Langone%20Hospitals%20on%20behalf%20of%20NYU%20Langone%20Hospitals%20and%20Sunset%20Park%20Health%20Council%2C%20Inc.",
+    "searchText": "NYU Langone Hospitals on behalf of NYU Langone Hospitals and Sunset Park Health Council, Inc. Healthcare lobbying"
+  },
+  {
+    "id": "lobbying:museum-of-the-city-of-new-york-inc-",
+    "type": "lobbying",
+    "label": "Museum of the City of New York, Inc.",
+    "subtitle": "Government / Public Sector · 0 bills · 1 members",
+    "route": "/influence?search=Museum%20of%20the%20City%20of%20New%20York%2C%20Inc.",
+    "searchText": "Museum of the City of New York, Inc. Government / Public Sector lobbying"
+  },
+  {
+    "id": "lobbying:the-broadway-league-inc-",
+    "type": "lobbying",
+    "label": "The Broadway League Inc.",
+    "subtitle": "Arts & Culture · 0 bills · 1 members",
+    "route": "/influence?search=The%20Broadway%20League%20Inc.",
+    "searchText": "The Broadway League Inc. Arts & Culture lobbying"
+  },
+  {
+    "id": "lobbying:the-women-s-housing-and-economic-development-corporation",
+    "type": "lobbying",
+    "label": "The Women's Housing and Economic Development Corporation",
+    "subtitle": "Real Estate · 0 bills · 1 members",
+    "route": "/influence?search=The%20Women's%20Housing%20and%20Economic%20Development%20Corporation",
+    "searchText": "The Women's Housing and Economic Development Corporation Real Estate lobbying"
   }
 ]

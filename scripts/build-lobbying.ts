@@ -652,6 +652,11 @@ export async function buildLobbyingIndex(): Promise<void> {
     .sort((a, b) => b.totalSpending - a.totalSpending);
 
   await writeJsonFile(path.join(PUBLIC_DATA_DIR, "lobbying-index.json"), index);
+
+  const PROCESSED_DIR = path.resolve("data/processed");
+  await fs.mkdir(PROCESSED_DIR, { recursive: true });
+  await writeJsonFile(path.join(PROCESSED_DIR, "lobbying-index.json"), index);
+
   console.log(`[build-lobbying-index] wrote ${index.length} entries to lobbying-index.json`);
 }
 

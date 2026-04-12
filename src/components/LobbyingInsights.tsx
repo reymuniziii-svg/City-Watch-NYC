@@ -49,7 +49,15 @@ export default function LobbyingInsights({ introNumber }: { introNumber: string 
 
   if (!data) {
     return (
-      <p className="text-sm text-slate-500 py-4">No lobbying activity found for this bill.</p>
+      <div className="space-y-2">
+        <div className="flex items-center gap-2">
+          <h4 className="font-editorial text-xl font-bold text-black">Lobbying Insights</h4>
+          <span className="px-2 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-bold uppercase tracking-widest rounded-sm">Beta</span>
+        </div>
+        <p className="text-sm text-slate-500">
+          No lobbying activity has been linked to this bill yet. Lobbying data is sourced from public filings with the NYC City Clerk's office.
+        </p>
+      </div>
     );
   }
 

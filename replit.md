@@ -89,9 +89,20 @@ A small Express server handles the production deployment:
 - `/bills` — Bill search and tracking
 - `/hearings` — Upcoming and past hearings
 - `/money` — Campaign finance comparison
+- `/influence` — Influence Mapper (donor/lobbying analysis, Pro-gated conflict alerts)
 - `/watchlist` — Personal watchlist (Clerk auth required)
 - `/pricing` — Pro subscription plans
 - `/support` — Donation / support page
+- `*` — 404 NotFoundPage with navigation shortcuts
+
+## Lobbying Data Pipeline
+- `scripts/build-lobbying.ts` fetches NYC Open Data Socrata dataset `fmf3-knd8` (lobbying filings)
+- Generates per-bill profiles in `public/data/lobbying/bills/*.json` and per-member profiles in `public/data/lobbying/members/*.json`
+- Also generates `public/data/lobbying-index.json` and `data/processed/lobbying-index.json` (search index source)
+- `LobbyingInsights` component displays lobbying data inside BillCard expanded summary (Pro-gated)
+- `MemberDashboard` shows lobbying activity section at bottom (Pro-gated)
+- `InfluenceMapperPage` shows full lobbying index with filterable table, supports `/influence?search=...` deep links
+- `IndustryBadge` shared component with `INDUSTRY_COLORS` map for consistent industry theming
 
 ## Mobile Optimization
 - All major cards (BillCard, HearingCard, PricingPage TierCard) use responsive padding: `p-4 md:p-8`

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Network, DollarSign, Users, Loader2, Filter, ChevronUp, ChevronDown, ChevronsUpDown, FileText, Search, AlertTriangle, Megaphone } from 'lucide-react';
 import { fetchInfluenceMap, fetchConflictAlerts, fetchLobbyingIndex } from '../services/nycDataService';
@@ -76,13 +76,14 @@ function SortHeader({ label, col, sort, onSort, tooltip }: SortHeaderProps) {
 /* ── main component ───────────────────────────────────────── */
 
 export default function InfluenceMapperPage() {
+  const [searchParams] = useSearchParams();
   const [data, setData] = useState<InfluenceMapEntry[]>([]);
   const [conflictAlerts, setConflictAlerts] = useState<ConflictAlert[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [sort, setSort] = useState<SortState>({ key: 'totalAmount', dir: 'desc' });
   const [industry, setIndustry] = useState('All Industries');
   const [borough, setBorough] = useState('All Boroughs');
-  const [memberSearch, setMemberSearch] = useState('');
+  const [memberSearch, setMemberSearch] = useState(searchParams.get('search') ?? '');
   const [lobbyingIndex, setLobbyingIndex] = useState<LobbyingIndexEntry[]>([]);
   const [expandedRows, setExpandedRows] = useState<Set<number>>(new Set());
 
