@@ -8,6 +8,7 @@ export interface FeatureFlags {
   canUseSemanticSearch: boolean;
   canCreateActionKits: boolean;
   canAccessAPI: boolean;
+  canViewLobbyingData: boolean;
 }
 
 export function getFeatureFlags(tier: ProTier): FeatureFlags {
@@ -19,5 +20,6 @@ export function getFeatureFlags(tier: ProTier): FeatureFlags {
     canUseSemanticSearch: tier === 'advocate' || tier === 'enterprise',
     canCreateActionKits: tier === 'enterprise',
     canAccessAPI: tier === 'enterprise',
+    canViewLobbyingData: tier === 'advocate' || tier === 'enterprise',
   };
 }

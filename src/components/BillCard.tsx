@@ -6,6 +6,7 @@ import { summarizeBill } from '../services/geminiService';
 import CivicActionCenter from './CivicActionCenter';
 import SourceContext from './SourceContext';
 import WatchButton from './WatchButton';
+import LobbyingInsights from './LobbyingInsights';
 
 type OpenPanel = 'none' | 'summary' | 'action';
 
@@ -190,30 +191,7 @@ export default function BillCard({ bill }: { bill: Bill }) {
               <SourceContext context={summary?.sourceContext} />
 
               <div className="mt-8 pt-8 border-t border-slate-200">
-                <div className="flex items-center gap-2 mb-6">
-                  <h4 className="font-editorial text-xl font-bold text-black">Lobbying Insights</h4>
-                  <span className="px-2 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-bold uppercase tracking-widest rounded-sm">Beta</span>
-                </div>
-                
-                <div className="bg-white p-6 border border-slate-200">
-                  <p className="text-sm text-slate-600 mb-4">
-                    Real-time lobbying data integration is currently being mapped from the NYC City Clerk's database. Once connected, this section will display:
-                  </p>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5 shrink-0"></div>
-                      <span className="text-sm text-slate-700"><strong>Top Organizations:</strong> Which groups are spending the most money to influence this specific bill.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-1.5 shrink-0"></div>
-                      <span className="text-sm text-slate-700"><strong>For vs. Against:</strong> A breakdown of which industries support the bill and which are fighting it.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0"></div>
-                      <span className="text-sm text-slate-700"><strong>Lobbying Firms:</strong> The specific lobbying firms hired to advocate on this legislation.</span>
-                    </li>
-                  </ul>
-                </div>
+                <LobbyingInsights introNumber={bill.number} />
               </div>
             </div>
           </motion.div>

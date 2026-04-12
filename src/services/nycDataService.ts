@@ -1,5 +1,5 @@
 import { CouncilMember, Bill, Hearing, HearingEnrichment, CampaignFinance, MemberMetrics, FinanceIndexRow } from '../types';
-import type { MemberSummary, HearingRecord, MemberProfile, HearingSummary, InfluenceMapEntry, ConflictAlert } from '../lib/types';
+import type { MemberSummary, HearingRecord, MemberProfile, HearingSummary, InfluenceMapEntry, ConflictAlert, BillLobbyingProfile, MemberLobbyingProfile, LobbyingIndexEntry } from '../lib/types';
 
 interface HearingEnrichmentIndex {
   byEventId: Map<string, HearingEnrichment>;
@@ -18,6 +18,9 @@ const memberProfileCache = new Map<string, MemberProfile | null>();
 let financeIndexCache: FinanceIndexRow[] | null = null;
 let influenceMapCache: InfluenceMapEntry[] | null = null;
 let conflictAlertsCache: ConflictAlert[] | null = null;
+const billLobbyingCache = new Map<string, BillLobbyingProfile | null>();
+const memberLobbyingCache = new Map<string, MemberLobbyingProfile | null>();
+let lobbyingIndexCache: LobbyingIndexEntry[] | null = null;
 
 interface BillIndexRecord {
   billId: string;
@@ -348,5 +351,40 @@ export async function fetchMemberProfile(id: string): Promise<MemberProfile | nu
     console.error('Error loading member profile:', error);
     memberProfileCache.set(id, null);
     return null;
+  }
+}
+
+export async function fetchBillLobbying(introNumber: string): Promise<BillLobbyingProfile | null> {
+  const slug = introNumber.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  if (billLobbyingCache.has(slug)) return billLobbyingCache.get(slug) ?? null;
+  try {
+    const data = await fetchJson<BillLobbyingProfile>(`/data/lobbying/bills/${slug}.json`);
+    billLobbyingCache.set(slug, data);
+    return data;
+  } catch {
+    billLobbyingCache.set(slug, null);
+    return null;
+  }
+}
+
+export async function fetchMemberLobbying(memberSlug: string): Promise<MemberLobbyingProfile | null> {
+  if (memberLobbyingCache.has(memberSlug)) return memberLobbyingCache.get(memberSlug) ?? null;
+  try {
+    const data = await fetchJson<MemberLobbyingProfile>(`/data/lobbying/members/${memberSlug}.json`);
+    memberLobbyingCache.set(memberSlug, data);
+    return data;
+  } catch {
+    memberLobbyingCache.set(memberSlug, null);
+    return null;
+  }
+}
+
+export async function fetchLobbyingIndex(): Promise<LobbyingIndexEntry[]> {
+  if (lobbyingIndexCache) return lobbyingIndexCache;
+  try {
+    lobbyingIndexCache = await fetchJson<LobbyingIndexEntry[]>('/data/lobbying-index.json');
+    return lobbyingIndexCache;
+  } catch {
+    return [];
   }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, FileText, Loader2, Search, Users } from 'lucide-react';
+import { Calendar, FileText, Loader2, Megaphone, Search, Users } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import type { SearchDocument } from '../lib/types';
 import { createSearchIndex } from '../lib/search';
@@ -15,6 +15,10 @@ function getResultIcon(type: SearchDocument['type']) {
     return Calendar;
   }
 
+  if (type === 'lobbying') {
+    return Megaphone;
+  }
+
   return FileText;
 }
 
@@ -25,6 +29,10 @@ function getResultLabel(type: SearchDocument['type']) {
 
   if (type === 'hearing') {
     return 'Hearing';
+  }
+
+  if (type === 'lobbying') {
+    return 'Lobbying Org';
   }
 
   return 'Bill';

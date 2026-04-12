@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Mail, Phone, Globe, Twitter, FileText, Landmark, Calendar, BarChart3, Loader2, Share2, Check, Network, AlertTriangle, Eye } from 'lucide-react';
+import { Mail, Phone, Globe, Twitter, FileText, Landmark, Calendar, BarChart3, Loader2, Share2, Check, Network, AlertTriangle, Eye, Megaphone } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Bill, Hearing, CampaignFinance, MemberMetrics } from '../types';
-import { fetchMemberProfile, fetchInfluenceMap, fetchConflictAlerts } from '../services/nycDataService';
-import type { MemberProfile, BillRecord, HearingRecord, InfluenceMapEntry, ConflictAlert } from '../lib/types';
+import { fetchMemberProfile, fetchInfluenceMap, fetchConflictAlerts, fetchMemberLobbying } from '../services/nycDataService';
+import type { MemberProfile, BillRecord, HearingRecord, InfluenceMapEntry, ConflictAlert, MemberLobbyingProfile } from '../lib/types';
 import BillCard from './BillCard';
 import HearingCard from './HearingCard';
 import FinanceView from './FinanceView';
@@ -13,6 +13,8 @@ import ActivityFeed from './ActivityFeed';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import WatchButton from './WatchButton';
+import IndustryBadge, { INDUSTRY_COLORS } from './shared/IndustryBadge';
+import ProGate from './ProGate';
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -53,19 +55,6 @@ function mapHearingRecordToHearing(hearing: HearingRecord): Hearing {
   };
 }
 
-const INDUSTRY_COLORS: Record<string, string> = {
-  'Real Estate': 'bg-amber-100 text-amber-800',
-  'Finance': 'bg-blue-100 text-blue-800',
-  'Legal': 'bg-purple-100 text-purple-800',
-  'Labor': 'bg-green-100 text-green-800',
-  'Healthcare': 'bg-rose-100 text-rose-800',
-  'Education': 'bg-teal-100 text-teal-800',
-  'Nonprofit / Advocacy': 'bg-indigo-100 text-indigo-800',
-  'Government / Public Sector': 'bg-slate-200 text-slate-700',
-  'Small Business / Retail': 'bg-orange-100 text-orange-800',
-  'Other / Mixed': 'bg-gray-100 text-gray-600',
-};
-
 function fmt$(value: number): string {
   return '$' + value.toLocaleString('en-US', { maximumFractionDigits: 0 });
 }
@@ -79,6 +68,7 @@ export default function MemberDashboard() {
   const [metrics, setMetrics] = useState<MemberMetrics | null>(null);
   const [influenceData, setInfluenceData] = useState<InfluenceMapEntry[]>([]);
   const [memberAlerts, setMemberAlerts] = useState<ConflictAlert[]>([]);
+  const [lobbyingData, setLobbyingData] = useState<MemberLobbyingProfile | null>(null);
   const [activeTab, setActiveTab] = useState<'activity' | 'bills' | 'money' | 'hearings'>('activity');
   const [isLoading, setIsLoading] = useState(true);
   const [copied, setCopied] = useState(false);
@@ -127,12 +117,14 @@ export default function MemberDashboard() {
             });
           }
 
-          const [allInfluence, allAlerts] = await Promise.all([
+          const [allInfluence, allAlerts, lobbyingProfile] = await Promise.all([
             fetchInfluenceMap(),
             fetchConflictAlerts(),
+            fetchMemberLobbying(memberId!),
           ]);
           setInfluenceData(allInfluence.filter(e => e.memberSlug === memberId).slice(0, 5));
           setMemberAlerts(allAlerts.filter(a => a.memberSlug === memberId).slice(0, 3));
+          setLobbyingData(lobbyingProfile);
         }
       } catch (error) {
         console.error('Error loading member data:', error);
@@ -428,6 +420,102 @@ export default function MemberDashboard() {
                 </div>
               ))}
             </div>
+          )}
+
+          {/* Lobbying Activity */}
+          {lobbyingData && (
+            <ProGate feature="Lobbying Activity" flag="canViewLobbyingData">
+              <div className="space-y-6">
+                <div className="flex items-center gap-3">
+                  <Megaphone className="w-5 h-5 text-black" />
+                  <h3 className="font-editorial text-2xl font-bold text-black">Lobbying Activity</h3>
+                  <span className="px-2 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-bold uppercase tracking-widest rounded-sm">Beta</span>
+                </div>
+
+                {/* Top clients grid */}
+                {lobbyingData.topClients.length > 0 && (
+                  <div>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-4">Top Lobbying Clients</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {lobbyingData.topClients.map((client, i) => (
+                        <motion.div
+                          key={`${client.clientName}-${i}`}
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: i * 0.05 }}
+                          className="bg-white border-editorial p-5 space-y-3"
+                        >
+                          <div className="flex items-center justify-between">
+                            <p className="font-semibold text-sm text-black truncate">{client.clientName}</p>
+                            <IndustryBadge industry={client.clientIndustry} />
+                          </div>
+                          <p className="font-editorial text-2xl font-bold text-black">
+                            {fmt$(client.totalSpending)}
+                          </p>
+                          <div className="space-y-1">
+                            {client.relatedBills.slice(0, 2).map((bill) => (
+                              <p key={bill.introNumber} className="text-xs text-slate-500 truncate">
+                                {bill.introNumber} — {bill.title}
+                              </p>
+                            ))}
+                            {client.relatedBills.length > 2 && (
+                              <p className="text-xs text-slate-400">
+                                +{client.relatedBills.length - 2} more bills
+                              </p>
+                            )}
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Industry breakdown bars */}
+                {lobbyingData.topIndustries.length > 0 && (
+                  <div className="bg-white border-editorial p-6">
+                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Industry Breakdown (Lobbying Spending)</p>
+                    <div className="space-y-2">
+                      {lobbyingData.topIndustries.map(({ industry, totalSpending }) => {
+                        const max = lobbyingData.topIndustries[0]?.totalSpending || 1;
+                        const pct = totalSpending / max;
+                        return (
+                          <div key={industry} className="flex items-center gap-3">
+                            <span className="w-40 text-xs font-medium text-slate-700 truncate shrink-0">{industry}</span>
+                            <div className="flex-1 h-4 bg-slate-100 overflow-hidden">
+                              <motion.div
+                                className={`h-full ${INDUSTRY_COLORS[industry]?.split(' ')[0] ?? 'bg-gray-200'}`}
+                                initial={{ width: 0 }}
+                                animate={{ width: `${Math.max(pct * 100, 1)}%` }}
+                                transition={{ duration: 0.6, delay: 0.1 }}
+                              />
+                            </div>
+                            <span className="text-xs font-medium text-slate-600 tabular-nums w-24 text-right shrink-0">{fmt$(totalSpending)}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Recent filings */}
+                {lobbyingData.recentFilings.length > 0 && (
+                  <div>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-4">Recent Filings</p>
+                    <div className="space-y-2">
+                      {lobbyingData.recentFilings.slice(0, 5).map((filing, i) => (
+                        <div key={`filing-${i}`} className="flex items-center justify-between py-2 border-b border-slate-100 last:border-b-0">
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-semibold text-black truncate">{filing.lobbyistName}</p>
+                            <p className="text-xs text-slate-500 truncate">{filing.clientName} &middot; {filing.period} {filing.reportYear}</p>
+                          </div>
+                          <span className="text-sm font-editorial font-bold text-black tabular-nums shrink-0 ml-4">{fmt$(filing.compensationTotal)}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </ProGate>
           )}
         </motion.div>
       )}
