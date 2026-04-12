@@ -9,6 +9,8 @@ import BillCard from './BillCard';
 import HearingCard from './HearingCard';
 import FinanceView from './FinanceView';
 import Scorecard from './Scorecard';
+import WorkHorseScorecard from './WorkHorseScorecard';
+import SponsorshipVelocityChart from './SponsorshipVelocityChart';
 import ActivityFeed from './ActivityFeed';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -272,6 +274,16 @@ export default function MemberDashboard() {
                     Static activity metrics are not available for this member yet.
                   </p>
                 </div>
+              )}
+              {member.workHorse && (
+                <ProGate flag="canViewWorkHorse" feature="Work Horse Index">
+                  <WorkHorseScorecard workHorse={member.workHorse} />
+                </ProGate>
+              )}
+              {member.slug && (
+                <ProGate flag="canViewWorkHorse" feature="Sponsorship Velocity">
+                  <SponsorshipVelocityChart memberSlug={member.slug} />
+                </ProGate>
               )}
               <ActivityFeed bills={bills} />
             </motion.div>

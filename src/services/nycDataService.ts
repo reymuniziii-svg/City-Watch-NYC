@@ -1,5 +1,5 @@
 import { CouncilMember, Bill, Hearing, HearingEnrichment, CampaignFinance, MemberMetrics, FinanceIndexRow } from '../types';
-import type { MemberSummary, HearingRecord, MemberProfile, HearingSummary, InfluenceMapEntry, ConflictAlert, BillLobbyingProfile, MemberLobbyingProfile, LobbyingIndexEntry } from '../lib/types';
+import type { MemberSummary, HearingRecord, MemberProfile, HearingSummary, InfluenceMapEntry, ConflictAlert, BillLobbyingProfile, MemberLobbyingProfile, LobbyingIndexEntry, WorkHorseEntry, BillVelocityEntry, CommitteeHeatmapEntry, BillDonorProximity } from '../lib/types';
 
 interface HearingEnrichmentIndex {
   byEventId: Map<string, HearingEnrichment>;
@@ -21,6 +21,10 @@ let conflictAlertsCache: ConflictAlert[] | null = null;
 const billLobbyingCache = new Map<string, BillLobbyingProfile | null>();
 const memberLobbyingCache = new Map<string, MemberLobbyingProfile | null>();
 let lobbyingIndexCache: LobbyingIndexEntry[] | null = null;
+let workhorseCache: WorkHorseEntry[] | null = null;
+let billVelocityCache: BillVelocityEntry[] | null = null;
+let committeeHeatmapCache: CommitteeHeatmapEntry[] | null = null;
+let billProximityCache: BillDonorProximity[] | null = null;
 
 interface BillIndexRecord {
   billId: string;
@@ -387,4 +391,66 @@ export async function fetchLobbyingIndex(): Promise<LobbyingIndexEntry[]> {
   } catch {
     return [];
   }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Work Horse Effectiveness Index                                    */
+/* ------------------------------------------------------------------ */
+
+export async function fetchWorkHorseIndex(): Promise<WorkHorseEntry[]> {
+  if (workhorseCache) return workhorseCache;
+  try {
+    workhorseCache = await fetchJson<WorkHorseEntry[]>('/data/workhorse-index.json');
+    return workhorseCache;
+  } catch {
+    return [];
+  }
+}
+
+export async function fetchBillVelocity(): Promise<BillVelocityEntry[]> {
+  if (billVelocityCache) return billVelocityCache;
+  try {
+    billVelocityCache = await fetchJson<BillVelocityEntry[]>('/data/workhorse-velocity.json');
+    return billVelocityCache;
+  } catch {
+    return [];
+  }
+}
+
+export async function fetchBillVelocityForMember(memberSlug: string): Promise<BillVelocityEntry[]> {
+  const all = await fetchBillVelocity();
+  return all.filter((entry) => entry.leadSponsorSlug === memberSlug);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Committee Industry Heatmap                                        */
+/* ------------------------------------------------------------------ */
+
+export async function fetchCommitteeHeatmap(): Promise<CommitteeHeatmapEntry[]> {
+  if (committeeHeatmapCache) return committeeHeatmapCache;
+  try {
+    committeeHeatmapCache = await fetchJson<CommitteeHeatmapEntry[]>('/data/committee-industry-heatmap.json');
+    return committeeHeatmapCache;
+  } catch {
+    return [];
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Bill Donor Proximity                                              */
+/* ------------------------------------------------------------------ */
+
+export async function fetchBillDonorProximity(): Promise<BillDonorProximity[]> {
+  if (billProximityCache) return billProximityCache;
+  try {
+    billProximityCache = await fetchJson<BillDonorProximity[]>('/data/bill-donor-proximity.json');
+    return billProximityCache;
+  } catch {
+    return [];
+  }
+}
+
+export async function fetchBillDonorProximityByIntro(introNumber: string): Promise<BillDonorProximity | null> {
+  const all = await fetchBillDonorProximity();
+  return all.find((entry) => entry.introNumber === introNumber) ?? null;
 }

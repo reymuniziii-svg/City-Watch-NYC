@@ -12,7 +12,7 @@ import {
 } from "./lib/legislation";
 import { isEnactedStatus } from "../src/lib/status-timeline";
 import { normalizePersonName } from "./lib/normalize";
-import type { BillRecord, HearingSummary, HearingRecord, MemberFinanceProfile, MemberLobbyingProfile, MemberProfile, MemberSummary, VoteRecord } from "../src/lib/types";
+import type { BillRecord, HearingSummary, HearingRecord, MemberFinanceProfile, MemberLobbyingProfile, MemberProfile, MemberSummary, VoteRecord, WorkHorseScore } from "../src/lib/types";
 
 interface SupplementalRow {
   slug: string | null;
@@ -38,6 +38,22 @@ interface MemberMetric {
   hearingActivity: number;
   rankSponsored: number;
   rankEnacted: number;
+}
+
+interface WorkHorseRow {
+  slug: string;
+  successRate: number;
+  committeePullRate: number;
+  bipartisanReachRate: number;
+  velocityScore: number;
+  compositeScore: number;
+  rank: number;
+  billBreakdown: {
+    introduced: number;
+    passedCommittee: number;
+    enacted: number;
+    bipartisanBills: number;
+  };
 }
 
 function loadSessionRange() {
@@ -214,6 +230,14 @@ export async function buildMembers(): Promise<MemberSummary[]> {
   }
   const metricBySlug = new Map<string, MemberMetric>(metrics.map((row): [string, MemberMetric] => [row.slug, row]));
 
+  let workhorseRows: WorkHorseRow[] = [];
+  try {
+    workhorseRows = await readJsonFile<WorkHorseRow[]>(path.join(PROCESSED_DIR, "workhorse-index.json"));
+  } catch {
+    // ignore -- workhorse data may not exist yet
+  }
+  const workhorseBySlug = new Map<string, WorkHorseRow>(workhorseRows.map((row): [string, WorkHorseRow] => [row.slug, row]));
+
   const bills = await loadBillDetails();
   const hearings = await readJsonFile<HearingRecord[]>(path.join(PROCESSED_DIR, "hearings-upcoming.json")).catch(() => []);
   const hearingSummaries = await readJsonFile<HearingSummary[]>(path.join(PROCESSED_DIR, "hearing-enrichment.json")).catch(() => []);
@@ -327,6 +351,7 @@ export async function buildMembers(): Promise<MemberSummary[]> {
       enactedFallback,
       finance: financeBySlug.get(entry.slug) ?? null,
       lobbying: lobbyingBySlug.get(entry.slug) ?? null,
+      workHorse: workhorseBySlug.get(entry.slug) ?? null,
     };
 
     await ensureDir(path.join(PROCESSED_DIR, "members"));

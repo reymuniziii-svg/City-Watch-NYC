@@ -14,6 +14,16 @@ export interface FeatureFlags {
   canViewLobbyingData: boolean;
   canUseSmsAlerts: boolean;
   canUseSlackAlerts: boolean;
+  canViewWorkHorse: boolean;
+  canBenchmarkMembers: boolean;
+  canViewCommitteeHeatmap: boolean;
+  canViewBillProximity: boolean;
+  canViewStakeholderMaps: boolean;
+  canUseStafferDirectory: boolean;
+  canUseInstitutionalMemory: boolean;
+  canUseMondayBrief: boolean;
+  canUseSemanticAnalysis: boolean;
+  canUsePredictiveSchedule: boolean;
 }
 
 export function getFeatureFlags(tier: ProTier): FeatureFlags {
@@ -33,5 +43,15 @@ export function getFeatureFlags(tier: ProTier): FeatureFlags {
     canAccessAPI: isEnterprise,
     canUseSmsAlerts: isEnterprise,
     canUseSlackAlerts: isEnterprise,
+    canViewWorkHorse: isPro,
+    canBenchmarkMembers: isPro,
+    canViewCommitteeHeatmap: isPro,
+    canViewBillProximity: isPro,
+    canViewStakeholderMaps: isPro,
+    canUseStafferDirectory: isEnterprise,
+    canUseInstitutionalMemory: isEnterprise,
+    canUseMondayBrief: isEnterprise,
+    canUseSemanticAnalysis: isEnterprise,
+    canUsePredictiveSchedule: isEnterprise,
   };
 }

@@ -268,6 +268,7 @@ export interface MemberProfile {
   enactedFallback: BillRecord[];
   finance: MemberFinanceProfile | null;
   lobbying: MemberLobbyingProfile | null;
+  workHorse: WorkHorseScore | null;
 }
 
 export interface SearchDocument {
@@ -428,4 +429,163 @@ export interface LobbyingConnection {
   clientIndustry: string;
   totalSpending: number;
   overlappingBills: string[];
+}
+
+/* ------------------------------------------------------------------ */
+/*  Work Horse Effectiveness Index                                    */
+/* ------------------------------------------------------------------ */
+
+export interface WorkHorseScore {
+  successRate: number;
+  committeePullRate: number;
+  bipartisanReachRate: number;
+  velocityScore: number;
+  compositeScore: number;
+  rank: number;
+  billBreakdown: {
+    introduced: number;
+    passedCommittee: number;
+    enacted: number;
+    bipartisanBills: number;
+  };
+}
+
+export interface WorkHorseEntry {
+  slug: string;
+  fullName: string;
+  districtNumber: number;
+  party: string;
+  successRate: number;
+  committeePullRate: number;
+  bipartisanReachRate: number;
+  velocityScore: number;
+  compositeScore: number;
+  rank: number;
+  billBreakdown: {
+    introduced: number;
+    passedCommittee: number;
+    enacted: number;
+    bipartisanBills: number;
+  };
+}
+
+export interface BillVelocityPoint {
+  date: string;
+  count: number;
+}
+
+export interface BillVelocityEntry {
+  introNumber: string;
+  title: string;
+  leadSponsorSlug: string;
+  committee: string;
+  introDate: string;
+  sponsorTimeline: BillVelocityPoint[];
+  committeeMean: BillVelocityPoint[];
+  daysToCommittee: number | null;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Committee Industry Heatmap                                        */
+/* ------------------------------------------------------------------ */
+
+export interface CommitteeIndustryCell {
+  industry: string;
+  totalAmount: number;
+  donorCount: number;
+  memberCount: number;
+  topMembers: { slug: string; name: string; amount: number }[];
+}
+
+export interface CommitteeHeatmapEntry {
+  committee: string;
+  industries: CommitteeIndustryCell[];
+  totalFunding: number;
+  memberCount: number;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Bill Donor Proximity                                              */
+/* ------------------------------------------------------------------ */
+
+export interface BillDonorProximity {
+  introNumber: string;
+  title: string;
+  committee: string;
+  topDonors: {
+    donorName: string;
+    industry: string;
+    totalToSponsors: number;
+    sponsorSlugs: string[];
+  }[];
+}
+
+/* ------------------------------------------------------------------ */
+/*  Staffer Directory                                                 */
+/* ------------------------------------------------------------------ */
+
+export interface StafferRecord {
+  id: string;
+  districtNumber: number;
+  memberSlug: string | null;
+  fullName: string;
+  title: string;
+  email: string | null;
+  phone: string | null;
+  policyAreas: string[];
+  verified: boolean;
+}
+
+export interface CommunicationLogEntry {
+  id: string;
+  stafferId: string;
+  userId: string;
+  userName: string;
+  contactType: "email" | "call" | "meeting" | "other";
+  summary: string;
+  contactDate: string;
+  createdAt: string;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Institutional Memory                                              */
+/* ------------------------------------------------------------------ */
+
+export interface MemberNote {
+  id: string;
+  memberSlug: string;
+  userId: string;
+  userName: string;
+  content: string;
+  isPinned: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface DocumentVaultEntry {
+  id: string;
+  entityType: "bill" | "member" | "hearing";
+  entityId: string;
+  filename: string;
+  storagePath: string;
+  mimeType: string;
+  sizeBytes: number;
+  description: string;
+  uploadedBy: string;
+  createdAt: string;
+}
+
+/* ------------------------------------------------------------------ */
+/*  Monday Morning Brief                                              */
+/* ------------------------------------------------------------------ */
+
+export interface BriefPreferences {
+  enabled: boolean;
+  dayOfWeek: number;
+  includeWatchlist: boolean;
+  includeConflicts: boolean;
+  includeWorkHorse: boolean;
+  brandingOrgName: string | null;
+  brandingLogoUrl: string | null;
+  lastGeneratedAt: string | null;
 }

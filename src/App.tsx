@@ -16,6 +16,10 @@ import ActionKitPage from './components/ActionKitPage';
 import ActionKitBuilder from './components/ActionKitBuilder';
 import ActionKitEmbed from './components/ActionKitEmbed';
 import ApiDocsPage from './components/ApiDocsPage';
+import WorkHorseRankingTable from './components/WorkHorseRankingTable';
+import WorkHorseBenchmark from './components/WorkHorseBenchmark';
+import StafferDirectoryPage from './components/StafferDirectoryPage';
+import BriefPreferencesPage from './components/BriefPreferencesPage';
 import NotFoundPage from './components/NotFoundPage';
 
 export default function App() {
@@ -32,6 +36,10 @@ export default function App() {
           <Route path="/hearings" element={<HearingList />} />
           <Route path="/money" element={<MoneyPage />} />
           <Route path="/influence" element={<InfluenceMapperPage />} />
+          <Route path="/workhorse" element={<WorkHorseRankingTable />} />
+          <Route path="/benchmark" element={<WorkHorseBenchmark />} />
+          <Route path="/staffers" element={<StafferDirectoryPage />} />
+          <Route path="/brief" element={<BriefPreferencesPage />} />
           <Route path="/watchlist" element={<WatchlistPage />} />
           <Route path="/impact" element={<ImpactAnalysisPage />} />
           <Route path="/action-kits" element={<ActionKitPage />} />
