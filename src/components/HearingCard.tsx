@@ -58,7 +58,7 @@ export default function HearingCard({ hearing }: { hearing: Hearing }) {
 
   return (
     <div className="bg-white border-editorial hover:bg-slate-50 transition-colors overflow-hidden">
-      <div className="p-8">
+      <div className="p-4 md:p-8">
         <div className="flex items-start justify-between gap-4 mb-6">
           <div className="flex items-center gap-3 px-3 py-1 border-editorial text-black text-xs font-bold uppercase tracking-widest">
             <Calendar className="w-3 h-3" />
@@ -129,7 +129,7 @@ export default function HearingCard({ hearing }: { hearing: Hearing }) {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="bg-slate-50 border-t-editorial p-8"
+            className="bg-slate-50 border-t-editorial p-4 md:p-8"
           >
             {isPast ? (
               enrichment ? (

@@ -15,10 +15,12 @@ function cn(...inputs: ClassValue[]) {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+  const [isSearchOpen, setIsSearchOpen] = React.useState(false);
   const location = useLocation();
 
   React.useEffect(() => {
     setIsSidebarOpen(false);
+    setIsSearchOpen(false);
   }, [location.pathname, location.search]);
 
   const navItems = [
@@ -41,10 +43,37 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Landmark className="w-6 h-6 text-black" />
           <span className="font-editorial font-bold text-xl tracking-tight text-black">Council Watch</span>
         </Link>
-        <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="p-2 text-black">
-          {isSidebarOpen ? <X /> : <Menu />}
-        </button>
+        <div className="flex items-center gap-1">
+          <button onClick={() => { setIsSearchOpen(!isSearchOpen); setIsSidebarOpen(false); }} className="p-2 text-black">
+            <Search className="w-5 h-5" />
+          </button>
+          <button onClick={() => { setIsSidebarOpen(!isSidebarOpen); setIsSearchOpen(false); }} className="p-2 text-black">
+            {isSidebarOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </header>
+
+      <AnimatePresence>
+        {isSearchOpen && (
+          <>
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="md:hidden bg-white border-b-editorial overflow-hidden sticky top-[57px] z-50"
+            >
+              <div className="p-4">
+                <GlobalSearch />
+              </div>
+            </motion.div>
+            <div
+              className="fixed inset-0 top-[57px] z-40 md:hidden"
+              onClick={() => setIsSearchOpen(false)}
+            />
+          </>
+        )}
+      </AnimatePresence>
 
       {/* Sidebar */}
       <aside className={cn(

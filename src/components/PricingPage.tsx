@@ -198,7 +198,7 @@ function TierCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, delay: index * 0.1 }}
-      className={`relative flex flex-col border-editorial bg-white p-8 ${
+      className={`relative flex flex-col border-editorial bg-white p-4 md:p-8 ${
         tier.highlighted ? 'ring-2 ring-black' : ''
       }`}
     >

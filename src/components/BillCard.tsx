@@ -61,7 +61,7 @@ export default function BillCard({ bill }: { bill: Bill }) {
 
   return (
     <div className="bg-white border-editorial hover:bg-slate-50 transition-colors overflow-hidden">
-      <div className="p-8">
+      <div className="p-4 md:p-8">
         <div className="flex items-start justify-between gap-4 mb-6">
           <div className="flex items-center gap-3 px-3 py-1 border-editorial text-black text-xs font-bold uppercase tracking-widest">
             <FileText className="w-3 h-3" />
@@ -80,7 +80,7 @@ export default function BillCard({ bill }: { bill: Bill }) {
           {bill.summary}
         </p>
 
-        <div className="flex items-center justify-between pt-6 border-t-editorial">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between pt-6 border-t-editorial gap-3">
           <div className="flex -space-x-2">
             {bill.sponsors?.slice(0, 3).map((sponsor, i) => (
               <div 
@@ -98,7 +98,7 @@ export default function BillCard({ bill }: { bill: Bill }) {
             )}
           </div>
           
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2">
             <WatchButton itemType="bill" itemValue={bill.number} itemLabel={bill.title} />
             <button
               onClick={handleShare}
@@ -163,7 +163,7 @@ export default function BillCard({ bill }: { bill: Bill }) {
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="overflow-hidden bg-slate-50 border-t-editorial"
           >
-            <div className="p-8">
+            <div className="p-4 md:p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div className="space-y-6">
                   <div>

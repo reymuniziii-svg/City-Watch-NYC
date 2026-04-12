@@ -171,7 +171,7 @@ export default function MemberDashboard() {
         <div className="bg-white border-editorial p-8 md:p-12 relative">
           <div className="flex flex-col md:flex-row gap-10 items-center md:items-start relative z-10">
             <div className="relative">
-              <div className="w-48 h-48 md:w-56 md:h-56 overflow-hidden border-editorial">
+              <div className="w-32 h-32 md:w-48 md:h-48 overflow-hidden border-editorial">
                 <img 
                   src={member.photoUrl || `https://picsum.photos/seed/${member.slug}/400/400`} 
                   alt={member.fullName}
@@ -237,7 +237,7 @@ export default function MemberDashboard() {
         </div>
 
         {/* Tabs */}
-        <div className="flex gap-0 border-b-editorial w-full overflow-x-auto sticky top-0 bg-white z-40 shadow-sm">
+        <div className="flex gap-0 border-b-editorial w-full overflow-x-auto sticky top-[57px] md:top-0 bg-white z-40 shadow-sm">
           {[
             { id: 'activity', label: 'Activity', icon: BarChart3 },
             { id: 'bills', label: 'Bills', icon: FileText },
@@ -248,7 +248,7 @@ export default function MemberDashboard() {
               key={tab.id}
               onClick={() => setActiveTab(tab.id as any)}
               className={cn(
-                "flex items-center gap-2 px-8 py-4 text-sm font-bold uppercase tracking-widest transition-all duration-200 border-b-2",
+                "flex items-center gap-2 px-4 py-3 md:px-8 md:py-4 text-sm font-bold uppercase tracking-widest transition-all duration-200 border-b-2",
                 activeTab === tab.id 
                   ? "border-black text-black" 
                   : "border-transparent text-slate-500 hover:text-black"
