@@ -6,20 +6,32 @@ export interface FeatureFlags {
   canReceiveAlerts: boolean;
   canUseImpactAnalysis: boolean;
   canUseSemanticSearch: boolean;
+  canUseHearingSuperSearch: boolean;
+  canViewSentiment: boolean;
+  canExportData: boolean;
   canCreateActionKits: boolean;
   canAccessAPI: boolean;
   canViewLobbyingData: boolean;
+  canUseSmsAlerts: boolean;
+  canUseSlackAlerts: boolean;
 }
 
 export function getFeatureFlags(tier: ProTier): FeatureFlags {
+  const isPro = tier === 'advocate' || tier === 'enterprise';
+  const isEnterprise = tier === 'enterprise';
   return {
-    canViewConflictAlerts: tier === 'advocate' || tier === 'enterprise',
-    canUseWatchlists: tier === 'advocate' || tier === 'enterprise',
-    canReceiveAlerts: tier === 'advocate' || tier === 'enterprise',
-    canUseImpactAnalysis: tier === 'advocate' || tier === 'enterprise',
-    canUseSemanticSearch: tier === 'advocate' || tier === 'enterprise',
-    canCreateActionKits: tier === 'enterprise',
-    canAccessAPI: tier === 'enterprise',
-    canViewLobbyingData: tier === 'advocate' || tier === 'enterprise',
+    canViewConflictAlerts: isPro,
+    canUseWatchlists: isPro,
+    canReceiveAlerts: isPro,
+    canUseImpactAnalysis: isPro,
+    canUseSemanticSearch: isPro,
+    canUseHearingSuperSearch: isPro,
+    canViewSentiment: isPro,
+    canViewLobbyingData: isPro,
+    canExportData: isEnterprise,
+    canCreateActionKits: isEnterprise,
+    canAccessAPI: isEnterprise,
+    canUseSmsAlerts: isEnterprise,
+    canUseSlackAlerts: isEnterprise,
   };
 }

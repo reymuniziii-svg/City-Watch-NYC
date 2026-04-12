@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Search, Users, FileText, Calendar, Landmark, Map, Menu, X, DollarSign, Heart, Zap, Network, Eye } from 'lucide-react';
+import { Search, Users, FileText, Calendar, Landmark, Map, Menu, X, DollarSign, Heart, Zap, Network, Eye, Target, Megaphone, Code } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -31,7 +31,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: 'Hearings', icon: Calendar, path: '/hearings' },
     { name: 'Money', icon: DollarSign, path: '/money' },
     { name: 'Influence', icon: Network, path: '/influence' },
+    { name: 'Impact Analysis', icon: Target, path: '/impact' },
     { name: 'Watchlist', icon: Eye, path: '/watchlist' },
+    { name: 'Action Kits', icon: Megaphone, path: '/action-kits' },
+    { name: 'API', icon: Code, path: '/api-docs' },
     { name: 'Pro', icon: Zap, path: '/pricing' },
   ];
 

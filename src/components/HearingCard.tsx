@@ -1,9 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Calendar, Clock, MapPin, Sparkles, Loader2, ExternalLink, FileText } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Hearing } from '../types';
 import { summarizeHearing } from '../services/geminiService';
 import SourceContext from './SourceContext';
+import HearingSentiment from './HearingSentiment';
+
+interface HearingSentimentData {
+  overall: 'supportive' | 'hostile' | 'mixed' | 'neutral';
+  score: number;
+  speakerStances: { speaker: string; stance: 'supportive' | 'critical' | 'neutral' | 'mixed'; quote: string }[];
+}
+
+let sentimentCache: Record<string, HearingSentimentData> | null = null;
+async function loadSentimentData(): Promise<Record<string, HearingSentimentData>> {
+  if (sentimentCache) return sentimentCache;
+  try {
+    const res = await fetch('/data/hearing-sentiment.json');
+    if (!res.ok) return {};
+    sentimentCache = await res.json();
+    return sentimentCache!;
+  } catch {
+    return {};
+  }
+}
 
 const OUTCOME_LABELS: Record<string, string> = {
   action: 'Vote / Action',
@@ -25,9 +45,19 @@ export default function HearingCard({ hearing }: { hearing: Hearing }) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [summary, setSummary] = useState<Hearing['summary'] | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [sentiment, setSentiment] = useState<HearingSentimentData | null>(null);
 
   const isPast = hearing.isPast;
   const enrichment = hearing.enrichment;
+
+  useEffect(() => {
+    if (isPast && enrichment) {
+      loadSentimentData().then(data => {
+        const s = data[hearing.id] ?? data[enrichment.id];
+        if (s) setSentiment(s);
+      });
+    }
+  }, [isPast, enrichment, hearing.id]);
 
   const handleSummarize = async () => {
     if (isPast) return;
@@ -174,6 +204,8 @@ export default function HearingCard({ hearing }: { hearing: Hearing }) {
                       </div>
                     </div>
                   )}
+
+                  <HearingSentiment sentiment={sentiment} />
 
                   <SourceContext context={enrichment.sourceContext} />
 

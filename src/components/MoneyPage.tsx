@@ -4,6 +4,7 @@ import { DollarSign, TrendingUp, Users, ChevronUp, ChevronDown, ChevronsUpDown, 
 import { motion } from 'motion/react';
 import { FinanceIndexRow } from '../types';
 import { fetchFinanceIndex } from '../services/nycDataService';
+import BulkExportPanel from './BulkExportPanel';
 
 function fmt$(value: number | null, digits = 0): string {
   if (value === null) return '—';
@@ -165,6 +166,22 @@ export default function MoneyPage() {
         <p className="text-slate-600 text-lg max-w-2xl">
           Compare how every NYC Council member funds their campaigns — who gives, how much, and where it comes from. Data from the NYC Campaign Finance Board.
         </p>
+        <div className="mt-3">
+          <BulkExportPanel
+            data={sorted as unknown as Record<string, unknown>[]}
+            filename="council-watch-finance"
+            columns={[
+              { key: 'fullName', label: 'Member' },
+              { key: 'districtNumber', label: 'District' },
+              { key: 'party', label: 'Party' },
+              { key: 'borough', label: 'Borough' },
+              { key: 'totalRaised', label: 'Total Raised' },
+              { key: 'publicFundsShare', label: 'Public Funds %' },
+              { key: 'smallDollarShare', label: 'Small Dollar %' },
+              { key: 'contributorCount', label: 'Contributors' },
+            ]}
+          />
+        </div>
       </div>
 
       {/* Council-wide summary strip */}

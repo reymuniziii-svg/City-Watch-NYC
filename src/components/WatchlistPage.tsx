@@ -8,6 +8,7 @@ import { isSupabaseConfigured } from '../services/supabaseClient';
 import { getWatchlist, addToWatchlist, removeFromWatchlist, WatchlistItem } from '../services/watchlistService';
 import ProGate from './ProGate';
 import AlertPreferences from './AlertPreferences';
+import AlertChannels from './AlertChannels';
 
 export default function WatchlistPage() {
   const { isAuthenticated, user, isLoading: authLoading } = useProUser();
@@ -363,6 +364,7 @@ export default function WatchlistPage() {
 
       {/* Alert Preferences — shown for authenticated users */}
       {isAuthenticated && <AlertPreferences />}
+      {isAuthenticated && <AlertChannels />}
     </div>
   );
 }
