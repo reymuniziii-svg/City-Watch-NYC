@@ -6,6 +6,7 @@ import { Bill } from '../types';
 import { fetchBills } from '../services/nycDataService';
 import { expandSearchQuery } from '../services/geminiService';
 import BillCard from './BillCard';
+import BulkExportPanel from './BulkExportPanel';
 
 export default function BillList() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -125,6 +126,21 @@ export default function BillList() {
         <div>
           <h1 className="font-editorial text-5xl font-black text-black tracking-tighter mb-4">Legislative Bills</h1>
           <p className="text-slate-600">Track and demystify legislation moving through City Hall.</p>
+          <div className="mt-3">
+            <BulkExportPanel
+              data={filteredBills as unknown as Record<string, unknown>[]}
+              filename="council-watch-bills"
+              columns={[
+                { key: 'number', label: 'Intro Number' },
+                { key: 'title', label: 'Title' },
+                { key: 'status', label: 'Status' },
+                { key: 'introducedDate', label: 'Introduced' },
+                { key: 'lastActionDate', label: 'Last Action' },
+                { key: 'committee', label: 'Committee' },
+                { key: 'sponsorCount', label: 'Sponsors' },
+              ]}
+            />
+          </div>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">

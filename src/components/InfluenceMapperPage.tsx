@@ -7,6 +7,7 @@ import type { InfluenceMapEntry, ConflictAlert, LobbyingIndexEntry } from '../li
 import ConflictAlertCard from './ConflictAlertCard';
 import ProGate from './ProGate';
 import IndustryBadge, { INDUSTRY_COLORS } from './shared/IndustryBadge';
+import BulkExportPanel from './BulkExportPanel';
 
 /* ── helpers ──────────────────────────────────────────────── */
 
@@ -202,6 +203,20 @@ export default function InfluenceMapperPage() {
         <p className="text-slate-600 text-lg max-w-2xl">
           Trace every major campaign contribution to Council members, see which industries give the most, and explore the bills those members sponsor. All data from NYC Campaign Finance Board public filings.
         </p>
+        <div className="mt-3">
+          <BulkExportPanel
+            data={sorted.map(r => ({ ...r, relatedBillsCount: r.relatedBills.length })) as unknown as Record<string, unknown>[]}
+            filename="council-watch-influence-map"
+            columns={[
+              { key: 'districtNumber', label: 'District' },
+              { key: 'memberName', label: 'Member' },
+              { key: 'donorName', label: 'Donor' },
+              { key: 'donorIndustry', label: 'Industry' },
+              { key: 'totalAmount', label: 'Amount' },
+              { key: 'relatedBillsCount', label: 'Related Bills' },
+            ]}
+          />
+        </div>
       </div>
 
       {/* Summary stats strip */}

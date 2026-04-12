@@ -24,6 +24,24 @@ serve(async (req) => {
     return new Response('ok', { headers: corsHeaders });
   }
 
+  // GET — list reports for the authenticated user
+  if (req.method === 'GET') {
+    const { data, error } = await supabase
+      .from('impact_reports')
+      .select('*')
+      .eq('user_id', userId)
+      .order('created_at', { ascending: false });
+
+    if (error) {
+      return new Response(JSON.stringify({ error: error.message }), {
+        status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      });
+    }
+    return new Response(JSON.stringify(data), {
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+    });
+  }
+
   if (req.method !== 'POST') {
     return new Response(JSON.stringify({ error: 'Method not allowed' }), {
       status: 405, headers: { ...corsHeaders, 'Content-Type': 'application/json' },
