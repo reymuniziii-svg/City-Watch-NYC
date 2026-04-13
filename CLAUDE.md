@@ -44,7 +44,7 @@ Upstream sources → scripts/*.ts → data/processed/ → public/data/*.json →
 
 2. **Frontend** (`src/`): React SPA that fetches static JSON from `/data/*.json` at runtime via service-layer functions in `src/services/nycDataService.ts`. Caching is handled by module-level variables — each JSON file is fetched once per session.
 
-3. **Supabase backend** (optional, Pro features only): 18 Deno edge functions + 10 SQL migrations. Handles watchlists, alerts, subscriptions, AI impact analysis, action kits, API keys, and multi-channel notifications.
+3. **Supabase backend** (optional, Pro features only): 25 Deno edge functions + 14 SQL migrations. Handles watchlists, alerts, subscriptions, AI impact analysis, action kits, API keys, multi-channel notifications, teams, staffers, institutional memory, document vault, and weekly briefs.
 
 The production server (`server.js`) is an Express app that serves `dist/`, runs an initial `data:sync` + `build` if no `dist/` exists, and schedules a nightly data refresh at 3:00 AM UTC.
 
@@ -52,13 +52,13 @@ The production server (`server.js`) is an Express app that serves `dist/`, runs 
 
 ```
 src/
-  App.tsx                # Router with 18 routes
+  App.tsx                # Router with 21 routes
   main.tsx               # Entry; conditionally wraps with ClerkProvider
   index.css              # Tailwind v4 + editorial theme variables
   types.ts               # Public types (CouncilMember, Bill, Hearing, CampaignFinance)
-  components/            # Flat directory, 40+ files (page + feature components)
+  components/            # Flat directory, 55+ files (page + feature components)
   components/shared/     # Reusable UI (IndustryBadge, etc.)
-  services/              # nycDataService, supabaseClient, geminiService, actionKitService, etc.
+  services/              # nycDataService, supabaseClient, geminiService, actionKitService, teamService, stafferService, institutionalMemoryService, briefService, etc.
   hooks/                 # useProUser, useFeatureFlags, useMyCM
   lib/
     types.ts             # Detailed internal types matching JSON schemas
@@ -73,14 +73,18 @@ scripts/
   build-{districts,bills,hearings,finance,lobbying,metrics,members,search-index}.ts
   build-hearing-{enrichment,sentiment,vectors}.ts
   build-influence-map.ts
+  build-workhorse.ts             # Work Horse Effectiveness Index (composite scoring)
+  build-committee-heatmap.ts     # Committee-level industry contribution heat maps
+  build-bill-proximity.ts        # Bill-donor proximity analysis (top donors per bill)
+  build-hearing-forecast.ts      # Predictive committee hearing scheduling
   generate-summaries.ts  # Gemini bill summaries
   check-env.ts
   post-merge.sh          # Git post-merge hook (runs via Replit)
   lib/                   # Shared: ai.ts, socrata.ts, csv.ts, normalize.ts, hash.ts, fs-utils.ts, constants.ts
 
 supabase/
-  migrations/            # 001_initial_schema ... 010_api_keys.sql (profiles, watchlists, subscriptions, platforms, alerts, impact reports, keyword pings, action kits, alert channels, API keys)
-  functions/             # 18 Deno edge functions + _shared/auth.ts (Clerk JWKS validation)
+  migrations/            # 001_initial_schema ... 014_weekly_briefs.sql (profiles, watchlists, subscriptions, platforms, alerts, impact reports, keyword pings, action kits, alert channels, API keys, teams, staffers, institutional memory, weekly briefs)
+  functions/             # 25 Deno edge functions + _shared/auth.ts (Clerk JWKS validation)
 
 public/data/             # Committed static JSON, auto-refreshed daily via GitHub Actions
 data/processed/          # Intermediate build artifacts (summary-cache.json, hearing-cache.json)
@@ -119,7 +123,7 @@ content/                 # Supplemental data (member-supplemental.json, campaign
 Two type files with different roles:
 
 - **`src/types.ts`** — Public, component-facing shapes: `CouncilMember`, `Bill`, `Hearing`, `CampaignFinance`, `MemberMetrics`. This is what components import.
-- **`src/lib/types.ts`** — Detailed internal shapes matching the raw JSON: `BillRecord`, `MemberProfile`, `MemberSummary`, `HearingRecord`, `HearingSummary`, `MemberLobbyingProfile`, `ConflictAlert`, etc. Used by the data pipeline and internally by `nycDataService.ts`.
+- **`src/lib/types.ts`** — Detailed internal shapes matching the raw JSON: `BillRecord`, `MemberProfile`, `MemberSummary`, `HearingRecord`, `HearingSummary`, `MemberLobbyingProfile`, `ConflictAlert`, `WorkHorseScore`, `CommitteeHeatmapEntry`, `BillDonorProximityEntry`, `Staffer`, `MemberNote`, `DocumentVaultItem`, `HearingForecastEntry`, `BriefPreferences`, `Team`, etc. Used by the data pipeline and internally by `nycDataService.ts`.
 
 `nycDataService.ts` maps between them — it fetches records shaped like `lib/types.ts` and returns the simpler shapes from `src/types.ts`.
 
@@ -128,8 +132,8 @@ Two type files with different roles:
 Three tiers defined in `src/lib/featureFlags.ts`:
 
 - **`free`** — Public content (bills, members, hearings, finance, districts)
-- **`advocate`** — Conflict alerts, watchlists, alerts, impact analysis, semantic search, hearing super search, sentiment, lobbying data
-- **`enterprise`** — Everything in advocate + data export, action kit creation, API access, SMS/Slack alerts
+- **`advocate`** — Conflict alerts, watchlists, alerts, impact analysis, semantic search, hearing super search, sentiment, lobbying data, Work Horse index, member benchmarks, committee heatmap, bill proximity, stakeholder maps
+- **`enterprise`** — Everything in advocate + data export, action kit creation, API access, SMS/Slack alerts, staffer directory, institutional memory (team notes + document vault), semantic analysis, predictive scheduling, Monday morning brief
 
 Usage:
 ```tsx
@@ -159,7 +163,7 @@ All 18 functions are **Deno-based** (not Node):
 - Auth validation via `supabase/functions/_shared/auth.ts` (Clerk JWKS)
 - Service role Supabase client (`createAdminClient()`) bypasses RLS where needed
 - Consistent pattern: CORS headers → OPTIONS handler → JWT validation → route by HTTP method
-- Functions: `watchlist`, `get-user-profile`, `analyze-impact`, `generate-impact-pdf`, `send-digest`, `send-slack`, `send-sms`, `create-checkout-session`, `stripe-webhook`, `alert-preferences`, `api-keys`, `api-v1`, `action-kits`, `action-kit-submit`, `action-kit-analytics`, `upload-platform`, `keyword-ping`
+- Functions: `watchlist`, `get-user-profile`, `analyze-impact`, `generate-impact-pdf`, `send-digest`, `send-slack`, `send-sms`, `create-checkout-session`, `stripe-webhook`, `alert-preferences`, `api-keys`, `api-v1`, `action-kits`, `action-kit-submit`, `action-kit-analytics`, `upload-platform`, `keyword-ping`, `team`, `staffers`, `communication-log`, `member-notes`, `document-vault`, `brief-preferences`, `generate-brief`
 
 Required Supabase secrets: `CLERK_JWKS_URL`, `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, plus feature-specific ones (`GEMINI_API_KEY`, `RESEND_API_KEY`, `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`).
 
@@ -216,6 +220,9 @@ Defined in `src/App.tsx`:
 - `/impact` — AI impact analysis (Pro)
 - `/action-kits` and `/action-kits/:id/edit` — Civic action campaigns
 - `/embed/:kitId` — Embeddable action kit widget
+- `/workhorse` — Work Horse Effectiveness Index rankings (Pro)
+- `/staffers` — Gatekeeper Staffer Directory (Enterprise)
+- `/brief` — Monday Morning Brief preferences (Enterprise)
 - `/api-docs` — Public REST API docs
 - `/pricing` — Subscription plans
 - `/support` — Help
