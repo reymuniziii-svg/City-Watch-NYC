@@ -12,7 +12,7 @@ import {
 } from "./lib/legislation";
 import { isEnactedStatus } from "../src/lib/status-timeline";
 import { normalizePersonName } from "./lib/normalize";
-import type { BillRecord, HearingSummary, HearingRecord, MemberFinanceProfile, MemberProfile, MemberSummary, VoteRecord } from "../src/lib/types";
+import type { BillRecord, HearingSummary, HearingRecord, MemberFinanceProfile, MemberProfile, MemberSummary, VoteRecord, WorkHorseScore } from "../src/lib/types";
 
 interface SupplementalRow {
   slug: string | null;
@@ -223,6 +223,20 @@ export async function buildMembers(): Promise<MemberSummary[]> {
     const finance = await readJsonFile<MemberFinanceProfile>(path.join(PROCESSED_DIR, "finance", file));
     financeBySlug.set(finance.slug, finance);
   }
+
+  // Load workhorse scores
+  interface WorkHorseIndexEntry extends WorkHorseScore { slug: string }
+  const workhorseBySlug = new Map<string, WorkHorseScore>();
+  try {
+    const whEntries = await readJsonFile<WorkHorseIndexEntry[]>(path.join(PUBLIC_DATA_DIR, "workhorse-index.json"));
+    for (const entry of whEntries) {
+      const { slug, ...score } = entry;
+      workhorseBySlug.set(slug, score);
+    }
+  } catch {
+    // workhorse data not yet built
+  }
+
   const votesByMember = await buildVotesMap(bills);
 
   const { start, end } = loadSessionRange();
@@ -314,6 +328,7 @@ export async function buildMembers(): Promise<MemberSummary[]> {
       recentVotes: votesByMember.get(entry.slug) ?? [],
       enactedFallback,
       finance: financeBySlug.get(entry.slug) ?? null,
+      workHorse: workhorseBySlug.get(entry.slug) ?? null,
     };
 
     await ensureDir(path.join(PROCESSED_DIR, "members"));

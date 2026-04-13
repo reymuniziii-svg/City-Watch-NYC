@@ -16,6 +16,9 @@ import ProDashboard from './components/ProDashboard';
 import ActionKitList from './components/ActionKitList';
 import ActionKitMicrosite from './components/ActionKitMicrosite';
 import HearingSuperSearch from './components/HearingSuperSearch';
+import WorkHorseRankingTable from './components/WorkHorseRankingTable';
+import StafferDirectoryPage from './components/StafferDirectoryPage';
+import BriefPreferencesPage from './components/BriefPreferencesPage';
 
 function AppRoutes() {
   return (
@@ -35,6 +38,9 @@ function AppRoutes() {
         <Route path="/dashboard" element={<ProDashboard />} />
         <Route path="/watchlist" element={<WatchlistPage />} />
         <Route path="/action-kits" element={<ActionKitList />} />
+        <Route path="/workhorse" element={<WorkHorseRankingTable />} />
+        <Route path="/staffers" element={<StafferDirectoryPage />} />
+        <Route path="/brief" element={<BriefPreferencesPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/support" element={<SupportPage />} />
       </Routes>

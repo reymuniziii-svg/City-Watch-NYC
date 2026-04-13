@@ -25,6 +25,18 @@ function getDeltaColor(days: number): string {
   return 'bg-slate-100 text-slate-600';
 }
 
+function getAmountSeverity(amount: number): string | null {
+  if (amount >= 5000) return 'bg-red-600 text-white';
+  if (amount >= 2500) return 'bg-orange-500 text-white';
+  if (amount >= 1000) return 'bg-amber-400 text-black';
+  return null;
+}
+
+function isRecent(dateStr: string): boolean {
+  const ms = Date.now() - new Date(dateStr).getTime();
+  return ms < 48 * 60 * 60 * 1000;
+}
+
 function fmt$(value: number): string {
   return '$' + value.toLocaleString('en-US', { maximumFractionDigits: 0 });
 }
@@ -37,13 +49,15 @@ interface ConflictAlertCardProps {
 export default function ConflictAlertCard({ alert, index }: ConflictAlertCardProps) {
   const industryCls = INDUSTRY_COLORS[alert.donorIndustry] ?? 'bg-gray-100 text-gray-600';
   const deltaCls = getDeltaColor(alert.daysDelta);
+  const amountSeverityCls = getAmountSeverity(alert.donationAmount);
+  const recent = isRecent(alert.donationDate);
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: Math.min(index * 0.04, 0.8) }}
-      className="border-editorial bg-white p-5 space-y-3"
+      className={`border-editorial bg-white p-5 space-y-3 ${recent ? 'ring-2 ring-red-300' : ''}`}
     >
       {/* Member + delta badge row */}
       <div className="flex items-start justify-between gap-3">
@@ -77,7 +91,17 @@ export default function ConflictAlertCard({ alert, index }: ConflictAlertCardPro
       <div>
         <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Donation</p>
         <span className="font-editorial font-bold text-lg text-black">{fmt$(alert.donationAmount)}</span>
+        {amountSeverityCls && (
+          <span className={`ml-2 px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest ${amountSeverityCls}`}>
+            High
+          </span>
+        )}
         <span className="text-xs text-slate-400 ml-2">{alert.donationDate}</span>
+        {recent && (
+          <span className="ml-2 px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest bg-red-100 text-red-800 animate-pulse">
+            New
+          </span>
+        )}
       </div>
 
       {/* Bill info */}

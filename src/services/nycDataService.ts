@@ -1,5 +1,5 @@
 import { CouncilMember, Bill, Hearing, HearingEnrichment, CampaignFinance, MemberMetrics, FinanceIndexRow } from '../types';
-import type { MemberSummary, HearingRecord, MemberProfile, HearingSummary, InfluenceMapEntry, ConflictAlert } from '../lib/types';
+import type { MemberSummary, HearingRecord, MemberProfile, HearingSummary, InfluenceMapEntry, ConflictAlert, CommitteeHeatmapEntry, BillDonorProximityEntry, HearingForecastEntry } from '../lib/types';
 
 interface HearingEnrichmentIndex {
   byEventId: Map<string, HearingEnrichment>;
@@ -18,6 +18,11 @@ const memberProfileCache = new Map<string, MemberProfile | null>();
 let financeIndexCache: FinanceIndexRow[] | null = null;
 let influenceMapCache: InfluenceMapEntry[] | null = null;
 let conflictAlertsCache: ConflictAlert[] | null = null;
+let workHorseIndexCache: unknown[] | null = null;
+let billVelocityCache: unknown[] | null = null;
+let committeeHeatmapCache: CommitteeHeatmapEntry[] | null = null;
+let billProximityCache: BillDonorProximityEntry[] | null = null;
+let hearingForecastCache: HearingForecastEntry[] | null = null;
 
 interface BillIndexRecord {
   billId: string;
@@ -348,5 +353,70 @@ export async function fetchMemberProfile(id: string): Promise<MemberProfile | nu
     console.error('Error loading member profile:', error);
     memberProfileCache.set(id, null);
     return null;
+  }
+}
+
+export async function fetchWorkHorseIndex(): Promise<unknown[]> {
+  if (workHorseIndexCache) return workHorseIndexCache;
+
+  try {
+    const data = await fetchJson<unknown[]>('/data/workhorse-index.json');
+    workHorseIndexCache = data;
+    return workHorseIndexCache;
+  } catch (error) {
+    console.error('Error loading workhorse index:', error);
+    return [];
+  }
+}
+
+export async function fetchBillVelocity(): Promise<unknown[]> {
+  if (billVelocityCache) return billVelocityCache;
+
+  try {
+    const data = await fetchJson<unknown[]>('/data/workhorse-velocity.json');
+    billVelocityCache = data;
+    return billVelocityCache;
+  } catch (error) {
+    console.error('Error loading bill velocity:', error);
+    return [];
+  }
+}
+
+export async function fetchCommitteeHeatmap(): Promise<CommitteeHeatmapEntry[]> {
+  if (committeeHeatmapCache) return committeeHeatmapCache;
+
+  try {
+    const data = await fetchJson<CommitteeHeatmapEntry[]>('/data/committee-industry-heatmap.json');
+    committeeHeatmapCache = data;
+    return committeeHeatmapCache;
+  } catch (error) {
+    console.error('Error loading committee heatmap:', error);
+    return [];
+  }
+}
+
+export async function fetchBillProximity(): Promise<BillDonorProximityEntry[]> {
+  if (billProximityCache) return billProximityCache;
+
+  try {
+    const data = await fetchJson<BillDonorProximityEntry[]>('/data/bill-donor-proximity.json');
+    billProximityCache = data;
+    return billProximityCache;
+  } catch (error) {
+    console.error('Error loading bill proximity:', error);
+    return [];
+  }
+}
+
+export async function fetchHearingForecast(): Promise<HearingForecastEntry[]> {
+  if (hearingForecastCache) return hearingForecastCache;
+
+  try {
+    const data = await fetchJson<HearingForecastEntry[]>('/data/hearing-forecast.json');
+    hearingForecastCache = data;
+    return hearingForecastCache;
+  } catch (error) {
+    console.error('Error loading hearing forecast:', error);
+    return [];
   }
 }

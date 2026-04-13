@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Mail, Phone, Globe, Twitter, FileText, Landmark, Calendar, BarChart3, Loader2, Share2, Check, Network, AlertTriangle, Eye } from 'lucide-react';
+import { Mail, Phone, Globe, Twitter, FileText, Landmark, Calendar, BarChart3, Loader2, Share2, Check, Network, AlertTriangle, Eye, TrendingUp, Users as UsersIcon, FolderOpen } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Bill, Hearing, CampaignFinance, MemberMetrics } from '../types';
 import { fetchMemberProfile, fetchInfluenceMap, fetchConflictAlerts } from '../services/nycDataService';
@@ -13,6 +13,11 @@ import ActivityFeed from './ActivityFeed';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import WatchButton from './WatchButton';
+import WorkHorseScorecard from './WorkHorseScorecard';
+import MemberNotesPanel from './MemberNotesPanel';
+import DocumentVaultPanel from './DocumentVaultPanel';
+import { useFeatureFlags } from '../hooks/useFeatureFlags';
+import type { WorkHorseScore } from '../lib/types';
 
 function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -79,7 +84,9 @@ export default function MemberDashboard() {
   const [metrics, setMetrics] = useState<MemberMetrics | null>(null);
   const [influenceData, setInfluenceData] = useState<InfluenceMapEntry[]>([]);
   const [memberAlerts, setMemberAlerts] = useState<ConflictAlert[]>([]);
-  const [activeTab, setActiveTab] = useState<'activity' | 'bills' | 'money' | 'hearings'>('activity');
+  const [activeTab, setActiveTab] = useState<'activity' | 'bills' | 'money' | 'hearings' | 'team-intel'>('activity');
+  const [workHorse, setWorkHorse] = useState<WorkHorseScore | null>(null);
+  const flags = useFeatureFlags();
   const [isLoading, setIsLoading] = useState(true);
   const [copied, setCopied] = useState(false);
 
@@ -125,6 +132,7 @@ export default function MemberDashboard() {
               rankSponsored: profile.scorecard.billsSponsoredRank,
               rankEnacted: profile.scorecard.billsEnactedRank,
             });
+            setWorkHorse(profile.workHorse ?? null);
           }
 
           const [allInfluence, allAlerts] = await Promise.all([
@@ -243,6 +251,7 @@ export default function MemberDashboard() {
             { id: 'bills', label: 'Bills', icon: FileText },
             { id: 'hearings', label: 'Hearings', icon: Calendar },
             { id: 'money', label: 'Money', icon: Landmark },
+            ...(flags.canUseInstitutionalMemory ? [{ id: 'team-intel', label: 'Team Intel', icon: FolderOpen }] : []),
           ].map((tab) => (
             <button
               key={tab.id}
@@ -280,6 +289,9 @@ export default function MemberDashboard() {
                     Static activity metrics are not available for this member yet.
                   </p>
                 </div>
+              )}
+              {workHorse && flags.canViewWorkHorse && (
+                <WorkHorseScorecard score={workHorse} />
               )}
               <ActivityFeed bills={bills} />
             </motion.div>
@@ -341,6 +353,19 @@ export default function MemberDashboard() {
               exit={{ opacity: 0, x: -20 }}
             >
               <FinanceView data={finance} />
+            </motion.div>
+          )}
+
+          {activeTab === 'team-intel' && member && (
+            <motion.div
+              key="team-intel"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              className="space-y-8"
+            >
+              <MemberNotesPanel memberSlug={member.slug} />
+              <DocumentVaultPanel entityType="member" entityId={member.slug} />
             </motion.div>
           )}
         </AnimatePresence>

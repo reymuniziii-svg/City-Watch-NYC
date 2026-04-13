@@ -13,6 +13,10 @@ import { buildMetrics } from "./build-metrics";
 import { buildMembers } from "./build-members";
 import { buildSearchIndex } from "./build-search-index";
 import { buildTranscriptIndex } from "./build-transcript-index";
+import { buildWorkHorse } from "./build-workhorse";
+import { buildCommitteeHeatmap } from "./build-committee-heatmap";
+import { buildBillProximity } from "./build-bill-proximity";
+import { buildHearingForecast } from "./build-hearing-forecast";
 
 async function publishHearingEnrichment(): Promise<void> {
   const src = path.join(PROCESSED_DIR, "hearing-enrichment.json");
@@ -33,10 +37,14 @@ export async function buildAll(): Promise<void> {
   await publishHearingEnrichment();
   await buildFinance();
   await buildMetrics();
+  await buildWorkHorse();
   await buildMembers();
   await buildFinanceIndex();
   await buildInfluenceMap();
   await buildConflictAlerts();
+  await buildCommitteeHeatmap();
+  await buildBillProximity();
+  await buildHearingForecast();
   await buildSearchIndex();
   await buildTranscriptIndex();
 

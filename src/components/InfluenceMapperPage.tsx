@@ -5,6 +5,7 @@ import { Network, DollarSign, Users, Loader2, Filter, ChevronUp, ChevronDown, Ch
 import { fetchInfluenceMap, fetchConflictAlerts } from '../services/nycDataService';
 import type { InfluenceMapEntry, ConflictAlert } from '../lib/types';
 import ConflictAlertCard from './ConflictAlertCard';
+import CommitteeHeatmap from './CommitteeHeatmap';
 import ProGate from './ProGate';
 
 /* ── helpers ──────────────────────────────────────────────── */
@@ -98,10 +99,13 @@ function industryBadge(industry: string) {
 
 /* ── main component ───────────────────────────────────────── */
 
+type ViewTab = 'table' | 'heatmap';
+
 export default function InfluenceMapperPage() {
   const [data, setData] = useState<InfluenceMapEntry[]>([]);
   const [conflictAlerts, setConflictAlerts] = useState<ConflictAlert[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [viewTab, setViewTab] = useState<ViewTab>('table');
   const [sort, setSort] = useState<SortState>({ key: 'totalAmount', dir: 'desc' });
   const [industry, setIndustry] = useState('All Industries');
   const [borough, setBorough] = useState('All Boroughs');
@@ -224,6 +228,27 @@ export default function InfluenceMapperPage() {
         </p>
       </div>
 
+      {/* View Tabs */}
+      <div className="flex gap-0 border-b-editorial">
+        {[
+          { id: 'table' as const, label: 'Donor Table' },
+          { id: 'heatmap' as const, label: 'Committee Heat Map' },
+        ].map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setViewTab(tab.id)}
+            className={`px-6 py-3 text-xs font-bold uppercase tracking-widest border-b-2 transition-colors ${
+              viewTab === tab.id ? 'border-black text-black' : 'border-transparent text-slate-500 hover:text-black'
+            }`}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
+      {viewTab === 'heatmap' && <CommitteeHeatmap />}
+
+      {viewTab === 'table' && <>
       {/* Summary stats strip */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border-editorial bg-black gap-[1px]">
         {[
@@ -410,6 +435,8 @@ export default function InfluenceMapperPage() {
         <p><strong className="text-black">Related Bills</strong> --- Bills sponsored by the receiving Council member. These are shown for context --- a donor-bill connection does not imply direct influence.</p>
         <p className="text-xs text-slate-400 pt-2">Source: NYC Campaign Finance Board public data export. 2025 election cycle. Click any member name to view their full profile.</p>
       </div>
+
+      </>}
 
       {/* Conflict Alerts section */}
       <div className="space-y-6">

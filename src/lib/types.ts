@@ -267,6 +267,7 @@ export interface MemberProfile {
   recentVotes: VoteRecord[];
   enactedFallback: BillRecord[];
   finance: MemberFinanceProfile | null;
+  workHorse: WorkHorseScore | null;
 }
 
 export interface SearchDocument {
@@ -337,4 +338,180 @@ export interface ConflictAlert {
   billTitle: string;
   billIntroDate: string;
   daysDelta: number;
+}
+
+// --- Phase 1: Work Horse Effectiveness Index ---
+
+export interface WorkHorseScore {
+  successRate: number;
+  committeePullRate: number;
+  bipartisanReachRate: number;
+  velocityScore: number;
+  compositeScore: number;
+  rank: number;
+  billBreakdown: {
+    introduced: number;
+    passedCommittee: number;
+    enacted: number;
+    bipartisanBills: number;
+  };
+}
+
+export interface BillVelocityEntry {
+  billId: string;
+  introNumber: string;
+  title: string;
+  sponsorSlug: string;
+  committee: string;
+  coSponsorTimeline: { date: string; count: number }[];
+  committeeMeanDays: number | null;
+  actualDays: number | null;
+}
+
+// --- Phase 2: Influence Mapping Enhancements ---
+
+export interface CommitteeHeatmapEntry {
+  committee: string;
+  industries: {
+    industry: string;
+    totalAmount: number;
+    donorCount: number;
+    memberCount: number;
+    topMembers: { slug: string; name: string; amount: number }[];
+  }[];
+  totalFunding: number;
+  memberCount: number;
+}
+
+export interface BillDonorProximityEntry {
+  billId: string;
+  introNumber: string;
+  title: string;
+  committee: string;
+  sponsors: { slug: string; name: string }[];
+  topDonors: {
+    name: string;
+    industry: string;
+    totalAmount: number;
+    memberSlugs: string[];
+  }[];
+}
+
+// --- Phase 3: Stakeholder Maps ---
+
+export interface StakeholderNode {
+  id: string;
+  type: 'bill' | 'sponsor' | 'donor' | 'chair' | 'lobbyist';
+  label: string;
+  meta?: Record<string, string | number>;
+}
+
+export interface StakeholderEdge {
+  source: string;
+  target: string;
+  label: string;
+}
+
+export interface StakeholderGraph {
+  nodes: StakeholderNode[];
+  edges: StakeholderEdge[];
+}
+
+// --- Phase 5: Staffer Directory ---
+
+export interface Staffer {
+  id: string;
+  district_number: number;
+  member_slug: string;
+  full_name: string;
+  title: string;
+  email: string | null;
+  phone: string | null;
+  policy_areas: string[];
+  verified: boolean;
+  submitted_by: string | null;
+  verified_by: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface CommunicationLog {
+  id: string;
+  staffer_id: string;
+  team_id: string;
+  user_id: string;
+  contact_type: 'email' | 'call' | 'meeting' | 'other';
+  summary: string;
+  contact_date: string;
+  created_at: string;
+}
+
+// --- Phase 6: Institutional Memory ---
+
+export interface MemberNote {
+  id: string;
+  team_id: string;
+  member_slug: string;
+  user_id: string;
+  content: string;
+  is_pinned: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface DocumentVaultItem {
+  id: string;
+  team_id: string;
+  user_id: string;
+  entity_type: 'bill' | 'member' | 'hearing';
+  entity_id: string;
+  filename: string;
+  storage_path: string;
+  mime_type: string;
+  size_bytes: number;
+  description: string | null;
+  created_at: string;
+}
+
+// --- Phase 7: AI Enhancements ---
+
+export interface HearingForecastEntry {
+  committee: string;
+  billsInQueue: number;
+  historicalFrequency: number;
+  predictedNextDate: string | null;
+  confidence: number;
+  backlogBills: { introNumber: string; title: string; daysSinceIntro: number }[];
+}
+
+// --- Phase 8: Monday Morning Brief ---
+
+export interface BriefPreferences {
+  user_id: string;
+  enabled: boolean;
+  day_of_week: number;
+  include_watchlist: boolean;
+  include_conflicts: boolean;
+  include_workhorse: boolean;
+  branding_org_name: string | null;
+  branding_logo_url: string | null;
+  last_generated_at: string | null;
+  created_at: string;
+}
+
+// --- Teams ---
+
+export interface Team {
+  id: string;
+  name: string;
+  owner_id: string;
+  created_at: string;
+}
+
+export interface TeamMember {
+  id: string;
+  team_id: string;
+  user_id: string;
+  role: 'admin' | 'member';
+  joined_at: string;
 }
