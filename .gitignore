@@ -30,3 +30,6 @@ public/data/*
 
 # Supabase CLI local artifacts
 supabase/.temp/
+.claude/worktrees/
+.claude/designer-brief.md
+.claude/phase-2-prompt.md
