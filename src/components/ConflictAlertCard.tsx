@@ -3,19 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { AlertTriangle } from 'lucide-react';
 import type { ConflictAlert } from '../lib/types';
-
-const INDUSTRY_COLORS: Record<string, string> = {
-  'Real Estate': 'bg-amber-100 text-amber-800',
-  'Finance': 'bg-blue-100 text-blue-800',
-  'Legal': 'bg-purple-100 text-purple-800',
-  'Labor': 'bg-green-100 text-green-800',
-  'Healthcare': 'bg-rose-100 text-rose-800',
-  'Education': 'bg-teal-100 text-teal-800',
-  'Nonprofit / Advocacy': 'bg-indigo-100 text-indigo-800',
-  'Government / Public Sector': 'bg-slate-200 text-slate-700',
-  'Small Business / Retail': 'bg-orange-100 text-orange-800',
-  'Other / Mixed': 'bg-gray-100 text-gray-600',
-};
+import { INDUSTRY_COLORS } from './shared/IndustryBadge';
 
 function getDeltaColor(days: number): string {
   const abs = Math.abs(days);

@@ -1,7 +1,7 @@
 import path from "node:path";
 import { PROCESSED_DIR, PUBLIC_DATA_DIR } from "./lib/constants";
 import { ensureDir, readJsonFile, writeJsonFile } from "./lib/fs-utils";
-import type { HearingRecord, SearchDocument } from "../src/lib/types";
+import type { HearingRecord, SearchDocument, LobbyingIndexEntry } from "../src/lib/types";
 
 interface BillIndexRow {
   billId: string;
@@ -44,6 +44,7 @@ export async function buildSearchIndex(): Promise<SearchDocument[]> {
   const bills = await readJsonFile<BillIndexRow[]>(path.join(PROCESSED_DIR, "bills-index.json"));
   const members = await readJsonFile<MemberIndexRow[]>(path.join(PROCESSED_DIR, "members-index.json"));
   const hearings = await readJsonFile<HearingRecord[]>(path.join(PROCESSED_DIR, "hearings-upcoming.json")).catch(() => []);
+  const lobbyingIndex = await readJsonFile<LobbyingIndexEntry[]>(path.join(PROCESSED_DIR, "lobbying-index.json")).catch(() => []);
 
   const memberDocs: SearchDocument[] = members
     .filter((member) => member.slug && member.status === "seated")
@@ -85,7 +86,16 @@ export async function buildSearchIndex(): Promise<SearchDocument[]> {
     };
   });
 
-  const documents = [...memberDocs, ...billDocs, ...hearingDocs];
+  const lobbyingDocs: SearchDocument[] = lobbyingIndex.map((entry) => ({
+    id: `lobbying:${entry.clientName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
+    type: "lobbying" as const,
+    label: entry.clientName,
+    subtitle: `${entry.clientIndustry} · ${entry.targetedBillCount} bills · ${entry.targetedMemberCount} members`,
+    route: `/influence?search=${encodeURIComponent(entry.clientName)}`,
+    searchText: `${entry.clientName} ${entry.clientIndustry} lobbying`,
+  }));
+
+  const documents = [...memberDocs, ...billDocs, ...hearingDocs, ...lobbyingDocs];
 
   await writeJsonFile(path.join(PROCESSED_DIR, "search-index.json"), documents);
   await ensureDir(PUBLIC_DATA_DIR);

@@ -267,12 +267,13 @@ export interface MemberProfile {
   recentVotes: VoteRecord[];
   enactedFallback: BillRecord[];
   finance: MemberFinanceProfile | null;
+  lobbying: MemberLobbyingProfile | null;
   workHorse: WorkHorseScore | null;
 }
 
 export interface SearchDocument {
   id: string;
-  type: "member" | "bill" | "hearing";
+  type: "member" | "bill" | "hearing" | "lobbying";
   label: string;
   subtitle: string;
   route: string;
@@ -325,6 +326,7 @@ export interface InfluenceMapEntry {
     committee: string;
     introDate: string;
   }[];
+  lobbyingConnections?: LobbyingConnection[];
 }
 
 export interface ConflictAlert {
@@ -338,6 +340,95 @@ export interface ConflictAlert {
   billTitle: string;
   billIntroDate: string;
   daysDelta: number;
+  lobbyingActivity?: {
+    lobbyistName: string;
+    clientName: string;
+    clientIndustry: string;
+    totalSpending: number;
+    period: string;
+    reportYear: number;
+  };
+}
+
+export type LobbyingPosition = "for" | "against" | "unknown";
+
+export interface LobbyingClient {
+  clientName: string;
+  clientIndustry: string;
+  lobbyistName: string;
+  position: LobbyingPosition;
+  totalSpending: number;
+  reportCount: number;
+  latestReportDate: string;
+}
+
+export interface LobbyingIndustryBreakdown {
+  industry: string;
+  totalSpending: number;
+  clientCount: number;
+  positions: { for: number; against: number; unknown: number; };
+}
+
+export interface BillLobbyingProfile {
+  introNumber: string;
+  billTitle: string;
+  updatedAt: string;
+  totalLobbyingSpending: number;
+  clientCount: number;
+  firmCount: number;
+  topClients: LobbyingClient[];
+  industryBreakdown: LobbyingIndustryBreakdown[];
+  topFirms: {
+    lobbyistName: string;
+    clientCount: number;
+    totalSpending: number;
+  }[];
+}
+
+export interface MemberLobbyingProfile {
+  memberSlug: string;
+  memberName: string;
+  updatedAt: string;
+  totalLobbyingSpending: number;
+  uniqueClients: number;
+  uniqueFirms: number;
+  topClients: {
+    clientName: string;
+    clientIndustry: string;
+    lobbyistName: string;
+    totalSpending: number;
+    reportCount: number;
+    subjects: string[];
+    relatedBills: { introNumber: string; title: string; position: LobbyingPosition; }[];
+  }[];
+  topIndustries: { industry: string; totalSpending: number; clientCount: number; }[];
+  recentFilings: {
+    lobbyistName: string;
+    clientName: string;
+    period: string;
+    reportYear: number;
+    compensationTotal: number;
+    endDate: string;
+  }[];
+}
+
+export interface LobbyingIndexEntry {
+  clientName: string;
+  clientIndustry: string;
+  totalSpending: number;
+  lobbyistNames: string[];
+  targetedMemberCount: number;
+  targetedBillCount: number;
+  latestReportYear: number;
+  latestPeriod: string;
+}
+
+export interface LobbyingConnection {
+  lobbyistName: string;
+  clientName: string;
+  clientIndustry: string;
+  totalSpending: number;
+  overlappingBills: string[];
 }
 
 // --- Phase 1: Work Horse Effectiveness Index ---

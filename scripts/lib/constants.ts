@@ -23,3 +23,6 @@ export const CFB_CONTRIBUTIONS_URL = `${CFB_BASE_URL}/datalibrary/2025_Contribut
 export const CFB_EXPENDITURES_URL = `${CFB_BASE_URL}/datalibrary/2025_Expenditures.csv`;
 export const CFB_FINANCIAL_ANALYSIS_URL = `${CFB_BASE_URL}/DataLibrary/EC2025_FinancialAnalysis.csv`;
 export const CFB_PAYMENTS_URL = `${CFB_BASE_URL}/DataLibrary/2025_Payments.csv`;
+
+export const LOBBYING_DATASET_ID = "fmf3-knd8";
+export const LOBBYING_CACHE_FILE = path.join(PROCESSED_DIR, "lobbying-cache.json");

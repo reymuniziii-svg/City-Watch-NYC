@@ -54,6 +54,41 @@ interface RelatedBill {
   introDate: string;
 }
 
+interface LobbyingConnection {
+  lobbyistName: string;
+  clientName: string;
+  clientIndustry: string;
+  totalSpending: number;
+  overlappingBills: string[];
+}
+
+interface MemberLobbyingData {
+  memberSlug: string;
+  memberName: string;
+  updatedAt: string;
+  totalLobbyingSpending: number;
+  uniqueClients: number;
+  uniqueFirms: number;
+  topClients: {
+    clientName: string;
+    clientIndustry: string;
+    lobbyistName: string;
+    totalSpending: number;
+    reportCount: number;
+    subjects: string[];
+    relatedBills: { introNumber: string; title: string; position: string }[];
+  }[];
+  topIndustries: { industry: string; totalSpending: number; clientCount: number }[];
+  recentFilings: {
+    lobbyistName: string;
+    clientName: string;
+    period: string;
+    reportYear: number;
+    compensationTotal: number;
+    endDate: string;
+  }[];
+}
+
 interface InfluenceMapEntry {
   memberSlug: string;
   memberName: string;
@@ -62,6 +97,7 @@ interface InfluenceMapEntry {
   donorIndustry: string;
   totalAmount: number;
   relatedBills: RelatedBill[];
+  lobbyingConnections?: LobbyingConnection[];
 }
 
 interface ConflictAlert {
@@ -75,6 +111,14 @@ interface ConflictAlert {
   billTitle: string;
   billIntroDate: string;
   daysDelta: number;
+  lobbyingActivity?: {
+    lobbyistName: string;
+    clientName: string;
+    clientIndustry: string;
+    totalSpending: number;
+    period: string;
+    reportYear: number;
+  };
 }
 
 /* ------------------------------------------------------------------ */
@@ -177,6 +221,66 @@ export async function buildInfluenceMap(): Promise<void> {
     }
   }
 
+  // 4b. Cross-reference with lobbying data
+  const lobbyingDir = path.join(PUBLIC_DATA_DIR, "lobbying", "members");
+  const lobbyingCache = new Map<string, MemberLobbyingData | null>();
+
+  async function loadMemberLobbying(slug: string): Promise<MemberLobbyingData | null> {
+    if (lobbyingCache.has(slug)) return lobbyingCache.get(slug)!;
+    const filePath = path.join(lobbyingDir, `${slug}.json`);
+    if (!(await fileExists(filePath))) {
+      lobbyingCache.set(slug, null);
+      return null;
+    }
+    try {
+      const data = await readJsonFile<MemberLobbyingData>(filePath);
+      lobbyingCache.set(slug, data);
+      return data;
+    } catch {
+      lobbyingCache.set(slug, null);
+      return null;
+    }
+  }
+
+  if (await fileExists(lobbyingDir)) {
+    let connectionCount = 0;
+    for (const entry of entryMap.values()) {
+      const lobbyingProfile = await loadMemberLobbying(entry.memberSlug);
+      if (!lobbyingProfile) continue;
+
+      const entryBillIntros = new Set(entry.relatedBills.map((b) => b.introNumber));
+      const connections: LobbyingConnection[] = [];
+
+      for (const client of lobbyingProfile.topClients) {
+        // Match: lobbying client industry aligns with donor industry
+        if (client.clientIndustry !== entry.donorIndustry) continue;
+
+        // Find bills that overlap between the influence entry and the lobbying client
+        const overlapping = client.relatedBills
+          .map((b) => b.introNumber)
+          .filter((intro) => entryBillIntros.has(intro));
+
+        if (overlapping.length === 0) continue;
+
+        connections.push({
+          lobbyistName: client.lobbyistName,
+          clientName: client.clientName,
+          clientIndustry: client.clientIndustry,
+          totalSpending: client.totalSpending,
+          overlappingBills: overlapping,
+        });
+      }
+
+      if (connections.length > 0) {
+        entry.lobbyingConnections = connections;
+        connectionCount += connections.length;
+      }
+    }
+    console.log(`[build-influence-map] attached ${connectionCount} lobbying connections to influence entries`);
+  } else {
+    console.log("[build-influence-map] no lobbying data found, skipping cross-reference");
+  }
+
   // 5. Sort by totalAmount descending
   const entries = [...entryMap.values()].sort((a, b) => b.totalAmount - a.totalAmount);
 
@@ -212,8 +316,31 @@ export async function buildConflictAlerts(): Promise<void> {
     billsBySponsor.set(bill.leadSponsorSlug, list);
   }
 
-  // 3. Generate conflict alerts
+  // 3. Load lobbying profiles for cross-referencing
+  const lobbyingDir = path.join(PUBLIC_DATA_DIR, "lobbying", "members");
+  const hasLobbyingData = await fileExists(lobbyingDir);
+  const lobbyingCache = new Map<string, MemberLobbyingData | null>();
+
+  async function loadMemberLobbying(slug: string): Promise<MemberLobbyingData | null> {
+    if (lobbyingCache.has(slug)) return lobbyingCache.get(slug)!;
+    const filePath = path.join(lobbyingDir, `${slug}.json`);
+    if (!(await fileExists(filePath))) {
+      lobbyingCache.set(slug, null);
+      return null;
+    }
+    try {
+      const data = await readJsonFile<MemberLobbyingData>(filePath);
+      lobbyingCache.set(slug, data);
+      return data;
+    } catch {
+      lobbyingCache.set(slug, null);
+      return null;
+    }
+  }
+
+  // 4. Generate conflict alerts
   const alerts: ConflictAlert[] = [];
+  let lobbyingEnrichCount = 0;
 
   for (const member of members) {
     const financePath = path.join(PUBLIC_DATA_DIR, "finance", `${member.slug}.json`);
@@ -226,6 +353,9 @@ export async function buildConflictAlerts(): Promise<void> {
     // Use the finance profile's updatedAt as the proxy donation date
     const donationDate = finance.updatedAt ?? now.toISOString();
     const donationTs = new Date(donationDate).getTime();
+
+    // Pre-load lobbying profile for this member
+    const lobbyingProfile = hasLobbyingData ? await loadMemberLobbying(member.slug) : null;
 
     // Collect all unique donors
     const donorsByName = new Map<string, Donor>();
@@ -255,7 +385,7 @@ export async function buildConflictAlerts(): Promise<void> {
         const msPerDay = 1000 * 60 * 60 * 24;
         const daysDelta = Math.round((donationTs - introTs) / msPerDay);
 
-        alerts.push({
+        const alert: ConflictAlert = {
           memberSlug: member.slug,
           memberName: member.fullName,
           donorName: donor.name,
@@ -266,15 +396,48 @@ export async function buildConflictAlerts(): Promise<void> {
           billTitle: bill.title,
           billIntroDate: bill.introDate,
           daysDelta,
-        });
+        };
+
+        // Cross-reference: find lobbying client with matching industry on same bill
+        if (lobbyingProfile) {
+          for (const client of lobbyingProfile.topClients) {
+            if (client.clientIndustry !== industry) continue;
+            const matchesBill = client.relatedBills.some(
+              (b) => b.introNumber === bill.introNumber,
+            );
+            if (!matchesBill) continue;
+
+            // Find the most recent filing for this client
+            const filing = lobbyingProfile.recentFilings.find(
+              (f) => f.clientName === client.clientName,
+            );
+
+            alert.lobbyingActivity = {
+              lobbyistName: client.lobbyistName,
+              clientName: client.clientName,
+              clientIndustry: client.clientIndustry,
+              totalSpending: client.totalSpending,
+              period: filing?.period ?? "",
+              reportYear: filing?.reportYear ?? 0,
+            };
+            lobbyingEnrichCount++;
+            break; // use the first (highest-spending) matching client
+          }
+        }
+
+        alerts.push(alert);
       }
     }
   }
 
-  // 4. Sort by abs(daysDelta) ascending (closest temporal matches first)
+  if (hasLobbyingData) {
+    console.log(`[build-conflict-alerts] enriched ${lobbyingEnrichCount} alerts with lobbying activity`);
+  }
+
+  // 5. Sort by abs(daysDelta) ascending (closest temporal matches first)
   alerts.sort((a, b) => Math.abs(a.daysDelta) - Math.abs(b.daysDelta));
 
-  // 5. Write output
+  // 6. Write output
   const outPath = path.join(PUBLIC_DATA_DIR, "conflict-alerts.json");
   await writeJsonFile(outPath, alerts);
   console.log(`[build-conflict-alerts] wrote ${alerts.length} alerts to ${outPath}`);

@@ -122,7 +122,7 @@ serve(async (req) => {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            from: 'Council Watch NYC <alerts@councilwatch.nyc>',
+            from: Deno.env.get('RESEND_FROM_EMAIL') ?? 'Council Watch NYC <alerts@councilwatch.nyc>',
             to: profile.email,
             subject: `Council Watch ${frequency === 'daily' ? 'Daily' : 'Weekly'} Digest`,
             html,

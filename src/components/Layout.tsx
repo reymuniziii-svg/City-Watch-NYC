@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Search, Users, FileText, Calendar, Landmark, Map, Menu, X, DollarSign, Heart, Zap, Network, Eye, Crosshair, LayoutDashboard, MessageSquareText, TrendingUp, UserCheck, Mail } from 'lucide-react';
+import { Search, Users, FileText, Calendar, Landmark, Map, Menu, X, DollarSign, Heart, Zap, Network, Eye, Target, Megaphone, Code, TrendingUp, UserCheck, Mail } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -15,10 +15,12 @@ function cn(...inputs: ClassValue[]) {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+  const [isSearchOpen, setIsSearchOpen] = React.useState(false);
   const location = useLocation();
 
   React.useEffect(() => {
     setIsSidebarOpen(false);
+    setIsSearchOpen(false);
   }, [location.pathname, location.search]);
 
   const navItems = [
@@ -27,15 +29,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: 'District Map', icon: Map, path: '/districts' },
     { name: 'Bills', icon: FileText, path: '/bills' },
     { name: 'Hearings', icon: Calendar, path: '/hearings' },
-    { name: 'Transcript Search', icon: MessageSquareText, path: '/hearing-search' },
     { name: 'Money', icon: DollarSign, path: '/money' },
     { name: 'Influence', icon: Network, path: '/influence' },
     { name: 'Work Horse', icon: TrendingUp, path: '/workhorse' },
-    { name: 'Impact', icon: Crosshair, path: '/impact' },
+    { name: 'Impact Analysis', icon: Target, path: '/impact' },
     { name: 'Watchlist', icon: Eye, path: '/watchlist' },
     { name: 'Staffers', icon: UserCheck, path: '/staffers' },
     { name: 'Brief', icon: Mail, path: '/brief' },
-    { name: 'Dashboard', icon: LayoutDashboard, path: '/dashboard' },
+    { name: 'Action Kits', icon: Megaphone, path: '/action-kits' },
+    { name: 'API', icon: Code, path: '/api-docs' },
     { name: 'Pro', icon: Zap, path: '/pricing' },
   ];
 
@@ -47,10 +49,37 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Landmark className="w-6 h-6 text-black" />
           <span className="font-editorial font-bold text-xl tracking-tight text-black">Council Watch</span>
         </Link>
-        <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="p-2 text-black">
-          {isSidebarOpen ? <X /> : <Menu />}
-        </button>
+        <div className="flex items-center gap-1">
+          <button onClick={() => { setIsSearchOpen(!isSearchOpen); setIsSidebarOpen(false); }} className="p-2 text-black">
+            <Search className="w-5 h-5" />
+          </button>
+          <button onClick={() => { setIsSidebarOpen(!isSidebarOpen); setIsSearchOpen(false); }} className="p-2 text-black">
+            {isSidebarOpen ? <X /> : <Menu />}
+          </button>
+        </div>
       </header>
+
+      <AnimatePresence>
+        {isSearchOpen && (
+          <>
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="md:hidden bg-white border-b-editorial overflow-hidden sticky top-[57px] z-50"
+            >
+              <div className="p-4">
+                <GlobalSearch />
+              </div>
+            </motion.div>
+            <div
+              className="fixed inset-0 top-[57px] z-40 md:hidden"
+              onClick={() => setIsSearchOpen(false)}
+            />
+          </>
+        )}
+      </AnimatePresence>
 
       {/* Sidebar */}
       <aside className={cn(

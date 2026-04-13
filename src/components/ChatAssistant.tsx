@@ -65,7 +65,7 @@ export default function ChatAssistant() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             onClick={() => setIsOpen(true)}
-            className="fixed bottom-8 right-8 p-4 bg-black text-white shadow-2xl hover:bg-slate-800 transition-colors z-50 border border-white/20 flex items-center gap-3 group"
+            className="fixed bottom-3 right-3 md:bottom-8 md:right-8 p-4 bg-black text-white shadow-2xl hover:bg-slate-800 transition-colors z-50 border border-white/20 flex items-center gap-3 group"
             aria-label="Open Chat Assistant"
           >
             <MessageCircle className="w-6 h-6" />
@@ -80,7 +80,7 @@ export default function ChatAssistant() {
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            className="fixed bottom-8 right-8 w-[90vw] sm:w-[400px] h-[600px] max-h-[80vh] bg-white border-editorial shadow-2xl z-50 flex flex-col"
+            className="fixed inset-x-3 bottom-3 md:inset-x-auto md:bottom-8 md:right-8 w-auto md:w-[400px] h-[600px] max-h-[85vh] bg-white border-editorial shadow-2xl z-50 flex flex-col"
           >
             {/* Header */}
             <div className="bg-black text-white p-4 flex items-center justify-between border-b-editorial">

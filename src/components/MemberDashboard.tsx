@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Mail, Phone, Globe, Twitter, FileText, Landmark, Calendar, BarChart3, Loader2, Share2, Check, Network, AlertTriangle, Eye, TrendingUp, Users as UsersIcon, FolderOpen } from 'lucide-react';
+import { Mail, Phone, Globe, Twitter, FileText, Landmark, Calendar, BarChart3, Loader2, Share2, Check, Network, AlertTriangle, Eye, Megaphone, FolderOpen } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Bill, Hearing, CampaignFinance, MemberMetrics } from '../types';
-import { fetchMemberProfile, fetchInfluenceMap, fetchConflictAlerts } from '../services/nycDataService';
-import type { MemberProfile, BillRecord, HearingRecord, InfluenceMapEntry, ConflictAlert } from '../lib/types';
+import { fetchMemberProfile, fetchInfluenceMap, fetchConflictAlerts, fetchMemberLobbying } from '../services/nycDataService';
+import type { MemberProfile, BillRecord, HearingRecord, InfluenceMapEntry, ConflictAlert, MemberLobbyingProfile } from '../lib/types';
 import BillCard from './BillCard';
 import HearingCard from './HearingCard';
 import FinanceView from './FinanceView';
@@ -13,6 +13,8 @@ import ActivityFeed from './ActivityFeed';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import WatchButton from './WatchButton';
+import IndustryBadge, { INDUSTRY_COLORS } from './shared/IndustryBadge';
+import ProGate from './ProGate';
 import WorkHorseScorecard from './WorkHorseScorecard';
 import MemberNotesPanel from './MemberNotesPanel';
 import DocumentVaultPanel from './DocumentVaultPanel';
@@ -58,19 +60,6 @@ function mapHearingRecordToHearing(hearing: HearingRecord): Hearing {
   };
 }
 
-const INDUSTRY_COLORS: Record<string, string> = {
-  'Real Estate': 'bg-amber-100 text-amber-800',
-  'Finance': 'bg-blue-100 text-blue-800',
-  'Legal': 'bg-purple-100 text-purple-800',
-  'Labor': 'bg-green-100 text-green-800',
-  'Healthcare': 'bg-rose-100 text-rose-800',
-  'Education': 'bg-teal-100 text-teal-800',
-  'Nonprofit / Advocacy': 'bg-indigo-100 text-indigo-800',
-  'Government / Public Sector': 'bg-slate-200 text-slate-700',
-  'Small Business / Retail': 'bg-orange-100 text-orange-800',
-  'Other / Mixed': 'bg-gray-100 text-gray-600',
-};
-
 function fmt$(value: number): string {
   return '$' + value.toLocaleString('en-US', { maximumFractionDigits: 0 });
 }
@@ -84,9 +73,10 @@ export default function MemberDashboard() {
   const [metrics, setMetrics] = useState<MemberMetrics | null>(null);
   const [influenceData, setInfluenceData] = useState<InfluenceMapEntry[]>([]);
   const [memberAlerts, setMemberAlerts] = useState<ConflictAlert[]>([]);
-  const [activeTab, setActiveTab] = useState<'activity' | 'bills' | 'money' | 'hearings' | 'team-intel'>('activity');
+  const [lobbyingData, setLobbyingData] = useState<MemberLobbyingProfile | null>(null);
   const [workHorse, setWorkHorse] = useState<WorkHorseScore | null>(null);
   const flags = useFeatureFlags();
+  const [activeTab, setActiveTab] = useState<'activity' | 'bills' | 'money' | 'hearings' | 'team-intel'>('activity');
   const [isLoading, setIsLoading] = useState(true);
   const [copied, setCopied] = useState(false);
 
@@ -135,12 +125,14 @@ export default function MemberDashboard() {
             setWorkHorse(profile.workHorse ?? null);
           }
 
-          const [allInfluence, allAlerts] = await Promise.all([
+          const [allInfluence, allAlerts, lobbyingProfile] = await Promise.all([
             fetchInfluenceMap(),
             fetchConflictAlerts(),
+            fetchMemberLobbying(memberId!),
           ]);
           setInfluenceData(allInfluence.filter(e => e.memberSlug === memberId).slice(0, 5));
           setMemberAlerts(allAlerts.filter(a => a.memberSlug === memberId).slice(0, 3));
+          setLobbyingData(lobbyingProfile);
         }
       } catch (error) {
         console.error('Error loading member data:', error);
@@ -179,7 +171,7 @@ export default function MemberDashboard() {
         <div className="bg-white border-editorial p-8 md:p-12 relative">
           <div className="flex flex-col md:flex-row gap-10 items-center md:items-start relative z-10">
             <div className="relative">
-              <div className="w-48 h-48 md:w-56 md:h-56 overflow-hidden border-editorial">
+              <div className="w-32 h-32 md:w-48 md:h-48 overflow-hidden border-editorial">
                 <img 
                   src={member.photoUrl || `https://picsum.photos/seed/${member.slug}/400/400`} 
                   alt={member.fullName}
@@ -245,7 +237,7 @@ export default function MemberDashboard() {
         </div>
 
         {/* Tabs */}
-        <div className="flex gap-0 border-b-editorial w-full overflow-x-auto sticky top-0 bg-white z-40 shadow-sm">
+        <div className="flex gap-0 border-b-editorial w-full overflow-x-auto sticky top-[57px] md:top-0 bg-white z-40 shadow-sm">
           {[
             { id: 'activity', label: 'Activity', icon: BarChart3 },
             { id: 'bills', label: 'Bills', icon: FileText },
@@ -257,7 +249,7 @@ export default function MemberDashboard() {
               key={tab.id}
               onClick={() => setActiveTab(tab.id as any)}
               className={cn(
-                "flex items-center gap-2 px-8 py-4 text-sm font-bold uppercase tracking-widest transition-all duration-200 border-b-2",
+                "flex items-center gap-2 px-4 py-3 md:px-8 md:py-4 text-sm font-bold uppercase tracking-widest transition-all duration-200 border-b-2",
                 activeTab === tab.id 
                   ? "border-black text-black" 
                   : "border-transparent text-slate-500 hover:text-black"
@@ -453,6 +445,102 @@ export default function MemberDashboard() {
                 </div>
               ))}
             </div>
+          )}
+
+          {/* Lobbying Activity */}
+          {lobbyingData && (
+            <ProGate feature="Lobbying Activity" flag="canViewLobbyingData">
+              <div className="space-y-6">
+                <div className="flex items-center gap-3">
+                  <Megaphone className="w-5 h-5 text-black" />
+                  <h3 className="font-editorial text-2xl font-bold text-black">Lobbying Activity</h3>
+                  <span className="px-2 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-bold uppercase tracking-widest rounded-sm">Beta</span>
+                </div>
+
+                {/* Top clients grid */}
+                {lobbyingData.topClients.length > 0 && (
+                  <div>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-4">Top Lobbying Clients</p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {lobbyingData.topClients.map((client, i) => (
+                        <motion.div
+                          key={`${client.clientName}-${i}`}
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: i * 0.05 }}
+                          className="bg-white border-editorial p-5 space-y-3"
+                        >
+                          <div className="flex items-center justify-between">
+                            <p className="font-semibold text-sm text-black truncate">{client.clientName}</p>
+                            <IndustryBadge industry={client.clientIndustry} />
+                          </div>
+                          <p className="font-editorial text-2xl font-bold text-black">
+                            {fmt$(client.totalSpending)}
+                          </p>
+                          <div className="space-y-1">
+                            {client.relatedBills.slice(0, 2).map((bill) => (
+                              <p key={bill.introNumber} className="text-xs text-slate-500 truncate">
+                                {bill.introNumber} — {bill.title}
+                              </p>
+                            ))}
+                            {client.relatedBills.length > 2 && (
+                              <p className="text-xs text-slate-400">
+                                +{client.relatedBills.length - 2} more bills
+                              </p>
+                            )}
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Industry breakdown bars */}
+                {lobbyingData.topIndustries.length > 0 && (
+                  <div className="bg-white border-editorial p-6">
+                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">Industry Breakdown (Lobbying Spending)</p>
+                    <div className="space-y-2">
+                      {lobbyingData.topIndustries.map(({ industry, totalSpending }) => {
+                        const max = lobbyingData.topIndustries[0]?.totalSpending || 1;
+                        const pct = totalSpending / max;
+                        return (
+                          <div key={industry} className="flex items-center gap-3">
+                            <span className="w-40 text-xs font-medium text-slate-700 truncate shrink-0">{industry}</span>
+                            <div className="flex-1 h-4 bg-slate-100 overflow-hidden">
+                              <motion.div
+                                className={`h-full ${INDUSTRY_COLORS[industry]?.split(' ')[0] ?? 'bg-gray-200'}`}
+                                initial={{ width: 0 }}
+                                animate={{ width: `${Math.max(pct * 100, 1)}%` }}
+                                transition={{ duration: 0.6, delay: 0.1 }}
+                              />
+                            </div>
+                            <span className="text-xs font-medium text-slate-600 tabular-nums w-24 text-right shrink-0">{fmt$(totalSpending)}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Recent filings */}
+                {lobbyingData.recentFilings.length > 0 && (
+                  <div>
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500 mb-4">Recent Filings</p>
+                    <div className="space-y-2">
+                      {lobbyingData.recentFilings.slice(0, 5).map((filing, i) => (
+                        <div key={`filing-${i}`} className="flex items-center justify-between py-2 border-b border-slate-100 last:border-b-0">
+                          <div className="flex-1 min-w-0">
+                            <p className="text-sm font-semibold text-black truncate">{filing.lobbyistName}</p>
+                            <p className="text-xs text-slate-500 truncate">{filing.clientName} &middot; {filing.period} {filing.reportYear}</p>
+                          </div>
+                          <span className="text-sm font-editorial font-bold text-black tabular-nums shrink-0 ml-4">{fmt$(filing.compensationTotal)}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </ProGate>
           )}
         </motion.div>
       )}

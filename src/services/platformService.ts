@@ -1,4 +1,4 @@
-import { supabase, isSupabaseConfigured } from './supabaseClient';
+import { callEdgeFunction, isSupabaseConfigured } from './supabaseClient';
 
 export interface PolicyPlatform {
   id: string;
@@ -11,58 +11,42 @@ export interface PolicyPlatform {
   created_at: string;
 }
 
-export async function uploadPlatform(userId: string, file: File): Promise<{ id: string; filename: string }> {
-  if (!isSupabaseConfigured() || !supabase) {
-    throw new Error('Supabase not configured');
-  }
+export async function uploadPlatform(token: string, file: File): Promise<{ id: string; filename: string }> {
+  if (!isSupabaseConfigured()) throw new Error('Supabase not configured');
 
   const formData = new FormData();
   formData.append('file', file);
 
-  const { data, error } = await supabase.functions.invoke('upload-platform', {
-    body: formData,
+  return await callEdgeFunction<{ id: string; filename: string }>('upload-platform', {
+    method: 'POST',
+    token,
+    formData,
   });
-
-  if (error) throw error;
-  return data as { id: string; filename: string };
 }
 
-export async function getUserPlatforms(userId: string): Promise<PolicyPlatform[]> {
-  if (!isSupabaseConfigured() || !supabase) return [];
-
-  const { data, error } = await supabase
-    .from('policy_platforms')
-    .select('*')
-    .eq('user_id', userId)
-    .order('created_at', { ascending: false });
-
-  if (error) {
-    console.error('Error fetching platforms:', error);
+export async function getUserPlatforms(token: string): Promise<PolicyPlatform[]> {
+  if (!isSupabaseConfigured()) return [];
+  try {
+    return await callEdgeFunction<PolicyPlatform[]>('upload-platform', { method: 'GET', token });
+  } catch (err) {
+    console.error('Error fetching platforms:', err);
     return [];
   }
-  return data as PolicyPlatform[];
 }
 
-export async function deletePlatform(userId: string, platformId: string): Promise<void> {
-  if (!isSupabaseConfigured() || !supabase) return;
-
-  // Get the storage path first
-  const { data: platform } = await supabase
-    .from('policy_platforms')
-    .select('storage_path')
-    .eq('id', platformId)
-    .eq('user_id', userId)
-    .single();
-
-  if (platform?.storage_path) {
-    await supabase.storage.from('policy-platforms').remove([platform.storage_path]);
+export async function deletePlatform(token: string, platformId: string): Promise<void> {
+  if (!isSupabaseConfigured()) return;
+  const supabaseUrl = import.meta.env.VITE_SUPABASE_URL as string;
+  const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string;
+  const res = await fetch(
+    `${supabaseUrl}/functions/v1/upload-platform?id=${encodeURIComponent(platformId)}`,
+    {
+      method: 'DELETE',
+      headers: { Authorization: `Bearer ${token}`, apikey: supabaseAnonKey },
+    }
+  );
+  if (!res.ok) {
+    const data = await res.json().catch(() => ({}));
+    throw new Error(data?.error ?? 'Failed to delete platform');
   }
-
-  const { error } = await supabase
-    .from('policy_platforms')
-    .delete()
-    .eq('id', platformId)
-    .eq('user_id', userId);
-
-  if (error) throw error;
 }

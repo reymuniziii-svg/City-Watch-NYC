@@ -12,7 +12,7 @@ import {
 } from "./lib/legislation";
 import { isEnactedStatus } from "../src/lib/status-timeline";
 import { normalizePersonName } from "./lib/normalize";
-import type { BillRecord, HearingSummary, HearingRecord, MemberFinanceProfile, MemberProfile, MemberSummary, VoteRecord, WorkHorseScore } from "../src/lib/types";
+import type { BillRecord, HearingSummary, HearingRecord, MemberFinanceProfile, MemberLobbyingProfile, MemberProfile, MemberSummary, VoteRecord, WorkHorseScore } from "../src/lib/types";
 
 interface SupplementalRow {
   slug: string | null;
@@ -224,6 +224,19 @@ export async function buildMembers(): Promise<MemberSummary[]> {
     financeBySlug.set(finance.slug, finance);
   }
 
+  const lobbyingDir = path.join(PUBLIC_DATA_DIR, "lobbying", "members");
+  const lobbyingFiles = await fs.readdir(lobbyingDir).catch(() => []);
+  const lobbyingBySlug = new Map<string, MemberLobbyingProfile>();
+  for (const file of lobbyingFiles.filter((name) => name.endsWith(".json"))) {
+    try {
+      const lobbying = await readJsonFile<MemberLobbyingProfile>(path.join(lobbyingDir, file));
+      lobbyingBySlug.set(lobbying.memberSlug, lobbying);
+    } catch {
+      // skip unreadable files
+    }
+  }
+  const votesByMember = await buildVotesMap(bills);
+
   // Load workhorse scores
   interface WorkHorseIndexEntry extends WorkHorseScore { slug: string }
   const workhorseBySlug = new Map<string, WorkHorseScore>();
@@ -236,8 +249,6 @@ export async function buildMembers(): Promise<MemberSummary[]> {
   } catch {
     // workhorse data not yet built
   }
-
-  const votesByMember = await buildVotesMap(bills);
 
   const { start, end } = loadSessionRange();
   const membersIndex: MemberSummary[] = [];
@@ -328,6 +339,7 @@ export async function buildMembers(): Promise<MemberSummary[]> {
       recentVotes: votesByMember.get(entry.slug) ?? [],
       enactedFallback,
       finance: financeBySlug.get(entry.slug) ?? null,
+      lobbying: lobbyingBySlug.get(entry.slug) ?? null,
       workHorse: workhorseBySlug.get(entry.slug) ?? null,
     };
 

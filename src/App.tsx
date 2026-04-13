@@ -12,49 +12,43 @@ import SupportPage from './components/SupportPage';
 import PricingPage from './components/PricingPage';
 import WatchlistPage from './components/WatchlistPage';
 import ImpactAnalysisPage from './components/ImpactAnalysisPage';
-import ProDashboard from './components/ProDashboard';
-import ActionKitList from './components/ActionKitList';
-import ActionKitMicrosite from './components/ActionKitMicrosite';
-import HearingSuperSearch from './components/HearingSuperSearch';
+import ActionKitPage from './components/ActionKitPage';
+import ActionKitBuilder from './components/ActionKitBuilder';
+import ActionKitEmbed from './components/ActionKitEmbed';
+import ApiDocsPage from './components/ApiDocsPage';
+import NotFoundPage from './components/NotFoundPage';
 import WorkHorseRankingTable from './components/WorkHorseRankingTable';
 import StafferDirectoryPage from './components/StafferDirectoryPage';
 import BriefPreferencesPage from './components/BriefPreferencesPage';
 
-function AppRoutes() {
-  return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<AddressSearch />} />
-        <Route path="/members" element={<MemberList />} />
-        <Route path="/members/:id" element={<MemberDashboard />} />
-        <Route path="/members/district/:district" element={<MemberDashboard />} />
-        <Route path="/districts" element={<DistrictsPage />} />
-        <Route path="/bills" element={<BillList />} />
-        <Route path="/hearings" element={<HearingList />} />
-        <Route path="/hearing-search" element={<HearingSuperSearch />} />
-        <Route path="/money" element={<MoneyPage />} />
-        <Route path="/influence" element={<InfluenceMapperPage />} />
-        <Route path="/impact" element={<ImpactAnalysisPage />} />
-        <Route path="/dashboard" element={<ProDashboard />} />
-        <Route path="/watchlist" element={<WatchlistPage />} />
-        <Route path="/action-kits" element={<ActionKitList />} />
-        <Route path="/workhorse" element={<WorkHorseRankingTable />} />
-        <Route path="/staffers" element={<StafferDirectoryPage />} />
-        <Route path="/brief" element={<BriefPreferencesPage />} />
-        <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/support" element={<SupportPage />} />
-      </Routes>
-    </Layout>
-  );
-}
-
 export default function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/kit/:slug" element={<ActionKitMicrosite />} />
-        <Route path="*" element={<AppRoutes />} />
-      </Routes>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<AddressSearch />} />
+          <Route path="/members" element={<MemberList />} />
+          <Route path="/members/:id" element={<MemberDashboard />} />
+          <Route path="/members/district/:district" element={<MemberDashboard />} />
+          <Route path="/districts" element={<DistrictsPage />} />
+          <Route path="/bills" element={<BillList />} />
+          <Route path="/hearings" element={<HearingList />} />
+          <Route path="/money" element={<MoneyPage />} />
+          <Route path="/influence" element={<InfluenceMapperPage />} />
+          <Route path="/watchlist" element={<WatchlistPage />} />
+          <Route path="/impact" element={<ImpactAnalysisPage />} />
+          <Route path="/action-kits" element={<ActionKitPage />} />
+          <Route path="/action-kits/:id/edit" element={<ActionKitBuilder />} />
+          <Route path="/embed/:kitId" element={<ActionKitEmbed />} />
+          <Route path="/api-docs" element={<ApiDocsPage />} />
+          <Route path="/workhorse" element={<WorkHorseRankingTable />} />
+          <Route path="/staffers" element={<StafferDirectoryPage />} />
+          <Route path="/brief" element={<BriefPreferencesPage />} />
+          <Route path="/pricing" element={<PricingPage />} />
+          <Route path="/support" element={<SupportPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Layout>
     </Router>
   );
 }

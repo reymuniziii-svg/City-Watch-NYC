@@ -1,230 +1,181 @@
-import { useState, useEffect, useCallback } from 'react';
-import { motion } from 'motion/react';
-import { Crosshair, Loader2, Download, Clock, CheckCircle2, AlertTriangle, FileText } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import {
+  Target, Upload, FileText, Loader2, Trash2, Play, Download,
+  ChevronDown, ChevronUp, CheckCircle, AlertTriangle, XCircle, Minus,
+} from 'lucide-react';
+import { useSession } from '@clerk/clerk-react';
 import { useProUser } from '../hooks/useProUser';
-import { supabase, isSupabaseConfigured } from '../services/supabaseClient';
-import { uploadPlatform } from '../services/platformService';
+import { isSupabaseConfigured } from '../services/supabaseClient';
+import {
+  uploadPlatform,
+  getUserPlatforms,
+  deletePlatform,
+  type PolicyPlatform,
+} from '../services/platformService';
+import {
+  runAnalysis,
+  getReports,
+  generatePDF,
+  type ImpactReport,
+  type BillClassification,
+} from '../services/impactService';
 import ProGate from './ProGate';
-import PolicyUploader from './PolicyUploader';
-import ImpactResultCard from './ImpactResultCard';
-import type { Classification } from './ImpactResultCard';
 
-/* ── types ──────────────────────────────────────────────── */
+/* ── helpers ────────────────────────────────────────────── */
 
-interface BillResult {
-  billId: string;
-  introNumber: string;
-  title: string;
-  classification: Classification;
-  reasoning: string;
-  confidence: number;
-}
-
-interface ImpactReport {
-  id: string;
-  platform_id: string;
-  status: 'pending' | 'processing' | 'complete' | 'error';
-  bills_analyzed: number;
-  results: BillResult[] | null;
-  created_at: string;
-  platform_filename?: string;
-}
-
-/* ── classification order ───────────────────────────────── */
-
-const CLASS_ORDER: Classification[] = ['Opportunity', 'Threat', 'Conflict', 'Neutral'];
-
-const CLASS_SECTION_STYLES: Record<Classification, { icon: string; label: string }> = {
-  Opportunity: { icon: 'text-green-600', label: 'Opportunities' },
-  Threat: { icon: 'text-red-600', label: 'Threats' },
-  Conflict: { icon: 'text-amber-600', label: 'Conflicts' },
-  Neutral: { icon: 'text-slate-500', label: 'Neutral' },
-};
-
-/* ── status badge helper ────────────────────────────────── */
-
-function StatusBadge({ status }: { status: ImpactReport['status'] }) {
-  const styles: Record<string, string> = {
-    pending: 'bg-slate-100 text-slate-600',
-    processing: 'bg-amber-100 text-amber-700',
-    complete: 'bg-green-100 text-green-700',
-    error: 'bg-red-100 text-red-700',
+function statusBadge(status: string) {
+  const map: Record<string, { bg: string; text: string; label: string }> = {
+    uploaded: { bg: 'bg-blue-100', text: 'text-blue-700', label: 'Ready' },
+    processing: { bg: 'bg-amber-100', text: 'text-amber-700', label: 'Processing' },
+    analyzed: { bg: 'bg-green-100', text: 'text-green-700', label: 'Analyzed' },
+    error: { bg: 'bg-red-100', text: 'text-red-700', label: 'Error' },
+    pending: { bg: 'bg-slate-100', text: 'text-slate-600', label: 'Pending' },
+    complete: { bg: 'bg-green-100', text: 'text-green-700', label: 'Complete' },
   };
+  const s = map[status] ?? { bg: 'bg-slate-100', text: 'text-slate-600', label: status };
   return (
-    <span className={`px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest ${styles[status] ?? styles.pending}`}>
-      {status}
+    <span className={`inline-block px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest ${s.bg} ${s.text}`}>
+      {s.label}
     </span>
   );
 }
 
-/* ── component ──────────────────────────────────────────── */
+function classificationIcon(c: string) {
+  switch (c) {
+    case 'Opportunity': return <CheckCircle className="w-4 h-4 text-green-600" />;
+    case 'Threat': return <XCircle className="w-4 h-4 text-red-600" />;
+    case 'Conflict': return <AlertTriangle className="w-4 h-4 text-amber-600" />;
+    default: return <Minus className="w-4 h-4 text-slate-400" />;
+  }
+}
+
+function classificationColor(c: string) {
+  switch (c) {
+    case 'Opportunity': return 'border-l-green-500';
+    case 'Threat': return 'border-l-red-500';
+    case 'Conflict': return 'border-l-amber-500';
+    default: return 'border-l-slate-300';
+  }
+}
+
+/* ── main component ─────────────────────────────────────── */
 
 export default function ImpactAnalysisPage() {
-  const { isAuthenticated, user, isLoading: authLoading } = useProUser();
+  const { isAuthenticated, isLoading: authLoading } = useProUser();
+  const { session } = useSession();
 
-  // upload state
-  const [isUploading, setIsUploading] = useState(false);
-  const [uploadedFile, setUploadedFile] = useState<string | null>(null);
-  const [platformId, setPlatformId] = useState<string | null>(null);
-
-  // analysis state
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [reportId, setReportId] = useState<string | null>(null);
-  const [results, setResults] = useState<BillResult[]>([]);
-  const [billsAnalyzed, setBillsAnalyzed] = useState(0);
-  const [analysisError, setAnalysisError] = useState<string | null>(null);
-
-  // pdf state
-  const [isGeneratingPdf, setIsGeneratingPdf] = useState(false);
-
-  // history state
-  const [history, setHistory] = useState<ImpactReport[]>([]);
-  const [historyLoading, setHistoryLoading] = useState(false);
-  const [viewingReport, setViewingReport] = useState<ImpactReport | null>(null);
-
-  /* ── fetch history ──────────────────────────────────── */
-
-  const fetchHistory = useCallback(async () => {
-    if (!user || !isSupabaseConfigured() || !supabase) return;
-    setHistoryLoading(true);
-    try {
-      const { data, error } = await supabase
-        .from('impact_reports')
-        .select('id, platform_id, status, bills_analyzed, results, created_at')
-        .eq('user_id', user.id)
-        .order('created_at', { ascending: false })
-        .limit(20);
-
-      if (error) throw error;
-
-      // fetch platform filenames
-      const reports = (data ?? []) as ImpactReport[];
-      const platformIds = [...new Set(reports.map(r => r.platform_id))];
-      if (platformIds.length > 0) {
-        const { data: platforms } = await supabase
-          .from('policy_platforms')
-          .select('id, filename')
-          .in('id', platformIds);
-
-        const filenameMap = new Map((platforms ?? []).map((p: { id: string; filename: string }) => [p.id, p.filename]));
-        for (const report of reports) {
-          report.platform_filename = filenameMap.get(report.platform_id) ?? 'Unknown file';
-        }
-      }
-      setHistory(reports);
-    } catch {
-      // silently fail for history
-    } finally {
-      setHistoryLoading(false);
-    }
-  }, [user]);
+  const [platforms, setPlatforms] = useState<PolicyPlatform[]>([]);
+  const [reports, setReports] = useState<ImpactReport[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [uploading, setUploading] = useState(false);
+  const [analyzing, setAnalyzing] = useState<string | null>(null);
+  const [exporting, setExporting] = useState<string | null>(null);
+  const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [selectedReport, setSelectedReport] = useState<ImpactReport | null>(null);
+  const [dragOver, setDragOver] = useState(false);
 
   useEffect(() => {
-    fetchHistory();
-  }, [fetchHistory]);
-
-  /* ── upload handler ─────────────────────────────────── */
+    if (!isAuthenticated || !session || !isSupabaseConfigured()) {
+      setLoading(false);
+      return;
+    }
+    setLoading(true);
+    session.getToken().then(async (token) => {
+      if (!token) return;
+      const [p, r] = await Promise.all([getUserPlatforms(token), getReports(token)]);
+      setPlatforms(p);
+      setReports(r);
+    }).catch(() => {}).finally(() => setLoading(false));
+  }, [isAuthenticated, session]);
 
   const handleUpload = async (file: File) => {
-    if (!user) return;
-    setIsUploading(true);
-    setAnalysisError(null);
+    if (!session) return;
+    setUploading(true);
     try {
-      const result = await uploadPlatform(user.id, file);
-      setPlatformId(result.id);
-      setUploadedFile(result.filename);
-      // reset any previous results
-      setResults([]);
-      setReportId(null);
-      setBillsAnalyzed(0);
+      const token = await session.getToken();
+      if (!token) return;
+      await uploadPlatform(token, file);
+      const refreshed = await getUserPlatforms(token);
+      setPlatforms(refreshed);
     } catch (err) {
-      setAnalysisError(err instanceof Error ? err.message : 'Upload failed. Please try again.');
+      console.error('Upload error:', err);
     } finally {
-      setIsUploading(false);
+      setUploading(false);
     }
   };
 
-  /* ── analyze handler ────────────────────────────────── */
-
-  const handleAnalyze = async () => {
-    if (!platformId || !isSupabaseConfigured() || !supabase) return;
-    setIsAnalyzing(true);
-    setAnalysisError(null);
-    setResults([]);
+  const handleDelete = async (id: string) => {
+    if (!session) return;
+    setDeletingId(id);
     try {
-      const { data, error } = await supabase.functions.invoke('analyze-impact', {
-        body: { platformId },
-      });
-      if (error) throw error;
-      const { reportId: rid, billsAnalyzed: count } = data as { reportId: string; billsAnalyzed: number };
-      setReportId(rid);
-      setBillsAnalyzed(count);
-
-      // fetch the full results
-      const { data: report, error: fetchError } = await supabase
-        .from('impact_reports')
-        .select('results')
-        .eq('id', rid)
-        .single();
-
-      if (fetchError) throw fetchError;
-      setResults((report?.results as BillResult[]) ?? []);
-      // refresh history
-      fetchHistory();
-    } catch (err) {
-      setAnalysisError(err instanceof Error ? err.message : 'Analysis failed. Please try again.');
-    } finally {
-      setIsAnalyzing(false);
-    }
-  };
-
-  /* ── download pdf handler ───────────────────────────── */
-
-  const handleDownloadPdf = async (targetReportId: string) => {
-    if (!isSupabaseConfigured() || !supabase) return;
-    setIsGeneratingPdf(true);
-    try {
-      const { data, error } = await supabase.functions.invoke('generate-impact-pdf', {
-        body: { reportId: targetReportId },
-      });
-      if (error) throw error;
-      const { url } = data as { url: string };
-      window.open(url, '_blank');
+      const token = await session.getToken();
+      if (!token) return;
+      await deletePlatform(token, id);
+      setPlatforms((prev) => prev.filter((p) => p.id !== id));
     } catch {
-      setAnalysisError('PDF generation failed. Please try again.');
     } finally {
-      setIsGeneratingPdf(false);
+      setDeletingId(null);
     }
   };
 
-  /* ── view historical report ─────────────────────────── */
-
-  const handleViewReport = (report: ImpactReport) => {
-    if (report.results) {
-      setViewingReport(report);
-      setResults(report.results);
-      setReportId(report.id);
-      setBillsAnalyzed(report.bills_analyzed);
-      setUploadedFile(report.platform_filename ?? null);
-      setPlatformId(report.platform_id);
+  const handleAnalyze = async (platformId: string) => {
+    if (!session) return;
+    setAnalyzing(platformId);
+    try {
+      const token = await session.getToken();
+      if (!token) return;
+      await runAnalysis(token, platformId);
+      // Refresh both platforms and reports
+      const [p, r] = await Promise.all([getUserPlatforms(token), getReports(token)]);
+      setPlatforms(p);
+      setReports(r);
+    } catch (err) {
+      console.error('Analysis error:', err);
+    } finally {
+      setAnalyzing(null);
     }
   };
 
-  /* ── grouped results ────────────────────────────────── */
+  const handleExportPDF = async (reportId: string) => {
+    if (!session) return;
+    setExporting(reportId);
+    try {
+      const token = await session.getToken();
+      if (!token) return;
+      const { url } = await generatePDF(token, reportId);
+      window.open(url, '_blank', 'noopener,noreferrer');
+    } catch (err) {
+      console.error('PDF export error:', err);
+    } finally {
+      setExporting(null);
+    }
+  };
 
-  const grouped = CLASS_ORDER.reduce<Record<Classification, BillResult[]>>((acc, cls) => {
-    acc[cls] = results.filter(r => r.classification === cls);
-    return acc;
-  }, { Opportunity: [], Threat: [], Conflict: [], Neutral: [] });
+  const onDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setDragOver(false);
+    const file = e.dataTransfer.files?.[0];
+    if (file && (file.name.endsWith('.pdf') || file.name.endsWith('.txt'))) {
+      handleUpload(file);
+    }
+  };
 
-  /* ── backend not configured ─────────────────────────── */
+  const onFileInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) handleUpload(file);
+    e.target.value = '';
+  };
+
+  /* Derived data */
+  const completedReports = reports.filter((r) => r.status === 'complete' && r.report_json);
 
   if (!isSupabaseConfigured()) {
     return (
       <div className="text-center py-20 border-editorial bg-white">
-        <Crosshair className="w-10 h-10 text-slate-300 mx-auto mb-4" />
+        <Target className="w-10 h-10 text-slate-300 mx-auto mb-4" />
         <h2 className="font-editorial text-3xl font-bold text-black mb-4">Impact Analysis</h2>
-        <p className="text-slate-600">Impact Analysis requires a connected backend. Please configure Supabase to enable this feature.</p>
+        <p className="text-slate-600">This feature requires a connected backend. Please configure Supabase.</p>
       </div>
     );
   }
@@ -241,9 +192,9 @@ export default function ImpactAnalysisPage() {
   if (!isAuthenticated) {
     return (
       <div className="text-center py-20 border-editorial bg-white">
-        <Crosshair className="w-10 h-10 text-slate-300 mx-auto mb-4" />
+        <Target className="w-10 h-10 text-slate-300 mx-auto mb-4" />
         <h2 className="font-editorial text-3xl font-bold text-black mb-4">Sign In Required</h2>
-        <p className="text-slate-600 mb-6">Sign in to access Impact Analysis and see how legislation affects your policy platform.</p>
+        <p className="text-slate-600 mb-6">Sign in to access Impact Analysis and compare bills against your policy platform.</p>
       </div>
     );
   }
@@ -251,220 +202,273 @@ export default function ImpactAnalysisPage() {
   return (
     <div className="space-y-12">
       {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
+      <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}>
         <div className="flex items-center gap-3 mb-2">
-          <Crosshair className="w-6 h-6 text-black" />
+          <Target className="w-6 h-6 text-black" />
           <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">Pro Feature</span>
         </div>
         <h1 className="font-editorial text-5xl md:text-7xl font-black text-black tracking-tighter leading-none mb-4">
           Impact Analysis
         </h1>
         <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
-          Upload your policy platform and discover which pending bills align with, threaten, or conflict with your priorities.
+          Upload your organization's policy platform and let AI analyze every active bill for opportunities, threats, and conflicts with your agenda.
         </p>
       </motion.div>
 
-      <ProGate flag="canUseImpactAnalysis" feature="Impact Analysis">
-        <div className="space-y-10">
-          {/* Upload Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.05 }}
-          >
-            <div className="flex items-center gap-3 border-b-editorial pb-4 mb-6">
-              <FileText className="w-5 h-5 text-black" />
-              <h2 className="font-editorial text-3xl font-bold text-black">Policy Platform</h2>
-            </div>
-            <PolicyUploader
-              onUpload={handleUpload}
-              isUploading={isUploading}
-              uploadedFile={uploadedFile}
-            />
+      <ProGate feature="Impact Analysis" flag="canUseImpactAnalysis">
+        {loading ? (
+          <div className="flex flex-col items-center justify-center py-20 gap-4">
+            <Loader2 className="w-8 h-8 text-black animate-spin" />
+            <p className="text-slate-500 font-medium">Loading your platforms...</p>
+          </div>
+        ) : (
+          <div className="space-y-12">
+            {/* Upload Section */}
+            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 }}>
+              <div className="flex items-center gap-3 border-b-editorial pb-4 mb-6">
+                <Upload className="w-5 h-5 text-black" />
+                <h2 className="font-editorial text-3xl font-bold text-black">Policy Platforms</h2>
+              </div>
 
-            {/* Analyze button */}
-            {platformId && !isAnalyzing && results.length === 0 && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="mt-6"
+              {/* Dropzone */}
+              <label
+                className={`flex flex-col items-center justify-center py-12 border-2 border-dashed transition-colors cursor-pointer ${
+                  dragOver ? 'border-black bg-slate-50' : 'border-slate-300 hover:border-black hover:bg-slate-50'
+                }`}
+                onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
+                onDragLeave={() => setDragOver(false)}
+                onDrop={onDrop}
               >
-                <button
-                  onClick={handleAnalyze}
-                  className="px-8 py-3 bg-black text-white font-bold uppercase tracking-widest text-sm hover:bg-slate-800 transition-colors"
-                >
-                  Analyze Against Pending Legislation
-                </button>
+                {uploading ? (
+                  <Loader2 className="w-8 h-8 text-black animate-spin mb-3" />
+                ) : (
+                  <Upload className="w-8 h-8 text-slate-400 mb-3" />
+                )}
+                <p className="text-sm font-bold text-slate-700 mb-1">
+                  {uploading ? 'Uploading...' : 'Drop a PDF or TXT file here'}
+                </p>
+                <p className="text-xs text-slate-400">
+                  Your organization's mission statement, legislative agenda, or policy platform. Max 10MB.
+                </p>
+                <input
+                  type="file"
+                  accept=".pdf,.txt"
+                  onChange={onFileInput}
+                  className="hidden"
+                  disabled={uploading}
+                />
+              </label>
+
+              {/* Platform List */}
+              {platforms.length > 0 && (
+                <div className="mt-6 space-y-3">
+                  {platforms.map((platform) => (
+                    <motion.div
+                      key={platform.id}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="flex items-center justify-between bg-white border-editorial p-5 group"
+                    >
+                      <div className="flex items-center gap-4 flex-1 min-w-0">
+                        <FileText className="w-5 h-5 text-slate-400 shrink-0" />
+                        <div className="min-w-0">
+                          <p className="text-sm font-bold text-black truncate">{platform.filename}</p>
+                          <p className="text-xs text-slate-400">
+                            {(platform.file_size / 1024).toFixed(1)} KB &middot; {new Date(platform.created_at).toLocaleDateString()}
+                          </p>
+                        </div>
+                        {statusBadge(platform.status)}
+                      </div>
+                      <div className="flex items-center gap-2 ml-4">
+                        {(platform.status === 'uploaded' || platform.status === 'analyzed') && (
+                          <button
+                            onClick={() => handleAnalyze(platform.id)}
+                            disabled={analyzing === platform.id}
+                            className="flex items-center gap-1.5 px-4 py-2 bg-black text-white text-xs font-bold uppercase tracking-widest hover:bg-slate-800 transition-colors disabled:opacity-50"
+                          >
+                            {analyzing === platform.id ? (
+                              <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                            ) : (
+                              <Play className="w-3.5 h-3.5" />
+                            )}
+                            {platform.status === 'analyzed' ? 'Re-analyze' : 'Analyze'}
+                          </button>
+                        )}
+                        {platform.status === 'processing' && (
+                          <span className="flex items-center gap-1.5 px-4 py-2 text-xs font-bold uppercase tracking-widest text-amber-700">
+                            <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                            Processing
+                          </span>
+                        )}
+                        <button
+                          onClick={() => handleDelete(platform.id)}
+                          disabled={deletingId === platform.id}
+                          className="p-2 text-slate-400 hover:text-red-600 transition-colors opacity-0 group-hover:opacity-100 disabled:opacity-50"
+                          title="Delete platform"
+                        >
+                          {deletingId === platform.id ? (
+                            <Loader2 className="w-4 h-4 animate-spin" />
+                          ) : (
+                            <Trash2 className="w-4 h-4" />
+                          )}
+                        </button>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              )}
+            </motion.div>
+
+            {/* Reports Section */}
+            {completedReports.length > 0 && (
+              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
+                <div className="flex items-center gap-3 border-b-editorial pb-4 mb-6">
+                  <Target className="w-5 h-5 text-black" />
+                  <h2 className="font-editorial text-3xl font-bold text-black">Analysis Reports</h2>
+                </div>
+
+                <div className="space-y-3">
+                  {completedReports.map((report) => {
+                    const results = report.report_json?.results ?? [];
+                    const opps = results.filter((r) => r.classification === 'Opportunity').length;
+                    const threats = results.filter((r) => r.classification === 'Threat').length;
+                    const conflicts = results.filter((r) => r.classification === 'Conflict').length;
+                    const isSelected = selectedReport?.id === report.id;
+
+                    return (
+                      <div key={report.id} className="border-editorial bg-white">
+                        <button
+                          onClick={() => setSelectedReport(isSelected ? null : report)}
+                          className="w-full flex items-center justify-between p-5 hover:bg-slate-50 transition-colors"
+                        >
+                          <div className="flex items-center gap-4">
+                            {statusBadge(report.status)}
+                            <span className="text-sm text-slate-700">
+                              {new Date(report.created_at).toLocaleDateString('en-US', {
+                                year: 'numeric', month: 'long', day: 'numeric',
+                              })}
+                            </span>
+                            <span className="text-xs text-slate-400">{results.length} bills analyzed</span>
+                          </div>
+                          <div className="flex items-center gap-4">
+                            <div className="flex items-center gap-3 text-xs font-bold">
+                              <span className="text-green-600">{opps} Opportunities</span>
+                              <span className="text-red-600">{threats} Threats</span>
+                              <span className="text-amber-600">{conflicts} Conflicts</span>
+                            </div>
+                            <button
+                              onClick={(e) => { e.stopPropagation(); handleExportPDF(report.id); }}
+                              disabled={exporting === report.id}
+                              className="flex items-center gap-1.5 px-3 py-1.5 border-editorial text-xs font-bold uppercase tracking-widest text-black hover:bg-slate-50 transition-colors disabled:opacity-50"
+                            >
+                              {exporting === report.id ? (
+                                <Loader2 className="w-3 h-3 animate-spin" />
+                              ) : (
+                                <Download className="w-3 h-3" />
+                              )}
+                              PDF
+                            </button>
+                            {isSelected ? <ChevronUp className="w-4 h-4 text-slate-400" /> : <ChevronDown className="w-4 h-4 text-slate-400" />}
+                          </div>
+                        </button>
+
+                        <AnimatePresence>
+                          {isSelected && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: 'auto', opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.2 }}
+                              className="overflow-hidden"
+                            >
+                              <ReportViewer results={results} />
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    );
+                  })}
+                </div>
               </motion.div>
             )}
 
-            {/* Error */}
-            {analysisError && (
-              <div className="flex items-center gap-2 mt-4 text-red-600">
-                <AlertTriangle className="w-4 h-4 shrink-0" />
-                <p className="text-sm">{analysisError}</p>
-              </div>
-            )}
-          </motion.div>
-
-          {/* Analyzing loading state */}
-          {isAnalyzing && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="flex flex-col items-center justify-center py-20 gap-4"
-            >
-              <div className="relative">
-                <Crosshair className="w-12 h-12 text-black animate-pulse" />
-              </div>
-              <p className="text-sm font-bold text-black uppercase tracking-widest">Analyzing legislation...</p>
-              <p className="text-xs text-slate-500">Cross-referencing your platform against pending bills</p>
-            </motion.div>
-          )}
-
-          {/* Results */}
-          {results.length > 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="space-y-8"
-            >
-              {/* Summary row */}
-              <div className="flex items-center justify-between border-b-editorial pb-4">
-                <div>
-                  <h2 className="font-editorial text-3xl font-bold text-black">Results</h2>
-                  <p className="text-sm text-slate-500 mt-1">{billsAnalyzed} bills analyzed</p>
-                </div>
-                {reportId && (
-                  <button
-                    onClick={() => handleDownloadPdf(reportId)}
-                    disabled={isGeneratingPdf}
-                    className="flex items-center gap-2 px-6 py-3 border-editorial text-black font-bold uppercase tracking-widest text-sm hover:bg-slate-50 transition-colors disabled:opacity-50"
-                  >
-                    {isGeneratingPdf ? (
-                      <Loader2 className="w-4 h-4 animate-spin" />
-                    ) : (
-                      <Download className="w-4 h-4" />
-                    )}
-                    Download PDF
-                  </button>
-                )}
-              </div>
-
-              {/* Grouped by classification */}
-              {CLASS_ORDER.map(cls => {
-                const items = grouped[cls];
-                if (items.length === 0) return null;
-                const section = CLASS_SECTION_STYLES[cls];
-                return (
-                  <div key={cls}>
-                    <div className="flex items-center gap-3 mb-4">
-                      <span className={`w-2 h-2 rounded-full ${cls === 'Opportunity' ? 'bg-green-500' : cls === 'Threat' ? 'bg-red-500' : cls === 'Conflict' ? 'bg-amber-500' : 'bg-slate-400'}`} />
-                      <h3 className="text-sm font-bold uppercase tracking-widest text-slate-700">
-                        {section.label}
-                      </h3>
-                      <span className="text-xs text-slate-400">{items.length}</span>
-                    </div>
-                    <div className="space-y-3">
-                      {items.map((bill, i) => (
-                        <motion.div
-                          key={bill.billId}
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: i * 0.03 }}
-                        >
-                          <ImpactResultCard {...bill} />
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-                );
-              })}
-            </motion.div>
-          )}
-
-          {/* History Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.15 }}
-          >
-            <div className="flex items-center gap-3 border-b-editorial pb-4 mb-6">
-              <Clock className="w-5 h-5 text-black" />
-              <h2 className="font-editorial text-3xl font-bold text-black">Past Analyses</h2>
+            {/* Methodology */}
+            <div className="p-8 bg-slate-50 border-editorial text-sm text-slate-600 space-y-2 max-w-3xl">
+              <p className="font-bold text-black uppercase tracking-widest text-xs mb-3">How it works</p>
+              <p><strong className="text-black">Upload</strong> --- Provide your organization's policy platform as a PDF or text file describing your legislative priorities.</p>
+              <p><strong className="text-black">Analyze</strong> --- AI compares every active City Council bill against your platform, classifying each as an Opportunity, Threat, Conflict, or Neutral.</p>
+              <p><strong className="text-black">Export</strong> --- Download a formatted PDF report to brief your team or board.</p>
+              <p className="text-xs text-slate-400 pt-2">Analysis powered by Google Gemini. Results are AI-generated and should be reviewed for accuracy.</p>
             </div>
-
-            {historyLoading ? (
-              <div className="flex items-center justify-center py-10 gap-3">
-                <Loader2 className="w-5 h-5 text-black animate-spin" />
-                <p className="text-sm text-slate-500">Loading history...</p>
-              </div>
-            ) : history.length === 0 ? (
-              <p className="text-sm text-slate-500 py-4">No past analyses yet. Upload a policy platform above to get started.</p>
-            ) : (
-              <div className="space-y-3">
-                {history.map(report => (
-                  <div
-                    key={report.id}
-                    className={`flex items-center justify-between bg-white border-editorial p-5 hover:bg-slate-50 transition-colors cursor-pointer group ${
-                      viewingReport?.id === report.id ? 'ring-2 ring-black' : ''
-                    }`}
-                    onClick={() => handleViewReport(report)}
-                    role="button"
-                    tabIndex={0}
-                    onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') handleViewReport(report); }}
-                  >
-                    <div className="flex items-center gap-4 flex-1 min-w-0">
-                      <div className="flex items-center justify-center w-8 h-8 bg-slate-100 shrink-0">
-                        {report.status === 'complete' ? (
-                          <CheckCircle2 className="w-4 h-4 text-green-600" />
-                        ) : report.status === 'error' ? (
-                          <AlertTriangle className="w-4 h-4 text-red-600" />
-                        ) : (
-                          <Loader2 className="w-4 h-4 text-slate-400 animate-spin" />
-                        )}
-                      </div>
-                      <div className="min-w-0">
-                        <p className="text-sm font-bold text-black truncate">
-                          {report.platform_filename ?? 'Policy Platform'}
-                        </p>
-                        <p className="text-xs text-slate-500 mt-0.5">
-                          {new Date(report.created_at).toLocaleDateString('en-US', {
-                            month: 'short',
-                            day: 'numeric',
-                            year: 'numeric',
-                          })}
-                          {report.bills_analyzed > 0 && ` \u2014 ${report.bills_analyzed} bills`}
-                        </p>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <StatusBadge status={report.status} />
-                      {report.status === 'complete' && (
-                        <button
-                          onClick={e => {
-                            e.stopPropagation();
-                            handleDownloadPdf(report.id);
-                          }}
-                          disabled={isGeneratingPdf}
-                          className="p-2 text-slate-400 hover:text-black transition-colors opacity-0 group-hover:opacity-100 disabled:opacity-50"
-                          title="Download PDF"
-                        >
-                          <Download className="w-4 h-4" />
-                        </button>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </motion.div>
-        </div>
+          </div>
+        )}
       </ProGate>
+    </div>
+  );
+}
+
+/* ── Report Viewer ──────────────────────────────────────── */
+
+function ReportViewer({ results }: { results: BillClassification[] }) {
+  const [activeTab, setActiveTab] = useState<'Opportunity' | 'Threat' | 'Conflict' | 'Neutral'>('Opportunity');
+
+  const groups = {
+    Opportunity: results.filter((r) => r.classification === 'Opportunity').sort((a, b) => b.confidence - a.confidence),
+    Threat: results.filter((r) => r.classification === 'Threat').sort((a, b) => b.confidence - a.confidence),
+    Conflict: results.filter((r) => r.classification === 'Conflict').sort((a, b) => b.confidence - a.confidence),
+    Neutral: results.filter((r) => r.classification === 'Neutral').sort((a, b) => b.confidence - a.confidence),
+  };
+
+  const tabs: { key: typeof activeTab; label: string; color: string; count: number }[] = [
+    { key: 'Opportunity', label: 'Opportunities', color: 'text-green-600', count: groups.Opportunity.length },
+    { key: 'Threat', label: 'Threats', color: 'text-red-600', count: groups.Threat.length },
+    { key: 'Conflict', label: 'Conflicts', color: 'text-amber-600', count: groups.Conflict.length },
+    { key: 'Neutral', label: 'Neutral', color: 'text-slate-500', count: groups.Neutral.length },
+  ];
+
+  return (
+    <div className="border-t border-slate-100">
+      {/* Tabs */}
+      <div className="flex border-b border-slate-100">
+        {tabs.map((tab) => (
+          <button
+            key={tab.key}
+            onClick={() => setActiveTab(tab.key)}
+            className={`flex-1 px-4 py-3 text-xs font-bold uppercase tracking-widest transition-colors ${
+              activeTab === tab.key ? `${tab.color} border-b-2 border-current bg-slate-50` : 'text-slate-400 hover:text-slate-600'
+            }`}
+          >
+            {tab.label} ({tab.count})
+          </button>
+        ))}
+      </div>
+
+      {/* Results */}
+      <div className="max-h-[500px] overflow-y-auto">
+        {groups[activeTab].length === 0 ? (
+          <p className="text-sm text-slate-500 text-center py-8">No bills in this category.</p>
+        ) : (
+          <div className="divide-y divide-slate-100">
+            {groups[activeTab].map((bill) => (
+              <div key={bill.billId} className={`p-5 border-l-4 ${classificationColor(bill.classification)}`}>
+                <div className="flex items-start gap-3">
+                  {classificationIcon(bill.classification)}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="text-xs font-bold text-black">{bill.introNumber}</span>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                        {Math.round(bill.confidence * 100)}% confidence
+                      </span>
+                    </div>
+                    <p className="text-sm text-slate-700 mb-2">{bill.title}</p>
+                    <p className="text-xs text-slate-500 leading-relaxed">{bill.reasoning}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

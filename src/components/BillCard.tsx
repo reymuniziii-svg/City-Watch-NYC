@@ -6,8 +6,20 @@ import { summarizeBill } from '../services/geminiService';
 import CivicActionCenter from './CivicActionCenter';
 import SourceContext from './SourceContext';
 import WatchButton from './WatchButton';
+import LobbyingInsights from './LobbyingInsights';
 
 type OpenPanel = 'none' | 'summary' | 'action';
+
+const STATUS_TIPS: Record<string, string> = {
+  'Committee': 'Being reviewed by a specialized council committee',
+  'Laid Over in Committee': 'Temporarily set aside by the committee for later review',
+  'Hearing Held': 'A public hearing has taken place on this bill',
+  'Enacted': 'Passed by the Council and signed into law',
+  'Approved': 'Passed by the full Council',
+  'Vetoed': 'Rejected by the Mayor after Council approval',
+  'Withdrawn': 'Pulled from consideration by the sponsor',
+  'Filed': 'Officially submitted but not yet assigned to a committee',
+};
 
 export default function BillCard({ bill }: { bill: Bill }) {
   const [openPanel, setOpenPanel] = useState<OpenPanel>('none');
@@ -61,13 +73,19 @@ export default function BillCard({ bill }: { bill: Bill }) {
 
   return (
     <div className="bg-white border-editorial hover:bg-slate-50 transition-colors overflow-hidden">
-      <div className="p-8">
+      <div className="p-4 md:p-8">
         <div className="flex items-start justify-between gap-4 mb-6">
-          <div className="flex items-center gap-3 px-3 py-1 border-editorial text-black text-xs font-bold uppercase tracking-widest">
+          <div
+            className="flex items-center gap-3 px-3 py-1 border-editorial text-black text-xs font-bold uppercase tracking-widest"
+            title="Introduction number — the bill's official ID in the Council"
+          >
             <FileText className="w-3 h-3" />
             <span>{bill.number}</span>
           </div>
-          <div className="px-3 py-1 bg-black text-white text-xs font-bold uppercase tracking-widest">
+          <div
+            className="px-3 py-1 bg-black text-white text-xs font-bold uppercase tracking-widest cursor-help"
+            title={STATUS_TIPS[bill.status] || bill.status}
+          >
             {bill.status}
           </div>
         </div>
@@ -80,7 +98,7 @@ export default function BillCard({ bill }: { bill: Bill }) {
           {bill.summary}
         </p>
 
-        <div className="flex items-center justify-between pt-6 border-t-editorial">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between pt-6 border-t-editorial gap-3">
           <div className="flex -space-x-2">
             {bill.sponsors?.slice(0, 3).map((sponsor, i) => (
               <div 
@@ -98,7 +116,7 @@ export default function BillCard({ bill }: { bill: Bill }) {
             )}
           </div>
           
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2">
             <WatchButton itemType="bill" itemValue={bill.number} itemLabel={bill.title} />
             <button
               onClick={handleShare}
@@ -163,7 +181,7 @@ export default function BillCard({ bill }: { bill: Bill }) {
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             className="overflow-hidden bg-slate-50 border-t-editorial"
           >
-            <div className="p-8">
+            <div className="p-4 md:p-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div className="space-y-6">
                   <div>
@@ -190,30 +208,7 @@ export default function BillCard({ bill }: { bill: Bill }) {
               <SourceContext context={summary?.sourceContext} />
 
               <div className="mt-8 pt-8 border-t border-slate-200">
-                <div className="flex items-center gap-2 mb-6">
-                  <h4 className="font-editorial text-xl font-bold text-black">Lobbying Insights</h4>
-                  <span className="px-2 py-0.5 bg-amber-100 text-amber-800 text-[10px] font-bold uppercase tracking-widest rounded-sm">Beta</span>
-                </div>
-                
-                <div className="bg-white p-6 border border-slate-200">
-                  <p className="text-sm text-slate-600 mb-4">
-                    Real-time lobbying data integration is currently being mapped from the NYC City Clerk's database. Once connected, this section will display:
-                  </p>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-1.5 shrink-0"></div>
-                      <span className="text-sm text-slate-700"><strong>Top Organizations:</strong> Which groups are spending the most money to influence this specific bill.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-1.5 shrink-0"></div>
-                      <span className="text-sm text-slate-700"><strong>For vs. Against:</strong> A breakdown of which industries support the bill and which are fighting it.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-purple-500 mt-1.5 shrink-0"></div>
-                      <span className="text-sm text-slate-700"><strong>Lobbying Firms:</strong> The specific lobbying firms hired to advocate on this legislation.</span>
-                    </li>
-                  </ul>
-                </div>
+                <LobbyingInsights introNumber={bill.number} />
               </div>
             </div>
           </motion.div>

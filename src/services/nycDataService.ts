@@ -1,5 +1,5 @@
 import { CouncilMember, Bill, Hearing, HearingEnrichment, CampaignFinance, MemberMetrics, FinanceIndexRow } from '../types';
-import type { MemberSummary, HearingRecord, MemberProfile, HearingSummary, InfluenceMapEntry, ConflictAlert, CommitteeHeatmapEntry, BillDonorProximityEntry, HearingForecastEntry } from '../lib/types';
+import type { MemberSummary, HearingRecord, MemberProfile, HearingSummary, InfluenceMapEntry, ConflictAlert, BillLobbyingProfile, MemberLobbyingProfile, LobbyingIndexEntry, CommitteeHeatmapEntry, BillDonorProximityEntry, HearingForecastEntry } from '../lib/types';
 
 interface HearingEnrichmentIndex {
   byEventId: Map<string, HearingEnrichment>;
@@ -23,6 +23,9 @@ let billVelocityCache: unknown[] | null = null;
 let committeeHeatmapCache: CommitteeHeatmapEntry[] | null = null;
 let billProximityCache: BillDonorProximityEntry[] | null = null;
 let hearingForecastCache: HearingForecastEntry[] | null = null;
+const billLobbyingCache = new Map<string, BillLobbyingProfile | null>();
+const memberLobbyingCache = new Map<string, MemberLobbyingProfile | null>();
+let lobbyingIndexCache: LobbyingIndexEntry[] | null = null;
 
 interface BillIndexRecord {
   billId: string;
@@ -356,9 +359,43 @@ export async function fetchMemberProfile(id: string): Promise<MemberProfile | nu
   }
 }
 
+export async function fetchBillLobbying(introNumber: string): Promise<BillLobbyingProfile | null> {
+  const slug = introNumber.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  if (billLobbyingCache.has(slug)) return billLobbyingCache.get(slug) ?? null;
+  try {
+    const data = await fetchJson<BillLobbyingProfile>(`/data/lobbying/bills/${slug}.json`);
+    billLobbyingCache.set(slug, data);
+    return data;
+  } catch {
+    billLobbyingCache.set(slug, null);
+    return null;
+  }
+}
+
+export async function fetchMemberLobbying(memberSlug: string): Promise<MemberLobbyingProfile | null> {
+  if (memberLobbyingCache.has(memberSlug)) return memberLobbyingCache.get(memberSlug) ?? null;
+  try {
+    const data = await fetchJson<MemberLobbyingProfile>(`/data/lobbying/members/${memberSlug}.json`);
+    memberLobbyingCache.set(memberSlug, data);
+    return data;
+  } catch {
+    memberLobbyingCache.set(memberSlug, null);
+    return null;
+  }
+}
+
+export async function fetchLobbyingIndex(): Promise<LobbyingIndexEntry[]> {
+  if (lobbyingIndexCache) return lobbyingIndexCache;
+  try {
+    lobbyingIndexCache = await fetchJson<LobbyingIndexEntry[]>('/data/lobbying-index.json');
+    return lobbyingIndexCache;
+  } catch {
+    return [];
+  }
+}
+
 export async function fetchWorkHorseIndex(): Promise<unknown[]> {
   if (workHorseIndexCache) return workHorseIndexCache;
-
   try {
     const data = await fetchJson<unknown[]>('/data/workhorse-index.json');
     workHorseIndexCache = data;
@@ -371,7 +408,6 @@ export async function fetchWorkHorseIndex(): Promise<unknown[]> {
 
 export async function fetchBillVelocity(): Promise<unknown[]> {
   if (billVelocityCache) return billVelocityCache;
-
   try {
     const data = await fetchJson<unknown[]>('/data/workhorse-velocity.json');
     billVelocityCache = data;
@@ -384,7 +420,6 @@ export async function fetchBillVelocity(): Promise<unknown[]> {
 
 export async function fetchCommitteeHeatmap(): Promise<CommitteeHeatmapEntry[]> {
   if (committeeHeatmapCache) return committeeHeatmapCache;
-
   try {
     const data = await fetchJson<CommitteeHeatmapEntry[]>('/data/committee-industry-heatmap.json');
     committeeHeatmapCache = data;
@@ -397,7 +432,6 @@ export async function fetchCommitteeHeatmap(): Promise<CommitteeHeatmapEntry[]> 
 
 export async function fetchBillProximity(): Promise<BillDonorProximityEntry[]> {
   if (billProximityCache) return billProximityCache;
-
   try {
     const data = await fetchJson<BillDonorProximityEntry[]>('/data/bill-donor-proximity.json');
     billProximityCache = data;
@@ -410,7 +444,6 @@ export async function fetchBillProximity(): Promise<BillDonorProximityEntry[]> {
 
 export async function fetchHearingForecast(): Promise<HearingForecastEntry[]> {
   if (hearingForecastCache) return hearingForecastCache;
-
   try {
     const data = await fetchJson<HearingForecastEntry[]>('/data/hearing-forecast.json');
     hearingForecastCache = data;

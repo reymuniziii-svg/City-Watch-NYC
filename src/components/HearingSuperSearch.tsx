@@ -1,319 +1,231 @@
-import React, { useState, useCallback, useEffect, useRef } from 'react';
-import { MessageSquareText, Search, ExternalLink, Loader2, Sparkles } from 'lucide-react';
-import { motion } from 'motion/react';
-import { useFeatureFlags } from '../hooks/useFeatureFlags';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import { Search, Loader2, ExternalLink, MessageSquareQuote, FileText } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 import ProGate from './ProGate';
-import {
-  keywordSearchTranscripts,
-  semanticSearchTranscripts,
-  type TranscriptSearchResult,
-} from '../services/transcriptSearchService';
+import type { HearingVectorChunk } from '../services/hearingSearchService';
 
-type SearchMode = 'keyword' | 'semantic';
+interface ChunkWithTitle extends HearingVectorChunk {
+  hearingTitle?: string;
+}
 
-const SENTIMENT_STYLES: Record<string, { bg: string; text: string }> = {
-  supportive: { bg: 'bg-green-100', text: 'text-green-800' },
-  opposed: { bg: 'bg-red-100', text: 'text-red-800' },
-  neutral: { bg: 'bg-slate-100', text: 'text-slate-700' },
-  contentious: { bg: 'bg-amber-100', text: 'text-amber-800' },
-};
+const RESULT_LIMIT = 20;
+const DEBOUNCE_MS = 300;
 
-const INTENSITY_BAR_COLORS: Record<string, string> = {
-  supportive: 'bg-green-500',
-  opposed: 'bg-red-500',
-  neutral: 'bg-slate-400',
-  contentious: 'bg-amber-500',
-};
+function highlightMatch(text: string, query: string): React.ReactNode {
+  if (!query.trim()) return text;
 
-function SentimentBadge({ sentiment, intensity }: { sentiment: string; intensity?: number }) {
-  const style = SENTIMENT_STYLES[sentiment] ?? SENTIMENT_STYLES.neutral;
-  const barColor = INTENSITY_BAR_COLORS[sentiment] ?? INTENSITY_BAR_COLORS.neutral;
+  const terms = query
+    .toLowerCase()
+    .split(/\s+/)
+    .filter((t) => t.length > 2);
+
+  if (terms.length === 0) return text;
+
+  const pattern = new RegExp(`(${terms.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'gi');
+  const parts = text.split(pattern);
 
   return (
-    <span className={`inline-flex items-center gap-1.5 px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest ${style.bg} ${style.text}`}>
-      {sentiment}
-      {intensity != null && (
-        <span className="inline-block w-8 h-1.5 bg-white/60 rounded-full overflow-hidden">
-          <span
-            className={`block h-full rounded-full ${barColor}`}
-            style={{ width: `${Math.round(intensity * 100)}%` }}
-          />
-        </span>
+    <>
+      {parts.map((part, i) =>
+        terms.some((t) => part.toLowerCase() === t) ? (
+          <mark key={i} className="bg-amber-200 text-black px-0.5 rounded-sm">
+            {part}
+          </mark>
+        ) : (
+          <React.Fragment key={i}>{part}</React.Fragment>
+        ),
       )}
-    </span>
+    </>
   );
 }
 
-function ResultCard({ result, mode }: { result: TranscriptSearchResult; mode: SearchMode }) {
+function searchChunks(chunks: ChunkWithTitle[], query: string): ChunkWithTitle[] {
+  const terms = query
+    .toLowerCase()
+    .split(/\s+/)
+    .filter((t) => t.length > 1);
+
+  if (terms.length === 0) return [];
+
+  const scored = chunks
+    .map((chunk) => {
+      const textLower = chunk.text.toLowerCase();
+      const speakerLower = chunk.speaker.toLowerCase();
+      let score = 0;
+
+      for (const term of terms) {
+        if (textLower.includes(term)) score += 10;
+        if (speakerLower.includes(term)) score += 5;
+
+        // Bonus for exact phrase within text
+        const idx = textLower.indexOf(term);
+        if (idx >= 0) {
+          // Boost early matches
+          score += Math.max(0, 5 - Math.floor(idx / 100));
+        }
+      }
+
+      // Bonus if all terms appear
+      const allMatch = terms.every((t) => textLower.includes(t) || speakerLower.includes(t));
+      if (allMatch) score += 20;
+
+      return { chunk, score };
+    })
+    .filter((item) => item.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, RESULT_LIMIT)
+    .map((item) => item.chunk);
+
+  return scored;
+}
+
+function HearingSuperSearchInner() {
+  const [query, setQuery] = useState('');
+  const [debouncedQuery, setDebouncedQuery] = useState('');
+  const [chunks, setChunks] = useState<ChunkWithTitle[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    let active = true;
+
+    async function load() {
+      setIsLoading(true);
+      try {
+        const response = await fetch('/data/hearing-vectors.json');
+        if (!response.ok) throw new Error('Failed to load vectors');
+        const data = (await response.json()) as ChunkWithTitle[];
+        if (active) setChunks(data);
+      } catch (error) {
+        console.error('Error loading hearing vectors:', error);
+        if (active) setChunks([]);
+      } finally {
+        if (active) setIsLoading(false);
+      }
+    }
+
+    load();
+    return () => { active = false; };
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedQuery(query);
+    }, DEBOUNCE_MS);
+
+    return () => clearTimeout(timer);
+  }, [query]);
+
+  const results = useMemo(
+    () => searchChunks(chunks, debouncedQuery),
+    [chunks, debouncedQuery],
+  );
+
+  const handleClear = useCallback(() => {
+    setQuery('');
+    setDebouncedQuery('');
+  }, []);
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="bg-white border-editorial p-6 hover:shadow-sm transition-shadow"
-    >
-      <div className="flex flex-col gap-3">
-        {/* Top row: metadata badges */}
-        <div className="flex flex-wrap items-center gap-2">
-          {result.speaker && (
-            <span className="inline-block bg-slate-100 text-slate-700 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest">
-              {result.speaker}
-            </span>
-          )}
-          {result.bodyName && (
-            <span className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
-              {result.bodyName}
-            </span>
-          )}
-          {result.date && (
-            <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
-              {result.date}
-            </span>
-          )}
-          {result.sentiment && (
-            <SentimentBadge sentiment={result.sentiment} intensity={result.intensity} />
-          )}
-          {mode === 'semantic' && result.similarity != null && (
-            <span className="inline-block bg-black text-white px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest">
-              {Math.round(result.similarity * 100)}% match
-            </span>
-          )}
-        </div>
-
-        {/* Excerpt */}
-        <p className="text-sm text-slate-700 leading-relaxed line-clamp-3">
-          {result.excerpt}
+    <div className="space-y-4">
+      <div>
+        <h3 className="font-editorial text-xl font-bold text-black mb-1">
+          Hearing Transcript Search
+        </h3>
+        <p className="text-sm text-slate-500">
+          Search across hearing transcripts, quotes, and summaries.
         </p>
-
-        {/* Chapter link */}
-        {result.chapterUrl && (
-          <a
-            href={result.chapterUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-bold text-black hover:text-slate-600 transition-colors group"
-          >
-            <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-            View on CityMeetings.nyc
-          </a>
-        )}
       </div>
-    </motion.div>
+
+      <div className="relative">
+        <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
+        <input
+          type="search"
+          value={query}
+          placeholder="Search hearing transcripts..."
+          className="w-full border-editorial bg-white py-3 pl-11 pr-4 text-sm text-black outline-none transition focus:border-black focus:ring-1 focus:ring-black rounded-none"
+          aria-label="Search hearing transcripts"
+          onChange={(e) => setQuery(e.target.value)}
+        />
+      </div>
+
+      {isLoading && (
+        <div className="flex items-center gap-3 px-4 py-5 text-sm text-slate-500 border-editorial">
+          <Loader2 className="h-4 w-4 animate-spin text-black" />
+          <span>Loading hearing data...</span>
+        </div>
+      )}
+
+      <AnimatePresence>
+        {!isLoading && debouncedQuery.trim().length > 0 && (
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 8 }}
+            transition={{ duration: 0.2 }}
+          >
+            {results.length > 0 ? (
+              <div className="border-editorial divide-y divide-slate-200">
+                <div className="px-4 py-2 bg-slate-50">
+                  <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest">
+                    {results.length} result{results.length !== 1 ? 's' : ''}
+                  </span>
+                </div>
+                {results.map((result, idx) => (
+                  <div key={`${result.hearingId}-${result.chunkIndex}-${idx}`} className="p-4 hover:bg-slate-50 transition-colors">
+                    <div className="flex items-start gap-3">
+                      <div className="mt-0.5 shrink-0">
+                        {result.speaker ? (
+                          <MessageSquareQuote className="w-4 h-4 text-slate-400" />
+                        ) : (
+                          <FileText className="w-4 h-4 text-slate-400" />
+                        )}
+                      </div>
+                      <div className="min-w-0 flex-1 space-y-1">
+                        {result.speaker && (
+                          <span className="inline-block px-2 py-0.5 bg-black text-white text-[10px] font-bold uppercase tracking-widest mb-1">
+                            {result.speaker}
+                          </span>
+                        )}
+                        <p className="text-sm text-black leading-relaxed line-clamp-3">
+                          {highlightMatch(result.text, debouncedQuery)}
+                        </p>
+                        <div className="flex items-center gap-3 pt-1">
+                          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest truncate">
+                            {result.hearingId}
+                          </span>
+                          {result.chapterUrl && (
+                            <a
+                              href={result.chapterUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 text-[10px] font-bold text-black hover:text-slate-600 uppercase tracking-widest underline shrink-0"
+                            >
+                              <ExternalLink className="w-3 h-3" />
+                              Source
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="px-4 py-5 text-sm text-slate-500 border-editorial">
+                No matches found for "{debouncedQuery.trim()}".
+              </div>
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }
 
 export default function HearingSuperSearch() {
-  const [query, setQuery] = useState('');
-  const [mode, setMode] = useState<SearchMode>('keyword');
-  const [results, setResults] = useState<TranscriptSearchResult[]>([]);
-  const [isSearching, setIsSearching] = useState(false);
-  const [hasSearched, setHasSearched] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const { canUseSemanticSearch } = useFeatureFlags();
-
-  const performSearch = useCallback(
-    async (searchQuery: string, searchMode: SearchMode) => {
-      const trimmed = searchQuery.trim();
-      if (!trimmed) {
-        setResults([]);
-        setHasSearched(false);
-        return;
-      }
-
-      setIsSearching(true);
-      setError(null);
-
-      try {
-        const searchResults =
-          searchMode === 'semantic'
-            ? await semanticSearchTranscripts(trimmed)
-            : await keywordSearchTranscripts(trimmed);
-        setResults(searchResults);
-        setHasSearched(true);
-      } catch {
-        setError('Search failed. Please try again.');
-        setResults([]);
-        setHasSearched(true);
-      } finally {
-        setIsSearching(false);
-      }
-    },
-    [],
-  );
-
-  // Debounced search on query change
-  useEffect(() => {
-    if (debounceRef.current) {
-      clearTimeout(debounceRef.current);
-    }
-
-    debounceRef.current = setTimeout(() => {
-      performSearch(query, mode);
-    }, 300);
-
-    return () => {
-      if (debounceRef.current) {
-        clearTimeout(debounceRef.current);
-      }
-    };
-  }, [query, mode, performSearch]);
-
-  const handleModeChange = (newMode: SearchMode) => {
-    if (newMode === 'semantic' && !canUseSemanticSearch) {
-      // Don't actually switch - ProGate overlay handles it
-      return;
-    }
-    setMode(newMode);
-  };
-
   return (
-    <div className="space-y-8">
-      {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <div className="flex items-center gap-3 mb-4">
-          <MessageSquareText className="w-8 h-8 text-black" />
-          <h1 className="font-editorial text-5xl font-black text-black tracking-tighter">
-            Transcript Search
-          </h1>
-        </div>
-        <p className="text-slate-600">
-          Search hearing transcripts by keyword or use AI-powered semantic search to find relevant testimony.
-        </p>
-      </motion.div>
-
-      {/* Search bar */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.05 }}
-      >
-        <div className="relative group">
-          <Search className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 group-focus-within:text-black transition-colors" />
-          <input
-            type="text"
-            placeholder={
-              mode === 'semantic'
-                ? 'Describe what you are looking for...'
-                : 'Search by speaker, keyword, or committee...'
-            }
-            className="w-full pl-14 pr-4 py-4 text-lg bg-white border-editorial focus:ring-1 focus:ring-black focus:border-black transition-all rounded-none"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            aria-label="Search hearing transcripts"
-          />
-        </div>
-      </motion.div>
-
-      {/* Mode toggle */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
-        className="flex items-center gap-1 border-b border-slate-200"
-      >
-        <button
-          onClick={() => handleModeChange('keyword')}
-          className={`px-6 py-3 text-xs font-bold uppercase tracking-widest border-b-2 transition-colors ${
-            mode === 'keyword'
-              ? 'border-black text-black'
-              : 'border-transparent text-slate-500 hover:text-black'
-          }`}
-        >
-          Keyword
-        </button>
-
-        {canUseSemanticSearch ? (
-          <button
-            onClick={() => handleModeChange('semantic')}
-            className={`flex items-center gap-1.5 px-6 py-3 text-xs font-bold uppercase tracking-widest border-b-2 transition-colors ${
-              mode === 'semantic'
-                ? 'border-black text-black'
-                : 'border-transparent text-slate-500 hover:text-black'
-            }`}
-          >
-            <Sparkles className="w-3.5 h-3.5" />
-            Semantic
-          </button>
-        ) : (
-          <div className="relative">
-            <ProGate flag="canUseSemanticSearch" feature="Semantic Search">
-              <button
-                className="flex items-center gap-1.5 px-6 py-3 text-xs font-bold uppercase tracking-widest border-b-2 border-transparent text-slate-500"
-              >
-                <Sparkles className="w-3.5 h-3.5" />
-                Semantic
-              </button>
-            </ProGate>
-          </div>
-        )}
-      </motion.div>
-
-      {/* Results */}
-      <div className="space-y-4">
-        {/* Loading */}
-        {isSearching && (
-          <div className="flex items-center justify-center py-16 bg-white border-editorial">
-            <Loader2 className="w-6 h-6 animate-spin text-black mr-3" />
-            <span className="text-sm text-slate-600">
-              {mode === 'semantic' ? 'Running semantic search...' : 'Searching transcripts...'}
-            </span>
-          </div>
-        )}
-
-        {/* Error */}
-        {error && !isSearching && (
-          <div className="text-center py-16 bg-white border-editorial">
-            <p className="text-sm text-red-600 font-bold uppercase tracking-widest">{error}</p>
-          </div>
-        )}
-
-        {/* Empty state - no query */}
-        {!isSearching && !hasSearched && !error && (
-          <div className="text-center py-20 bg-white border-editorial flex flex-col items-center justify-center">
-            <MessageSquareText className="w-12 h-12 text-slate-300 mb-4" />
-            <p className="text-slate-500 font-bold uppercase tracking-widest text-xs">
-              Search hearing transcripts
-            </p>
-            <p className="text-slate-400 text-sm mt-2 max-w-md">
-              Enter a keyword, speaker name, or topic to search across council hearing transcripts.
-            </p>
-          </div>
-        )}
-
-        {/* No results */}
-        {!isSearching && hasSearched && results.length === 0 && !error && (
-          <div className="text-center py-20 bg-white border-editorial flex flex-col items-center justify-center">
-            <MessageSquareText className="w-12 h-12 text-slate-300 mb-4" />
-            <p className="text-slate-500 font-bold uppercase tracking-widest text-xs">
-              No results found
-            </p>
-            <p className="text-slate-400 text-sm mt-2">
-              Try different keywords or broaden your search.
-            </p>
-          </div>
-        )}
-
-        {/* Results list */}
-        {!isSearching && results.length > 0 && (
-          <>
-            <p className="text-[10px] font-bold uppercase tracking-widest text-slate-500">
-              {results.length} result{results.length !== 1 ? 's' : ''}
-            </p>
-            <div className="space-y-4">
-              {results.map((result, i) => (
-                <ResultCard
-                  key={`${result.eventId}-${result.speaker}-${i}`}
-                  result={result}
-                  mode={mode}
-                />
-              ))}
-            </div>
-          </>
-        )}
-      </div>
-    </div>
+    <ProGate feature="Hearing Transcript Search" flag="canUseSemanticSearch">
+      <HearingSuperSearchInner />
+    </ProGate>
   );
 }

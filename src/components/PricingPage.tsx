@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Check, X, Zap, Shield, Building2, ChevronDown } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
+import { useSession } from '@clerk/clerk-react';
 import { useProUser, type ProTier } from '../hooks/useProUser';
-import { isSupabaseConfigured, supabase } from '../services/supabaseClient';
+import { isSupabaseConfigured, callEdgeFunction } from '../services/supabaseClient';
 import SubscriptionStatus from './SubscriptionStatus';
 
 /* ------------------------------------------------------------------ */
@@ -44,35 +45,35 @@ const tiers: Tier[] = [
     id: 'advocate',
     name: 'Advocate',
     icon: Zap,
-    monthlyPrice: 9,
-    yearlyPrice: 89,
-    tagline: 'Deeper analysis for civic power users',
+    monthlyPrice: 49,
+    yearlyPrice: 490,
+    tagline: 'Strategic intelligence for advocacy and policy teams',
     cta: 'Upgrade',
     highlighted: true,
     features: [
       'Everything in Free',
-      'Influence Mapper',
-      'Conflict-of-interest alerts',
+      'Influence Mapper & conflict alerts',
+      'AI Impact Analysis (5 reports/mo)',
+      'Hearing sentiment & super-search',
       'Watchlists with email alerts',
-      'AI-powered analysis tools',
-      'Priority data refresh',
+      'Lobbying data & analysis',
     ],
   },
   {
     id: 'enterprise',
     name: 'Enterprise',
     icon: Building2,
-    monthlyPrice: 29,
-    yearlyPrice: 249,
-    tagline: 'Built for newsrooms, orgs, and researchers',
-    cta: 'Contact Us',
+    monthlyPrice: 250,
+    yearlyPrice: 2500,
+    tagline: 'Full-service platform for firms, newsrooms, and orgs',
+    cta: 'Upgrade',
     features: [
       'Everything in Advocate',
-      'API access',
-      'Bulk data export',
-      'Custom alert rules',
-      'Dedicated support',
-      'Team accounts',
+      'Unlimited AI Impact Analysis',
+      'Whitelabel Action Kits',
+      'REST API access + bulk export',
+      'Real-time SMS & Slack alerts',
+      'Team accounts + dedicated support',
     ],
   },
 ];
@@ -87,14 +88,18 @@ const comparisonRows: [string, boolean, boolean, boolean][] = [
   ['Global search', true, true, true],
   ['Influence Mapper', false, true, true],
   ['Conflict-of-interest alerts', false, true, true],
+  ['AI Impact Analysis', false, true, true],
+  ['Hearing sentiment analysis', false, true, true],
+  ['Hearing transcript super-search', false, true, true],
   ['Watchlists with email alerts', false, true, true],
-  ['AI-powered analysis', false, true, true],
-  ['Priority data refresh', false, true, true],
-  ['API access', false, false, true],
-  ['Bulk data export', false, false, true],
-  ['Custom alert rules', false, false, true],
-  ['Dedicated support', false, false, true],
+  ['Lobbying data & insights', false, true, true],
+  ['Executive PDF reports', false, true, true],
+  ['Whitelabel Action Kits', false, false, true],
+  ['REST API access', false, false, true],
+  ['Bulk data export (CSV/JSON)', false, false, true],
+  ['SMS & Slack alerts', false, false, true],
   ['Team accounts', false, false, true],
+  ['Dedicated support', false, false, true],
 ];
 
 interface FAQItem {
@@ -197,7 +202,7 @@ function TierCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, delay: index * 0.1 }}
-      className={`relative flex flex-col border-editorial bg-white p-8 ${
+      className={`relative flex flex-col border-editorial bg-white p-4 md:p-8 ${
         tier.highlighted ? 'ring-2 ring-black' : ''
       }`}
     >
@@ -236,13 +241,6 @@ function TierCard({
         <div className="w-full py-3.5 border-editorial bg-slate-50 text-center text-xs font-bold uppercase tracking-widest text-slate-500 mb-8">
           Current Plan
         </div>
-      ) : tier.id === 'enterprise' ? (
-        <a
-          href="mailto:hello@councilwatch.nyc?subject=Enterprise%20Inquiry"
-          className="w-full block py-3.5 border-editorial bg-black text-center text-white text-xs font-bold uppercase tracking-widest hover:bg-slate-800 transition-colors mb-8"
-        >
-          Contact Us
-        </a>
       ) : onUpgrade && isAuthenticated ? (
         <button
           onClick={() => onUpgrade(tier.id)}
@@ -373,25 +371,30 @@ function FAQSection() {
 
 export default function PricingPage() {
   const { tier: currentTier, isAuthenticated, subscriptionStatus } = useProUser();
+  const { session } = useSession();
   const [billing, setBilling] = useState<'monthly' | 'yearly'>('monthly');
   const [searchParams] = useSearchParams();
   const showSuccess = searchParams.get('success') === 'true';
+  const sessionId = searchParams.get('session_id');
 
   const handleCheckout = async (plan: ProTier) => {
-    if (!isSupabaseConfigured() || !supabase) return;
+    if (!isSupabaseConfigured() || !session) return;
 
     try {
-      const { data, error } = await supabase.functions.invoke('create-checkout-session', {
+      const token = await session.getToken();
+      const data = await callEdgeFunction<{ url?: string }>('create-checkout-session', {
+        method: 'POST',
+        token,
         body: {
           plan,
-          successUrl: window.location.origin + '/pricing?success=true',
+          billing,
+          successUrl: window.location.origin + '/pricing?success=true&session_id={CHECKOUT_SESSION_ID}',
           cancelUrl: window.location.origin + '/pricing',
         },
       });
 
-      if (error) throw error;
       if (data?.url) {
-        window.location.href = data.url;
+        window.open(data.url, '_blank', 'noopener,noreferrer');
       }
     } catch (err) {
       console.error('Checkout error:', err);
@@ -407,11 +410,16 @@ export default function PricingPage() {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-green-50 border border-green-200 p-4 text-center"
+          className="bg-green-50 border border-green-200 p-4 text-center space-y-1"
         >
           <p className="text-green-800 font-bold text-sm">
             Welcome to Council Watch Pro! Your subscription is now active.
           </p>
+          {sessionId && (
+            <p className="text-green-700 text-xs">
+              Confirmation: <span className="font-mono">{sessionId}</span>
+            </p>
+          )}
         </motion.div>
       )}
 

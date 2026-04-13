@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { motion } from 'motion/react';
-import { Network, DollarSign, Users, Loader2, Filter, ChevronUp, ChevronDown, ChevronsUpDown, FileText, Search, AlertTriangle } from 'lucide-react';
-import { fetchInfluenceMap, fetchConflictAlerts } from '../services/nycDataService';
-import type { InfluenceMapEntry, ConflictAlert } from '../lib/types';
+import { Network, DollarSign, Users, Loader2, Filter, ChevronUp, ChevronDown, ChevronsUpDown, FileText, Search, AlertTriangle, Megaphone } from 'lucide-react';
+import { fetchInfluenceMap, fetchConflictAlerts, fetchLobbyingIndex } from '../services/nycDataService';
+import type { InfluenceMapEntry, ConflictAlert, LobbyingIndexEntry } from '../lib/types';
 import ConflictAlertCard from './ConflictAlertCard';
 import CommitteeHeatmap from './CommitteeHeatmap';
 import ProGate from './ProGate';
+import IndustryBadge, { INDUSTRY_COLORS } from './shared/IndustryBadge';
+import BulkExportPanel from './BulkExportPanel';
 
 /* ── helpers ──────────────────────────────────────────────── */
 
@@ -26,19 +28,6 @@ function districtToBorough(district: number): string {
 }
 
 /* ── constants ────────────────────────────────────────────── */
-
-const INDUSTRY_COLORS: Record<string, string> = {
-  'Real Estate': 'bg-amber-100 text-amber-800',
-  'Finance': 'bg-blue-100 text-blue-800',
-  'Legal': 'bg-purple-100 text-purple-800',
-  'Labor': 'bg-green-100 text-green-800',
-  'Healthcare': 'bg-rose-100 text-rose-800',
-  'Education': 'bg-teal-100 text-teal-800',
-  'Nonprofit / Advocacy': 'bg-indigo-100 text-indigo-800',
-  'Government / Public Sector': 'bg-slate-200 text-slate-700',
-  'Small Business / Retail': 'bg-orange-100 text-orange-800',
-  'Other / Mixed': 'bg-gray-100 text-gray-600',
-};
 
 const BOROUGHS = ['All Boroughs', 'Manhattan', 'Bronx', 'Brooklyn', 'Queens', 'Staten Island'];
 
@@ -86,22 +75,12 @@ function SortHeader({ label, col, sort, onSort, tooltip }: SortHeaderProps) {
   );
 }
 
-/* ── industry badge ───────────────────────────────────────── */
-
-function industryBadge(industry: string) {
-  const cls = INDUSTRY_COLORS[industry] ?? 'bg-gray-100 text-gray-600';
-  return (
-    <span className={`inline-flex items-center px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest rounded-none ${cls}`}>
-      {industry}
-    </span>
-  );
-}
-
 /* ── main component ───────────────────────────────────────── */
 
 type ViewTab = 'table' | 'heatmap';
 
 export default function InfluenceMapperPage() {
+  const [searchParams] = useSearchParams();
   const [data, setData] = useState<InfluenceMapEntry[]>([]);
   const [conflictAlerts, setConflictAlerts] = useState<ConflictAlert[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -109,16 +88,18 @@ export default function InfluenceMapperPage() {
   const [sort, setSort] = useState<SortState>({ key: 'totalAmount', dir: 'desc' });
   const [industry, setIndustry] = useState('All Industries');
   const [borough, setBorough] = useState('All Boroughs');
-  const [memberSearch, setMemberSearch] = useState('');
+  const [memberSearch, setMemberSearch] = useState(searchParams.get('search') ?? '');
+  const [lobbyingIndex, setLobbyingIndex] = useState<LobbyingIndexEntry[]>([]);
   const [expandedRows, setExpandedRows] = useState<Set<number>>(new Set());
 
   useEffect(() => {
-    Promise.all([fetchInfluenceMap(), fetchConflictAlerts()]).then(
-      ([entries, alerts]) => {
+    Promise.all([fetchInfluenceMap(), fetchConflictAlerts(), fetchLobbyingIndex().catch(() => [])]).then(
+      ([entries, alerts, lobbyingEntries]) => {
         setData(entries);
         setConflictAlerts(
           [...alerts].sort((a, b) => Math.abs(a.daysDelta) - Math.abs(b.daysDelta)),
         );
+        setLobbyingIndex(lobbyingEntries);
         setIsLoading(false);
       },
     );
@@ -226,6 +207,20 @@ export default function InfluenceMapperPage() {
         <p className="text-slate-600 text-lg max-w-2xl">
           Trace every major campaign contribution to Council members, see which industries give the most, and explore the bills those members sponsor. All data from NYC Campaign Finance Board public filings.
         </p>
+        <div className="mt-3">
+          <BulkExportPanel
+            data={sorted.map(r => ({ ...r, relatedBillsCount: r.relatedBills.length })) as unknown as Record<string, unknown>[]}
+            filename="council-watch-influence-map"
+            columns={[
+              { key: 'districtNumber', label: 'District' },
+              { key: 'memberName', label: 'Member' },
+              { key: 'donorName', label: 'Donor' },
+              { key: 'donorIndustry', label: 'Industry' },
+              { key: 'totalAmount', label: 'Amount' },
+              { key: 'relatedBillsCount', label: 'Related Bills' },
+            ]}
+          />
+        </div>
       </div>
 
       {/* View Tabs */}
@@ -250,12 +245,13 @@ export default function InfluenceMapperPage() {
 
       {viewTab === 'table' && <>
       {/* Summary stats strip */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border-editorial bg-black gap-[1px]">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-0 border-editorial bg-black gap-[1px]">
         {[
           { label: 'Donor-Member Links', value: totalEntries.toLocaleString(), icon: Network },
           { label: 'Unique Donors', value: uniqueDonors.toLocaleString(), icon: DollarSign },
           { label: 'Council Members', value: uniqueMembers.toLocaleString(), icon: Users },
           { label: 'Top Industry', value: topIndustry, icon: FileText },
+          { label: 'Lobbying Orgs', value: lobbyingIndex.length.toLocaleString(), icon: Megaphone },
         ].map((stat, i) => (
           <div key={i} className="bg-white p-6">
             <div className="flex items-center gap-2 mb-3">
@@ -383,7 +379,7 @@ export default function InfluenceMapperPage() {
                       <span className="text-sm text-slate-700 font-medium">{row.donorName}</span>
                     </td>
                     <td className="px-4 py-3">
-                      {industryBadge(row.donorIndustry)}
+                      <IndustryBadge industry={row.donorIndustry} />
                     </td>
                     <td className="px-4 py-3">
                       <span className="font-editorial font-bold text-sm text-black">{fmt$(row.totalAmount)}</span>

@@ -19,6 +19,7 @@
     "data:hearings": "tsx scripts/build-hearings.ts",
     "data:hearing-enrichment": "tsx scripts/build-hearing-enrichment.ts",
     "data:finance": "tsx scripts/build-finance.ts",
+    "data:lobbying": "tsx scripts/build-lobbying.ts",
     "data:metrics": "tsx scripts/build-metrics.ts",
     "data:search": "tsx scripts/build-search-index.ts",
     "data:transcripts": "tsx scripts/build-transcript-index.ts",
