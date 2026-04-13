@@ -2,6 +2,8 @@ import { useUser, useSession } from '@clerk/clerk-react';
 import { useEffect, useState } from 'react';
 import { isSupabaseConfigured, callEdgeFunction } from '../services/supabaseClient';
 
+const OWNER_ID = 'user_3CBInTW2eAXEABQpFJ7czG6U2kp';
+
 export type ProTier = 'free' | 'advocate' | 'enterprise';
 type Tier = ProTier;
 
@@ -79,6 +81,22 @@ export function useProUser(): ProUserState {
   }, [isSignedIn, clerkUser?.id, session]);
 
   if (!isLoaded) return { ...FREE_STATE, isLoading: true };
+
+  if (clerkUser?.id === OWNER_ID) {
+    return {
+      isAuthenticated: true,
+      isPro: true,
+      isEnterprise: true,
+      user: {
+        id: clerkUser.id,
+        email: clerkUser.primaryEmailAddress?.emailAddress ?? '',
+        displayName: clerkUser.fullName ?? clerkUser.firstName ?? '',
+      },
+      tier: 'enterprise',
+      isLoading: false,
+      subscriptionStatus: 'active',
+    };
+  }
 
   return {
     isAuthenticated: !!isSignedIn,
